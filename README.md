@@ -42,7 +42,7 @@ subo por si le sirve a alguien más.
 - **Zod** valida todo el catálogo de datos al importarse — un dato mal formado revienta el build
   con la ruta del archivo culpable, no llega en silencio a producción.
 - **Vitest** para las pruebas del motor de cálculo.
-- Desplegado en **Cloudflare Pages** directo desde este repo.
+- Desplegado en **Cloudflare** (Workers con assets estáticos) directo desde este repo.
 
 ## Cómo correrlo
 
