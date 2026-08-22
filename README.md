@@ -5,7 +5,7 @@ real donde cada parte del enemigo tiene su propia vida, armadura, durabilidad, r
 explosión y porcentaje de transferencia al Main HP, y donde el proyectil y su explosión son
 **dos eventos de daño independientes**.
 
-React + TypeScript + Vite. Datos validados con Zod. Despliegue estático en Vercel.
+React + TypeScript + Vite. Datos validados con Zod. Despliegue estático en Cloudflare Pages.
 
 - **Parche de referencia:** 1.007.001
 - **Datos verificados:** 2026-08-21
@@ -22,15 +22,24 @@ npm run typecheck  # tsc --noEmit
 npm run build      # typecheck + bundle a dist/
 ```
 
-## Desplegar en Vercel
+## Desplegar en Cloudflare Pages
 
 1. Sube el repo a GitHub.
-2. Vercel → **Add New → Project → Import**.
-3. No hay que configurar nada: el `vercel.json` declara preset `vite`, build `npm run build` y
-   salida `dist`.
+2. Cloudflare Dashboard → **Workers & Pages → Create → Pages → Connect to Git** → elige el repo.
+3. Configuración de build:
+   - **Framework preset:** Vite
+   - **Build command:** `npm run build`
+   - **Build output directory:** `dist`
+4. El `wrangler.toml` deja `pages_build_output_dir = "dist"` guardado en el repo, así que
+   `wrangler pages deploy` funciona igual desde la terminal sin pasar flags:
 
-Cada `git push` redespliega. El build corre `tsc --noEmit` antes de empaquetar, así que un dato
-mal formado o un tipo roto **falla el despliegue** en vez de llegar a producción.
+   ```bash
+   npx wrangler pages deploy
+   ```
+
+Cada `git push` a la rama de producción redespliega vía la integración de Git. El build corre
+`tsc --noEmit` antes de empaquetar, así que un dato mal formado o un tipo roto **falla el
+despliegue** en vez de llegar a producción.
 
 ---
 

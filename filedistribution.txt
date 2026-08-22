@@ -4,7 +4,7 @@ SEAF Applied Ballistics Division/
 ├── package.json                    scripts: dev · build · test · typecheck
 ├── tsconfig.json                   strict + alias @/ y @data/
 ├── vite.config.ts                  plugin React, alias, config de vitest
-├── vercel.json                     preset vite → dist/
+├── wrangler.toml                   Cloudflare Pages, salida dist/
 ├── .gitignore
 ├── README.md
 │
