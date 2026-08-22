@@ -1,0 +1,51 @@
+{
+  "referenceDate": "2026-08-21",
+  "gameVersion": "1.007.001",
+
+  "armorPenetration": {
+    "greater": 1.0,
+    "equal": 0.65,
+    "lesser": 0.0,
+    "source": {
+      "name": "Helldivers Wiki — Damage",
+      "url": "https://helldivers.wiki.gg/wiki/Damage",
+      "dateChecked": "2026-08-21",
+      "confidence": "HIGH",
+      "status": "verified",
+      "conflict": "La página Damage_Comparison de la misma wiki dice «alrededor del 50%» para la retícula blanca. La página Damage y los cálculos de la comunidad usan 65%. El motor usa 0.65; el valor es editable aquí sin tocar código."
+    }
+  },
+
+  "rounding": {
+    "mode": "floor",
+    "source": {
+      "name": "Helldivers Wiki — Damage",
+      "url": "https://helldivers.wiki.gg/wiki/Damage",
+      "dateChecked": "2026-08-21",
+      "confidence": "MEDIUM",
+      "status": "partially_verified",
+      "conflict": "Verificado que trunca hacia abajo al final (Adjudicator 95/23 @30% → 73.4 → 73; fuego DoT 100×1.5×0.65 → 97.5 → 97). NO verificado si además trunca en pasos intermedios."
+    }
+  },
+
+  "explosion": {
+    "ignoresDurability": true,
+    "outerRadiusApPenalty": 1,
+    "outerRadiusApFloor": 2,
+    "source": {
+      "name": "Helldivers Wiki — Damage",
+      "url": "https://helldivers.wiki.gg/wiki/Damage",
+      "dateChecked": "2026-08-21",
+      "confidence": "HIGH",
+      "status": "verified",
+      "conflict": null
+    }
+  },
+
+  "angleBuckets": [
+    { "id": "direct", "label": "Directo", "range": "0–25°" },
+    { "id": "slight", "label": "Ángulo leve", "range": "26–60°" },
+    { "id": "large", "label": "Ángulo grande", "range": "61–80°" },
+    { "id": "extreme", "label": "Ángulo extremo", "range": "81–90°" }
+  ]
+}

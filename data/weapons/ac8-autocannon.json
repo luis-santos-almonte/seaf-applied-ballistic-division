@@ -1,0 +1,110 @@
+{
+  "id": "ac8-autocannon",
+  "name": "AC-8 Autocannon",
+  "category": "Support Weapon",
+  "rpm": 190,
+  "magazine": 10,
+  "reload": {
+    "clipSize": 5,
+    "partial": 1.8,
+    "full": 4.5,
+    "confidence": "MEDIUM",
+    "notes": "Recarga por peines de 5. 1.8 s por peine con el cargador no vacío; ~4.5 s completa desde vacío porque hay que ciclar el cerrojo. Valores del parche 1.006.100."
+  },
+  "source": {
+    "name": "Helldivers Wiki — AC-8 Autocannon",
+    "url": "https://helldivers.wiki.gg/wiki/AC-8_Autocannon",
+    "dateChecked": "2026-08-21",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "aphet-projectile",
+      "label": "APHET · proyectil",
+      "internalName": "20mm APHET ROUNDS P",
+      "kind": "projectile",
+      "standard": 325,
+      "durable": 260,
+      "ap": [4, 4, 4, 0],
+      "triggersExplosion": "aphet-explosion",
+      "demolition": 30,
+      "stagger": 30,
+      "push": 20,
+      "confidence": "HIGH",
+      "notes": "El proyectil y su explosión son dos eventos independientes. No se suman 325 + 150 automáticamente: tienen AP distinto y pueden dar veredictos distintos contra la misma parte."
+    },
+    {
+      "id": "aphet-explosion",
+      "label": "APHET · explosión",
+      "internalName": "20mm APHET ROUNDS P IE",
+      "kind": "explosion",
+      "standard": 150,
+      "durable": 150,
+      "ap": 3,
+      "radiusInner": 2,
+      "radiusOuter": 4,
+      "radiusShockwave": 5.5,
+      "demolition": 30,
+      "stagger": 40,
+      "push": 40,
+      "confidence": "HIGH",
+      "notes": "AP3. Contra AV4 (Charger, Hulk, Bile Titan) la explosión no penetra aunque el proyectil AP4 sí lo haga."
+    },
+    {
+      "id": "flak-projectile",
+      "label": "FLAK · proyectil",
+      "internalName": "20mm FLAK ROUNDS P",
+      "kind": "projectile",
+      "standard": 150,
+      "durable": 150,
+      "ap": [2, 2, 2, 0],
+      "triggersExplosion": "flak-explosion",
+      "demolition": 20,
+      "stagger": 30,
+      "push": 30,
+      "confidence": "HIGH",
+      "notes": null
+    },
+    {
+      "id": "flak-explosion",
+      "label": "FLAK · explosión",
+      "internalName": "20mm FLAK ROUNDS P IE",
+      "kind": "explosion",
+      "standard": 190,
+      "durable": 190,
+      "ap": 3,
+      "radiusInner": 2,
+      "radiusOuter": 7,
+      "radiusShockwave": 8,
+      "shrapnel": { "count": 30, "attackId": "shrapnel" },
+      "demolition": 20,
+      "stagger": 25,
+      "push": 40,
+      "confidence": "HIGH",
+      "notes": null
+    },
+    {
+      "id": "shrapnel",
+      "label": "FLAK · fragmento de metralla",
+      "internalName": "SHRAPNEL P",
+      "kind": "projectile",
+      "standard": 110,
+      "durable": 35,
+      "ap": [3, 3, 2, 0],
+      "demolition": 10,
+      "stagger": 10,
+      "push": 20,
+      "confidence": "HIGH",
+      "notes": "La secuencia 3/3/2/0 no es una cadena de penetraciones: son los cuatro valores de AP del fragmento según el ángulo de impacto."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.100", "date": "2026-03-17", "field": "reload.full", "from": 5.5, "to": 4.5, "note": "Y la parcial de 2.3 s a 1.8 s." },
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "aphet-projectile.standard", "from": 260, "to": 325, "note": "+25% de standard. El durable siguió en 260, así que el buff solo beneficia objetivos con durabilidad menor a 100%." },
+    { "patch": "1.003.000", "date": "2025-05-13", "field": "shrapnel", "from": "25 fragmentos, AP 3 a ángulo grande", "to": "30 fragmentos, AP 2 a ángulo grande", "note": null },
+    { "patch": "1.001.104", "date": "2024-10-15", "field": "firingModes", "from": "solo APHET", "to": "munición programable APHET / FLAK", "note": null },
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "ap", "from": "no dañaba pesados", "to": "puede dañar Charger, Bile Titan, Impaler y Hulk", "note": null }
+  ]
+}

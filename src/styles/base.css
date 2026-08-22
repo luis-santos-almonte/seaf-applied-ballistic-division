@@ -1,0 +1,47 @@
+/* Reset mínimo y tipografía base. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    repeating-linear-gradient(105deg, rgba(240, 180, 41, 0.022) 0 2px, transparent 2px 9px),
+    radial-gradient(120% 80% at 50% -10%, #1a1e13 0%, var(--color-void) 60%);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+hr.rule {
+  border: 0;
+  border-top: 1px solid var(--color-line);
+  margin: var(--space-4) 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

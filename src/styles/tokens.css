@@ -1,0 +1,44 @@
+/* ============================================================
+   Tokens de diseño.
+   Único lugar donde se declaran colores, tipografías y ritmo.
+   ============================================================ */
+:root {
+  /* Superficies: chapa militar gastada, no negro puro. */
+  --color-void: #0e100d;
+  --color-panel: #15180f;
+  --color-panel-raised: #1d2117;
+  --color-panel-inset: #262b1e;
+  --color-line: #333926;
+  --color-line-strong: #4a5236;
+
+  /* Texto */
+  --color-text: #e7e4d4;
+  --color-text-dim: #8c9179;
+  --color-text-faint: #5f6552;
+
+  /* Acento estructural: franja de peligro de Super Tierra. */
+  --color-accent: #f0b429;
+  --color-accent-deep: #8a6710;
+
+  /* Estados de penetración: replican la semántica de los hitmarkers. */
+  --color-pen-full: #e0523a;
+  --color-pen-equal: #f2f0e4;
+  --color-pen-none: #5c6357;
+  --color-positive: #a7c957;
+
+  /* Tipografía */
+  --font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --font-body: 'Barlow', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Ritmo */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 28px;
+  --space-7: 44px;
+
+  --page-max: 1240px;
+}

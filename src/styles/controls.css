@@ -1,0 +1,98 @@
+/* Campos de formulario y botones. */
+
+.field {
+  margin-bottom: var(--space-3);
+}
+
+.field__label {
+  display: block;
+  margin-bottom: 5px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-dim);
+}
+
+.field__input {
+  width: 100%;
+  padding: 8px 9px;
+  background: var(--color-void);
+  border: 1px solid var(--color-line-strong);
+  border-radius: 0;
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  appearance: none;
+}
+
+select.field__input {
+  padding-right: 26px;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--color-accent) 50%),
+    linear-gradient(135deg, var(--color-accent) 50%, transparent 50%);
+  background-position: right 13px top 16px, right 8px top 16px;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+
+.field__input:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.field__hint {
+  margin: 4px 0 var(--space-3);
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--color-text-faint);
+}
+
+.field-row {
+  display: grid;
+  gap: 10px;
+}
+.field-row--2 {
+  grid-template-columns: 1fr 1fr;
+}
+.field-row--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: 10px;
+  font-size: 13.5px;
+  color: var(--color-text-dim);
+}
+.check input {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--color-accent);
+}
+.check label {
+  cursor: pointer;
+}
+
+.button {
+  width: 100%;
+  padding: 9px;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.button--ghost {
+  background: var(--color-panel-inset);
+  border: 1px solid var(--color-line-strong);
+  color: var(--color-text-dim);
+}
+.button--ghost:hover {
+  color: var(--color-text);
+  border-color: var(--color-accent-deep);
+}

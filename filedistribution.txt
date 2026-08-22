@@ -1,0 +1,98 @@
+SEAF Applied Ballistics Division/
+│
+├── index.html                      punto de entrada de Vite
+├── package.json                    scripts: dev · build · test · typecheck
+├── tsconfig.json                   strict + alias @/ y @data/
+├── vite.config.ts                  plugin React, alias, config de vitest
+├── vercel.json                     preset vite → dist/
+├── .gitignore
+├── README.md
+│
+├── data/                           ← LO ÚNICO QUE TOCAS TRAS UN PARCHE
+│   ├── rules.json                  multiplicadores AP, redondeo, explosiones
+│   ├── weapons/
+│   │   └── ac8-autocannon.json     un archivo por arma
+│   └── enemies/
+│       ├── terminids/charger.json  un archivo por enemigo
+│       ├── automatons/devastator.json
+│       └── illuminate/             (vacío, listo para llenar)
+│
+├── src/
+│   ├── main.tsx                    monta React, importa las 6 hojas de estilo
+│   ├── App.tsx                     composición de la página, nada más
+│   │
+│   ├── domain/                     el vocabulario. sin lógica, sin dependencias
+│   │   ├── schemas.ts              esquemas Zod ← fuente única de verdad
+│   │   ├── types.ts                tipos derivados con z.infer + tipos de resultado
+│   │   └── constants.ts            lo que no cambia con los parches
+│   │
+│   ├── engine/                     motor puro: sin React, sin DOM, sin fetch
+│   │   ├── rounding.ts             política de truncado
+│   │   ├── durability.ts           paso 1 — mezcla standard/durable
+│   │   ├── armor.ts                paso 2 — penetración y buckets de ángulo
+│   │   ├── hit.ts                  un evento de daño + bypass de explosión
+│   │   ├── transfer.ts             paso 5 — a Main HP, con tope de overflow
+│   │   ├── firing.ts               cadencia, recargas, TTK, DPS
+│   │   ├── simulate.ts             simulador disparo a disparo
+│   │   ├── ranking.ts              comparador de puntos de impacto
+│   │   ├── tables.ts               tabla de durabilidad y matriz AV × durab.
+│   │   ├── flak.ts                 desglose de metralla
+│   │   ├── explain.ts              simulación → derivación paso a paso
+│   │   └── index.ts                superficie pública (barrel)
+│   │
+│   ├── data/
+│   │   └── catalog.ts              glob + valida los JSON + consultas
+│   │
+│   ├── hooks/
+│   │   ├── scenarioReducer.ts      todas las transiciones de estado
+│   │   └── useScenario.ts          catálogo + overrides → resultados memoizados
+│   │
+│   ├── components/
+│   │   ├── ui/                     primitivas reutilizables
+│   │   │   ├── Panel.tsx
+│   │   │   ├── Field.tsx           NumberField · SelectField · CheckField · FieldRow
+│   │   │   ├── DataTable.tsx       tabla genérica con columnas tipadas
+│   │   │   ├── Pill.tsx            Pill · VerdictPill · ConfidencePill
+│   │   │   └── Notice.tsx
+│   │   ├── console/                panel de ENTRADA
+│   │   │   ├── FireConsole.tsx     compone los tres grupos
+│   │   │   ├── WeaponFields.tsx
+│   │   │   ├── TargetFields.tsx
+│   │   │   └── FiringFields.tsx
+│   │   ├── receipt/                panel de SALIDA
+│   │   │   ├── DamageReceipt.tsx
+│   │   │   ├── VerdictStamp.tsx    ← elemento firma
+│   │   │   ├── StepList.tsx
+│   │   │   └── OutcomeStats.tsx
+│   │   ├── tables/
+│   │   │   ├── TargetRanking.tsx
+│   │   │   ├── ShotLedger.tsx
+│   │   │   ├── ArmorDurabilityMatrix.tsx
+│   │   │   └── FlakBreakdown.tsx
+│   │   └── layout/
+│   │       ├── Masthead.tsx
+│   │       ├── Intro.tsx
+│   │       ├── SourceAudit.tsx     procedencia y conflictos de fuentes
+│   │       └── Footer.tsx
+│   │
+│   ├── lib/
+│   │   ├── format.ts               Intl, porcentajes, segundos
+│   │   └── classNames.ts
+│   │
+│   └── styles/
+│       ├── tokens.css              ← todos los colores y tipografías, un solo sitio
+│       ├── base.css                reset y tipografía
+│       ├── layout.css              página, masthead, Panel, footer
+│       ├── controls.css            campos y botones
+│       ├── receipt.css             sello, pasos numerados, estadísticas
+│       └── tables.css              tablas, matriz, píldoras
+│
+└── tests/
+    ├── fixtures.ts                 catálogo real parseado, compartido
+    ├── damage.test.ts              durabilidad, armadura, resolución de impacto
+    ├── firing.test.ts              intervalos, recargas, TTK, DPS
+    ├── transfer.test.ts            % a Main y tope de overflow
+    ├── simulate.test.ts            Devastator, Charger, ranking
+    ├── flak.test.ts                teórico vs. realista
+    ├── catalog.test.ts             integridad de los datos
+    └── render.test.tsx             prueba de humo: monta toda la UI
