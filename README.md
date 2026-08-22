@@ -1,252 +1,128 @@
-# HD2 Damage Lab
+# SEAF Applied Ballistics Division 🪖
 
-Calculadora de daño por partes para **HELLDIVERS 2**. No es `vida ÷ daño`: reproduce el sistema
-real donde cada parte del enemigo tiene su propia vida, armadura, durabilidad, resistencia a
-explosión y porcentaje de transferencia al Main HP, y donde el proyectil y su explosión son
-**dos eventos de daño independientes**.
+Calculadora de daño por partes para **HELLDIVERS 2**, hecha porque me cansé de que la respuesta a
+"¿este arma mata al Charger?" siempre fuera un `vida ÷ daño` que ignora armadura, durabilidad y
+transferencia a Main HP. Este proyecto reproduce el sistema de daño real del juego: cada parte del
+enemigo tiene su propia vida, su propia armadura, su propia resistencia a explosión y su propio
+porcentaje de transferencia — y el proyectil y su explosión cuentan como **dos eventos de daño
+independientes**.
 
-React + TypeScript + Vite. Datos validados con Zod. Despliegue estático en Cloudflare Pages.
+Es un proyecto personal, hecho para mi propio uso jugando con la comunidad de Helldivers 2, y lo
+subo por si le sirve a alguien más.
 
-- **Parche de referencia:** 1.007.001
-- **Datos verificados:** 2026-08-21
+> Sin afiliación con Arrowhead Game Studios. Los datos vienen de datamining de la comunidad
+> (Arrowhead no publica estos números), así que tómalos como un modelo, no como una medición oficial
+> del juego.
 
 ---
 
-## Arrancar
+## ¿Qué hace?
+
+- **Calcula el daño real de un disparo**, parte por parte, aplicando durabilidad, penetración de
+  armadura por ángulo, redondeo, ExDR (resistencia a explosión) y transferencia a Main HP.
+- **Simula una ráfaga completa** disparo a disparo: cuántos impactos necesitas, cuándo recargas y
+  el TTK (time-to-kill) resultante.
+- **Compara puntos de impacto**: te dice cuál parte conviene disparar según arma y objetivo.
+- **Explica el resultado paso a paso**, no solo el número final — para poder discutir con alguien
+  que no te cree.
+- **Audita las fuentes de los datos**: cada arma y enemigo tiene su URL, fecha de verificación y
+  nivel de confianza, y si dos fuentes se contradicen, la app te muestra el conflicto en vez de
+  elegir en silencio.
+- Todo el catálogo de armas y enemigos vive en JSON versionado, así que agregar contenido nuevo
+  después de cada parche es crear un archivo, no tocar código.
+
+## Capturas
+
+*(pendiente — agrego capturas cuando tenga el catálogo más lleno)*
+
+## Stack
+
+- **React 18 + TypeScript** (strict) para la interfaz.
+- **Vite** como bundler y servidor de desarrollo.
+- **Zod** valida todo el catálogo de datos al importarse — un dato mal formado revienta el build
+  con la ruta del archivo culpable, no llega en silencio a producción.
+- **Vitest** para las pruebas del motor de cálculo.
+- Desplegado en **Cloudflare Pages** directo desde este repo.
+
+## Cómo correrlo
 
 ```bash
 npm install
 npm run dev        # servidor de desarrollo
-npm test           # 43 pruebas
+npm test           # suite de pruebas del motor
 npm run typecheck  # tsc --noEmit
 npm run build      # typecheck + bundle a dist/
 ```
 
-## Desplegar en Cloudflare Pages
-
-1. Sube el repo a GitHub.
-2. Cloudflare Dashboard → **Workers & Pages → Create → Pages → Connect to Git** → elige el repo.
-3. Configuración de build:
-   - **Framework preset:** Vite
-   - **Build command:** `npm run build`
-   - **Build output directory:** `dist`
-4. El `wrangler.toml` deja `pages_build_output_dir = "dist"` guardado en el repo, así que
-   `wrangler pages deploy` funciona igual desde la terminal sin pasar flags:
-
-   ```bash
-   npx wrangler pages deploy
-   ```
-
-Cada `git push` a la rama de producción redespliega vía la integración de Git. El build corre
-`tsc --noEmit` antes de empaquetar, así que un dato mal formado o un tipo roto **falla el
-despliegue** en vez de llegar a producción.
-
----
-
-## Arquitectura
+## Estructura del proyecto
 
 ```
-data/                        datos editables a mano, un archivo por entidad
+data/                        catálogo editable a mano, un archivo por entidad
   rules.json                 constantes del modelo (multiplicadores, redondeo, explosiones)
   weapons/<arma>.json
   enemies/<facción>/<enemigo>.json
 
 src/
-  domain/                    el lenguaje del proyecto, sin lógica
-    schemas.ts               esquemas Zod — fuente única de verdad
-    types.ts                 tipos derivados con z.infer + tipos de resultado
-    constants.ts             constantes que no cambian con los parches
+  domain/                    tipos y esquemas Zod — fuente única de verdad
+  engine/                    motor de cálculo puro (sin React, sin DOM, sin fetch)
+  data/catalog.ts            carga y valida los JSON, expone consultas
+  hooks/                     estado del escenario + resultados derivados
+  components/                UI: consola de entrada, recibo de salida, tablas, layout
+  lib/                       formateo y utilidades
 
-  engine/                    motor de cálculo puro: sin React, sin DOM, sin fetch
-    rounding.ts              política de redondeo
-    durability.ts            paso 1 — mezcla standard/durable
-    armor.ts                 paso 2 — penetración y buckets de ángulo
-    hit.ts                   resolución de un evento de daño + bypass de explosión
-    transfer.ts              paso 5 — transferencia a Main y tope de overflow
-    firing.ts                cadencia, recargas, TTK, DPS
-    simulate.ts              simulador disparo a disparo
-    ranking.ts               comparador de puntos de impacto
-    tables.ts                tabla de durabilidad y matriz armadura × durabilidad
-    flak.ts                  desglose FLAK
-    explain.ts               convierte una simulación en la derivación paso a paso
-    index.ts                 superficie pública
-
-  data/catalog.ts            carga los JSON, los valida y expone consultas
-  hooks/
-    scenarioReducer.ts       todas las transiciones de estado
-    useScenario.ts           resuelve catálogo + overrides y deriva resultados
-  components/
-    ui/                      primitivas: Panel, Field, DataTable, Pill, Notice
-    console/                 panel de entrada, dividido por grupo de campos
-    receipt/                 panel de salida: sello, pasos, estadísticas
-    tables/                  ranking, registro, matriz, FLAK
-    layout/                  cabecera, intro, auditoría de fuentes, pie
-  lib/                       formateo y utilidades de presentación
-  styles/                    tokens + una hoja por área
+tests/                       pruebas del motor por módulo + humo de la UI
 ```
 
-Tres reglas que mantienen esto ordenado:
+El motor (`src/engine/`) no sabe que existe una interfaz: no importa React ni toca el DOM, así que
+en teoría se podría reusar desde un script de Node para generar reportes. Los componentes no
+calculan nada, todo llega ya resuelto desde `useScenario`.
 
-1. **El motor no sabe que existe una interfaz.** `src/engine/` no importa React ni toca el DOM.
-   Se puede ejecutar tal cual desde un script de Node para generar Excel, CSV o reportes.
-2. **Los componentes no calculan.** Todo se deriva en `useScenario` y llega ya resuelto.
-3. **Los tipos salen del esquema.** No hay una interfaz escrita a mano que pueda desincronizarse
-   del validador.
+## El modelo, en corto
 
----
+1. **Durabilidad** — mezcla el daño estándar y el durable según el % de durabilidad de la parte.
+2. **Penetración de armadura** — 100% de daño si tu AP supera el AV de la parte, 65% si empatan,
+   0% (ricochet) si tu AP es menor. Cada arma tiene 4 valores de AP según el ángulo de impacto.
+3. **Redondeo** — trunca hacia abajo, una sola vez al final.
+4. **ExDR** — reduce el daño de explosión según la resistencia de la parte; con 100% de ExDR el
+   daño se redirige a Main HP si la explosión tiene AP suficiente.
+5. **Transferencia a Main** — cada parte transfiere un % del daño recibido a la vida principal
+   (puede ser más de 100%), con o sin tope de overflow según el enemigo.
+6. **TTK** — cuenta disparos, cadencia y tiempos de recarga.
 
-## Por qué los datos siguen en JSON
+Lo que **no** modela, a propósito: ángulos reales contra la geometría 3D del enemigo, caída de daño
+por distancia, dispersión real de metralla, sobrepenetración encadenada, movimiento del objetivo.
+Es un modelo de las reglas del juego, no una simulación física.
 
-Porque los edita una persona copiando tablas de la wiki tras cada parche, y JSON da diffs
-legibles en GitHub y cero fricción para editar. Lo que sí cambió respecto al primer borrador:
+## Agregar contenido
 
-- **Un archivo por entidad**, no un JSON gigante. Agregar un enemigo es crear un archivo; el diff
-  de un parche se lee de un vistazo y dos personas pueden trabajar sin conflictos de merge.
-- **Se empaquetan en el bundle** con `import.meta.glob(..., { eager: true })`. No hay `fetch`, no
-  hay CORS, no hay estado de carga, y el catálogo está disponible de forma síncrona.
-- **Se validan con Zod al importarse.** Un `durability` de `70` en vez de `0.7`, una referencia a
-  una parte que no existe o una fecha con formato raro revientan el build con la ruta del archivo
-  culpable.
+**Arma nueva:** creas `data/weapons/<id>.json` siguiendo `weaponSchema` en `src/domain/schemas.ts`.
 
-Lo que sí salió del JSON: las constantes que no cambian con los parches (`src/domain/constants.ts`)
-y la lógica de explicación, que es código y necesita tipos.
+**Enemigo nuevo:** creas `data/enemies/<facción>/<id>.json` copiando la tabla *Anatomy* de la wiki
+de Helldivers. Si un dato no se puede verificar, se deja en `null` con `"confidence": "LOW"` en vez
+de inventar un número.
 
----
+Después de tocar cualquier JSON: `npm test` — las pruebas de `tests/catalog.test.ts` atrapan ids
+duplicados, referencias rotas a partes que no existen y fuentes sin fecha.
 
-## El modelo, paso a paso
-
-**1 · Durabilidad** — `raw = standard × (1 − durability) + durable × durability`.
-Las explosiones la ignoran: aplican su valor durable completo.
-
-**2 · Penetración de armadura**
-
-| Relación | Multiplicador | Hitmarker |
-|---|---|---|
-| AP > AV | 100 % | rojo |
-| AP = AV | 65 % | blanco |
-| AP < AV | 0 % | ricochet |
-
-Cada proyectil declara **cuatro** valores de AP según el ángulo de impacto
-(0–25° / 26–60° / 61–80° / 81–90°). Las explosiones usan uno solo, que baja en 1 (piso 2) en el
-radio exterior.
-
-**3 · Redondeo** — truncado hacia abajo, una sola vez al final. Verificado contra dos ejemplos
-publicados. No está verificado si el juego trunca también en pasos intermedios; el selector
-permite comparar.
-
-**4 · ExDR** — `daño × (1 − ExDR)`. Con ExDR 100 % la parte es inmune y el daño se redirige a Main
-(*Affected By Explosion*), una vez por explosión y solo si el AP de la explosión alcanza el AV de
-Main.
-
-**5 · Transferencia a Main** — `mainDamage = dañoALaParte × toMain`. Puede pasar de 100 %: la carne
-interior del Charger transfiere 300 %. Con `overflowCap` el total transferido se limita a
-`hp + constitution`; sin él, el exceso se transfiere entero.
-
-**6 · Muerte** — Main a 0, o parte fatal destruida. Destruir una parte no fatal no mata: el
-simulador se detiene y lo dice.
-
-**7 · TTK** — `t = (disparos − 1) × 60/RPM + recargas × tiempoDeRecarga`, primer disparo en `t = 0`.
-
-### Lo que NO modela
-
-Modelo **LEVEL 2** (mecánicas del juego). Fuera de alcance a propósito: ángulos reales contra la
-geometría del enemigo, caída de daño por distancia, dispersión real de la metralla, sobrepenetración
-encadenada, cancelación de recarga, movimiento del objetivo, cronómetro del desangrado.
-
-No presentes estos números como una medición del juego. Son un modelo.
-
----
-
-## Agregar un arma
-
-Crea `data/weapons/<id>.json`. El esquema está en `src/domain/schemas.ts` (`weaponSchema`) y el
-editor te autocompleta si tienes el JSON schema activo.
-
-```jsonc
-{
-  "id": "gl21-grenade-launcher",
-  "name": "GL-21 Grenade Launcher",
-  "category": "Support Weapon",
-  "rpm": 60,
-  "magazine": 6,
-  "reload": { "clipSize": null, "partial": null, "full": 4.0, "confidence": "LOW", "notes": null },
-  "source": {
-    "name": "Helldivers Wiki — GL-21",
-    "url": "https://helldivers.wiki.gg/wiki/GL-21_Grenade_Launcher",
-    "dateChecked": "2026-08-21",
-    "confidence": "HIGH",
-    "status": "verified",
-    "conflict": null
-  },
-  "attacks": [
-    {
-      "id": "grenade-projectile",
-      "label": "Granada · proyectil",
-      "kind": "projectile",
-      "standard": 0,
-      "durable": 0,
-      "ap": [3, 3, 3, 0],
-      "triggersExplosion": "grenade-explosion",
-      "confidence": "HIGH"
-    },
-    {
-      "id": "grenade-explosion",
-      "label": "Granada · explosión",
-      "kind": "explosion",
-      "standard": 0,
-      "durable": 0,
-      "ap": 3,
-      "confidence": "HIGH"
-    }
-  ]
-}
-```
-
-## Agregar un enemigo
-
-Crea `data/enemies/<facción>/<id>.json` y copia la tabla **Anatomy** de su página en la wiki. Las
-columnas mapean una a una:
-
-| Columna de la wiki | Campo JSON | Ojo |
-|---|---|---|
-| Health | `hp` | Si dice `Main`: `"hp": null, "hpIsMain": true` |
-| AV | `av` | entero 0–11 |
-| Durable | `durability` | **fracción 0–1**, no porcentaje: 30 % → `0.3` |
-| % To Main | `toMain` | fracción; 300 % → `3.0` |
-| Overflow Cap? | `overflowCap` | `Yes` → `true` |
-| Constitution | `constitution` / `constitutionDecay` | `750 [100/s]` → `750` y `100` |
-| Fatal? | `fatal` | |
-| ExDR | `exdr` | fracción 0–1 |
-
-Campos extra que la wiki no tiene en columna pero sí en el texto: `breakablePlating`, `protects`
-(id de la parte que la placa cubre) y `requiresBroken` (id de la placa que hay que abrir primero).
-Sin `requiresBroken`, el comparador recomienda partes imposibles de alcanzar.
-
-Los campos opcionales se pueden omitir: el esquema les pone valor por defecto.
-
-**Regla del proyecto:** si un valor no se puede verificar, va en `null` con
-`"status": "unverified"` y `"confidence": "LOW"`. Una celda vacía es mejor que un número
-inventado. Si dos fuentes se contradicen, rellena `conflict` con ambas versiones en vez de elegir
-en silencio — la app muestra esos conflictos en el panel de auditoría.
-
-Después de tocar cualquier JSON: `npm test`. Las pruebas de `tests/catalog.test.ts` atrapan ids
-duplicados, referencias rotas y fuentes sin fecha.
-
----
-
-## Cobertura actual
+## Estado actual
 
 | | |
 |---|---|
-| Armas | 1 (AC-8 Autocannon) con 5 perfiles de ataque |
+| Armas | 1 (AC-8 Autocannon) |
 | Enemigos | 2 (Devastator, Charger) |
-| Partes | 17 |
 | Pruebas | 43 |
-| Conflictos de fuentes registrados | 2 |
 
-Solo se incluyen enemigos con la tabla de anatomía verificada entera. Mientras el catálogo crece,
-todos los campos del objetivo son editables en la consola: puedes teclear cualquier combinación de
-vida, armadura, durabilidad, % a Main y ExDR sin tocar archivos.
+Todavía es chico. La idea es ir completando el roster con cada arma y enemigo que verifique contra
+la wiki.
+
+## Roadmap
+
+- [ ] Resto del roster (Terminids, Automatons, Illuminate)
+- [ ] Más armas
+- [ ] Comparador de varias armas contra un mismo objetivo
+- [ ] Sobrepenetración encadenada
+- [ ] Permalinks con el escenario codificado en la URL
+- [ ] Exportar resultados a Excel/CSV
 
 ## Fuentes
 
@@ -255,16 +131,7 @@ vida, armadura, durabilidad, % a Main y ExDR sin tocar archivos.
 - Devastator: <https://helldivers.wiki.gg/wiki/Devastator>
 - Charger: <https://helldivers.wiki.gg/wiki/Charger>
 
-Los datos de la wiki vienen de datamining de la comunidad; Arrowhead no publica estos números.
-Cada entrada lleva su URL, fecha de verificación y nivel de confianza.
+---
 
-## Roadmap
-
-- [ ] Resto del roster (Terminids, Automatons, Illuminate)
-- [ ] Más armas
-- [ ] Exportar a Excel/CSV desde el motor en Node
-- [ ] Comparador de varias armas contra un mismo objetivo
-- [ ] Sobrepenetración encadenada
-- [ ] Permalinks con el escenario codificado en la URL
-
-Proyecto de fans. Sin afiliación con Arrowhead Game Studios.
+Hecho por mí, para el escuadrón. Si encontrás un número mal o tenés datos de un arma/enemigo que
+falta, abrí un issue o un PR.
