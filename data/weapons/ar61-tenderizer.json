@@ -1,0 +1,41 @@
+{
+  "id": "ar61-tenderizer",
+  "name": "AR-61 Tenderizer",
+  "category": "Primary Weapon",
+  "rpm": 600,
+  "magazine": 35,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 3.33,
+    "confidence": "HIGH",
+    "notes": null
+  },
+  "source": {
+    "name": "Helldivers Wiki — AR-61 Tenderizer",
+    "url": "https://helldivers.wiki.gg/wiki/AR-61_Tenderizer",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "AR-61 P",
+      "kind": "projectile",
+      "standard": 105,
+      "durable": 30,
+      "ap": [2, 2, 2, 0],
+      "confidence": "HIGH",
+      "notes": "El arma tiene una función de selector de cadencia 600/850 rpm sin cambio de daño por disparo; se modela con 600 rpm (modo por defecto)."
+    }
+  ],
+  "history": [
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "projectile.durable", "from": 22, "to": 30, "note": null },
+    { "patch": "1.002.200", "date": "2025-03-18", "field": "projectile.standard", "from": 95, "to": 105, "note": null },
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "magazine", "from": 30, "to": 35, "note": null },
+    { "patch": "1.000.400", "date": "2024-06-13", "field": "projectile.standard", "from": 60, "to": 95, "note": null }
+  ]
+}

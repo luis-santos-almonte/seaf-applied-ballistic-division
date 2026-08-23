@@ -1,0 +1,40 @@
+{
+  "id": "ar23a-liberator-carbine",
+  "name": "AR-23A Liberator Carbine",
+  "category": "Primary Weapon",
+  "rpm": 920,
+  "magazine": 45,
+  "reload": {
+    "clipSize": null,
+    "partial": 1.6,
+    "full": 2.5,
+    "confidence": "HIGH",
+    "notes": "1.6s si el cargador no está vacío (recarga táctica); 2.5s si está vacío (hay que accionar el cerrojo). Cifras del cargador extendido de 45."
+  },
+  "source": {
+    "name": "Helldivers Wiki — AR-23A Liberator Carbine",
+    "url": "https://helldivers.wiki.gg/wiki/AR-23A_Liberator_Carbine",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": null,
+      "kind": "projectile",
+      "standard": 90,
+      "durable": 22,
+      "ap": 2,
+      "confidence": "MEDIUM",
+      "notes": "La wiki da un único valor (Light/AP2) sin desglose por ángulo para este arma en particular; otras variantes Liberator caen a Unarmored en ángulo extremo, pero no está confirmado aquí. internalName no listado en la página."
+    }
+  ],
+  "history": [
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "projectile.standard", "from": 80, "to": 90, "note": "Durable subió de 15 a 22." },
+    { "patch": "1.001.104", "date": "2024-10-15", "field": "reload.full", "from": 3, "to": 2.5, "note": null },
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "projectile.standard", "from": 60, "to": 70, "note": null }
+  ]
+}

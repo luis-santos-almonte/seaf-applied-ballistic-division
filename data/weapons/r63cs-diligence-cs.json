@@ -1,0 +1,40 @@
+{
+  "id": "r63cs-diligence-cs",
+  "name": "R-63CS Diligence Counter Sniper",
+  "category": "Primary Weapon",
+  "rpm": 350,
+  "magazine": 15,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 3,
+    "confidence": "HIGH",
+    "notes": null
+  },
+  "source": {
+    "name": "Helldivers Wiki — R-63CS Diligence Counter Sniper",
+    "url": "https://helldivers.wiki.gg/wiki/R-63CS_Diligence_Counter_Sniper",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "9x70mm HIGH VELOCITY P",
+      "kind": "projectile",
+      "standard": 200,
+      "durable": 50,
+      "ap": [3, 3, 3, 0],
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": [
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "projectile.standard", "from": 140, "to": 200, "note": "Durable subió de 14 a 50; stagger de 15 a 20." },
+    { "patch": "1.000.300", "date": "2024-04-29", "field": "projectile.standard", "from": 128, "to": 140, "note": null },
+    { "patch": "1.000.200", "date": "2024-04-02", "field": "ap", "from": 2, "to": 3, "note": "Penetración de armadura mejorada de Light a Medium." }
+  ]
+}

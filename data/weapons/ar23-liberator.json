@@ -1,0 +1,40 @@
+{
+  "id": "ar23-liberator",
+  "name": "AR-23 Liberator",
+  "category": "Primary Weapon",
+  "rpm": 640,
+  "magazine": 45,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 3,
+    "confidence": "HIGH",
+    "notes": "Cargador extendido estándar de 45. La wiki no reporta un tiempo de recarga parcial distinto para este cargador (sí existe uno para el cargador corto opcional, no modelado en este archivo)."
+  },
+  "source": {
+    "name": "Helldivers Wiki — AR-23 Liberator",
+    "url": "https://helldivers.wiki.gg/wiki/AR-23_Liberator",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "5.5x50mm FULL METAL JACKET P",
+      "kind": "projectile",
+      "standard": 90,
+      "durable": 22,
+      "ap": [2, 2, 2, 0],
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": [
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "projectile.standard", "from": 80, "to": 90, "note": "Durable subió de 15 a 22 en el mismo parche." },
+    { "patch": "1.002.200", "date": "2025-03-18", "field": "projectile.standard", "from": 70, "to": 80, "note": null },
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "projectile.standard", "from": 60, "to": 70, "note": "Durable subió de 14 a 15." }
+  ]
+}

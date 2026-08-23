@@ -1,0 +1,60 @@
+{
+  "id": "eat-17",
+  "name": "EAT-17 Expendable Anti-Tank",
+  "category": "Support Weapon",
+  "rpm": 600,
+  "magazine": 1,
+  "reload": {
+    "clipSize": 1,
+    "partial": null,
+    "full": 0,
+    "confidence": "MEDIUM",
+    "notes": "El EAT-17 es un lanzador desechable de un solo disparo: al vaciarse se descarta (no se puede volver a levantar desde 1.001.201) y no existe ciclo de recarga propiamente dicho. La estratagema entrega DOS lanzadores por llamada, así que tras el primer disparo el segundo está listo de inmediato (full=0); conseguir más unidades requiere volver a llamar la estratagema (cooldown de la estratagema, no modelado aquí como 'recarga')."
+  },
+  "source": {
+    "name": "Helldivers Wiki — EAT-17 Expendable Anti-Tank",
+    "url": "https://helldivers.wiki.gg/wiki/EAT-17_Expendable_Anti-Tank",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "heat-projectile",
+      "label": "HEAT · proyectil",
+      "internalName": "75mm HEAT GRENADE P",
+      "kind": "projectile",
+      "standard": 2000,
+      "durable": 2000,
+      "ap": [6, 6, 6, 3],
+      "triggersExplosion": "heat-explosion",
+      "demolition": null,
+      "stagger": null,
+      "push": null,
+      "confidence": "HIGH",
+      "notes": "AP Anti-Tank II (0-80°), Medium a ángulo extremo."
+    },
+    {
+      "id": "heat-explosion",
+      "label": "HEAT · explosión",
+      "internalName": "75mm HEAT GRENADE P IE",
+      "kind": "explosion",
+      "standard": 150,
+      "durable": 150,
+      "ap": 3,
+      "radiusInner": 1.5,
+      "radiusOuter": 3,
+      "radiusShockwave": 6,
+      "demolition": 30,
+      "stagger": 60,
+      "push": 40,
+      "confidence": "HIGH",
+      "notes": "Falloff de outer radius: 149→0."
+    }
+  ],
+  "history": [
+    { "patch": "1.001.201", "date": "2024-10-29", "field": "pickup", "from": "recogible vacío", "to": "no recogible vacío", "note": null },
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "heat-projectile.standard", "from": 650, "to": 2000, "note": "Drag factor del proyectil reducido de 30% a 0%." }
+  ]
+}

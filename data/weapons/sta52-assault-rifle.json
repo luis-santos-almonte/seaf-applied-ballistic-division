@@ -1,0 +1,40 @@
+{
+  "id": "sta52-assault-rifle",
+  "name": "StA-52 Assault Rifle",
+  "category": "Primary Weapon",
+  "rpm": 790,
+  "magazine": 56,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 3.3,
+    "confidence": "LOW",
+    "notes": "La wiki no reporta un tiempo de recarga numérico para esta arma. Se estima 3.3s por comparación con rifles de asalto de cargador grande (AR-61 Tenderizer, 35 rondas → 3.33s), escalado a las 56 rondas de este cargador; no confirmado en la fuente."
+  },
+  "source": {
+    "name": "Helldivers Wiki — StA-52 Assault Rifle",
+    "url": "https://helldivers.wiki.gg/wiki/StA-52_Assault_Rifle",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "5.5x50mm FULL METAL JACKET P",
+      "kind": "projectile",
+      "standard": 90,
+      "durable": 22,
+      "ap": [2, 2, 2, 0],
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": [
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "projectile.standard", "from": 80, "to": 90, "note": "Durable subió de 15 a 22." },
+    { "patch": "1.002.200", "date": "2025-03-18", "field": "projectile.standard", "from": 70, "to": 80, "note": null },
+    { "patch": "1.002.003", "date": "2024-12-19", "field": "weapon", "from": null, "to": null, "note": "Agregada al juego." }
+  ]
+}

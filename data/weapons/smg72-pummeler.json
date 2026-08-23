@@ -1,0 +1,40 @@
+{
+  "id": "smg72-pummeler",
+  "name": "SMG-72 Pummeler",
+  "category": "Primary Weapon",
+  "rpm": 475,
+  "magazine": 45,
+  "reload": {
+    "clipSize": null,
+    "partial": 2,
+    "full": 2.8,
+    "confidence": "HIGH",
+    "notes": null
+  },
+  "source": {
+    "name": "Helldivers Wiki — SMG-72 Pummeler",
+    "url": "https://helldivers.wiki.gg/wiki/SMG-72_Pummeler",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "SMG-72 P",
+      "kind": "projectile",
+      "standard": 85,
+      "durable": 17,
+      "ap": [2, 2, 2, 0],
+      "confidence": "HIGH",
+      "notes": "Aplica un efecto de aturdimiento medio (Status Medium, fuerza 2, 3s de duración); no hay campo de esquema dedicado a 'stun'."
+    }
+  ],
+  "history": [
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "projectile.standard", "from": 70, "to": 85, "note": "Durable subió a 17-18; valor de aturdimiento subió a 2." },
+    { "patch": "1.003.200", "date": "2025-07-15", "field": "stunDuration", "from": null, "to": 3, "note": "Duración de aturdimiento (no representada en el esquema)." },
+    { "patch": "1.002.200", "date": "2025-03-18", "field": "projectile.standard", "from": 65, "to": 70, "note": null }
+  ]
+}

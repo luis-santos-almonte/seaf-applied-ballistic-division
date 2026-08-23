@@ -1,0 +1,39 @@
+{
+  "id": "las5-scythe",
+  "name": "LAS-5 Scythe",
+  "category": "Primary Weapon",
+  "rpm": 60,
+  "magazine": 8,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 3,
+    "confidence": "HIGH",
+    "notes": "Arma de energía con mecánica de calor: capacidad de 8s de disparo continuo (~8 disparos a 60rpm) antes de sobrecalentar a 100°C. 'Magazine' representa esa cantidad de disparos equivalente."
+  },
+  "source": {
+    "name": "Helldivers Wiki — LAS-5 Scythe",
+    "url": "https://helldivers.wiki.gg/wiki/LAS-5_Scythe",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "beam",
+      "label": "Rayo",
+      "internalName": "LAS-5 SCYTHE B",
+      "kind": "projectile",
+      "standard": 350,
+      "durable": 70,
+      "ap": 2,
+      "confidence": "HIGH",
+      "notes": "La wiki reporta Light (AP2) 'en todos los ángulos' sin mencionar una caída a Unarmored en ángulo extremo, a diferencia de otras armas láser. Además del rayo, aplica un efecto de ignición: 100 DPS de fuego con AP Heavy (4), no modelado como ataque aparte por ser un efecto de estado."
+    }
+  ],
+  "history": [
+    { "patch": "1.003.000", "date": "2025-05-13", "field": "bug", "from": null, "to": null, "note": "Se corrigió un exploit de munición infinita." },
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "beam.standard", "from": 300, "to": 350, "note": "Velocidad de enfriamiento también aumentó." }
+  ]
+}

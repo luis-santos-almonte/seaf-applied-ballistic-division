@@ -1,0 +1,57 @@
+{
+  "id": "gp-31-grenade-pistol",
+  "name": "GP-31 Grenade Pistol",
+  "category": "Secondary Weapon",
+  "rpm": 900,
+  "magazine": 1,
+  "reload": {
+    "clipSize": 1,
+    "partial": null,
+    "full": 2.3,
+    "confidence": "LOW",
+    "notes": "La wiki no publica un tiempo de recarga en segundos para esta arma (lanzagranadas de un solo disparo). Estimado en 2.3 s, algo más rápida que la GP-20 Ultimatum por tratarse de una granada de 40mm más liviana que un cohete anti-tanque."
+  },
+  "source": {
+    "name": "Helldivers Wiki — GP-31 Grenade Pistol",
+    "url": "https://helldivers.wiki.gg/wiki/GP-31_Grenade_Pistol",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "proyectil",
+      "label": "Proyectil",
+      "internalName": "40mm HEAT GRENADE P",
+      "kind": "projectile",
+      "standard": 250,
+      "durable": 250,
+      "ap": [3, 3, 3, 0],
+      "triggersExplosion": "explosion",
+      "demolition": 30,
+      "stagger": 40,
+      "push": 10,
+      "confidence": "HIGH",
+      "notes": null
+    },
+    {
+      "id": "explosion",
+      "label": "Explosión",
+      "internalName": "40mm HEAT GRENADE P IE",
+      "kind": "explosion",
+      "standard": 400,
+      "durable": 400,
+      "ap": 3,
+      "radiusInner": 2.25,
+      "radiusOuter": 6.5,
+      "radiusShockwave": 8,
+      "demolition": 30,
+      "stagger": 25,
+      "push": 30,
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": []
+}

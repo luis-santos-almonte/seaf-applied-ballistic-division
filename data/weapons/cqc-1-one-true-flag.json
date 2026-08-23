@@ -1,0 +1,39 @@
+{
+  "id": "cqc-1-one-true-flag",
+  "name": "CQC-1 One True Flag",
+  "category": "Support Weapon",
+  "rpm": 117,
+  "magazine": 1,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 0,
+    "confidence": "MEDIUM",
+    "notes": "Arma cuerpo a cuerpo (categoría de la wiki: 'Weapon Category: Support Weapon', tipo 'Melee') sin munición ni recarga real; usos ilimitados mientras esté equipada tras llamarla como estratagema de arma pesada. magazine=1 es un valor técnico requerido por el esquema."
+  },
+  "source": {
+    "name": "Helldivers Wiki — CQC-1 One True Flag",
+    "url": "https://helldivers.wiki.gg/wiki/CQC-1_One_True_Flag",
+    "dateChecked": "2026-08-22",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "thrust",
+      "label": "Estocada",
+      "internalName": null,
+      "kind": "projectile",
+      "standard": 200,
+      "durable": 100,
+      "ap": [3, 0, 0, 0],
+      "demolition": null,
+      "stagger": 35,
+      "push": null,
+      "confidence": "MEDIUM",
+      "notes": "Arma de asta (bandera) de un solo filo/punta usada como lanza cuerpo a cuerpo; ocupa el slot de estratagema de arma de apoyo pese a funcionar en combate como un arma melee. AP Medium a ángulo directo, Unarmored en el resto según la wiki. Aplica 'Stun Large'."
+    }
+  ],
+  "history": []
+}

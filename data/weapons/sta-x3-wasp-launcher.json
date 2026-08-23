@@ -1,0 +1,60 @@
+{
+  "id": "sta-x3-wasp-launcher",
+  "name": "StA-X3 W.A.S.P. Launcher",
+  "category": "Support Weapon",
+  "rpm": 500,
+  "magazine": 7,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 9,
+    "confidence": "LOW",
+    "notes": "La wiki no publica un tiempo numérico de recarga (solo menciona que el módulo de nave 'Payroll Management System' la reduce un 10%). Se estima 9.0 s para el cambio completo del cargador de 7 misiles (mochila con 5 cargadores de repuesto, 42 misiles en total); requiere verificación manual."
+  },
+  "source": {
+    "name": "Helldivers Wiki — StA-X3 W.A.S.P. Launcher",
+    "url": "https://helldivers.wiki.gg/wiki/StA-X3_W.A.S.P._Launcher",
+    "dateChecked": "2026-08-22",
+    "confidence": "LOW",
+    "status": "partially_verified",
+    "conflict": "El historial de parches indica que en 1.006.001 (2026-02-03) el AP del proyectil subió a Heavy y su daño directo se redujo a 0 (quedando el daño concentrado en la explosión), pero la tabla de ataque consultada muestra 200 de daño balístico con AP Anti-Tank II en los 4 ángulos. Se prioriza la tabla de ataque actual y se deja constancia del conflicto para verificación manual. Además, esta arma tiene un segundo modo de fuego ('Artillery', indirecto por trayectoria) cuyo perfil de daño no se pudo extraer por separado en esta consulta; solo se modela el modo 'Burst' (directo)."
+  },
+  "attacks": [
+    {
+      "id": "burst-projectile",
+      "label": "Modo Burst · proyectil",
+      "internalName": "Burst P",
+      "kind": "projectile",
+      "standard": 200,
+      "durable": 200,
+      "ap": 6,
+      "triggersExplosion": "burst-explosion",
+      "demolition": 30,
+      "stagger": 25,
+      "push": 50,
+      "confidence": "LOW",
+      "notes": "Ver conflicto de fuente en source.conflict sobre el daño/AP real tras el parche 1.006.001."
+    },
+    {
+      "id": "burst-explosion",
+      "label": "Modo Burst · explosión",
+      "internalName": "Burst P IE",
+      "kind": "explosion",
+      "standard": 600,
+      "durable": 600,
+      "ap": 3,
+      "radiusInner": 2.5,
+      "radiusOuter": 5,
+      "radiusShockwave": 7,
+      "demolition": 30,
+      "stagger": 25,
+      "push": 50,
+      "confidence": "MEDIUM",
+      "notes": "AP Medium uniforme."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.001", "date": "2026-02-03", "field": "burst-projectile", "from": "AP Anti-Tank II, daño 200", "to": "AP Heavy, daño reducido a 0", "note": "Ver conflicto con la tabla de ataque actual en source.conflict." },
+    { "patch": "1.002.003", "date": "2024-12-18", "field": "release", "from": null, "to": "arma agregada al juego", "note": null }
+  ]
+}

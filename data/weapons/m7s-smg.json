@@ -1,0 +1,40 @@
+{
+  "id": "m7s-smg",
+  "name": "M7S SMG",
+  "category": "Primary Weapon",
+  "rpm": 872,
+  "magazine": 48,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 2.8,
+    "confidence": "LOW",
+    "notes": "La wiki no reporta un tiempo de recarga numérico para esta arma. Se estima 2.8s por comparación con SMGs de capacidad similar (SMG-37 Defender, StA-11 SMG); no confirmado en la fuente."
+  },
+  "source": {
+    "name": "Helldivers Wiki — M7S SMG",
+    "url": "https://helldivers.wiki.gg/wiki/M7S_SMG",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "M7S P",
+      "kind": "projectile",
+      "standard": 90,
+      "durable": 18,
+      "ap": [2, 2, 2, 0],
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": [
+    { "patch": "1.005.000", "date": "2025-12-02", "field": "projectile.standard", "from": 80, "to": 90, "note": "Durable subió de 16 a 18." },
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "projectile.standard", "from": 70, "to": 80, "note": "Durable subió de 7 a 16." },
+    { "patch": "1.003.202", "date": "2025-08-26", "field": "weapon", "from": null, "to": null, "note": "Agregada al juego." }
+  ]
+}

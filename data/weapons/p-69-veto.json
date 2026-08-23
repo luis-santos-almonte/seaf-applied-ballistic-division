@@ -1,0 +1,39 @@
+{
+  "id": "p-69-veto",
+  "name": "P-69 Veto",
+  "category": "Secondary Weapon",
+  "rpm": 750,
+  "magazine": 12,
+  "reload": {
+    "clipSize": 6,
+    "partial": null,
+    "full": 3.0,
+    "confidence": "LOW",
+    "notes": "La P-69 Veto tiene un cargador interno de 12 balas que se recarga con dos peines (stripper clips) de 6 balas jet-assisted cada uno; la wiki documenta el mecanismo pero no publica el tiempo en segundos. Estimado en ~3.0 s para la recarga completa (dos peines) por analogía con armas de recarga por peine; el tiempo de recarga parcial (un solo peine) no se modela porque no hay dato base fiable — se deja en null en vez de inventar un número."
+  },
+  "source": {
+    "name": "Helldivers Wiki — P-69 Veto",
+    "url": "https://helldivers.wiki.gg/wiki/P-69_Veto",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "proyectil",
+      "label": "Proyectil",
+      "internalName": "15x100mm STANDARD ROCKET P1",
+      "kind": "projectile",
+      "standard": 105,
+      "durable": 35,
+      "ap": [3, 3, 3, 0],
+      "demolition": 10,
+      "stagger": 35,
+      "push": 15,
+      "confidence": "HIGH",
+      "notes": "Munición de propulsión a chorro: sin caída ni resistencia de arrastre relevante, por lo que conserva el daño completo a cualquier distancia."
+    }
+  ],
+  "history": []
+}

@@ -1,0 +1,38 @@
+{
+  "id": "ar2-coyote",
+  "name": "AR-2 Coyote",
+  "category": "Primary Weapon",
+  "rpm": 600,
+  "magazine": 45,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 3,
+    "confidence": "MEDIUM",
+    "notes": "Solo se reporta un valor de recarga (3s). La wiki muestra animaciones de recarga parcial pero no un tiempo numérico distinto para esa recarga."
+  },
+  "source": {
+    "name": "Helldivers Wiki — AR-2 Coyote",
+    "url": "https://helldivers.wiki.gg/wiki/AR-2_Coyote",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "AR-2 P",
+      "kind": "projectile",
+      "standard": 75,
+      "durable": 10,
+      "ap": 3,
+      "confidence": "MEDIUM",
+      "notes": "La wiki no desglosa el AP por ángulo para esta arma (a diferencia de la mayoría de balísticas); se usa un único valor Medium=3, podría caer a Unarmored en ángulo extremo como el resto de la familia pero no está confirmado. Además del daño balístico, el proyectil aplica una quemadura (Fire DoT): 100 de daño standard y durable, AP4 (Heavy), con 3s de duración. No se modela como ataque aparte por ser un efecto de estado (burn) y no un evento de daño instantáneo adicional."
+    }
+  ],
+  "history": [
+    { "patch": "1.004.000", "date": "2025-09-04", "field": "weapon", "from": null, "to": null, "note": "Agregada al juego." }
+  ]
+}

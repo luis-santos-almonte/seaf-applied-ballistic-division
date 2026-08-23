@@ -1,0 +1,49 @@
+{
+  "id": "r2-amendment",
+  "name": "R-2 Amendment",
+  "category": "Primary Weapon",
+  "rpm": 480,
+  "magazine": 20,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 3.5,
+    "confidence": "HIGH",
+    "notes": null
+  },
+  "source": {
+    "name": "Helldivers Wiki — R-2 Amendment",
+    "url": "https://helldivers.wiki.gg/wiki/R-2_Amendment",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "R-2 P",
+      "kind": "projectile",
+      "standard": 200,
+      "durable": 50,
+      "ap": [2, 2, 2, 0],
+      "confidence": "HIGH",
+      "notes": null
+    },
+    {
+      "id": "bayonet",
+      "label": "Bayoneta (cuerpo a cuerpo)",
+      "internalName": null,
+      "kind": "projectile",
+      "standard": 165,
+      "durable": 83,
+      "ap": [3, 0, 0, 0],
+      "confidence": "HIGH",
+      "notes": "Ataque cuerpo a cuerpo con bayoneta calada; usa 'projectile' por restricción del esquema (solo admite 'projectile' o 'explosion'). AP Medium solo en golpe directo; el resto de ángulos es Unarmored."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.001", "date": "2026-02-03", "field": "bayonet.standard", "from": 110, "to": 165, "note": "Durable de bayoneta subió de 55 a 83." }
+  ]
+}

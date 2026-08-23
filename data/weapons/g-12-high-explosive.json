@@ -1,0 +1,46 @@
+{
+  "id": "g-12-high-explosive",
+  "name": "G-12 High Explosive",
+  "category": "Grenade",
+  "rpm": 30,
+  "magazine": 5,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 0,
+    "confidence": "LOW",
+    "notes": "Las granadas no tienen cadencia de disparo real ni recarga por cargador. 'rpm' (30, equivalente a una tirada cada ~2s) y 'reload.full' (0) son valores de compatibilidad con el esquema de armas de fuego sin significado en el juego real. 'magazine' = 5 es la capacidad máxima documentada (empieza en 4, reabastece 3; el tope subió de 4 a 5 en el parche 1.006.300). 'clipSize' y 'partial' quedan en null: no hay cargador parcial, solo reabastecimiento en punto de suministro."
+  },
+  "source": {
+    "name": "Helldivers Wiki — G-12 High Explosive",
+    "url": "https://helldivers.wiki.gg/wiki/G-12_High_Explosive",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "explosion",
+      "label": "Explosión",
+      "internalName": "G-12 HE E",
+      "kind": "explosion",
+      "standard": 800,
+      "durable": null,
+      "ap": 4,
+      "triggersExplosion": null,
+      "radiusInner": 2.5,
+      "radiusOuter": 7,
+      "radiusShockwave": 9,
+      "demolition": 30,
+      "stagger": 30,
+      "push": 40,
+      "confidence": "HIGH",
+      "notes": "AP4 (Heavy), confirmado por ícono Armor_AP4_Icon. Granada por defecto del juego; daño doblado de 400 a 800 en el parche 1.001.104. Fusible cronometrado de 3.5 s, se puede cocinar (retener antes de tirar)."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.300", "date": "2026-06-16", "field": "magazine", "from": 4, "to": 5, "note": "Inicial 3→4, reabastecimiento 2→3." },
+    { "patch": "1.001.104", "date": "2024-10-15", "field": "explosion.standard", "from": 400, "to": 800, "note": null }
+  ]
+}

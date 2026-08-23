@@ -1,0 +1,39 @@
+{
+  "id": "ma5c-assault-rifle",
+  "name": "MA5C Assault Rifle",
+  "category": "Primary Weapon",
+  "rpm": 640,
+  "magazine": 32,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 3,
+    "confidence": "LOW",
+    "notes": "La wiki no reporta un tiempo de recarga numérico para esta arma. Se estima 3s por comparación con rifles de asalto/de batalla de capacidad similar (BR-14 Adjudicator, familia Liberator); no confirmado en la fuente."
+  },
+  "source": {
+    "name": "Helldivers Wiki — MA5C Assault Rifle",
+    "url": "https://helldivers.wiki.gg/wiki/MA5C_Assault_Rifle",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "MA5C P",
+      "kind": "projectile",
+      "standard": 90,
+      "durable": 16,
+      "ap": [3, 3, 3, 0],
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": [
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "projectile.standard", "from": 80, "to": 90, "note": null },
+    { "patch": "1.003.202", "date": "2025-08-26", "field": "weapon", "from": null, "to": null, "note": "Agregada al juego." }
+  ]
+}

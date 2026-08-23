@@ -1,0 +1,54 @@
+{
+  "id": "sg8p-punisher-plasma",
+  "name": "SG-8P Punisher Plasma",
+  "category": "Primary Weapon",
+  "rpm": 80,
+  "magazine": 10,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 2.5,
+    "confidence": "HIGH",
+    "notes": null
+  },
+  "source": {
+    "name": "Helldivers Wiki — SG-8P Punisher Plasma",
+    "url": "https://helldivers.wiki.gg/wiki/SG-8P_Punisher_Plasma",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "*LARGE PLASMA BOLT P3",
+      "kind": "projectile",
+      "standard": 0,
+      "durable": 0,
+      "ap": 2,
+      "triggersExplosion": "explosion",
+      "confidence": "MEDIUM",
+      "notes": "El impacto directo no hace daño propio (reducido a 0 en el parche 1.004.100): todo el daño proviene de la explosión que dispara. AP reportado solo para ángulo directo (Light=2); no hay desglose para el resto de ángulos porque el proyectil en sí no inflige daño."
+    },
+    {
+      "id": "explosion",
+      "label": "Explosión",
+      "internalName": "*LARGE PLASMA BOLT P3 IE",
+      "kind": "explosion",
+      "standard": 225,
+      "durable": 225,
+      "ap": 3,
+      "radiusInner": 2.3,
+      "radiusOuter": 3,
+      "radiusShockwave": 4,
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": [
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "projectile.standard", "from": 100, "to": 0, "note": "Explosión subió de 150 a 225 al mismo tiempo." },
+    { "patch": "1.001.201", "date": "2024-10-29", "field": "magazine", "from": 8, "to": 10, "note": null }
+  ]
+}

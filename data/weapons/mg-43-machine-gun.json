@@ -1,0 +1,43 @@
+{
+  "id": "mg-43-machine-gun",
+  "name": "MG-43 Machine Gun",
+  "category": "Support Weapon",
+  "rpm": 900,
+  "magazine": 175,
+  "reload": {
+    "clipSize": null,
+    "partial": 3.45,
+    "full": 4.1,
+    "confidence": "HIGH",
+    "notes": "Recarga táctica (con munición restante en el cargador) 3.45 s; recarga completa desde vacío 4.1 s. Cadencia seleccionable entre 630/760/900 rpm; se usa el máximo (900) como valor de referencia."
+  },
+  "source": {
+    "name": "Helldivers Wiki — MG-43 Machine Gun",
+    "url": "https://helldivers.wiki.gg/wiki/MG-43_Machine_Gun",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "fmj-projectile",
+      "label": "FMJ · proyectil",
+      "internalName": "8x60mm FULL METAL JACKET P1",
+      "kind": "projectile",
+      "standard": 90,
+      "durable": 23,
+      "ap": [3, 3, 3, 1],
+      "demolition": 10,
+      "stagger": 20,
+      "push": 12,
+      "confidence": "HIGH",
+      "notes": "AP Medium (0-80°), Very Light a ángulo extremo."
+    }
+  ],
+  "history": [
+    { "patch": "1.001.104", "date": "2024-10-15", "field": "magazine", "from": 150, "to": 175, "note": "Cargadores de repuesto 1→2." },
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "fmj-projectile.stagger", "from": 15, "to": 20, "note": null },
+    { "patch": "1.000.400", "date": "2024-06-13", "field": "fmj-projectile.standard", "from": 80, "to": 90, "note": "Durable 7→23." }
+  ]
+}

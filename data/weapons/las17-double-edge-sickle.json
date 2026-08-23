@@ -1,0 +1,72 @@
+{
+  "id": "las17-double-edge-sickle",
+  "name": "LAS-17 Double-Edge Sickle",
+  "category": "Primary Weapon",
+  "rpm": 700,
+  "magazine": 175,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 2.83,
+    "confidence": "HIGH",
+    "notes": "Arma de energía con mecánica de calor que se disipa mientras se dispara, permitiendo fuego casi indefinido en condiciones ideales (capacidad nominal 15s / 175 disparos a 700rpm antes de sobrecalentar a 200°C). 'Magazine' representa esa cifra nominal, no un cargador físico. El daño escala con el nivel de calor acumulado (ver los 4 ataques)."
+  },
+  "source": {
+    "name": "Helldivers Wiki — LAS-17 Double-Edge Sickle",
+    "url": "https://helldivers.wiki.gg/wiki/LAS-17_Double-Edge_Sickle",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "heat-0-25",
+      "label": "Rayo · 0–25% de calor",
+      "internalName": "LASER P",
+      "kind": "projectile",
+      "standard": 60,
+      "durable": 6,
+      "ap": 2,
+      "confidence": "MEDIUM",
+      "notes": "AP reportado como valor único por tramo de calor (Light=2), sin desglose por ángulo de impacto."
+    },
+    {
+      "id": "heat-26-50",
+      "label": "Rayo · 26–50% de calor",
+      "internalName": "LASER P1",
+      "kind": "projectile",
+      "standard": 55,
+      "durable": 5,
+      "ap": 3,
+      "confidence": "MEDIUM",
+      "notes": "AP reportado como valor único por tramo de calor (Medium=3), sin desglose por ángulo de impacto."
+    },
+    {
+      "id": "heat-51-90",
+      "label": "Rayo · 51–90% de calor",
+      "internalName": "LASER P2",
+      "kind": "projectile",
+      "standard": 70,
+      "durable": 7,
+      "ap": 3,
+      "confidence": "MEDIUM",
+      "notes": "AP reportado como valor único por tramo de calor (Medium=3), sin desglose por ángulo de impacto."
+    },
+    {
+      "id": "heat-91-plus",
+      "label": "Rayo · 91%+ de calor",
+      "internalName": "LASER P3",
+      "kind": "projectile",
+      "standard": 70,
+      "durable": 7,
+      "ap": 4,
+      "confidence": "MEDIUM",
+      "notes": "AP reportado como valor único por tramo de calor (Heavy=4), sin desglose por ángulo de impacto."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.202", "date": "2026-04-28", "field": "sound", "from": null, "to": null, "note": "Ya no emite un zumbido agudo al disparar." },
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "heat-0-25.standard", "from": 55, "to": 60, "note": null }
+  ]
+}

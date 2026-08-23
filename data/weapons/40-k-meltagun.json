@@ -1,0 +1,41 @@
+{
+  "id": "40-k-meltagun",
+  "name": "40-K Meltagun",
+  "category": "Support Weapon",
+  "rpm": 50,
+  "magazine": 3,
+  "reload": {
+    "clipSize": null,
+    "partial": 3.35,
+    "full": 3.35,
+    "confidence": "HIGH",
+    "notes": "La wiki da el mismo valor (3.35s) para recarga estándar y táctica."
+  },
+  "source": {
+    "name": "Helldivers Wiki — 40-K Meltagun",
+    "url": "https://helldivers.wiki.gg/wiki/40-K_Meltagun",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "beam-burst",
+      "label": "Ráfaga de haz fundente",
+      "internalName": "40-K MELTAGUN B",
+      "kind": "projectile",
+      "standard": 2600,
+      "durable": 2600,
+      "ap": 7,
+      "demolition": 30,
+      "stagger": 40,
+      "push": 40,
+      "confidence": "HIGH",
+      "notes": "AP Anti-Tank III uniforme. Dispara un haz continuo de ~1.4s tras una breve carga, con un máximo teórico de 3640 de daño total por ráfaga completa; el daño cae al 60% a 15m de alcance máximo. Aplica 'FlamerSlowed' (0.5s) y 'Fire_Panic' (1s). Agregada en el parche 1.007.000 (2026-08-12) vía el Legendary Warbond 'Castellan's Creed'."
+    }
+  ],
+  "history": [
+    { "patch": "1.007.000", "date": "2026-08-12", "field": "release", "from": null, "to": "arma agregada al juego", "note": "Anunciada en el mid-patch 1.006.301 (2026-07-30)." }
+  ]
+}

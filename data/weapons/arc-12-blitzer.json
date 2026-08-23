@@ -1,0 +1,40 @@
+{
+  "id": "arc-12-blitzer",
+  "name": "ARC-12 Blitzer",
+  "category": "Primary Weapon",
+  "rpm": 45,
+  "magazine": 999999,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 0,
+    "confidence": "HIGH",
+    "notes": "Munición infinita (arma de arco/energía autorregenerativa): no existe recarga real, solo un ciclo de bombeo entre disparos ya reflejado en el RPM. El campo 'magazine' se fija en un valor centinela alto porque el esquema exige un entero positivo; no representa una cifra real del juego."
+  },
+  "source": {
+    "name": "Helldivers Wiki — ARC-12 Blitzer",
+    "url": "https://helldivers.wiki.gg/wiki/ARC-12_Blitzer",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "arc",
+      "label": "Descarga de arco",
+      "internalName": "ARC-12 BLITZER A",
+      "kind": "projectile",
+      "standard": 50,
+      "durable": 35,
+      "ap": [3, 3, 3, 0],
+      "confidence": "HIGH",
+      "notes": "50 de daño Arc por cada uno de los arcos individuales (hasta 5 salen del arma por disparo, potencialmente encadenando hacia más objetivos con un ángulo de encadenamiento restrictivo, alcance máximo 25m). El total teórico por disparo si los 5 arcos golpean al mismo blanco es 250; se modela por-arco porque normalmente golpean objetivos distintos."
+    }
+  ],
+  "history": [
+    { "patch": "1.003.200", "date": "2025-07-15", "field": "stun", "from": null, "to": null, "note": "Valor de aturdimiento incrementado (sin cifra exacta reportada)." },
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "stun", "from": null, "to": null, "note": "Se añadió un efecto de aturdimiento leve." },
+    { "patch": "1.000.300", "date": "2024-04-29", "field": "rpm", "from": 30, "to": 45, "note": null }
+  ]
+}

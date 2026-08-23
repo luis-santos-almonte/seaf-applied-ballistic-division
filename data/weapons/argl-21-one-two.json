@@ -1,0 +1,64 @@
+{
+  "id": "argl-21-one-two",
+  "name": "AR/GL-21 One-Two",
+  "category": "Primary Weapon",
+  "rpm": 650,
+  "magazine": 40,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 3.33,
+    "confidence": "MEDIUM",
+    "notes": "Corresponde a la recarga del rifle de 8mm (40 rondas). El lanzagranadas subcañón (1 disparo, 3 de reserva) no tiene un tiempo de recarga separado listado en la wiki."
+  },
+  "source": {
+    "name": "Helldivers Wiki — AR/GL-21 One-Two",
+    "url": "https://helldivers.wiki.gg/wiki/AR/GL-21_One-Two",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "rifle-projectile",
+      "label": "Rifle · proyectil",
+      "internalName": "AR/GL-21 P",
+      "kind": "projectile",
+      "standard": 95,
+      "durable": 24,
+      "ap": 2,
+      "confidence": "MEDIUM",
+      "notes": "AP reportado como valor único (Light=2) sin desglose por ángulo."
+    },
+    {
+      "id": "grenade-projectile",
+      "label": "Granada · proyectil",
+      "internalName": "40mm HEAT GRENADE P",
+      "kind": "projectile",
+      "standard": 250,
+      "durable": 250,
+      "ap": 3,
+      "triggersExplosion": "grenade-explosion",
+      "confidence": "LOW",
+      "notes": "La wiki no reporta un AP separado para el impacto del proyectil de granada, solo para su explosión (Medium=3). Se asume igual al de la explosión por ser el patrón habitual de granadas HE del juego; no confirmado explícitamente."
+    },
+    {
+      "id": "grenade-explosion",
+      "label": "Granada · explosión",
+      "internalName": "40mm HEAT GRENADE P IE",
+      "kind": "explosion",
+      "standard": 400,
+      "durable": 400,
+      "ap": 3,
+      "radiusInner": 2.25,
+      "radiusOuter": 6.5,
+      "radiusShockwave": 8,
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": [
+    { "patch": "1.005.000", "date": "2025-12-02", "field": "weapon", "from": null, "to": null, "note": "Agregada al juego." }
+  ]
+}

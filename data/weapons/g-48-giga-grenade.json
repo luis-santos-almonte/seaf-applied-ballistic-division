@@ -1,0 +1,46 @@
+{
+  "id": "g-48-giga-grenade",
+  "name": "G-48 Giga Grenade",
+  "category": "Grenade",
+  "rpm": 30,
+  "magazine": 2,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 0,
+    "confidence": "LOW",
+    "notes": "Las granadas no tienen cadencia de disparo real ni recarga por cargador. 'rpm' (30, equivalente a una tirada cada ~2s) y 'reload.full' (0) son valores de compatibilidad con el esquema de armas de fuego sin significado en el juego real. 'magazine' = 2 es la capacidad máxima documentada por la wiki (subida de 1 a 2 el reabastecimiento en el parche 1.006.300; algunas fuentes mencionan hasta 4 con ciertas ventajas de armadura, no confirmado con la misma solidez). 'clipSize' y 'partial' quedan en null: no hay cargador parcial, solo reabastecimiento en punto de suministro."
+  },
+  "source": {
+    "name": "Helldivers Wiki — G-48 Giga Grenade",
+    "url": "https://helldivers.wiki.gg/wiki/G-48_Giga_Grenade",
+    "dateChecked": "2026-08-22",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "La capacidad máxima aparece como 2 en el resumen principal del infobox, pero una mención adicional indica 'hasta 4 con ciertas ventajas de armadura' sin especificar cuál. Se usa 2 como valor base y se deja la nota para no inflar artificialmente la capacidad."
+  },
+  "attacks": [
+    {
+      "id": "explosion",
+      "label": "Explosión",
+      "internalName": "G-48 GIGA GRENADE E",
+      "kind": "explosion",
+      "standard": 2000,
+      "durable": null,
+      "ap": 5,
+      "triggersExplosion": null,
+      "radiusInner": 2,
+      "radiusOuter": 12,
+      "radiusShockwave": 16,
+      "demolition": 40,
+      "stagger": 40,
+      "push": 40,
+      "confidence": "HIGH",
+      "notes": "AP5 (Anti-Tank I) en impacto directo, leve y grande ángulo; baja a AP4 (Heavy) solo en ángulo extremo. Como el motor de cálculo de este proyecto resuelve el AP de una explosión únicamente con el valor de ángulo directo (ver resolveHit en src/engine/hit.ts), se usa 5 como valor único. Detona al impacto (no tiene fusible temporizado, no se puede cocinar). Granada muy reciente: anunciada en el parche 1.006.003 y agregada en el 1.006.100 (marzo 2026); capacidad de reabastecimiento subida de 1 a 2 en el 1.006.300."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.300", "date": "2026-06-16", "field": "magazine", "from": 1, "to": 2, "note": "Reabastecimiento, no el tope de capacidad base." },
+    { "patch": "1.006.100", "date": "2026-03-17", "field": "added", "from": null, "to": "G-48 Giga Grenade agregada al juego", "note": "Anunciada previamente en el parche 1.006.003 (2026-03-10)." }
+  ]
+}

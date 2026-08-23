@@ -1,0 +1,80 @@
+{
+  "id": "g-7-pineapple",
+  "name": "G-7 Pineapple",
+  "category": "Grenade",
+  "rpm": 30,
+  "magazine": 5,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 0,
+    "confidence": "LOW",
+    "notes": "Las granadas no tienen cadencia de disparo real ni recarga por cargador. 'rpm' (30, equivalente a una tirada cada ~2s) y 'reload.full' (0) son valores de compatibilidad con el esquema de armas de fuego sin significado en el juego real. 'magazine' = 5 es la capacidad máxima documentada por la wiki (empieza en 4, reabastece 3, subido desde tope 4 en el parche 1.006.300). 'clipSize' y 'partial' quedan en null: no hay cargador parcial, solo reabastecimiento en punto de suministro."
+  },
+  "source": {
+    "name": "Helldivers Wiki — G-7 Pineapple",
+    "url": "https://helldivers.wiki.gg/wiki/G-7_Pineapple",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "explosion",
+      "label": "Explosión principal",
+      "internalName": "G-7 PINEAPPLE E",
+      "kind": "explosion",
+      "standard": 300,
+      "durable": null,
+      "ap": 3,
+      "triggersExplosion": null,
+      "radiusInner": 4,
+      "radiusOuter": 10,
+      "radiusShockwave": 14,
+      "shrapnel": { "count": 18, "attackId": "bomblet" },
+      "demolition": 30,
+      "stagger": 25,
+      "push": 40,
+      "confidence": "HIGH",
+      "notes": "Granada de fragmentación en racimo: la carga principal expulsa 18 submuniciones ('bomblets')."
+    },
+    {
+      "id": "bomblet",
+      "label": "Submunición (bomblet)",
+      "internalName": "CLUSTER_BOMB_P",
+      "kind": "projectile",
+      "standard": 300,
+      "durable": 300,
+      "ap": [3, 0, 0, 0],
+      "triggersExplosion": "bomblet-explosion",
+      "demolition": 30,
+      "stagger": 25,
+      "push": 40,
+      "confidence": "MEDIUM",
+      "notes": "AP documentado solo como Medium (3) en impacto directo; ángulos leve/grande/extremo caen a Unarmored (0), a diferencia del patrón habitual de metralla [3,3,2,0]. Cada bomblet, al impactar, dispara una explosión secundaria propia (ver 'bomblet-explosion')."
+    },
+    {
+      "id": "bomblet-explosion",
+      "label": "Explosión secundaria de bomblet",
+      "internalName": "CLUSTER_BOMB_P_IE",
+      "kind": "explosion",
+      "standard": 100,
+      "durable": null,
+      "ap": 3,
+      "triggersExplosion": null,
+      "radiusInner": null,
+      "radiusOuter": 5,
+      "radiusShockwave": null,
+      "demolition": 20,
+      "stagger": 25,
+      "push": 40,
+      "confidence": "MEDIUM",
+      "notes": "Solo se documentó el radio exterior (5 m); la wiki no distingue un radio interior ni de onda expansiva separados para esta sub-explosión. Con 18 bomblets, el daño potencial total de esta capa es de hasta 1800 si todos impactan e imponen su explosión secundaria."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.300", "date": "2026-06-16", "field": "magazine", "from": 4, "to": 5, "note": "Inicial 3→4, reabastecimiento 2→3." },
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "bomblet.shrapnel_count", "from": 7, "to": 18, "note": "También mejoró el daño de las explosiones secundarias." }
+  ]
+}

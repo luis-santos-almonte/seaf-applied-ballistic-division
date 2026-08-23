@@ -1,0 +1,41 @@
+{
+  "id": "r40k-hot-shot-marksman-rifle",
+  "name": "R/40-K Hot-Shot Marksman Rifle",
+  "category": "Primary Weapon",
+  "rpm": 210,
+  "magazine": 12,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 2.9,
+    "confidence": "HIGH",
+    "notes": null
+  },
+  "source": {
+    "name": "Helldivers Wiki — R/40-K Hot-Shot Marksman Rifle",
+    "url": "https://helldivers.wiki.gg/wiki/R/40-K_Hot-Shot_Marksman_Rifle",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "R/40-K P",
+      "kind": "projectile",
+      "standard": 275,
+      "durable": 40,
+      "ap": [3, 3, 3, 0],
+      "demolition": 10,
+      "stagger": 20,
+      "push": 14,
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": [
+    { "patch": "1.007.000", "date": "2026-08-12", "field": "weapon", "from": null, "to": null, "note": "Agregada al juego." }
+  ]
+}

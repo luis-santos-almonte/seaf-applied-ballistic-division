@@ -1,0 +1,39 @@
+{
+  "id": "sg225-breaker",
+  "name": "SG-225 Breaker",
+  "category": "Primary Weapon",
+  "rpm": 300,
+  "magazine": 16,
+  "reload": {
+    "clipSize": null,
+    "partial": 1.75,
+    "full": 2.5,
+    "confidence": "HIGH",
+    "notes": null
+  },
+  "source": {
+    "name": "Helldivers Wiki — SG-225 Breaker",
+    "url": "https://helldivers.wiki.gg/wiki/SG-225_Breaker",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "pellet",
+      "label": "Perdigón",
+      "internalName": "12g BUCKSHOT P",
+      "kind": "projectile",
+      "standard": 30,
+      "durable": 6,
+      "ap": [2, 2, 2, 0],
+      "confidence": "HIGH",
+      "notes": "11 perdigones por cartucho. Valores por perdigón individual."
+    }
+  ],
+  "history": [
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "magazine", "from": 13, "to": 16, "note": "Stagger también subió a 15." },
+    { "patch": "1.000.100", "date": "2024-03-06", "field": "magazine", "from": 16, "to": 13, "note": "Recoil subió a 55." }
+  ]
+}

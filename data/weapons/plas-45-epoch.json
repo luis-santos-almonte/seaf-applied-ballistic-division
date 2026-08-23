@@ -1,0 +1,89 @@
+{
+  "id": "plas-45-epoch",
+  "name": "PLAS-45 Epoch",
+  "category": "Support Weapon",
+  "rpm": 600,
+  "magazine": 3,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 4.65,
+    "confidence": "HIGH",
+    "notes": "Cargador de 3 proyectiles de plasma; se recarga entero. 4 cargadores de repuesto."
+  },
+  "source": {
+    "name": "Helldivers Wiki — PLAS-45 Epoch",
+    "url": "https://helldivers.wiki.gg/wiki/PLAS-45_Epoch",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "uncharged-projectile",
+      "label": "Disparo sin cargar · proyectil",
+      "internalName": "LARGE PLASMA BOLT P1",
+      "kind": "projectile",
+      "standard": 400,
+      "durable": 200,
+      "ap": 4,
+      "triggersExplosion": "uncharged-explosion",
+      "demolition": 10,
+      "stagger": 30,
+      "push": 15,
+      "confidence": "HIGH",
+      "notes": "AP Heavy uniforme. Disparo instantáneo sin mantener el gatillo."
+    },
+    {
+      "id": "uncharged-explosion",
+      "label": "Disparo sin cargar · explosión",
+      "internalName": "Explosion P1",
+      "kind": "explosion",
+      "standard": 500,
+      "durable": 500,
+      "ap": 4,
+      "radiusOuter": 3,
+      "demolition": 10,
+      "stagger": 20,
+      "push": 7,
+      "confidence": "HIGH",
+      "notes": "AP Heavy."
+    },
+    {
+      "id": "charged-projectile",
+      "label": "Disparo cargado · proyectil",
+      "internalName": "LARGE PLASMA BOLT P2",
+      "kind": "projectile",
+      "standard": 800,
+      "durable": 400,
+      "ap": 5,
+      "triggersExplosion": "charged-explosion",
+      "demolition": 30,
+      "stagger": 30,
+      "push": 15,
+      "confidence": "HIGH",
+      "notes": "AP Anti-Tank I uniforme. Requiere mantener el gatillo para cargar antes de disparar."
+    },
+    {
+      "id": "charged-explosion",
+      "label": "Disparo cargado · explosión",
+      "internalName": "Explosion P2",
+      "kind": "explosion",
+      "standard": 800,
+      "durable": 800,
+      "ap": 5,
+      "radiusOuter": 4,
+      "demolition": 30,
+      "stagger": 35,
+      "push": 30,
+      "confidence": "HIGH",
+      "notes": "AP Anti-Tank I."
+    }
+  ],
+  "history": [
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "uncharged-explosion.standard", "from": 400, "to": 500, "note": "Demolición del disparo cargado 10→30." },
+    { "patch": "1.003.202", "date": "2025-08-05", "field": "spread", "from": "150/100 mrad", "to": "30/30 mrad", "note": "Reducción de dispersión del 75%." },
+    { "patch": "1.003.201", "date": "2025-07-17", "field": "release", "from": null, "to": "arma agregada al juego vía Control Group Premium Warbond", "note": null }
+  ]
+}

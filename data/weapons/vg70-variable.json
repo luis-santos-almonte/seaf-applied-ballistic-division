@@ -1,0 +1,39 @@
+{
+  "id": "vg70-variable",
+  "name": "VG-70 Variable",
+  "category": "Primary Weapon",
+  "rpm": 750,
+  "magazine": 49,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 3.58,
+    "confidence": "HIGH",
+    "notes": "La recarga táctica ('tactical reload') reportada es idéntica a la completa (3.58s), por eso se deja 'partial' en null en vez de duplicar el valor."
+  },
+  "source": {
+    "name": "Helldivers Wiki — VG-70 Variable",
+    "url": "https://helldivers.wiki.gg/wiki/VG-70_Variable",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "VG-70 P",
+      "kind": "projectile",
+      "standard": 85,
+      "durable": 23,
+      "ap": [2, 2, 2, 0],
+      "confidence": "MEDIUM",
+      "notes": "El arma tiene un selector de cadencia en modo Auto (300/550/750 rpm) sin cambio de daño por disparo; se modela con 750 rpm (cadencia máxima). También tiene modos Volley (ráfaga fija) y Total (vacía el cargador), que no cambian el daño por proyectil."
+    }
+  ],
+  "history": [
+    { "patch": "1.005.000", "date": "2025-12-02", "field": "projectile.durable", "from": 20, "to": 23, "note": null },
+    { "patch": "1.003.201", "date": "2025-07-17", "field": "weapon", "from": null, "to": null, "note": "Agregada al juego." }
+  ]
+}

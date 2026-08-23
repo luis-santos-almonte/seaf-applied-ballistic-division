@@ -1,0 +1,54 @@
+{
+  "id": "p-33-missile-pistol",
+  "name": "P-33 Missile Pistol",
+  "category": "Secondary Weapon",
+  "rpm": 60,
+  "magazine": 1,
+  "reload": {
+    "clipSize": 1,
+    "partial": null,
+    "full": 3.2,
+    "confidence": "LOW",
+    "notes": "La wiki no publica un tiempo de recarga en segundos para esta arma. Estimado en 3.2 s por ser el proyectil más pesado y de mayor retroceso (313) de las pistolas-lanzacohetes de esta división."
+  },
+  "source": {
+    "name": "Helldivers Wiki — P-33 Missile Pistol",
+    "url": "https://helldivers.wiki.gg/wiki/P-33_Missile_Pistol",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "proyectil",
+      "label": "Proyectil (misil guiado)",
+      "internalName": "Guided_P",
+      "kind": "projectile",
+      "standard": 1000,
+      "durable": 1000,
+      "ap": [5, 5, 5, 0],
+      "triggersExplosion": "explosion",
+      "confidence": "HIGH",
+      "notes": "Firing modes: Guided / Non-Guided. El proyectil puede autoguiarse hacia el objetivo marcado."
+    },
+    {
+      "id": "explosion",
+      "label": "Explosión",
+      "internalName": "Guided_P_IE",
+      "kind": "explosion",
+      "standard": 300,
+      "durable": 300,
+      "ap": 3,
+      "radiusInner": 2,
+      "radiusOuter": 4,
+      "radiusShockwave": 12,
+      "demolition": 30,
+      "stagger": 40,
+      "push": 40,
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": []
+}

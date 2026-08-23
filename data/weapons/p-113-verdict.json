@@ -1,0 +1,36 @@
+{
+  "id": "p-113-verdict",
+  "name": "P-113 Verdict",
+  "category": "Secondary Weapon",
+  "rpm": 450,
+  "magazine": 10,
+  "reload": {
+    "clipSize": 10,
+    "partial": null,
+    "full": 2.0,
+    "confidence": "LOW",
+    "notes": "La wiki no publica un tiempo de recarga en segundos para esta arma. Estimado en 2.0 s por analogía con pistolas de calibre similar (P-2 Peacemaker 1.8s, P-19 Redeemer 2.1s), ajustado hacia arriba por su cartucho más pesado."
+  },
+  "source": {
+    "name": "Helldivers Wiki — P-113 Verdict",
+    "url": "https://helldivers.wiki.gg/wiki/P-113_Verdict",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "proyectil",
+      "label": "Proyectil",
+      "internalName": "12x25mm FULL METAL JACKET P",
+      "kind": "projectile",
+      "standard": 140,
+      "durable": 32,
+      "ap": [3, 3, 3, 0],
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": []
+}

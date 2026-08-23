@@ -1,0 +1,63 @@
+{
+  "id": "g-142-pyrotech",
+  "name": "G-142 Pyrotech",
+  "category": "Grenade",
+  "rpm": 30,
+  "magazine": 6,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 0,
+    "confidence": "LOW",
+    "notes": "Las granadas no tienen cadencia de disparo real ni recarga por cargador. 'rpm' (30, equivalente a una tirada cada ~2s) y 'reload.full' (0) son valores de compatibilidad con el esquema de armas de fuego sin significado en el juego real. 'magazine' = 6 es la capacidad máxima documentada por la wiki (empieza en 4, reabastece 3). 'clipSize' y 'partial' quedan en null: no hay cargador parcial, solo reabastecimiento en punto de suministro."
+  },
+  "source": {
+    "name": "Helldivers Wiki — G-142 Pyrotech",
+    "url": "https://helldivers.wiki.gg/wiki/G-142_Pyrotech",
+    "dateChecked": "2026-08-22",
+    "confidence": "MEDIUM",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "explosion",
+      "label": "Explosión",
+      "internalName": "G-142 PYROTECH E",
+      "kind": "explosion",
+      "standard": 50,
+      "durable": null,
+      "ap": 3,
+      "triggersExplosion": null,
+      "radiusInner": 2.5,
+      "radiusOuter": 5,
+      "radiusShockwave": 7,
+      "demolition": 30,
+      "stagger": 50,
+      "push": 40,
+      "confidence": "MEDIUM",
+      "notes": "AP3 (Medium), confirmado por ícono Armor_AP3_Icon. Daño de la explosión en sí es bajo (50): su función principal es rociar fuego (ver 'fire-spray'). Fusible no cocinable de 2.9 s. Agregada en el parche 1.003.000."
+    },
+    {
+      "id": "fire-spray",
+      "label": "Rociado de fuego (daño por tiempo)",
+      "internalName": "G-142 PYROTECH S",
+      "kind": "explosion",
+      "standard": 100,
+      "durable": null,
+      "ap": 7,
+      "triggersExplosion": null,
+      "radiusInner": null,
+      "radiusOuter": null,
+      "radiusShockwave": null,
+      "demolition": 10,
+      "stagger": 5,
+      "push": 5,
+      "confidence": "MEDIUM",
+      "notes": "AP7 (Anti-Tank III), muy superior al AP3 de la explosión: el rociado de fuego perfora objetivos fuertemente blindados. 100 de daño por tick durante 3 s de contacto directo, más un fuego remanente de ~20 daño/s durante 6 s adicionales en el suelo tras la detonación. La wiki no separa estos dos sub-efectos (tick directo vs. fuego remanente) en filas distintas, así que se documentan juntos en 'notes' y se usa el valor de tick (100) como 'standard'."
+    }
+  ],
+  "history": [
+    { "patch": "1.003.000", "date": "2025-05-13", "field": "added", "from": null, "to": "G-142 Pyrotech agregada al juego", "note": null }
+  ]
+}

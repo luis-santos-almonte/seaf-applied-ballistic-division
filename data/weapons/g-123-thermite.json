@@ -1,0 +1,64 @@
+{
+  "id": "g-123-thermite",
+  "name": "G-123 Thermite",
+  "category": "Grenade",
+  "rpm": 30,
+  "magazine": 3,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 0,
+    "confidence": "LOW",
+    "notes": "Las granadas no tienen cadencia de disparo real ni recarga por cargador. 'rpm' (30, equivalente a una tirada cada ~2s) y 'reload.full' (0) son valores de compatibilidad con el esquema de armas de fuego sin significado en el juego real. 'magazine' = 3 es la capacidad máxima documentada por la wiki (bajada de 4 a 3 en el parche 1.001.100 al subir mucho el daño). 'clipSize' y 'partial' quedan en null: no hay cargador parcial, solo reabastecimiento en punto de suministro."
+  },
+  "source": {
+    "name": "Helldivers Wiki — G-123 Thermite",
+    "url": "https://helldivers.wiki.gg/wiki/G-123_Thermite",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": "El infobox etiqueta la penetración de la explosión como 'Tank III' (ícono Armor_AV7_Icon) mientras que el resto de la wiki llama 'Anti-Tank III' al mismo nivel numérico (AP7, ver página Armor_Penetration). Se asume que es la misma categoría con una etiqueta inconsistente y se usa el número 7 en ambos casos."
+  },
+  "attacks": [
+    {
+      "id": "explosion",
+      "label": "Explosión",
+      "internalName": "G-123 THERMITE E",
+      "kind": "explosion",
+      "standard": 2000,
+      "durable": null,
+      "ap": 7,
+      "triggersExplosion": null,
+      "radiusInner": 1.5,
+      "radiusOuter": 2.5,
+      "radiusShockwave": 4,
+      "demolition": 30,
+      "stagger": 20,
+      "push": 40,
+      "confidence": "HIGH",
+      "notes": "AP7 (Anti-Tank III / 'Tank III' en el infobox). Granada pegajosa con púas: se adhiere a superficies y objetivos. Fusible de 2.9 s, se puede cocinar sin afectar la adherencia. Radio interior muy pequeño (1.5 m) porque su función es concentrar daño en un punto, no barrer un área."
+    },
+    {
+      "id": "thermite-burn",
+      "label": "Quemadura de termita (daño por tiempo)",
+      "internalName": "G-123 THERMITE BURN",
+      "kind": "explosion",
+      "standard": 150,
+      "durable": null,
+      "ap": 7,
+      "triggersExplosion": null,
+      "radiusInner": null,
+      "radiusOuter": null,
+      "radiusShockwave": null,
+      "demolition": 10,
+      "stagger": 0,
+      "push": 0,
+      "confidence": "HIGH",
+      "notes": "150 de daño por segundo durante 6.5 s tras adherirse (subido de 50 a 100 en el parche 1.003.000; el valor actual documentado es 150/s). AP7, igual que la explosión. La suma explosión + quemadura (2000 + 150×6.5 = 2975) coincide exactamente con el 'daño potencial total' que documenta la wiki, lo que confirma que estos dos componentes son los únicos reales. Una extracción preliminar mencionó además un supuesto tercer componente de 'fuego, 100 por tick' con AP4, pero no aparece reflejado en ese total documentado por la wiki y se descartó por posible confusión con el mecanismo de fuego de otras granadas incendiarias (G-10/G-13)."
+    }
+  ],
+  "history": [
+    { "patch": "1.003.000", "date": "2025-05-13", "field": "thermite-burn.standard", "from": 50, "to": 100, "note": "Documentado más tarde en 150/s tras ajustes posteriores no desglosados por parche." },
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "explosion.standard", "from": 100, "to": 2000, "note": "También bajó la capacidad de 4 a 3." }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "p-92-warrant",
+  "name": "P-92 Warrant",
+  "category": "Secondary Weapon",
+  "rpm": 450,
+  "magazine": 13,
+  "reload": {
+    "clipSize": 13,
+    "partial": null,
+    "full": 2.0,
+    "confidence": "LOW",
+    "notes": "La wiki no publica un tiempo de recarga en segundos para esta arma. Estimado en 2.0 s por analogía con la P-113 Verdict (mismo fire_rate de 450 rpm y clase de arma comparable)."
+  },
+  "source": {
+    "name": "Helldivers Wiki — P-92 Warrant",
+    "url": "https://helldivers.wiki.gg/wiki/P-92_Warrant",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "proyectil",
+      "label": "Proyectil (autoguiado)",
+      "internalName": null,
+      "kind": "projectile",
+      "standard": 80,
+      "durable": 20,
+      "ap": [3, 3, 3, 0],
+      "demolition": 10,
+      "stagger": 15,
+      "push": 10,
+      "confidence": "HIGH",
+      "notes": "Firing modes: Guided / Non-Guided. Comprado en la Superstore, no en warbonds."
+    }
+  ],
+  "history": []
+}

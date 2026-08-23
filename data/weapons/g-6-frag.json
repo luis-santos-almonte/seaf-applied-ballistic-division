@@ -1,0 +1,64 @@
+{
+  "id": "g-6-frag",
+  "name": "G-6 Frag",
+  "category": "Grenade",
+  "rpm": 30,
+  "magazine": 6,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 0,
+    "confidence": "LOW",
+    "notes": "Las granadas no tienen cadencia de disparo real ni recarga por cargador. 'rpm' (30, equivalente a una tirada cada ~2s) y 'reload.full' (0) son valores de compatibilidad con el esquema de armas de fuego sin significado en el juego real: no interpretar como cadencia de lanzamiento ni tiempo de recarga verdaderos. 'magazine' = 6 es la capacidad máxima de granadas que documenta la wiki (parche 1.004.100 la subió de 5 a 6; se reabastecen 4 por punto de suministro). 'clipSize' y 'partial' quedan en null porque no existe concepto de cargador parcial para una granada: solo se repone en un punto de reabastecimiento o mochila de munición."
+  },
+  "source": {
+    "name": "Helldivers Wiki — G-6 Frag",
+    "url": "https://helldivers.wiki.gg/wiki/G-6_Frag",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "explosion",
+      "label": "Explosión",
+      "internalName": "G-6 FRAG E",
+      "kind": "explosion",
+      "standard": 500,
+      "durable": null,
+      "ap": 3,
+      "triggersExplosion": null,
+      "radiusInner": 4,
+      "radiusOuter": 10,
+      "radiusShockwave": 14,
+      "shrapnel": { "count": 35, "attackId": "shrapnel" },
+      "demolition": 20,
+      "stagger": 25,
+      "push": 40,
+      "confidence": "HIGH",
+      "notes": "AP3 (Medio), confirmado por el ícono Armor_AP3_Icon del infobox. Daño doblado de 250 a 500 en el parche 1.001.104."
+    },
+    {
+      "id": "shrapnel",
+      "label": "Fragmento de metralla",
+      "internalName": "SHRAPNEL P",
+      "kind": "projectile",
+      "standard": 110,
+      "durable": 35,
+      "ap": [3, 3, 2, 0],
+      "triggersExplosion": null,
+      "demolition": 10,
+      "stagger": 10,
+      "push": 20,
+      "confidence": "HIGH",
+      "notes": "35 fragmentos por granada (subido de 25 a 35 en parches sucesivos). Los valores de daño y AP por ángulo coinciden exactamente con el fragmento 'SHRAPNEL P' del AC-8 Autocannon (data/weapons/ac8-autocannon.json), lo que sugiere que ambas armas reutilizan la misma entidad de metralla interna del juego."
+    }
+  ],
+  "history": [
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "magazine", "from": 5, "to": 6, "note": null },
+    { "patch": "1.003.000", "date": "2025-05-13", "field": "shrapnel.count", "from": 25, "to": 35, "note": "También bajó la penetración en ángulo grande de Medium a Light." },
+    { "patch": "1.001.104", "date": "2024-10-15", "field": "explosion.standard", "from": 250, "to": 500, "note": null },
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "shrapnel.standard", "from": null, "to": 110, "note": "Daño de metralla subido ~50% y radio ampliado; capacidad subida a 5." }
+  ]
+}

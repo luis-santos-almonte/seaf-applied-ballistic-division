@@ -1,0 +1,59 @@
+{
+  "id": "flam-40-flamethrower",
+  "name": "FLAM-40 Flamethrower",
+  "category": "Support Weapon",
+  "rpm": 1200,
+  "magazine": 150,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 3.5,
+    "confidence": "LOW",
+    "notes": "La wiki no publica RPM ni tiempo de recarga explícitos (solo aclara que la recarga tarda lo mismo sin importar cuánto combustible quede). rpm=1200 (20 impactos/seg) es una estimación de la tasa de tick del chorro de llama, típica de armas de fuego continuo en este motor, para que standard×rpm/60 se aproxime al DPS de contacto documentado en otras fuentes. reload.full=3.5 s es una estimación por analogía con armas de munición continua similares (Stalwart, Sterilizer). Ambos valores requieren verificación manual."
+  },
+  "source": {
+    "name": "Helldivers Wiki — FLAM-40 Flamethrower",
+    "url": "https://helldivers.wiki.gg/wiki/FLAM-40_Flamethrower",
+    "dateChecked": "2026-08-22",
+    "confidence": "LOW",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "direct-spray",
+      "label": "Chorro directo",
+      "internalName": "FLAM-40 FLAMETHROWER S",
+      "kind": "projectile",
+      "standard": 2,
+      "durable": 2,
+      "ap": 4,
+      "triggersExplosion": null,
+      "demolition": null,
+      "stagger": 5,
+      "push": 5,
+      "confidence": "MEDIUM",
+      "notes": "AP Heavy uniforme según la wiki (no desglosada por ángulo para este ataque). Aplica los efectos 'Fire' (3 s), 'FlamerSlowed' y 'Fire_Panic'."
+    },
+    {
+      "id": "burn-tick",
+      "label": "Quemadura (daño sostenido)",
+      "internalName": "Fire",
+      "kind": "projectile",
+      "standard": 100,
+      "durable": 100,
+      "ap": [4, 4, 4, 0],
+      "triggersExplosion": null,
+      "demolition": 0,
+      "stagger": null,
+      "push": null,
+      "confidence": "MEDIUM",
+      "notes": "Representa el daño por quemadura aplicado tras el contacto directo (efecto de estado 'Fire', ~3 s de duración); no es una explosión disparada por el chorro sino un efecto de estado aparte, por eso no usa triggersExplosion."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.100", "date": "2026-03-17", "field": "status", "from": null, "to": "el fuego ahora ralentiza y confunde", "note": null },
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "magazine", "from": 130, "to": 150, "note": "Cargador inicial 2→3, repuestos 4→5." },
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "ap", "from": "Medium", "to": "Heavy", "note": "Daño +33%." }
+  ]
+}

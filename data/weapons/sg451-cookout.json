@@ -1,0 +1,39 @@
+{
+  "id": "sg451-cookout",
+  "name": "SG-451 Cookout",
+  "category": "Primary Weapon",
+  "rpm": 80,
+  "magazine": 16,
+  "reload": {
+    "clipSize": 1,
+    "partial": 0.4,
+    "full": 6.4,
+    "confidence": "MEDIUM",
+    "notes": "Carga cartucho por cartucho; la wiki no da un tiempo numérico exacto pero comparte cuerpo/animación de recarga con SG-8 Punisher y SG-8S Slugger (16 cartuchos). Se usa la proporción confirmada en SG-8S Slugger (6.4s / 16 = 0.4s por cartucho)."
+  },
+  "source": {
+    "name": "Helldivers Wiki — SG-451 Cookout",
+    "url": "https://helldivers.wiki.gg/wiki/SG-451_Cookout",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "pellet",
+      "label": "Perdigón",
+      "internalName": "SG-451 P",
+      "kind": "projectile",
+      "standard": 16,
+      "durable": 3,
+      "ap": [2, 2, 2, 0],
+      "confidence": "HIGH",
+      "notes": "20 perdigones por cartucho. Además aplica una quemadura (Fire DoT): 100 de daño standard y durable, 3s de duración. No se modela como ataque aparte por ser un efecto de estado."
+    }
+  ],
+  "history": [
+    { "patch": "1.003.000", "date": "2025-05-13", "field": "fireDot.standard", "from": 50, "to": 100, "note": "Fuerza de estado bajó de 100 a 0.6." },
+    { "patch": "1.001.002", "date": "2024-08-06", "field": "weapon", "from": null, "to": null, "note": "Agregada al juego." }
+  ]
+}

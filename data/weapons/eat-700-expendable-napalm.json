@@ -1,0 +1,91 @@
+{
+  "id": "eat-700-expendable-napalm",
+  "name": "EAT-700 Expendable Napalm",
+  "category": "Support Weapon",
+  "rpm": 600,
+  "magazine": 1,
+  "reload": {
+    "clipSize": 1,
+    "partial": null,
+    "full": 0,
+    "confidence": "MEDIUM",
+    "notes": "Lanzador desechable de un solo disparo (familia EAT) que dispara un misil con bombas de racimo de napalm. No existe ciclo de recarga; se agota y se descarta tras el único disparo."
+  },
+  "source": {
+    "name": "Helldivers Wiki — EAT-700 Expendable Napalm",
+    "url": "https://helldivers.wiki.gg/wiki/EAT-700_Expendable_Napalm",
+    "dateChecked": "2026-08-22",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "main-projectile",
+      "label": "Misil de napalm · proyectil",
+      "internalName": "EAT-700 P",
+      "kind": "projectile",
+      "standard": 500,
+      "durable": 500,
+      "ap": [3, 3, 3, 0],
+      "triggersExplosion": "main-explosion",
+      "demolition": 30,
+      "stagger": 50,
+      "push": 25,
+      "confidence": "MEDIUM",
+      "notes": "AP Medium (0-80°), Unarmored a ángulo extremo."
+    },
+    {
+      "id": "main-explosion",
+      "label": "Misil de napalm · explosión",
+      "internalName": "EAT-700 P IE",
+      "kind": "explosion",
+      "standard": 250,
+      "durable": 250,
+      "ap": 3,
+      "radiusInner": null,
+      "radiusOuter": 8,
+      "radiusShockwave": null,
+      "demolition": 30,
+      "stagger": 50,
+      "push": 40,
+      "confidence": "MEDIUM",
+      "notes": "Solo se documentó el radio exterior (8m); inner/shockwave no confirmados, se dejan en null."
+    },
+    {
+      "id": "flak-projectile",
+      "label": "Submunición FLAK · proyectil",
+      "internalName": "20mm FLAK ROUNDS P1",
+      "kind": "projectile",
+      "standard": 200,
+      "durable": 200,
+      "ap": 0,
+      "triggersExplosion": "flak-explosion",
+      "demolition": 30,
+      "stagger": 50,
+      "push": 25,
+      "confidence": "MEDIUM",
+      "notes": "Submunición dispersada por el misil principal."
+    },
+    {
+      "id": "flak-explosion",
+      "label": "Submunición FLAK · explosión",
+      "internalName": "20mm FLAK ROUNDS P1 IE",
+      "kind": "explosion",
+      "standard": 50,
+      "durable": 50,
+      "ap": 3,
+      "radiusInner": null,
+      "radiusOuter": 5,
+      "radiusShockwave": null,
+      "demolition": 30,
+      "stagger": 50,
+      "push": 25,
+      "confidence": "MEDIUM",
+      "notes": "Solo se documentó el radio exterior (5m); inner/shockwave no confirmados, se dejan en null."
+    }
+  ],
+  "history": [
+    { "patch": "1.004.000", "date": "2025-09-02", "field": "release", "from": null, "to": "arma agregada al juego vía Dust Devils Premium Warbond", "note": null }
+  ]
+}

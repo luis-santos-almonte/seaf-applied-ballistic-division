@@ -1,0 +1,39 @@
+{
+  "id": "p-2-peacemaker",
+  "name": "P-2 Peacemaker",
+  "category": "Secondary Weapon",
+  "rpm": 900,
+  "magazine": 15,
+  "reload": {
+    "clipSize": 15,
+    "partial": 1.45,
+    "full": 1.8,
+    "confidence": "HIGH",
+    "notes": "reload_time=1.8s, tac_reload_time=1.45s en la infobox de la wiki."
+  },
+  "source": {
+    "name": "Helldivers Wiki — P-2 Peacemaker",
+    "url": "https://helldivers.wiki.gg/wiki/P-2_Peacemaker",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "proyectil",
+      "label": "Proyectil",
+      "internalName": "9x20mm HOLLOW POINT P",
+      "kind": "projectile",
+      "standard": 100,
+      "durable": 32,
+      "ap": [2, 2, 2, 0],
+      "demolition": 10,
+      "stagger": 10,
+      "push": null,
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": []
+}

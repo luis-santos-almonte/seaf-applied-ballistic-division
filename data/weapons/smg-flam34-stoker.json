@@ -1,0 +1,49 @@
+{
+  "id": "smg-flam34-stoker",
+  "name": "SMG/FLAM-34 Stoker",
+  "category": "Primary Weapon",
+  "rpm": 420,
+  "magazine": 45,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 2.8,
+    "confidence": "MEDIUM",
+    "notes": "Corresponde a la recarga del cargador de SMG (45 rondas, modo de disparo principal). El lanzallamas subcañón (capacidad 50 de combustible) tiene su propia recarga que la wiki no reporta con un tiempo numérico; no se modela por separado en este campo."
+  },
+  "source": {
+    "name": "Helldivers Wiki — SMG/FLAM-34 Stoker",
+    "url": "https://helldivers.wiki.gg/wiki/SMG/FLAM-34_Stoker",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "smg-projectile",
+      "label": "SMG · proyectil",
+      "internalName": "12x25mm FULL METAL JACKET P3",
+      "kind": "projectile",
+      "standard": 130,
+      "durable": 30,
+      "ap": 2,
+      "confidence": "MEDIUM",
+      "notes": "AP reportado como valor único (Light, munición de 12mm) sin desglose por ángulo."
+    },
+    {
+      "id": "flamethrower-particle",
+      "label": "Lanzallamas · partícula",
+      "internalName": "Underbarrel SMG/FLAM-34 STOKER 0 S",
+      "kind": "projectile",
+      "standard": 2,
+      "durable": 2,
+      "ap": 4,
+      "confidence": "MEDIUM",
+      "notes": "El impacto directo de cada partícula hace solo 2 de daño; el grueso del daño viene de la quemadura (Fire DoT): 100 de daño standard/durable en 3s, Heavy AP. No se modela como ataque aparte por ser un efecto de estado. AP reportado como valor único sin desglose por ángulo."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.100", "date": "2026-03-17", "field": "weapon", "from": null, "to": null, "note": "Agregada al juego." }
+  ]
+}

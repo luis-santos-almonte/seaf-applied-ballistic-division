@@ -1,0 +1,39 @@
+{
+  "id": "sg97-sweeper",
+  "name": "SG-97 Sweeper",
+  "category": "Primary Weapon",
+  "rpm": 150,
+  "magazine": 7,
+  "reload": {
+    "clipSize": 1,
+    "partial": 0.4,
+    "full": 2.8,
+    "confidence": "LOW",
+    "notes": "Carga cartucho por cartucho; la wiki solo indica que 'una recarga completa desde vacío será más lenta que la de un cargador tradicional', sin cifra numérica. Se estima 0.4s por cartucho (proporción derivada de SG-8S Slugger) y 2.8s para los 7 cartuchos; no confirmado en la fuente."
+  },
+  "source": {
+    "name": "Helldivers Wiki — SG-97 Sweeper",
+    "url": "https://helldivers.wiki.gg/wiki/SG-97_Sweeper",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "pellet",
+      "label": "Perdigón",
+      "internalName": "SG-97 P",
+      "kind": "projectile",
+      "standard": 42,
+      "durable": 11,
+      "ap": [3, 3, 3, 0],
+      "confidence": "HIGH",
+      "notes": "12 perdigones por cartucho. Valores por perdigón individual."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.100", "date": "2026-03-17", "field": "weapon", "from": null, "to": null, "note": "Agregada al juego." },
+    { "patch": "1.006.300", "date": "2026-06-16", "field": "bug", "from": null, "to": null, "note": "Ahora eyecta cartuchos de forma confiable al disparar en modo slam-fire." }
+  ]
+}

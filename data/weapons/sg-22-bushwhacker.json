@@ -1,0 +1,39 @@
+{
+  "id": "sg-22-bushwhacker",
+  "name": "SG-22 Bushwhacker",
+  "category": "Secondary Weapon",
+  "rpm": 650,
+  "magazine": 3,
+  "reload": {
+    "clipSize": 3,
+    "partial": null,
+    "full": 2.5,
+    "confidence": "LOW",
+    "notes": "Escopeta de 3 cañones que recarga un cartucho a la vez, sin descartar los no disparados; cada cartucho gastado hace la recarga progresivamente más larga (mecanismo documentado en prosa por la wiki, sin tiempos en segundos). 'full' (2.5s) estima la recarga completa desde los 3 cañones vacíos, uno por uno; 'partial' se deja en null porque el tiempo real depende de cuántos cañones estén gastados y no hay dato base fiable para un único número."
+  },
+  "source": {
+    "name": "Helldivers Wiki — SG-22 Bushwhacker",
+    "url": "https://helldivers.wiki.gg/wiki/SG-22_Bushwhacker",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "perdigon",
+      "label": "Perdigón",
+      "internalName": "BUCKSTOCK P1",
+      "kind": "projectile",
+      "standard": 45,
+      "durable": 12,
+      "ap": [2, 2, 2, 0],
+      "demolition": 10,
+      "stagger": 35,
+      "push": 30,
+      "confidence": "HIGH",
+      "notes": "Valor de daño POR PERDIGÓN. Cada disparo normal ('Semi') dispara un cañón con 9 perdigones (máximo 405 de daño si todos impactan); el modo 'All Barrel' dispara los 3 cañones a la vez (27 perdigones, hasta 1215). Esta ficha no multiplica por perdigones: la calculadora debe aplicar ese factor según el modo de disparo elegido."
+    }
+  ],
+  "history": []
+}

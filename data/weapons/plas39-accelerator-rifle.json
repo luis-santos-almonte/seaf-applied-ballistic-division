@@ -1,0 +1,54 @@
+{
+  "id": "plas39-accelerator-rifle",
+  "name": "PLAS-39 Accelerator Rifle",
+  "category": "Primary Weapon",
+  "rpm": 550,
+  "magazine": 9,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 2.5,
+    "confidence": "LOW",
+    "notes": "La wiki no reporta un tiempo de recarga numérico para esta arma. Se estima 2.5s por comparación con otras armas de plasma de la misma familia (PLAS-1 Scorcher, PLAS-101 Purifier); no confirmado en la fuente."
+  },
+  "source": {
+    "name": "Helldivers Wiki — PLAS-39 Accelerator Rifle",
+    "url": "https://helldivers.wiki.gg/wiki/PLAS-39_Accelerator_Rifle",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "*MEDIUM PLASMA BOLT P1",
+      "kind": "projectile",
+      "standard": 250,
+      "durable": 125,
+      "ap": [3, 3, 3, 0],
+      "triggersExplosion": "explosion",
+      "confidence": "HIGH",
+      "notes": null
+    },
+    {
+      "id": "explosion",
+      "label": "Explosión",
+      "internalName": "*MEDIUM PLASMA BOLT P1 IE",
+      "kind": "explosion",
+      "standard": 100,
+      "durable": 100,
+      "ap": 3,
+      "radiusInner": 1,
+      "radiusOuter": 2,
+      "radiusShockwave": 2,
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": [
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "magazine.spare", "from": 8, "to": 12, "note": "Cargadores de reserva; ergonomía subió de 40 a 60." },
+    { "patch": "1.003.000", "date": "2025-05-13", "field": "category", "from": "ballistic", "to": "energy", "note": "Recategorizada como arma de energía; drag bajó de 150% a 10%." }
+  ]
+}

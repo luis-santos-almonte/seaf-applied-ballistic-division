@@ -1,0 +1,65 @@
+{
+  "id": "g-31-arc",
+  "name": "G-31 Arc",
+  "category": "Grenade",
+  "rpm": 30,
+  "magazine": 5,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 0,
+    "confidence": "LOW",
+    "notes": "Las granadas no tienen cadencia de disparo real ni recarga por cargador. 'rpm' (30, equivalente a una tirada cada ~2s) y 'reload.full' (0) son valores de compatibilidad con el esquema de armas de fuego sin significado en el juego real. 'magazine' = 5 es la capacidad máxima documentada por la wiki (empieza en 4, reabastece 3; subida de tope 4 a 5 en el parche 1.006.001). 'clipSize' y 'partial' quedan en null: no hay cargador parcial, solo reabastecimiento en punto de suministro."
+  },
+  "source": {
+    "name": "Helldivers Wiki — G-31 Arc",
+    "url": "https://helldivers.wiki.gg/wiki/G-31_Arc",
+    "dateChecked": "2026-08-22",
+    "confidence": "MEDIUM",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "explosion",
+      "label": "Detonación inicial (sin daño, define área)",
+      "internalName": "G-31 ARC E",
+      "kind": "explosion",
+      "standard": 0,
+      "durable": null,
+      "ap": 4,
+      "triggersExplosion": null,
+      "radiusInner": 1,
+      "radiusOuter": 10,
+      "radiusShockwave": 15,
+      "demolition": 20,
+      "stagger": 35,
+      "push": 10,
+      "confidence": "HIGH",
+      "notes": "La detonación inicial en sí inflige 0 de daño (confirmado explícitamente en la tabla de la wiki: 'Inner Radius: 0 Arc'); solo define el área de efecto y aplica un aturdimiento leve (Stun Small, fuerza 8, 1.5 s). Todo el daño real proviene de los arcos eléctricos posteriores (ver 'arc-discharge'). No cocinable, fusible de 3 s tras el impacto."
+    },
+    {
+      "id": "arc-discharge",
+      "label": "Descarga de arco eléctrico",
+      "internalName": "G-31 ARC_E_A",
+      "kind": "explosion",
+      "standard": 100,
+      "durable": null,
+      "ap": 4,
+      "triggersExplosion": null,
+      "radiusInner": null,
+      "radiusOuter": 10,
+      "radiusShockwave": null,
+      "demolition": null,
+      "stagger": null,
+      "push": null,
+      "confidence": "MEDIUM",
+      "notes": "100 de daño AP4 (Heavy) por cada descarga; el dispositivo expulsa arcos un total de 5 veces antes de agotarse (hasta 500 de daño total si los 5 arcos impactan al mismo objetivo), rebotando de forma algo impredecible según el terreno y los enemigos cercanos. El esquema de este catálogo no modela una mecánica de '5 golpes repetidos' de forma nativa: cada descarga se representa aquí como un único evento de 100 de daño, y el usuario del simulador debe multiplicar manualmente por el número de arcos que se asuma que impactan. Fuerzas de demolición/stagger/push no documentadas por separado para la descarga (se dejan en null; los valores de la detonación inicial son los únicos que la wiki reporta con forma explícita)."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.100", "date": "2026-03-17", "field": "magazine.starting", "from": 3, "to": 4, "note": null },
+    { "patch": "1.006.001", "date": "2026-02-03", "field": "magazine", "from": 4, "to": 5, "note": "Tope máximo; inicial también subió de 3 a 4." },
+    { "patch": "1.003.201", "date": "2025-07-17", "field": "added", "from": null, "to": "G-31 Arc agregada al juego", "note": null }
+  ]
+}

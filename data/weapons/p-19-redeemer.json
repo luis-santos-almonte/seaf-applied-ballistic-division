@@ -1,0 +1,39 @@
+{
+  "id": "p-19-redeemer",
+  "name": "P-19 Redeemer",
+  "category": "Secondary Weapon",
+  "rpm": 1100,
+  "magazine": 31,
+  "reload": {
+    "clipSize": 31,
+    "partial": null,
+    "full": 2.1,
+    "confidence": "HIGH",
+    "notes": "Reload Time=2.1s documentado en la wiki; no se documenta una recarga parcial distinta."
+  },
+  "source": {
+    "name": "Helldivers Wiki — P-19 Redeemer",
+    "url": "https://helldivers.wiki.gg/wiki/P-19_Redeemer",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "proyectil",
+      "label": "Proyectil",
+      "internalName": "9x20mm FULL METAL JACKET P1",
+      "kind": "projectile",
+      "standard": 70,
+      "durable": 12,
+      "ap": [2, 2, 2, 0],
+      "demolition": 10,
+      "stagger": 10,
+      "push": null,
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": []
+}

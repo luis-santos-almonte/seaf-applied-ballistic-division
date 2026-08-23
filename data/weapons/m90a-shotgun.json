@@ -1,0 +1,39 @@
+{
+  "id": "m90a-shotgun",
+  "name": "M90A Shotgun",
+  "category": "Primary Weapon",
+  "rpm": 80,
+  "magazine": 6,
+  "reload": {
+    "clipSize": 1,
+    "partial": 0.4,
+    "full": 2.4,
+    "confidence": "LOW",
+    "notes": "Carga cartucho por cartucho (tubular); la wiki no da un tiempo numérico exacto, solo que 'la velocidad de recarga se acerca a su cadencia de disparo'. Se estima 0.4s por cartucho (proporción derivada de SG-8S Slugger: 6.4s / 16 cartuchos) y 2.4s para los 6 cartuchos del cargador completo. No confirmado explícitamente para esta arma."
+  },
+  "source": {
+    "name": "Helldivers Wiki — M90A Shotgun",
+    "url": "https://helldivers.wiki.gg/wiki/M90A_Shotgun",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "pellet",
+      "label": "Perdigón",
+      "internalName": "BUCKSHOT P",
+      "kind": "projectile",
+      "standard": 55,
+      "durable": 20,
+      "ap": [2, 2, 2, 0],
+      "confidence": "HIGH",
+      "notes": "11 perdigones por cartucho. Valores por perdigón individual."
+    }
+  ],
+  "history": [
+    { "patch": "1.005.000", "date": "2025-12-02", "field": "pellet.durable", "from": 15, "to": 20, "note": null },
+    { "patch": "1.003.202", "date": "2025-08-26", "field": "weapon", "from": null, "to": null, "note": "Agregada al juego." }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "id": "r36-eruptor",
+  "name": "R-36 Eruptor",
+  "category": "Primary Weapon",
+  "rpm": 32,
+  "magazine": 5,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 4.67,
+    "confidence": "HIGH",
+    "notes": null
+  },
+  "source": {
+    "name": "Helldivers Wiki — R-36 Eruptor",
+    "url": "https://helldivers.wiki.gg/wiki/R-36_Eruptor",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "15x100mm HIGH EXPLOSIVE P",
+      "kind": "projectile",
+      "standard": 230,
+      "durable": 115,
+      "ap": [4, 4, 4, 0],
+      "triggersExplosion": "explosion",
+      "confidence": "HIGH",
+      "notes": null
+    },
+    {
+      "id": "explosion",
+      "label": "Explosión",
+      "internalName": "15x100mm HIGH EXPLOSIVE_P_IE",
+      "kind": "explosion",
+      "standard": 225,
+      "durable": 225,
+      "ap": 3,
+      "radiusInner": 4,
+      "radiusOuter": 7,
+      "radiusShockwave": 8,
+      "shrapnel": { "count": 30, "attackId": "shrapnel" },
+      "confidence": "HIGH",
+      "notes": null
+    },
+    {
+      "id": "shrapnel",
+      "label": "Fragmento de metralla",
+      "internalName": "SHRAPNEL_P",
+      "kind": "projectile",
+      "standard": 110,
+      "durable": 35,
+      "ap": [3, 3, 2, 0],
+      "confidence": "HIGH",
+      "notes": "Mismos valores exactos que el fragmento de metralla del AC-8 Autocannon (misma entidad SHRAPNEL_P compartida en el juego); se reutiliza su AP por ángulo [3,3,2,0]."
+    }
+  ],
+  "history": [
+    { "patch": "1.003.000", "date": "2025-05-13", "field": "rpm", "from": 25, "to": 32, "note": null },
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "explosion.standard", "from": 350, "to": 225, "note": "Se reintrodujo la metralla (30 fragmentos, 110 de daño) al mismo tiempo que se redujo el daño de la explosión." },
+    { "patch": "1.000.400", "date": "2024-06-13", "field": "totalDamage", "from": null, "to": 570, "note": "Daño total por disparo (proyectil+explosión) subió a 570." }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "mgx-42-bullet-storm",
+  "name": "MGX-42 Bullet Storm",
+  "category": "Support Weapon",
+  "rpm": 1300,
+  "magazine": 300,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 0,
+    "confidence": "HIGH",
+    "notes": "Arma desechable de un solo uso: dispara sus 300 balas caseless a alta cadencia y luego se descarta (no tiene recarga). La estratagema entrega un par de estas armas."
+  },
+  "source": {
+    "name": "Helldivers Wiki — MGX-42 Bullet Storm",
+    "url": "https://helldivers.wiki.gg/wiki/MGX-42_Bullet_Storm",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "MGX-42 P",
+      "kind": "projectile",
+      "standard": 100,
+      "durable": 25,
+      "ap": [2, 2, 2, 0],
+      "demolition": 10,
+      "stagger": 20,
+      "push": 10,
+      "confidence": "HIGH",
+      "notes": "AP Light (0-80°), Unarmored a ángulo extremo. Agregada en el parche 1.006.202 (2026-04-28) vía el Premium Warbond 'Exo Experts'."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.202", "date": "2026-04-28", "field": "release", "from": null, "to": "arma agregada al juego", "note": "Anunciada en el mid-patch 1.006.102 (2026-04-21)." }
+  ]
+}

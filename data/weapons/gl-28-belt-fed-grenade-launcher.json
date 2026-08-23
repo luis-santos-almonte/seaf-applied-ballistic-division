@@ -1,0 +1,60 @@
+{
+  "id": "gl-28-belt-fed-grenade-launcher",
+  "name": "GL-28 Belt-Fed Grenade Launcher",
+  "category": "Support Weapon",
+  "rpm": 320,
+  "magazine": 120,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 0,
+    "confidence": "HIGH",
+    "notes": "Alimentado por cinta continua de 120 granadas; la wiki indica explícitamente que 'no necesita recargarse manualmente como otras armas de mochila'. Se resurte con cajas de suministro/munición, no hay ciclo de recarga tradicional. Cadencia seleccionable entre 160/240/320 rpm; se usa el máximo (320) como valor de referencia."
+  },
+  "source": {
+    "name": "Helldivers Wiki — GL-28 Belt-Fed Grenade Launcher",
+    "url": "https://helldivers.wiki.gg/wiki/GL-28_Belt-Fed_Grenade_Launcher",
+    "dateChecked": "2026-08-22",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "La fuente consultada mezcló las estadísticas de proyectil y explosión en una sola tabla resumida sin separar claramente ambas filas; se modeló como proyectil que dispara una explosión, reutilizando el mismo daño/AP base (150/Heavy) para ambos eventos por falta de una fila separada explícita para el proyectil."
+  },
+  "attacks": [
+    {
+      "id": "he-projectile",
+      "label": "HE · proyectil",
+      "internalName": "40mm HE GRENADE P",
+      "kind": "projectile",
+      "standard": 150,
+      "durable": 150,
+      "ap": [4, 4, 4, 0],
+      "triggersExplosion": "he-explosion",
+      "demolition": 10,
+      "stagger": 30,
+      "push": 10,
+      "confidence": "MEDIUM",
+      "notes": "Ver conflicto de fuente en source.conflict."
+    },
+    {
+      "id": "he-explosion",
+      "label": "HE · explosión",
+      "internalName": "40mm HE GRENADE P IE",
+      "kind": "explosion",
+      "standard": 150,
+      "durable": 150,
+      "ap": [4, 4, 4, 0],
+      "radiusInner": 2,
+      "radiusOuter": 4,
+      "radiusShockwave": 5.5,
+      "demolition": 30,
+      "stagger": 20,
+      "push": 20,
+      "confidence": "MEDIUM",
+      "notes": "Ver conflicto de fuente en source.conflict."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.100", "date": "2026-03-17", "field": "magazine", "from": 100, "to": 120, "note": null },
+    { "patch": "1.006.001", "date": "2026-02-03", "field": "release", "from": null, "to": "agregada al juego", "note": null }
+  ]
+}

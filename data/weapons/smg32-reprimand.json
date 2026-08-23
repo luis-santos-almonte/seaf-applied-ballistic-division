@@ -1,0 +1,40 @@
+{
+  "id": "smg32-reprimand",
+  "name": "SMG-32 Reprimand",
+  "category": "Primary Weapon",
+  "rpm": 490,
+  "magazine": 25,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 3.5,
+    "confidence": "HIGH",
+    "notes": null
+  },
+  "source": {
+    "name": "Helldivers Wiki — SMG-32 Reprimand",
+    "url": "https://helldivers.wiki.gg/wiki/SMG-32_Reprimand",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "12x25mm FULL METAL JACKET P1",
+      "kind": "projectile",
+      "standard": 140,
+      "durable": 32,
+      "ap": [3, 3, 3, 0],
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": [
+    { "patch": "1.005.000", "date": "2025-12-02", "field": "projectile.standard", "from": 135, "to": 140, "note": null },
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "projectile.standard", "from": 125, "to": 135, "note": null },
+    { "patch": "1.001.201", "date": "2024-10-31", "field": "weapon", "from": null, "to": null, "note": "Agregada al juego." }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "cb9-exploding-crossbow",
+  "name": "CB-9 Exploding Crossbow",
+  "category": "Primary Weapon",
+  "rpm": 50,
+  "magazine": 5,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 3.3,
+    "confidence": "MEDIUM",
+    "notes": "La wiki da un único valor de 3.3s para 'recarga completa del cargador'; no queda claro si es por virote o por el cargador completo de 5."
+  },
+  "source": {
+    "name": "Helldivers Wiki — CB-9 Exploding Crossbow",
+    "url": "https://helldivers.wiki.gg/wiki/CB-9_Exploding_Crossbow",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "bolt-projectile",
+      "label": "Virote · proyectil",
+      "internalName": "CB-9 P",
+      "kind": "projectile",
+      "standard": 270,
+      "durable": 50,
+      "ap": 3,
+      "triggersExplosion": "bolt-explosion",
+      "confidence": "MEDIUM",
+      "notes": "AP reportado como valor único (Medium=3) sin desglose por ángulo."
+    },
+    {
+      "id": "bolt-explosion",
+      "label": "Virote · explosión",
+      "internalName": "CB-9 P IE",
+      "kind": "explosion",
+      "standard": 350,
+      "durable": 350,
+      "ap": 3,
+      "radiusInner": 3,
+      "radiusOuter": 6,
+      "radiusShockwave": 7,
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": [
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "bolt-explosion.standard", "from": 150, "to": 350, "note": "Radio de explosión también aumentó 50%." },
+    { "patch": "1.001.002", "date": "2024-08-06", "field": "weapon", "from": null, "to": null, "note": "Cambiada a arma de una mano." }
+  ]
+}

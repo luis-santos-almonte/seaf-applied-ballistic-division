@@ -1,0 +1,59 @@
+{
+  "id": "eat-411-leveller",
+  "name": "EAT-411 Leveller",
+  "category": "Support Weapon",
+  "rpm": 600,
+  "magazine": 1,
+  "reload": {
+    "clipSize": 1,
+    "partial": null,
+    "full": 0,
+    "confidence": "MEDIUM",
+    "notes": "Lanzador desechable de un solo disparo (familia EAT), de área de cobertura grande contra objetivos pesados. No existe ciclo de recarga; se agota y se descarta tras el único disparo."
+  },
+  "source": {
+    "name": "Helldivers Wiki — EAT-411 Leveller",
+    "url": "https://helldivers.wiki.gg/wiki/EAT-411_Leveller",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "EAT-411 P",
+      "kind": "projectile",
+      "standard": 1000,
+      "durable": 1000,
+      "ap": 6,
+      "triggersExplosion": "explosion",
+      "demolition": 40,
+      "stagger": 50,
+      "push": 20,
+      "confidence": "HIGH",
+      "notes": "AP Anti-Tank II uniforme."
+    },
+    {
+      "id": "explosion",
+      "label": "Explosión",
+      "internalName": "EAT-411 P IE",
+      "kind": "explosion",
+      "standard": 2500,
+      "durable": 2500,
+      "ap": 6,
+      "radiusInner": 10,
+      "radiusOuter": 25,
+      "radiusShockwave": 35,
+      "demolition": 40,
+      "stagger": 100,
+      "push": 40,
+      "confidence": "HIGH",
+      "notes": "Radio de explosión muy grande, acorde a su rol de arma de área contra objetivos pesados agrupados."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.001", "date": "2026-02-03", "field": "release", "from": null, "to": "arma agregada al juego vía Siege Breakers Premium Warbond", "note": "Anunciada en 1.005.002 (2026-01-27)." }
+  ]
+}

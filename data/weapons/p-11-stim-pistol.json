@@ -1,0 +1,36 @@
+{
+  "id": "p-11-stim-pistol",
+  "name": "P-11 Stim Pistol",
+  "category": "Secondary Weapon",
+  "rpm": 70,
+  "magazine": 6,
+  "reload": {
+    "clipSize": 6,
+    "partial": null,
+    "full": 1.8,
+    "confidence": "LOW",
+    "notes": "La wiki no publica un tiempo de recarga en segundos para esta arma. Estimado por analogía con la P-2 Peacemaker (pistola de cargador desmontable de tamaño similar)."
+  },
+  "source": {
+    "name": "Helldivers Wiki — P-11 Stim Pistol",
+    "url": "https://helldivers.wiki.gg/wiki/P-11_Stim_Pistol",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "dardo",
+      "label": "Dardo curativo",
+      "internalName": null,
+      "kind": "projectile",
+      "standard": 0,
+      "durable": 0,
+      "ap": 0,
+      "confidence": "HIGH",
+      "notes": "Arma de soporte sin daño ofensivo (0 Ballistic documentado en la wiki): el dardo restaura ~90% de la vida del objetivo en ~4 segundos, equivalente a un estimulante estándar. No participa en cálculos de daño a enemigos; se incluye en el catálogo por completitud ya que es un arma secundaria equipable."
+    }
+  ],
+  "history": []
+}

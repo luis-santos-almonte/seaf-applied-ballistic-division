@@ -1,0 +1,43 @@
+{
+  "id": "mg-206-heavy-machine-gun",
+  "name": "MG-206 Heavy Machine Gun",
+  "category": "Support Weapon",
+  "rpm": 750,
+  "magazine": 100,
+  "reload": {
+    "clipSize": null,
+    "partial": 3.9,
+    "full": 5.5,
+    "confidence": "HIGH",
+    "notes": "Recarga con bala en recámara (táctica) 3.9 s; recarga completa desde vacío 5.5 s. Cadencia seleccionable entre 450/600/750 rpm; se usa el máximo (750) como valor de referencia."
+  },
+  "source": {
+    "name": "Helldivers Wiki — MG-206 Heavy Machine Gun",
+    "url": "https://helldivers.wiki.gg/wiki/MG-206_Heavy_Machine_Gun",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "bchp-projectile",
+      "label": "BCHP · proyectil",
+      "internalName": "12.5mm BCHP RIFLE ROUNDS P",
+      "kind": "projectile",
+      "standard": 150,
+      "durable": 35,
+      "ap": [4, 4, 4, 0],
+      "demolition": 15,
+      "stagger": 25,
+      "push": 20,
+      "confidence": "HIGH",
+      "notes": "AP Heavy (0-80°), Unarmored a ángulo extremo."
+    }
+  ],
+  "history": [
+    { "patch": "1.002.200", "date": "2025-03-18", "field": "bchp-projectile.ap", "from": 3, "to": 4, "note": "AP a ángulo grande mejorado de Medium a Heavy." },
+    { "patch": "1.001.104", "date": "2024-10-15", "field": "magazine", "from": 75, "to": 100, "note": null },
+    { "patch": "1.000.400", "date": "2024-06-13", "field": "bchp-projectile.standard", "from": 100, "to": 150, "note": "Cadencias reducidas a 450/600/750; recarga bajada a 5.5s." }
+  ]
+}

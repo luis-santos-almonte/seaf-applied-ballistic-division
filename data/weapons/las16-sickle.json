@@ -1,0 +1,38 @@
+{
+  "id": "las16-sickle",
+  "name": "LAS-16 Sickle",
+  "category": "Primary Weapon",
+  "rpm": 750,
+  "magazine": 87,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 2.83,
+    "confidence": "HIGH",
+    "notes": "Arma de energía con mecánica de calor: capacidad de 7s de disparo continuo (~87 disparos a 750rpm) antes de sobrecalentar. 'Magazine' representa esa cantidad de disparos equivalente. Enfriamiento completo pasivo desde calor máximo: 12.5s (varía con el entorno); 2.83s es el tiempo de cambio de elemento de enfriamiento."
+  },
+  "source": {
+    "name": "Helldivers Wiki — LAS-16 Sickle",
+    "url": "https://helldivers.wiki.gg/wiki/LAS-16_Sickle",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "beam",
+      "label": "Rayo",
+      "internalName": "LASER P",
+      "kind": "projectile",
+      "standard": 60,
+      "durable": 6,
+      "ap": [2, 2, 2, 0],
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": [
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "beam.standard", "from": 55, "to": 60, "note": "Durable subió de 5 a 6." }
+  ]
+}

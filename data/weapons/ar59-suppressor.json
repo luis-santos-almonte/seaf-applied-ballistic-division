@@ -1,0 +1,38 @@
+{
+  "id": "ar59-suppressor",
+  "name": "AR-59 Suppressor",
+  "category": "Primary Weapon",
+  "rpm": 850,
+  "magazine": 45,
+  "reload": {
+    "clipSize": null,
+    "partial": 2,
+    "full": 3,
+    "confidence": "HIGH",
+    "notes": "Cargador extendido de 45. Variante de cargador corto: 2.5s/1.8s (no modelada)."
+  },
+  "source": {
+    "name": "Helldivers Wiki — AR-59 Suppressor",
+    "url": "https://helldivers.wiki.gg/wiki/AR-59_Suppressor",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "5.5x50mm SUBSONIC P",
+      "kind": "projectile",
+      "standard": 80,
+      "durable": 20,
+      "ap": [2, 2, 2, 0],
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": [
+    { "patch": "1.005.002", "date": "2026-01-22", "field": "weapon", "from": null, "to": null, "note": "Agregada al juego." }
+  ]
+}

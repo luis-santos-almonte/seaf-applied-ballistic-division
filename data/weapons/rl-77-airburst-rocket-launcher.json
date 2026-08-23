@@ -1,0 +1,75 @@
+{
+  "id": "rl-77-airburst-rocket-launcher",
+  "name": "RL-77 Airburst Rocket Launcher",
+  "category": "Support Weapon",
+  "rpm": 16,
+  "magazine": 1,
+  "reload": {
+    "clipSize": 1,
+    "partial": null,
+    "full": 3.7,
+    "confidence": "MEDIUM",
+    "notes": "Cadencia práctica ~16 rpm (ritmo cíclico interno documentado de 600 rpm, no alcanzable en uso real de un lanzador de un solo cohete). 1 cohete en el tubo, 5 de repuesto en la mochila."
+  },
+  "source": {
+    "name": "Helldivers Wiki — RL-77 Airburst Rocket Launcher",
+    "url": "https://helldivers.wiki.gg/wiki/RL-77_Airburst_Rocket_Launcher",
+    "dateChecked": "2026-08-22",
+    "confidence": "LOW",
+    "status": "partially_verified",
+    "conflict": "La tabla de ataque de la fuente consultada combina varias filas de submunición (FLAK P2, CLUSTER BOMB P1/P1 IE/P2/P3) sin dejar clara la cadena proyectil→detonación de aire→submunición. Se modela una versión simplificada de 3 eventos (proyectil principal, detonación de aire, submunición dispersa) priorizando los números mejor documentados; se recomienda verificar manualmente contra la wiki en vivo para el árbol completo de submuniciones de esta arma."
+  },
+  "attacks": [
+    {
+      "id": "main-projectile",
+      "label": "Cohete airburst · proyectil principal",
+      "internalName": "20mm FLAK P2",
+      "kind": "projectile",
+      "standard": 350,
+      "durable": 350,
+      "ap": [3, 3, 3, 0],
+      "triggersExplosion": "airburst-detonation",
+      "demolition": 30,
+      "stagger": 50,
+      "push": 40,
+      "confidence": "MEDIUM",
+      "notes": "AP Medium (0-80°), Unarmored a ángulo extremo."
+    },
+    {
+      "id": "airburst-detonation",
+      "label": "Detonación de aire",
+      "internalName": "CLUSTER BOMB P1 IE",
+      "kind": "explosion",
+      "standard": 500,
+      "durable": 500,
+      "ap": 3,
+      "radiusInner": 4,
+      "radiusOuter": 6,
+      "radiusShockwave": 8,
+      "demolition": 20,
+      "stagger": 25,
+      "push": 40,
+      "confidence": "MEDIUM",
+      "notes": "Detonación proximal en el aire que dispersa submuniciones."
+    },
+    {
+      "id": "submunition",
+      "label": "Submunición dispersa",
+      "internalName": "CLUSTER BOMB P3",
+      "kind": "projectile",
+      "standard": 150,
+      "durable": 150,
+      "ap": [3, 3, 3, 0],
+      "demolition": 25,
+      "stagger": 25,
+      "push": 40,
+      "confidence": "LOW",
+      "notes": "No quedó claro si esta submunición dispara a su vez una explosión propia; se modela solo como impacto directo. Ver conflicto de fuente."
+    }
+  ],
+  "history": [
+    { "patch": "1.002.001", "date": "2024-12-13", "field": "firingModes", "from": null, "to": "modo de disparo en racimo agregado", "note": null },
+    { "patch": "1.001.104", "date": "2024-10-15", "field": "reload.full", "from": 7, "to": 5, "note": "Reducido de nuevo posteriormente." },
+    { "patch": "1.000.300", "date": "2024-04-29", "field": "proximity", "from": null, "to": "radio de proximidad reducido; no detona cerca de estratagemas/Helldivers", "note": null }
+  ]
+}

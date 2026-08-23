@@ -1,0 +1,43 @@
+{
+  "id": "tx-41-sterilizer",
+  "name": "TX-41 Sterilizer",
+  "category": "Support Weapon",
+  "rpm": 1200,
+  "magazine": 125,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 3.9,
+    "confidence": "MEDIUM",
+    "notes": "rpm=1200 (20 ticks/seg) es una estimación de la tasa de aplicación del chorro de gas continuo, por analogía con el FLAM-40, ya que la wiki no publica un RPM explícito para armas de chorro continuo. El tiempo de recarga (3.9s) sí está documentado explícitamente."
+  },
+  "source": {
+    "name": "Helldivers Wiki — TX-41 Sterilizer",
+    "url": "https://helldivers.wiki.gg/wiki/TX-41_Sterilizer",
+    "dateChecked": "2026-08-22",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "gas-spray",
+      "label": "Chorro de gas",
+      "internalName": "TX-41 STERILIZER S",
+      "kind": "projectile",
+      "standard": 1,
+      "durable": 1,
+      "ap": [5, 5, 5, 0],
+      "demolition": 5,
+      "stagger": 10,
+      "push": 5,
+      "confidence": "HIGH",
+      "notes": "AP Anti-Tank I (0-80°), Unarmored a ángulo extremo. Aplica los efectos de estado 'Gas_Var2' (10s, ralentiza) y 'Gas_Confusion_Var2' (9s, ceguera/confusión) en vez de dañar directamente; el daño por impacto es mínimo, el arma funciona principalmente como control de masas."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.300", "date": "2026-06-16", "field": "magazine", "from": 100, "to": 125, "note": "Cargadores iniciales 2→3." },
+    { "patch": "1.002.200", "date": "2025-03-18", "field": "ergonomics", "from": 5, "to": 20, "note": null },
+    { "patch": "1.002.101", "date": "2025-02-04", "field": "status.duration", "from": 6, "to": 10, "note": "Duración del efecto de gas aumentada." }
+  ]
+}

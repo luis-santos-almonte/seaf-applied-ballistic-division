@@ -1,0 +1,39 @@
+{
+  "id": "ar23p-liberator-penetrator",
+  "name": "AR-23P Liberator Penetrator",
+  "category": "Primary Weapon",
+  "rpm": 640,
+  "magazine": 45,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 3,
+    "confidence": "HIGH",
+    "notes": "Cifra para el cargador extendido estándar de 45. Existen variantes de recarga para cargador corto (2.5s/1.65s) y de tambor (3.5s/2.3s), no modeladas acá."
+  },
+  "source": {
+    "name": "Helldivers Wiki — AR-23P Liberator Penetrator",
+    "url": "https://helldivers.wiki.gg/wiki/AR-23P_Liberator_Penetrator",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "5.5x50mm PENETRATOR P",
+      "kind": "projectile",
+      "standard": 65,
+      "durable": 15,
+      "ap": [3, 3, 3, 0],
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": [
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "projectile.standard", "from": 60, "to": 65, "note": null },
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "projectile.standard", "from": 45, "to": 60, "note": null }
+  ]
+}

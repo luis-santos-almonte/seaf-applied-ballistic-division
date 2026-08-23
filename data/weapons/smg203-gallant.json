@@ -1,0 +1,38 @@
+{
+  "id": "smg203-gallant",
+  "name": "SMG-203 Gallant",
+  "category": "Primary Weapon",
+  "rpm": 1380,
+  "magazine": 50,
+  "reload": {
+    "clipSize": null,
+    "partial": 1.7,
+    "full": 2.5,
+    "confidence": "HIGH",
+    "notes": null
+  },
+  "source": {
+    "name": "Helldivers Wiki — SMG-203 Gallant",
+    "url": "https://helldivers.wiki.gg/wiki/SMG-203_Gallant",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "9x20mm HIGH VELOCITY P",
+      "kind": "projectile",
+      "standard": 65,
+      "durable": 13,
+      "ap": [3, 3, 3, 0],
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": [
+    { "patch": "1.006.202", "date": "2026-04-28", "field": "weapon", "from": null, "to": null, "note": "Agregada al juego." }
+  ]
+}

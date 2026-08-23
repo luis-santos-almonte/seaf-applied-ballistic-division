@@ -1,0 +1,60 @@
+{
+  "id": "faf-14-spear",
+  "name": "FAF-14 Spear",
+  "category": "Support Weapon",
+  "rpm": 240,
+  "magazine": 1,
+  "reload": {
+    "clipSize": 1,
+    "partial": null,
+    "full": 8,
+    "confidence": "LOW",
+    "notes": "La wiki no publica un valor numérico de recarga (solo indica que la animación puede cancelarse apenas el HUD muestra el misil cargado). Se estima 8.0 s en base a animaciones comparables de lanzadores guiados de la misma familia (MLS-4X Commando); requiere verificación manual."
+  },
+  "source": {
+    "name": "Helldivers Wiki — FAF-14 Spear",
+    "url": "https://helldivers.wiki.gg/wiki/FAF-14_Spear",
+    "dateChecked": "2026-08-22",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "missile-projectile",
+      "label": "Misil guiado · proyectil",
+      "internalName": "HOMING GROUND MISSILE P",
+      "kind": "projectile",
+      "standard": 4000,
+      "durable": 4000,
+      "ap": 7,
+      "triggersExplosion": "missile-explosion",
+      "demolition": 40,
+      "stagger": 50,
+      "push": 25,
+      "confidence": "HIGH",
+      "notes": "AP Anti-Tank III, uniforme en los 4 ángulos. Misil autoguiado (lock-on) contra objetivos marcados."
+    },
+    {
+      "id": "missile-explosion",
+      "label": "Misil guiado · explosión",
+      "internalName": "HOMING GROUND MISSILE P IE",
+      "kind": "explosion",
+      "standard": 200,
+      "durable": 200,
+      "ap": 3,
+      "radiusInner": 1.5,
+      "radiusOuter": 3,
+      "radiusShockwave": 6,
+      "demolition": 30,
+      "stagger": 60,
+      "push": 70,
+      "confidence": "HIGH",
+      "notes": "Falloff de outer radius: 199→0."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.202", "date": "2026-04-28", "field": "magazine", "from": 3, "to": 4, "note": "Misiles de repuesto en la mochila aumentados de 3 a 4." },
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "missile-projectile.standard", "from": 1000, "to": 4000, "note": null }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "g-50-seeker",
+  "name": "G-50 Seeker",
+  "category": "Grenade",
+  "rpm": 30,
+  "magazine": 5,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 0,
+    "confidence": "LOW",
+    "notes": "Las granadas no tienen cadencia de disparo real ni recarga por cargador. 'rpm' (30, equivalente a una tirada cada ~2s) y 'reload.full' (0) son valores de compatibilidad con el esquema de armas de fuego sin significado en el juego real. 'magazine' = 5 es la capacidad máxima documentada (empieza en 4, reabastece 3; el tope subió de 4 a 5 en el parche 1.006.300). 'clipSize' y 'partial' quedan en null: no hay cargador parcial, solo reabastecimiento en punto de suministro."
+  },
+  "source": {
+    "name": "Helldivers Wiki — G-50 Seeker",
+    "url": "https://helldivers.wiki.gg/wiki/G-50_Seeker",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "explosion",
+      "label": "Explosión",
+      "internalName": "G-50 SEEKER E",
+      "kind": "explosion",
+      "standard": 500,
+      "durable": null,
+      "ap": 4,
+      "triggersExplosion": null,
+      "radiusInner": 3.5,
+      "radiusOuter": 7,
+      "radiusShockwave": 8,
+      "demolition": 30,
+      "stagger": 30,
+      "push": 40,
+      "confidence": "HIGH",
+      "notes": "AP4 (Heavy). Es un 'dron' que sigue al Helldiver hasta detectar un enemigo cercano (rango de detección ~50 m, prioriza voladores y objetivos marcados) y vuela hacia él, explotando al impacto; se autodetona sin hacer daño tras 30 s de batería si no encuentra objetivo. Daño subido de 400 a 500 en el parche 1.004.100. Agregada al juego en el parche 1.002.101."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.300", "date": "2026-06-16", "field": "magazine", "from": 4, "to": 5, "note": "Inicial 3→4, reabastecimiento 2→3." },
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "explosion.standard", "from": 400, "to": 500, "note": null },
+    { "patch": "1.002.101", "date": "2025-02-06", "field": "added", "from": null, "to": "G-50 Seeker agregada al juego", "note": null }
+  ]
+}

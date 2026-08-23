@@ -1,0 +1,39 @@
+{
+  "id": "las13-trident",
+  "name": "LAS-13 Trident",
+  "category": "Primary Weapon",
+  "rpm": 300,
+  "magazine": 10,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 3.67,
+    "confidence": "HIGH",
+    "notes": "Arma de energía con mecánica de calor: se sobrecalienta a 100°C (10°C por disparo ≈ 10 disparos antes de sobrecalentar). 'Magazine' representa esa cantidad de disparos, no un cargador físico. El tiempo de recarga (3.67s) es el de cambio de batería/enfriador tras vaciar o sobrecalentar."
+  },
+  "source": {
+    "name": "Helldivers Wiki — LAS-13 Trident",
+    "url": "https://helldivers.wiki.gg/wiki/LAS-13_Trident",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "beam",
+      "label": "Rayo",
+      "internalName": "LAS-13 TRIDENT B",
+      "kind": "projectile",
+      "standard": 60,
+      "durable": 6,
+      "ap": [2, 2, 2, 0],
+      "confidence": "HIGH",
+      "notes": "Dispara múltiples rayos simultáneos (hasta 6) de 60/6 cada uno; el total teórico si todos impactan el mismo blanco es 360. Se modela por-rayo porque normalmente golpean objetivos distintos. Alcance del rayo: 200m."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.001", "date": "2026-02-03", "field": "weapon", "from": null, "to": null, "note": "Agregada al juego." },
+    { "patch": "1.006.003", "date": "2026-02-10", "field": "name", "from": "LAS-16", "to": "LAS-13", "note": "Corrección de nombre/designación." }
+  ]
+}

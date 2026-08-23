@@ -1,0 +1,40 @@
+{
+  "id": "sg225ie-breaker-incendiary",
+  "name": "SG-225IE Breaker Incendiary",
+  "category": "Primary Weapon",
+  "rpm": 300,
+  "magazine": 26,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 3,
+    "confidence": "HIGH",
+    "notes": null
+  },
+  "source": {
+    "name": "Helldivers Wiki — SG-225IE Breaker Incendiary",
+    "url": "https://helldivers.wiki.gg/wiki/SG-225IE_Breaker_Incendiary",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "pellet",
+      "label": "Perdigón",
+      "internalName": "*12g LIBERTY FIRE P",
+      "kind": "projectile",
+      "standard": 20,
+      "durable": 10,
+      "ap": [2, 2, 2, 0],
+      "confidence": "HIGH",
+      "notes": "12 perdigones por cartucho. Además aplica una quemadura (Fire DoT): 100 de daño standard y durable, 3s de duración. No se modela como ataque aparte por ser un efecto de estado."
+    }
+  ],
+  "history": [
+    { "patch": "1.003.000", "date": "2025-05-13", "field": "fireDot.standard", "from": 50, "to": 100, "note": "Se quitó el elemento de fuego de los perdigones; fuerza de estado bajó a 0.6." },
+    { "patch": "1.001.002", "date": "2024-08-06", "field": "magazine.spare", "from": 6, "to": 4, "note": null },
+    { "patch": "1.000.200", "date": "2024-04-02", "field": "pellet.standard", "from": null, "to": 20, "note": "240 total por cartucho; daño de fuego +50%." }
+  ]
+}

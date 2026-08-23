@@ -1,0 +1,43 @@
+{
+  "id": "apw-1-anti-materiel-rifle",
+  "name": "APW-1 Anti-Materiel Rifle",
+  "category": "Support Weapon",
+  "rpm": 400,
+  "magazine": 7,
+  "reload": {
+    "clipSize": null,
+    "partial": 1.85,
+    "full": 2.75,
+    "confidence": "HIGH",
+    "notes": "Recarga táctica 1.85 s; recarga completa desde vacío 2.75 s."
+  },
+  "source": {
+    "name": "Helldivers Wiki — APW-1 Anti-Materiel Rifle",
+    "url": "https://helldivers.wiki.gg/wiki/APW-1_Anti-Materiel_Rifle",
+    "dateChecked": "2026-08-22",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "ap-projectile",
+      "label": "Perforante · proyectil",
+      "internalName": null,
+      "kind": "projectile",
+      "standard": 450,
+      "durable": 225,
+      "ap": [4, 4, 4, 0],
+      "demolition": 20,
+      "stagger": 25,
+      "push": 25,
+      "confidence": "HIGH",
+      "notes": "Nombre interno no confirmado en la fuente consultada. AP Heavy (0-80°), Unarmored a ángulo extremo. Rifle semiautomático de precisión antimaterial."
+    }
+  ],
+  "history": [
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "ap-projectile.durable", "from": 180, "to": 225, "note": "Cargadores iniciales 4→5, máximo 6→8." },
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "ap-projectile.durable", "from": 135, "to": 180, "note": "Stagger 20→25." },
+    { "patch": "1.000.200", "date": "2024-04-02", "field": "ap-projectile.standard", "from": 350, "to": 450, "note": "Durable 105→135." }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "cqc-20-breaching-hammer",
+  "name": "CQC-20 Breaching Hammer",
+  "category": "Support Weapon",
+  "rpm": 100,
+  "magazine": 1,
+  "reload": {
+    "clipSize": 1,
+    "partial": null,
+    "full": 2,
+    "confidence": "LOW",
+    "notes": "Arma cuerpo a cuerpo (categoría de la wiki: 'Weapon Category: Support Weapons', tipo 'Melee') que además puede llevar una carga demoledora adosable (1 en mano + 7 de repuesto). No se encontró un RPM ni un tiempo de recarga explícitos para el ciclo de recolocar una carga nueva; se estima rpm=100 (ritmo de golpe cuerpo a cuerpo típico) y reload.full=2.0s (tiempo de re-armado de una carga) de forma conservadora. Ambos valores requieren verificación manual."
+  },
+  "source": {
+    "name": "Helldivers Wiki — CQC-20 Breaching Hammer",
+    "url": "https://helldivers.wiki.gg/wiki/CQC-20_Breaching_Hammer",
+    "dateChecked": "2026-08-22",
+    "confidence": "LOW",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "hammer-impact",
+      "label": "Golpe de mazo",
+      "internalName": null,
+      "kind": "projectile",
+      "standard": 300,
+      "durable": 300,
+      "ap": [3, 0, 0, 0],
+      "demolition": null,
+      "stagger": null,
+      "push": null,
+      "confidence": "MEDIUM",
+      "notes": "Impacto cuerpo a cuerpo directo del mazo. AP Medium a ángulo directo según la wiki; el resto de ángulos no se documentó con claridad."
+    },
+    {
+      "id": "charge-explosion",
+      "label": "Carga adosada · explosión",
+      "internalName": null,
+      "kind": "explosion",
+      "standard": 2200,
+      "durable": 2200,
+      "ap": 6,
+      "radiusInner": 0.5,
+      "radiusOuter": 3,
+      "demolition": null,
+      "stagger": null,
+      "push": null,
+      "confidence": "MEDIUM",
+      "notes": "Explosión de la carga de demolición que puede adosarse con el mazo y detonarse. AP Anti-Tank II."
+    }
+  ],
+  "history": []
+}

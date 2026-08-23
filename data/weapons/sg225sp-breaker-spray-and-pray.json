@@ -1,0 +1,40 @@
+{
+  "id": "sg225sp-breaker-spray-and-pray",
+  "name": "SG-225SP Breaker Spray&Pray",
+  "category": "Primary Weapon",
+  "rpm": 330,
+  "magazine": 26,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 3,
+    "confidence": "HIGH",
+    "notes": null
+  },
+  "source": {
+    "name": "Helldivers Wiki — SG-225SP Breaker Spray&Pray",
+    "url": "https://helldivers.wiki.gg/wiki/SG-225SP_Breaker_Spray%26Pray",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "pellet",
+      "label": "Perdigón",
+      "internalName": "12g BIRDSHOT P",
+      "kind": "projectile",
+      "standard": 15,
+      "durable": 4,
+      "ap": [2, 2, 2, 0],
+      "demolition": 10,
+      "stagger": 3,
+      "confidence": "HIGH",
+      "notes": "16 perdigones por cartucho. Valores por perdigón individual."
+    }
+  ],
+  "history": [
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "pellet.standard", "from": 12, "to": 15, "note": "Cargador bajó de 32 a 26; RPM subió de 300 a 330." }
+  ]
+}

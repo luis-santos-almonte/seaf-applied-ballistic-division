@@ -1,0 +1,42 @@
+{
+  "id": "las-98-laser-cannon",
+  "name": "LAS-98 Laser Cannon",
+  "category": "Support Weapon",
+  "rpm": 60,
+  "magazine": 1,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 0,
+    "confidence": "LOW",
+    "notes": "Arma de haz continuo sin munición discreta: dispara hasta acumular calor (100°C, ~12.5 s de disparo continuo) y luego necesita enfriarse (disipación de 3.8-7.5 °C/s según entorno) antes de poder volver a disparar; no hay 'recarga' en el sentido tradicional. magazine=1 y rpm=60 son valores técnicos para modelar el haz como golpes de 1s cada uno; el ciclo real de sobrecalentamiento/enfriamiento no está capturado por estos campos y debe tenerse en cuenta aparte."
+  },
+  "source": {
+    "name": "Helldivers Wiki — LAS-98 Laser Cannon",
+    "url": "https://helldivers.wiki.gg/wiki/LAS-98_Laser_Cannon",
+    "dateChecked": "2026-08-22",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "beam",
+      "label": "Haz láser",
+      "internalName": "LAS-98 LASER CANNON B",
+      "kind": "projectile",
+      "standard": 350,
+      "durable": 200,
+      "ap": 4,
+      "demolition": 20,
+      "stagger": 0,
+      "push": 0,
+      "confidence": "HIGH",
+      "notes": "350 DPS láser + 100 DPS de fuego adicional (efecto de estado, no incluido en 'standard'). AP Heavy uniforme en los 4 ángulos."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.100", "date": "2026-03-17", "field": "range", "from": 200, "to": 1000, "note": "Alcance del haz aumentado drásticamente." },
+    { "patch": "1.000.300", "date": "2024-04-29", "field": "beam.standard", "from": 300, "to": 350, "note": "Durable 300→200." }
+  ]
+}

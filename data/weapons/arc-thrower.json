@@ -1,0 +1,42 @@
+{
+  "id": "arc-thrower",
+  "name": "ARC-3 Arc Thrower",
+  "category": "Support Weapon",
+  "rpm": 60,
+  "magazine": 1,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 0,
+    "confidence": "MEDIUM",
+    "notes": "Munición infinita (capacidad '∞' en la wiki): no existe cargador real ni recarga. Se usa magazine=1 como valor técnico mínimo requerido por el esquema. El tiempo de carga del capacitor entre disparos (~1 s) ya está representado por rpm=60 (60 disparos/min ≈ 1 disparo/s), por lo que reload.full se deja en 0 para no contar ese tiempo dos veces."
+  },
+  "source": {
+    "name": "Helldivers Wiki — ARC-3 Arc Thrower",
+    "url": "https://helldivers.wiki.gg/wiki/ARC-3_Arc_Thrower",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "arc-hit",
+      "label": "Descarga de arco",
+      "internalName": null,
+      "kind": "projectile",
+      "standard": 250,
+      "durable": 100,
+      "ap": [7, 7, 7, 0],
+      "demolition": 20,
+      "stagger": 35,
+      "push": 10,
+      "confidence": "HIGH",
+      "notes": "Nombre interno no confirmado en la fuente consultada. Alcance de arco 55 m; encadena a 1 objetivo adicional por defecto (hasta 3 con el módulo de nave 'Circuit Expansion'), con el daño degradándose por salto según 1/(1+cadenas). Aplica 'Stun Small' (1.5 s). AP Anti-Tank III (0-80°), Unarmored a ángulo extremo."
+    }
+  ],
+  "history": [
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "arc-hit.durable", "from": 50, "to": 100, "note": "Alcance aumentado de 35 a 55 m; se agregó efecto de aturdimiento." },
+    { "patch": "1.000.200", "date": "2024-04-02", "field": "range", "from": 50, "to": 35, "note": "Nerf de alcance, revertido más tarde en 1.001.100." }
+  ]
+}

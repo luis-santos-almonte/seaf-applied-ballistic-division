@@ -1,0 +1,75 @@
+{
+  "id": "s-11-speargun",
+  "name": "S-11 Speargun",
+  "category": "Support Weapon",
+  "rpm": 60,
+  "magazine": 1,
+  "reload": {
+    "clipSize": 1,
+    "partial": null,
+    "full": 2.5,
+    "confidence": "HIGH",
+    "notes": "Valor actual tras el parche 1.004.001, que redujo la recarga de 3.5 a 2.5 s."
+  },
+  "source": {
+    "name": "Helldivers Wiki — S-11 Speargun",
+    "url": "https://helldivers.wiki.gg/wiki/S-11_Speargun",
+    "dateChecked": "2026-08-22",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "spear-projectile",
+      "label": "Arpón · proyectil",
+      "internalName": "S-11 P",
+      "kind": "projectile",
+      "standard": 650,
+      "durable": 275,
+      "ap": 5,
+      "triggersExplosion": "spear-explosion",
+      "demolition": 30,
+      "stagger": 80,
+      "push": 35,
+      "confidence": "HIGH",
+      "notes": "AP Anti-Tank I uniforme. El tipo de daño del proyectil cambió de Gas a Ballistic en el parche 1.006.300; se usa el tipo/valor actual."
+    },
+    {
+      "id": "gas-cloud",
+      "label": "Nube de gas residual",
+      "internalName": "Gas",
+      "kind": "projectile",
+      "standard": 25,
+      "durable": 25,
+      "ap": [6, 6, 6, 0],
+      "demolition": null,
+      "stagger": 0,
+      "push": 0,
+      "confidence": "LOW",
+      "notes": "Tick periódico de daño de una posible nube de gas residual del impacto; mecánica aproximada, requiere verificación manual."
+    },
+    {
+      "id": "spear-explosion",
+      "label": "Arpón · explosión",
+      "internalName": "S-11 P E",
+      "kind": "explosion",
+      "standard": 3,
+      "durable": 3,
+      "ap": 6,
+      "radiusInner": 2,
+      "radiusOuter": 5,
+      "radiusShockwave": 7,
+      "demolition": 30,
+      "stagger": 10,
+      "push": 10,
+      "confidence": "LOW",
+      "notes": "La wiki muestra un valor de daño muy bajo (3) para esta explosión, que probablemente corresponde a un tick de nube de gas residual y no al impacto principal del arpón. Requiere verificación manual contra la página en vivo."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.300", "date": "2026-06-16", "field": "spear-projectile.type", "from": "Gas", "to": "Ballistic", "note": null },
+    { "patch": "1.004.001", "date": "2025-09-04", "field": "reload.full", "from": 3.5, "to": 2.5, "note": null },
+    { "patch": "1.004.000", "date": "2025-09-04", "field": "release", "from": null, "to": "arma agregada al juego", "note": null }
+  ]
+}

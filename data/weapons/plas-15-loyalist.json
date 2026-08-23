@@ -1,0 +1,85 @@
+{
+  "id": "plas-15-loyalist",
+  "name": "PLAS-15 Loyalist",
+  "category": "Secondary Weapon",
+  "rpm": 1000,
+  "magazine": 8,
+  "reload": {
+    "clipSize": 8,
+    "partial": null,
+    "full": 1.6,
+    "confidence": "LOW",
+    "notes": "La wiki no publica un tiempo de recarga en segundos para esta arma. Estimado por analogía con el PLAS-1 Scorcher (arma de plasma con carga, reload_time=2.5s documentado para un cargador de 20), escalado a la baja por el cargador mucho menor (8) de la Loyalist."
+  },
+  "source": {
+    "name": "Helldivers Wiki — PLAS-15 Loyalist",
+    "url": "https://helldivers.wiki.gg/wiki/PLAS-15_Loyalist",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "sin-carga",
+      "label": "Disparo sin carga",
+      "internalName": "SMALL PLASMA BOLT P",
+      "kind": "projectile",
+      "standard": 100,
+      "durable": 50,
+      "ap": [2, 2, 2, 0],
+      "demolition": 10,
+      "stagger": 20,
+      "push": 10,
+      "confidence": "HIGH",
+      "notes": "Disparo instantáneo sin mantener el gatillo."
+    },
+    {
+      "id": "carga-media",
+      "label": "Carga media (1.00s)",
+      "internalName": "SMALL PLASMA BOLT P1",
+      "kind": "projectile",
+      "standard": 150,
+      "durable": 75,
+      "ap": [3, 3, 3, 0],
+      "demolition": 10,
+      "stagger": 20,
+      "push": 10,
+      "confidence": "HIGH",
+      "notes": null
+    },
+    {
+      "id": "carga-completa",
+      "label": "Carga completa (0.75s tras el último parche)",
+      "internalName": "SMALL PLASMA BOLT P2",
+      "kind": "projectile",
+      "standard": 150,
+      "durable": 75,
+      "ap": [3, 3, 3, 0],
+      "triggersExplosion": "explosion-carga-completa",
+      "demolition": 10,
+      "stagger": 20,
+      "push": 10,
+      "confidence": "HIGH",
+      "notes": "El parche 1.006.100 redujo el tiempo de carga completa de 1s a 0.75s. Este disparo, a diferencia del de carga media, detona al impactar."
+    },
+    {
+      "id": "explosion-carga-completa",
+      "label": "Explosión (carga completa)",
+      "internalName": "SMALL PLASMA BOLT P2 IE",
+      "kind": "explosion",
+      "standard": 225,
+      "durable": 225,
+      "ap": 3,
+      "radiusInner": 2.9,
+      "radiusOuter": 3,
+      "radiusShockwave": 4,
+      "demolition": 10,
+      "stagger": 35,
+      "push": 30,
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": []
+}

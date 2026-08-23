@@ -1,0 +1,39 @@
+{
+  "id": "smg37-defender",
+  "name": "SMG-37 Defender",
+  "category": "Primary Weapon",
+  "rpm": 520,
+  "magazine": 45,
+  "reload": {
+    "clipSize": null,
+    "partial": 2,
+    "full": 2.8,
+    "confidence": "HIGH",
+    "notes": "Cifra para el cargador extendido de 45. Variante de cargador corto (35 rondas): 2.3s/1.6s, no modelada."
+  },
+  "source": {
+    "name": "Helldivers Wiki — SMG-37 Defender",
+    "url": "https://helldivers.wiki.gg/wiki/SMG-37_Defender",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "12x25mm FULL METAL JACKET P2",
+      "kind": "projectile",
+      "standard": 110,
+      "durable": 22,
+      "ap": [2, 2, 2, 0],
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": [
+    { "patch": "1.005.000", "date": "2025-12-02", "field": "projectile.standard", "from": 100, "to": 110, "note": null },
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "projectile.standard", "from": 85, "to": 100, "note": "Durable subió a 20." }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "g-23-stun",
+  "name": "G-23 Stun",
+  "category": "Grenade",
+  "rpm": 30,
+  "magazine": 5,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 0,
+    "confidence": "LOW",
+    "notes": "Las granadas no tienen cadencia de disparo real ni recarga por cargador. 'rpm' (30, equivalente a una tirada cada ~2s) y 'reload.full' (0) son valores de compatibilidad con el esquema de armas de fuego sin significado en el juego real. 'magazine' = 5 es la capacidad máxima documentada (empieza en 4, reabastece 3; el tope subió de 4 a 5 en el parche 1.006.300). 'clipSize' y 'partial' quedan en null: no hay cargador parcial, solo reabastecimiento en punto de suministro."
+  },
+  "source": {
+    "name": "Helldivers Wiki — G-23 Stun",
+    "url": "https://helldivers.wiki.gg/wiki/G-23_Stun",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "explosion",
+      "label": "Explosión / aturdimiento (EMS)",
+      "internalName": "G-23 STUN E",
+      "kind": "explosion",
+      "standard": 0,
+      "durable": null,
+      "ap": 6,
+      "triggersExplosion": null,
+      "radiusInner": 1,
+      "radiusOuter": 10,
+      "radiusShockwave": 15,
+      "demolition": 0,
+      "stagger": 50,
+      "push": 0,
+      "confidence": "HIGH",
+      "notes": "Granada de efecto EMS/aturdimiento no letal: daño = 0 (confirmado explícitamente por el infobox, 'Damage: 0'). Su función es aturdir 5 s a todo objetivo dentro del radio efectivo y agotar el vigor del Helldiver que quede en el área. No afecta a Tanques Automaton, Factory Striders, Impalers ni Bile Titans. Demolición = 0: no puede destruir estructuras. Fusible de 1.8 s, cocinable."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.300", "date": "2026-06-16", "field": "magazine", "from": 4, "to": 5, "note": "Inicial 3→4, reabastecimiento 2→3." },
+    { "patch": "1.004.000", "date": "2025-09-02", "field": "explosion.stagger", "from": 0, "to": 50, "note": null },
+    { "patch": "1.000.200", "date": "2024-04-02", "field": "immunity", "from": null, "to": "Bile Titans inmunes al aturdimiento", "note": null }
+  ]
+}

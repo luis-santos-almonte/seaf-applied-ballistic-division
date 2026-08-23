@@ -1,0 +1,40 @@
+{
+  "id": "br14-adjudicator",
+  "name": "BR-14 Adjudicator",
+  "category": "Primary Weapon",
+  "rpm": 550,
+  "magazine": 30,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 3,
+    "confidence": "HIGH",
+    "notes": null
+  },
+  "source": {
+    "name": "Helldivers Wiki — BR-14 Adjudicator",
+    "url": "https://helldivers.wiki.gg/wiki/BR-14_Adjudicator",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "8x60mm FULL METAL JACKET P",
+      "kind": "projectile",
+      "standard": 95,
+      "durable": 23,
+      "ap": [3, 3, 3, 1],
+      "confidence": "HIGH",
+      "notes": "Ángulo extremo cae a Very Light (AP1), no a Unarmored como la mayoría de balísticas."
+    }
+  ],
+  "history": [
+    { "patch": "1.002.200", "date": "2025-03-18", "field": "projectile.standard", "from": 90, "to": 95, "note": null },
+    { "patch": "1.001.104", "date": "2024-10-15", "field": "projectile.standard", "from": 80, "to": 90, "note": "Durable subió de 16 a 23." },
+    { "patch": "1.000.400", "date": "2024-06-13", "field": "magazine", "from": 25, "to": 30, "note": null }
+  ]
+}

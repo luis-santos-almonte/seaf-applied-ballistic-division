@@ -1,0 +1,38 @@
+{
+  "id": "r4-hyena",
+  "name": "R-4 Hyena",
+  "category": "Primary Weapon",
+  "rpm": 190,
+  "magazine": 15,
+  "reload": {
+    "clipSize": null,
+    "partial": 1.5,
+    "full": 2.5,
+    "confidence": "HIGH",
+    "notes": "Los 1.5s de recarga parcial corresponden al accesorio de cargador corto."
+  },
+  "source": {
+    "name": "Helldivers Wiki — R-4 Hyena",
+    "url": "https://helldivers.wiki.gg/wiki/R-4_Hyena",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "9x70mm FULL METAL JACKET P1",
+      "kind": "projectile",
+      "standard": 220,
+      "durable": 45,
+      "ap": [3, 3, 3, 0],
+      "confidence": "HIGH",
+      "notes": "Además del daño balístico, el proyectil recubierto de termita aplica una quemadura (Fire DoT): 100 de daño standard y durable, AP4 (Heavy), 3s de duración. No se modela como ataque aparte por ser un efecto de estado y no un evento de daño instantáneo adicional."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.301", "date": "2026-07-13", "field": "weapon", "from": null, "to": null, "note": "Agregada al arsenal de los Helldivers." }
+  ]
+}

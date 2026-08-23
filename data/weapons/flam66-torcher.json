@@ -1,0 +1,39 @@
+{
+  "id": "flam66-torcher",
+  "name": "FLAM-66 Torcher",
+  "category": "Primary Weapon",
+  "rpm": 900,
+  "magazine": 100,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 4.5,
+    "confidence": "LOW",
+    "notes": "La wiki no reporta un tiempo de recarga numérico para este lanzallamas. Se estima 4.5s por analogía con otras armas de capacidad alta del catálogo; no confirmado en la fuente. El RPM tampoco se reporta como cifra discreta (es un chorro continuo); se usa 900 como aproximación de la tasa de partículas por minuto implícita en el DPS reportado (150 DPS / 2 de daño por partícula × 60 ≈ 900), marcado también LOW."
+  },
+  "source": {
+    "name": "Helldivers Wiki — FLAM-66 Torcher",
+    "url": "https://helldivers.wiki.gg/wiki/FLAM-66_Torcher",
+    "dateChecked": "2026-08-22",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "particle",
+      "label": "Partícula de fuego",
+      "internalName": "FLAM-66 TORCHER S",
+      "kind": "projectile",
+      "standard": 2,
+      "durable": 2,
+      "ap": [4, 4, 4, 0],
+      "confidence": "MEDIUM",
+      "notes": "El impacto directo de cada partícula hace solo 2 de daño; el grueso del daño viene de la quemadura (Fire DoT) que aplica: 100 de daño (standard y durable) repartido en 3s, con Heavy AP. La wiki resume el total como ~150 DPS. La quemadura no se modela como ataque aparte por ser un efecto de estado, no un evento de impacto instantáneo."
+    }
+  ],
+  "history": [
+    { "patch": "1.003.000", "date": "2025-05-13", "field": "particle.standard", "from": 4, "to": 2, "note": "Cargador subió 25%; daño de quemadura subió de 50 a 100." },
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "ap", "from": null, "to": null, "note": "Penetración de armadura mejorada a Heavy; daño general +50%." }
+  ]
+}

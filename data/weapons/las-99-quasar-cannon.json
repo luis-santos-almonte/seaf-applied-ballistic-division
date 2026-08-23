@@ -1,0 +1,59 @@
+{
+  "id": "las-99-quasar-cannon",
+  "name": "LAS-99 Quasar Cannon",
+  "category": "Support Weapon",
+  "rpm": 10,
+  "magazine": 1,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 15,
+    "confidence": "HIGH",
+    "notes": "Munición infinita, sin cargador: se carga 3.0 s antes de disparar y luego necesita 15.0 s de enfriamiento antes del siguiente disparo (no hay recarga manual). Se usa reload.full=15 (el enfriamiento) como el tiempo relevante entre disparos consecutivos; rpm=10 es el ritmo teórico documentado por la wiki."
+  },
+  "source": {
+    "name": "Helldivers Wiki — LAS-99 Quasar Cannon",
+    "url": "https://helldivers.wiki.gg/wiki/LAS-99_Quasar_Cannon",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "plasma-projectile",
+      "label": "Plasma · proyectil",
+      "internalName": "LASER P5",
+      "kind": "projectile",
+      "standard": 2000,
+      "durable": 2000,
+      "ap": [6, 6, 6, 3],
+      "triggersExplosion": "plasma-explosion",
+      "demolition": 30,
+      "stagger": 50,
+      "push": 40,
+      "confidence": "HIGH",
+      "notes": "AP Anti-Tank II (0-80°), Medium a ángulo extremo."
+    },
+    {
+      "id": "plasma-explosion",
+      "label": "Plasma · explosión",
+      "internalName": "LASER P5 IE",
+      "kind": "explosion",
+      "standard": 150,
+      "durable": 150,
+      "ap": 3,
+      "radiusInner": 1.5,
+      "radiusOuter": 3,
+      "demolition": 30,
+      "stagger": 50,
+      "push": 40,
+      "confidence": "HIGH",
+      "notes": "Falloff de outer radius: 149→0."
+    }
+  ],
+  "history": [
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "plasma-projectile.standard", "from": 650, "to": 2000, "note": null },
+    { "patch": "1.000.300", "date": "2024-04-29", "field": "reload.full", "from": 10, "to": 15, "note": "Tiempo de recarga/enfriamiento aumentado." }
+  ]
+}

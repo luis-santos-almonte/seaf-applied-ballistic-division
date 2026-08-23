@@ -1,0 +1,42 @@
+{
+  "id": "ar23c-liberator-concussive",
+  "name": "AR-23C Liberator Concussive",
+  "category": "Primary Weapon",
+  "rpm": 400,
+  "magazine": 60,
+  "reload": {
+    "clipSize": null,
+    "partial": 2.3,
+    "full": 3.5,
+    "confidence": "HIGH",
+    "notes": "Cargador de tambor (drum) de 60 rondas de serie."
+  },
+  "source": {
+    "name": "Helldivers Wiki — AR-23C Liberator Concussive",
+    "url": "https://helldivers.wiki.gg/wiki/AR-23C_Liberator_Concussive",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "5.5x50mm EXPLOSIVE P",
+      "kind": "projectile",
+      "standard": 75,
+      "durable": 35,
+      "ap": 2,
+      "stagger": 35,
+      "push": 60,
+      "confidence": "MEDIUM",
+      "notes": "Pese a llamarse internamente 'EXPLOSIVE P', la wiki no reporta una explosión separada: el efecto 'concussive' se traduce en un stagger/push altos, no en un ataque de explosión aparte. AP reportado como un único valor (Light=2) sin desglose por ángulo."
+    }
+  ],
+  "history": [
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "projectile.standard", "from": 65, "to": 75, "note": "Durable subió de 30 a 35." },
+    { "patch": "1.002.200", "date": "2025-03-18", "field": "rpm", "from": 320, "to": 400, "note": null },
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "magazine", "from": 30, "to": 60, "note": "Pasó a cargador de tambor de 60 rondas." }
+  ]
+}

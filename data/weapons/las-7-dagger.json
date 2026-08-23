@@ -1,0 +1,47 @@
+{
+  "id": "las-7-dagger",
+  "name": "LAS-7 Dagger",
+  "category": "Secondary Weapon",
+  "rpm": 60,
+  "magazine": 1,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 2.83,
+    "confidence": "LOW",
+    "notes": "Arma de haz continuo con capacidad de calor de 6.67s (no un conteo de balas); no tiene concepto de 'cargador' en rondas, por eso magazine=1 (un ciclo de disparo continuo) y clipSize queda null. La wiki no publica un tiempo de recarga en segundos; estimado por analogía con el LAS-16 Sickle (arma de energía comparable, reload_time=2.83s documentado)."
+  },
+  "source": {
+    "name": "Helldivers Wiki — LAS-7 Dagger",
+    "url": "https://helldivers.wiki.gg/wiki/LAS-7_Dagger",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "rayo",
+      "label": "Rayo",
+      "internalName": "LAS-7 DAGGER B",
+      "kind": "projectile",
+      "standard": 250,
+      "durable": 50,
+      "ap": [2, 2, 2, 0],
+      "confidence": "HIGH",
+      "notes": "rpm=60 representa 1 ciclo de daño por segundo del haz continuo (250 de daño por ciclo = 250 DPS documentado en la infobox)."
+    },
+    {
+      "id": "quemadura",
+      "label": "Quemadura (fuego)",
+      "internalName": null,
+      "kind": "projectile",
+      "standard": 100,
+      "durable": 100,
+      "ap": [4, 4, 4, 0],
+      "confidence": "MEDIUM",
+      "notes": "Efecto de fuego simultáneo al haz, documentado como 100 DPS en la infobox. Se modela con el mismo rpm=60 del arma (1 ciclo/seg = 100 de daño por ciclo) para que el DPS calculado coincida con el publicado; se suma en paralelo al daño del rayo, no lo reemplaza."
+    }
+  ],
+  "history": []
+}

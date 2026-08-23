@@ -1,0 +1,42 @@
+{
+  "id": "b-md-c4-pack",
+  "name": "B/MD C4 Pack",
+  "category": "Support Weapon",
+  "rpm": 60,
+  "magazine": 1,
+  "reload": {
+    "clipSize": 1,
+    "partial": null,
+    "full": 0,
+    "confidence": "MEDIUM",
+    "notes": "La wiki indica recarga 'instantánea' entre cargas individuales (1 en mano + 6 de repuesto = 7 en total). rpm=60 es una estimación conservadora (≈1 carga colocada por segundo) ya que la wiki no publica un RPM explícito para esta arma de colocación de explosivos; no confundir con el cooldown de 480s para volver a llamar la estratagema completa, que es un valor distinto no representado en 'reload'."
+  },
+  "source": {
+    "name": "Helldivers Wiki — B/MD C4 Pack",
+    "url": "https://helldivers.wiki.gg/wiki/B/MD_C4_Pack",
+    "dateChecked": "2026-08-22",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "charge-explosion",
+      "label": "Carga explosiva",
+      "internalName": null,
+      "kind": "explosion",
+      "standard": 2000,
+      "durable": 2000,
+      "ap": 7,
+      "radiusInner": 3,
+      "radiusOuter": 7,
+      "radiusShockwave": 8,
+      "demolition": 40,
+      "stagger": 30,
+      "push": 40,
+      "confidence": "HIGH",
+      "notes": "AP Anti-Tank III uniforme. Mochila de cargas de demolición colocables y detonables a distancia (backpack de la categoría 'Anti-Tank')."
+    }
+  ],
+  "history": []
+}

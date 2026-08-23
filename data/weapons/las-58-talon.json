@@ -1,0 +1,39 @@
+{
+  "id": "las-58-talon",
+  "name": "LAS-58 Talon",
+  "category": "Secondary Weapon",
+  "rpm": 750,
+  "magazine": 7,
+  "reload": {
+    "clipSize": 7,
+    "partial": null,
+    "full": 2.83,
+    "confidence": "LOW",
+    "notes": "La wiki no publica un tiempo de recarga en segundos para esta arma láser (documenta el mecanismo de calor/batería pero no un valor de reload_time). Estimado por analogía con el LAS-16 Sickle (arma de energía con mecanismo de batería comparable), cuya wiki sí documenta reload_time=2.83s."
+  },
+  "source": {
+    "name": "Helldivers Wiki — LAS-58 Talon",
+    "url": "https://helldivers.wiki.gg/wiki/LAS-58_Talon",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "rayo",
+      "label": "Rayo",
+      "internalName": null,
+      "kind": "projectile",
+      "standard": 200,
+      "durable": 20,
+      "ap": [3, 3, 3, 0],
+      "demolition": 10,
+      "stagger": 10,
+      "push": null,
+      "confidence": "HIGH",
+      "notes": "Arma de calor/batería: se sobrecalienta a 100°C, ganando 15°C por disparo y disipando 10-15°C/s según temperatura ambiente."
+    }
+  ],
+  "history": []
+}

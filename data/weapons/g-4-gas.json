@@ -1,0 +1,64 @@
+{
+  "id": "g-4-gas",
+  "name": "G-4 Gas",
+  "category": "Grenade",
+  "rpm": 30,
+  "magazine": 4,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 0,
+    "confidence": "LOW",
+    "notes": "Las granadas no tienen cadencia de disparo real ni recarga por cargador. 'rpm' (30, equivalente a una tirada cada ~2s) y 'reload.full' (0) son valores de compatibilidad con el esquema de armas de fuego sin significado en el juego real. 'magazine' = 4 es la capacidad máxima documentada por la wiki (empieza en 3, reabastece 2). 'clipSize' y 'partial' quedan en null: no hay cargador parcial, solo reabastecimiento en punto de suministro."
+  },
+  "source": {
+    "name": "Helldivers Wiki — G-4 Gas",
+    "url": "https://helldivers.wiki.gg/wiki/G-4_Gas",
+    "dateChecked": "2026-08-22",
+    "confidence": "MEDIUM",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "explosion",
+      "label": "Explosión (impacto directo)",
+      "internalName": "G-4 GAS E",
+      "kind": "explosion",
+      "standard": 3,
+      "durable": null,
+      "ap": 6,
+      "triggersExplosion": null,
+      "radiusInner": 2,
+      "radiusOuter": 7,
+      "radiusShockwave": 7,
+      "demolition": 30,
+      "stagger": 10,
+      "push": 10,
+      "confidence": "LOW",
+      "notes": "El daño de impacto directo es de solo 3 (confirmado dos veces contra la wiki, no es un error de transcripción): esta granada es un arma química cuyo propósito es la nube de gas persistente, no la explosión inicial. AP6 (Anti-Tank II). Fusible de 2.9 s, cocinable."
+    },
+    {
+      "id": "gas-dot",
+      "label": "Nube de gas (daño por tiempo)",
+      "internalName": "G-4 GAS DOT",
+      "kind": "explosion",
+      "standard": 25,
+      "durable": null,
+      "ap": 6,
+      "triggersExplosion": null,
+      "radiusInner": null,
+      "radiusOuter": null,
+      "radiusShockwave": null,
+      "demolition": 0,
+      "stagger": 0,
+      "push": 0,
+      "confidence": "MEDIUM",
+      "notes": "25 de daño por segundo mientras el objetivo permanece en la nube (efecto de estado 'Gas', fuerza 100, aplicación de 6 s por entrada a la nube). La nube en sí persiste 15 s en el terreno y puede reaplicarse a quien vuelva a entrar. Desde el parche 1.006.202 el gas también aplica 25% de ralentización ('Gas Confusion')."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.202", "date": "2026-04-28", "field": "gas-dot.effect", "from": null, "to": "Gas Confusion: -25% velocidad", "note": null },
+    { "patch": "1.002.001", "date": "2024-12-13", "field": "explosion.demolition", "from": 10, "to": 30, "note": null }
+  ]
+}

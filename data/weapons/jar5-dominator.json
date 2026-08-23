@@ -1,0 +1,41 @@
+{
+  "id": "jar5-dominator",
+  "name": "JAR-5 Dominator",
+  "category": "Primary Weapon",
+  "rpm": 250,
+  "magazine": 15,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 3.8,
+    "confidence": "HIGH",
+    "notes": null
+  },
+  "source": {
+    "name": "Helldivers Wiki — JAR-5 Dominator",
+    "url": "https://helldivers.wiki.gg/wiki/JAR-5_Dominator",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "15x100mm STANDARD ROCKET P",
+      "kind": "projectile",
+      "standard": 275,
+      "durable": 90,
+      "ap": [3, 3, 3, 0],
+      "demolition": 10,
+      "stagger": 35,
+      "confidence": "HIGH",
+      "notes": "Munición autopropulsada (cohete). No explota, solo impacto directo."
+    }
+  ],
+  "history": [
+    { "patch": "1.000.300", "date": "2024-04-29", "field": "projectile.standard", "from": 300, "to": 275, "note": null },
+    { "patch": "1.000.200", "date": "2024-04-02", "field": "projectile.standard", "from": 200, "to": 300, "note": "Stagger también aumentó." }
+  ]
+}

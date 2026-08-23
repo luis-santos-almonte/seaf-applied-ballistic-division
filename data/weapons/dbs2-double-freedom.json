@@ -1,0 +1,41 @@
+{
+  "id": "dbs2-double-freedom",
+  "name": "DBS-2 Double Freedom",
+  "category": "Primary Weapon",
+  "rpm": 650,
+  "magazine": 2,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 2.5,
+    "confidence": "LOW",
+    "notes": "La wiki no reporta un tiempo de recarga numérico para esta escopeta de doble cañón (acción basculante). Se estima 2.5s por comparación con otras armas de recarga rápida de 2 cartuchos; no confirmado en la fuente."
+  },
+  "source": {
+    "name": "Helldivers Wiki — DBS-2 Double Freedom",
+    "url": "https://helldivers.wiki.gg/wiki/DBS-2_Double_Freedom",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "pellet",
+      "label": "Perdigón",
+      "internalName": "DBS-2 P",
+      "kind": "projectile",
+      "standard": 70,
+      "durable": 35,
+      "ap": [3, 3, 3, 0],
+      "demolition": 10,
+      "stagger": 35,
+      "push": 30,
+      "confidence": "HIGH",
+      "notes": "12 perdigones por disparo. Los valores standard/durable son por perdigón individual, no el total del cartucho."
+    }
+  ],
+  "history": [
+    { "patch": "1.005.000", "date": "2025-12-02", "field": "weapon", "from": null, "to": null, "note": "Agregada al juego." }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "sg20-halt",
+  "name": "SG-20 Halt",
+  "category": "Primary Weapon",
+  "rpm": 80,
+  "magazine": 8,
+  "reload": {
+    "clipSize": 1,
+    "partial": 0.4,
+    "full": 3.2,
+    "confidence": "LOW",
+    "notes": "Escopeta de doble tubo (8 cartuchos de cada tipo de munición seleccionable); la wiki no reporta un tiempo de recarga numérico. Se estima 0.4s por cartucho (proporción derivada de SG-8S Slugger) y 3.2s para los 8 cartuchos de un tubo; no confirmado en la fuente. 'Magazine' representa la capacidad del tubo de flechettes (munición principal)."
+  },
+  "source": {
+    "name": "Helldivers Wiki — SG-20 Halt",
+    "url": "https://helldivers.wiki.gg/wiki/SG-20_Halt",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "flechette",
+      "label": "Flechette",
+      "internalName": "*10g FLECHETTES P",
+      "kind": "projectile",
+      "standard": 35,
+      "durable": 10,
+      "ap": [3, 3, 3, 0],
+      "confidence": "HIGH",
+      "notes": "11 flechettes por cartucho. Valores por flechette individual."
+    },
+    {
+      "id": "stun-pellet",
+      "label": "Perdigón de aturdimiento",
+      "internalName": "*10g STUN ROUNDS P",
+      "kind": "projectile",
+      "standard": 6,
+      "durable": 2,
+      "ap": [2, 2, 2, 0],
+      "stagger": null,
+      "confidence": "HIGH",
+      "notes": "20 perdigones por cartucho, munición alternativa seleccionable. Aplica aturdimiento grande (Stun Large) con 5s de duración; no hay campo de esquema dedicado a 'stun'."
+    }
+  ],
+  "history": [
+    { "patch": "1.002.101", "date": "2025-02-04", "field": "bug", "from": null, "to": null, "note": "Se corrigió un cuelgue al recargar." }
+  ]
+}

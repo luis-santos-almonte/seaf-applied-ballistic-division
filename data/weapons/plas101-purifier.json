@@ -1,0 +1,80 @@
+{
+  "id": "plas101-purifier",
+  "name": "PLAS-101 Purifier",
+  "category": "Primary Weapon",
+  "rpm": 1000,
+  "magazine": 15,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 2.5,
+    "confidence": "HIGH",
+    "notes": null
+  },
+  "source": {
+    "name": "Helldivers Wiki — PLAS-101 Purifier",
+    "url": "https://helldivers.wiki.gg/wiki/PLAS-101_Purifier",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "uncharged-projectile",
+      "label": "Sin cargar · proyectil",
+      "internalName": "LARGE PLASMA BOLT_P",
+      "kind": "projectile",
+      "standard": 100,
+      "durable": 50,
+      "ap": 3,
+      "triggersExplosion": "uncharged-explosion",
+      "confidence": "MEDIUM",
+      "notes": "Requiere mínimo 0.1s de carga (multiplicador de daño 50%). AP reportado como valor único (Medium=3) sin desglose por ángulo."
+    },
+    {
+      "id": "uncharged-explosion",
+      "label": "Sin cargar · explosión",
+      "internalName": "LARGE PLASMA BOLT_P IE",
+      "kind": "explosion",
+      "standard": 75,
+      "durable": 75,
+      "ap": 3,
+      "radiusInner": 1,
+      "radiusOuter": 2,
+      "radiusShockwave": 2,
+      "confidence": "HIGH",
+      "notes": null
+    },
+    {
+      "id": "charged-projectile",
+      "label": "Carga completa · proyectil",
+      "internalName": "VOLATILE PLASMA BOLT_P",
+      "kind": "projectile",
+      "standard": 200,
+      "durable": 100,
+      "ap": 3,
+      "triggersExplosion": "charged-explosion",
+      "confidence": "MEDIUM",
+      "notes": "Carga máxima 1.0s (multiplicador de daño 100%). AP reportado como valor único (Medium=3) sin desglose por ángulo."
+    },
+    {
+      "id": "charged-explosion",
+      "label": "Carga completa · explosión",
+      "internalName": "VOLATILE PLASMA BOLT_P IE",
+      "kind": "explosion",
+      "standard": 300,
+      "durable": 300,
+      "ap": 3,
+      "radiusInner": 2.9,
+      "radiusOuter": 3,
+      "radiusShockwave": 4,
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": [
+    { "patch": "1.001.104", "date": "2024-10-15", "field": "charged-projectile.standard", "from": 100, "to": 200, "note": "Se introdujo la mecánica de carga; explosión cargada subió a 300." },
+    { "patch": "1.000.400", "date": "2024-06-13", "field": "ap", "from": 2, "to": 3, "note": "Penetración de armadura mejorada a Medium." }
+  ]
+}

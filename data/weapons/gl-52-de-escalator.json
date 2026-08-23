@@ -1,0 +1,61 @@
+{
+  "id": "gl-52-de-escalator",
+  "name": "GL-52 De-Escalator",
+  "category": "Support Weapon",
+  "rpm": 200,
+  "magazine": 6,
+  "reload": {
+    "clipSize": 1,
+    "partial": 2.5,
+    "full": 5.5,
+    "confidence": "MEDIUM",
+    "notes": "Mecanismo de revólver: recarga de a un proyectil por vez (~2.5 s, valor aproximado según la wiki) o el tambor completo vacío (~5.5 s tras la reducción del parche 1.006.100, antes 7.5 s)."
+  },
+  "source": {
+    "name": "Helldivers Wiki — GL-52 De-Escalator",
+    "url": "https://helldivers.wiki.gg/wiki/GL-52_De-Escalator",
+    "dateChecked": "2026-08-22",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Granada de arco · proyectil",
+      "internalName": "GL-52 P",
+      "kind": "projectile",
+      "standard": 20,
+      "durable": 2,
+      "ap": 0,
+      "triggersExplosion": "arc-explosion",
+      "demolition": null,
+      "stagger": null,
+      "push": null,
+      "confidence": "MEDIUM",
+      "notes": "El proyectil cinético en sí es casi inofensivo (AP Unarmored); el daño real proviene de la descarga de arco que dispara al impactar. La wiki lista además una fila intermedia 'GL-52 P IE' sin daño propio (solo dispara la descarga de arco), que se omitió por ser un evento de daño nulo puramente de encadenamiento."
+    },
+    {
+      "id": "arc-explosion",
+      "label": "Descarga de arco",
+      "internalName": "GL-52 P IE A",
+      "kind": "explosion",
+      "standard": 100,
+      "durable": 70,
+      "ap": [4, 4, 4, 0],
+      "radiusInner": 1,
+      "radiusOuter": 3,
+      "radiusShockwave": 4,
+      "demolition": 20,
+      "stagger": 35,
+      "push": 10,
+      "confidence": "MEDIUM",
+      "notes": "AP Heavy (0-80°), Unarmored a ángulo extremo. Es un 'lanzagranadas humanitario' pensado para aturdir/incapacitar en vez de matar directamente."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.100", "date": "2026-03-17", "field": "reload.full", "from": 7.5, "to": 5.5, "note": "También rpm 160→200." },
+    { "patch": "1.006.001", "date": "2026-02-03", "field": "arc-explosion.ap", "from": 3, "to": 4, "note": "AP del arco subido a Heavy; daño del proyectil cinético reducido a 0 (ver GL-52 P IE)." },
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "arc-explosion.standard", "from": 55, "to": 100, "note": "Durable 55→70." }
+  ]
+}

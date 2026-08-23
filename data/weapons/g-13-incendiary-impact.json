@@ -1,0 +1,65 @@
+{
+  "id": "g-13-incendiary-impact",
+  "name": "G-13 Incendiary Impact",
+  "category": "Grenade",
+  "rpm": 30,
+  "magazine": 5,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 0,
+    "confidence": "LOW",
+    "notes": "Las granadas no tienen cadencia de disparo real ni recarga por cargador. 'rpm' (30, equivalente a una tirada cada ~2s) y 'reload.full' (0) son valores de compatibilidad con el esquema de armas de fuego sin significado en el juego real. 'magazine' = 5 es la capacidad máxima documentada (empieza en 4, reabastece 3; el tope subió de 4 a 5 en el parche 1.006.300). 'clipSize' y 'partial' quedan en null: no hay cargador parcial, solo reabastecimiento en punto de suministro."
+  },
+  "source": {
+    "name": "Helldivers Wiki — G-13 Incendiary Impact",
+    "url": "https://helldivers.wiki.gg/wiki/G-13_Incendiary_Impact",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "explosion",
+      "label": "Explosión",
+      "internalName": "G-13 INCENDIARY IMPACT E",
+      "kind": "explosion",
+      "standard": 150,
+      "durable": null,
+      "ap": 3,
+      "triggersExplosion": null,
+      "radiusInner": 1,
+      "radiusOuter": 7,
+      "radiusShockwave": 9,
+      "demolition": 30,
+      "stagger": 20,
+      "push": 15,
+      "confidence": "HIGH",
+      "notes": "AP3 (Medium). Detona al impacto: cubre la zona inmediata en fósforo blanco autoinflamable. No tiene fusible temporizado y no se puede cocinar."
+    },
+    {
+      "id": "fire-dot",
+      "label": "Fuego persistente (daño por tiempo)",
+      "internalName": "G-13 INCENDIARY IMPACT FIRE",
+      "kind": "explosion",
+      "standard": 100,
+      "durable": null,
+      "ap": 4,
+      "triggersExplosion": null,
+      "radiusInner": null,
+      "radiusOuter": null,
+      "radiusShockwave": null,
+      "demolition": 0,
+      "stagger": 0,
+      "push": 0,
+      "confidence": "MEDIUM",
+      "notes": "AP4 (Heavy), superior al AP3 de la explosión directa. 100 de daño por tick cada 3 s; fuego remanente hasta 15 s (extendido desde 8s en el parche 1.003.200; daño de quemadura subido de 50 a 100 en el 1.003.000). Sin radio propio documentado por separado."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.300", "date": "2026-06-16", "field": "magazine", "from": 4, "to": 5, "note": "Inicial 3→4." },
+    { "patch": "1.003.200", "date": "2025-07-15", "field": "fire-dot.duration", "from": "8s", "to": "15s", "note": null },
+    { "patch": "1.003.000", "date": "2025-05-13", "field": "fire-dot.standard", "from": 50, "to": 100, "note": "También se agregó escalado contra enemigos grandes." }
+  ]
+}

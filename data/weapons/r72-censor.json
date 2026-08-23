@@ -1,0 +1,38 @@
+{
+  "id": "r72-censor",
+  "name": "R-72 Censor",
+  "category": "Primary Weapon",
+  "rpm": 400,
+  "magazine": 20,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 2.5,
+    "confidence": "HIGH",
+    "notes": "Cifra para el cargador estándar de 20. Con el accesorio de cargador extendido (30 rondas) la recarga completa sube a 2.9s, no modelado acá."
+  },
+  "source": {
+    "name": "Helldivers Wiki — R-72 Censor",
+    "url": "https://helldivers.wiki.gg/wiki/R-72_Censor",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "8x60mm SUBSONIC P",
+      "kind": "projectile",
+      "standard": 165,
+      "durable": 45,
+      "ap": [2, 2, 2, 0],
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": [
+    { "patch": "1.005.002", "date": "2026-01-22", "field": "weapon", "from": null, "to": null, "note": "Agregada al juego." }
+  ]
+}

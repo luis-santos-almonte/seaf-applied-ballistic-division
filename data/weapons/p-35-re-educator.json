@@ -1,0 +1,47 @@
+{
+  "id": "p-35-re-educator",
+  "name": "P-35 Re-Educator",
+  "category": "Secondary Weapon",
+  "rpm": 110,
+  "magazine": 6,
+  "reload": {
+    "clipSize": 6,
+    "partial": null,
+    "full": 2.2,
+    "confidence": "LOW",
+    "notes": "La wiki no publica un tiempo de recarga en segundos para esta arma. Estimado en 2.2 s por tratarse de cartuchos de gas más voluminosos que una bala de pistola estándar."
+  },
+  "source": {
+    "name": "Helldivers Wiki — P-35 Re-Educator",
+    "url": "https://helldivers.wiki.gg/wiki/P-35_Re-Educator",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "proyectil",
+      "label": "Proyectil (gas)",
+      "internalName": null,
+      "kind": "projectile",
+      "standard": 60,
+      "durable": 10,
+      "ap": [4, 4, 3, 0],
+      "confidence": "HIGH",
+      "notes": "AP por ángulo asimétrico según la wiki: Directo y ángulo leve Heavy(4), ángulo grande Medium(3), ángulo extremo Unarmored(0)."
+    },
+    {
+      "id": "gas",
+      "label": "Nube de gas (efecto de estado)",
+      "internalName": "Gas_Confusion",
+      "kind": "projectile",
+      "standard": 25,
+      "durable": 25,
+      "ap": 6,
+      "confidence": "MEDIUM",
+      "notes": "Efecto de estado 'Gas' (6s) y 'Gas_Confusion' (5s), ambos a intensidad 100. El gas en sí penetra hasta Anti-Tank II (AP6) en todos los ángulos salvo el extremo, distinto del AP del impacto inicial del proyectil."
+    }
+  ],
+  "history": []
+}

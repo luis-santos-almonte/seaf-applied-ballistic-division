@@ -1,0 +1,61 @@
+{
+  "id": "ms-11-solo-silo",
+  "name": "MS-11 Solo Silo",
+  "category": "Support Weapon",
+  "rpm": 0.333,
+  "magazine": 1,
+  "reload": {
+    "clipSize": 1,
+    "partial": null,
+    "full": 180,
+    "confidence": "LOW",
+    "notes": "Es un silo de un solo misil desplegado como estratagema (con mando de guía a distancia), no un arma portátil recargable: la wiki indica explícitamente 'sin RPM ni tiempo de recarga', solo un cooldown de estratagema de 180 s (171 s con el módulo 'Morale Augmentation') para volver a llamarlo, más un tiempo de despliegue de 7.75 s. Se usa ese cooldown de 180 s como valor proxy de 'reload.full' (tiempo hasta el próximo disparo posible) siguiendo el criterio del proyecto para armas de un solo disparo sin recarga documentada; rpm=0.333 (60/180) se deriva del mismo cooldown. Ambos valores son una aproximación, no una recarga real."
+  },
+  "source": {
+    "name": "Helldivers Wiki — MS-11 Solo Silo",
+    "url": "https://helldivers.wiki.gg/wiki/MS-11_Solo_Silo",
+    "dateChecked": "2026-08-22",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "main-explosion",
+      "label": "Impacto principal",
+      "internalName": "SWP SOLO SILO E",
+      "kind": "explosion",
+      "standard": 2500,
+      "durable": 2500,
+      "ap": 7,
+      "radiusInner": 10,
+      "radiusOuter": 25,
+      "demolition": 40,
+      "stagger": 100,
+      "push": 40,
+      "confidence": "HIGH",
+      "notes": "AP Anti-Tank III uniforme."
+    },
+    {
+      "id": "impact-explosion",
+      "label": "Explosión de impacto secundaria",
+      "internalName": "SWP SOLO SILO EImpact",
+      "kind": "explosion",
+      "standard": 1500,
+      "durable": 1500,
+      "ap": 9,
+      "radiusInner": 3,
+      "radiusOuter": 6,
+      "demolition": 40,
+      "stagger": 100,
+      "push": 40,
+      "confidence": "MEDIUM",
+      "notes": "AP Anti-Tank V uniforme. No quedó claro en la fuente si esta explosión ocurre siempre junto a la principal o es un evento alternativo; se modela como un segundo evento de daño del mismo impacto."
+    }
+  ],
+  "history": [
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "health", "from": 800, "to": 1500, "note": "Vida del silo (antes de ser destruido en el suelo) aumentada." },
+    { "patch": "1.004.001", "date": "2025-09-04", "field": "reload.full", "from": 210, "to": 180, "note": "Cooldown de la estratagema reducido." },
+    { "patch": "1.004.000", "date": "2025-09-04", "field": "release", "from": null, "to": "arma agregada al juego", "note": null }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "sg8-punisher",
+  "name": "SG-8 Punisher",
+  "category": "Primary Weapon",
+  "rpm": 80,
+  "magazine": 16,
+  "reload": {
+    "clipSize": 1,
+    "partial": 0.4,
+    "full": 6.4,
+    "confidence": "MEDIUM",
+    "notes": "Carga cartucho por cartucho ('la velocidad de recarga se acerca a su cadencia de disparo'); comparte cuerpo con SG-8S Slugger, que sí reporta 6.4s para 16 cartuchos. Se reutiliza esa cifra."
+  },
+  "source": {
+    "name": "Helldivers Wiki — SG-8 Punisher",
+    "url": "https://helldivers.wiki.gg/wiki/SG-8_Punisher",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "pellet",
+      "label": "Perdigón",
+      "internalName": "BUCKSHOT P1",
+      "kind": "projectile",
+      "standard": 45,
+      "durable": 12,
+      "ap": [2, 2, 2, 0],
+      "stagger": 35,
+      "push": 30,
+      "confidence": "HIGH",
+      "notes": "9 perdigones por cartucho. Valores por perdigón individual."
+    }
+  ],
+  "history": [
+    { "patch": "1.000.100", "date": "2024-03-06", "field": "pellet.standard", "from": 40, "to": 45, "note": "Stagger subió de 20 a 35." }
+  ]
+}

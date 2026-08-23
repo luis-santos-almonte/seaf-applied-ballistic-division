@@ -1,0 +1,39 @@
+{
+  "id": "ar32-pacifier",
+  "name": "AR-32 Pacifier",
+  "category": "Primary Weapon",
+  "rpm": 700,
+  "magazine": 40,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 3,
+    "confidence": "HIGH",
+    "notes": "No se reporta recarga parcial separada."
+  },
+  "source": {
+    "name": "Helldivers Wiki — AR-32 Pacifier",
+    "url": "https://helldivers.wiki.gg/wiki/AR-32_Pacifier",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "*AR-32 P",
+      "kind": "projectile",
+      "standard": 55,
+      "durable": 10,
+      "ap": [3, 3, 3, 0],
+      "confidence": "HIGH",
+      "notes": "Dispara munición de aturdimiento (Stun Medium, 3s de duración, fuerza 2 por proyectil); no hay campo de esquema para 'stun' más allá de stagger/push, que la wiki no reporta numéricamente para esta arma."
+    }
+  ],
+  "history": [
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "projectile.standard", "from": 50, "to": 55, "note": "Fuerza de aturdimiento por proyectil subió de 1.5 a 2." },
+    { "patch": "1.003.200", "date": "2025-07-15", "field": "stunDuration", "from": 1.5, "to": 3, "note": "Duración de aturdimiento en segundos (no representado en el esquema)." }
+  ]
+}

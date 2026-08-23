@@ -1,0 +1,92 @@
+{
+  "id": "gr-8-recoilless-rifle",
+  "name": "GR-8 Recoilless Rifle",
+  "category": "Support Weapon",
+  "rpm": 600,
+  "magazine": 1,
+  "reload": {
+    "clipSize": 1,
+    "partial": null,
+    "full": 4,
+    "confidence": "MEDIUM",
+    "notes": "Recarga en solitario: 4 s (arrodillado, insertando un proyectil por vez, sin cargador extraíble). En equipo (un aliado carga mientras el tirador apunta) el ritmo efectivo sube a ~38-40 disparos/min, pero eso depende de coordinación y no se modela como un valor único aquí."
+  },
+  "source": {
+    "name": "Helldivers Wiki — GR-8 Recoilless Rifle",
+    "url": "https://helldivers.wiki.gg/wiki/GR-8_Recoilless_Rifle",
+    "dateChecked": "2026-08-22",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "La wiki no desglosó de forma clara el stagger/push/demolition por fila de ataque para el modo HEAT; se dejaron esos campos en null en el proyectil HEAT en vez de inventar un valor."
+  },
+  "attacks": [
+    {
+      "id": "heat-projectile",
+      "label": "HEAT · proyectil",
+      "internalName": "85mm HEAT GRENADE P",
+      "kind": "projectile",
+      "standard": 3200,
+      "durable": 3200,
+      "ap": [6, 6, 6, 3],
+      "triggersExplosion": "heat-explosion",
+      "demolition": null,
+      "stagger": null,
+      "push": null,
+      "confidence": "MEDIUM",
+      "notes": "AP Anti-Tank II (0-80°) y Medium a ángulo extremo. Stagger/push/demolición del proyectil no quedaron claros en la fuente consultada."
+    },
+    {
+      "id": "heat-explosion",
+      "label": "HEAT · explosión",
+      "internalName": "85mm HEAT GRENADE P IE",
+      "kind": "explosion",
+      "standard": 150,
+      "durable": 150,
+      "ap": 3,
+      "radiusInner": 1.5,
+      "radiusOuter": 3,
+      "radiusShockwave": 6,
+      "demolition": null,
+      "stagger": 50,
+      "push": null,
+      "confidence": "MEDIUM",
+      "notes": "AP Medium (3)."
+    },
+    {
+      "id": "he-projectile",
+      "label": "HE · proyectil",
+      "internalName": "85mm HIGH-EXPLOSIVE GRENADE P",
+      "kind": "projectile",
+      "standard": 750,
+      "durable": 750,
+      "ap": [5, 5, 5, 0],
+      "triggersExplosion": "he-explosion",
+      "demolition": null,
+      "stagger": null,
+      "push": null,
+      "confidence": "HIGH",
+      "notes": "Munición programable HE (alto explosivo, menos AP que HEAT pero explosión mucho mayor). AP Anti-Tank I (0-80°), Unarmored a ángulo extremo."
+    },
+    {
+      "id": "he-explosion",
+      "label": "HE · explosión",
+      "internalName": "85mm HIGH-EXPLOSIVE GRENADE P IE",
+      "kind": "explosion",
+      "standard": 800,
+      "durable": 800,
+      "ap": 4,
+      "radiusInner": 3,
+      "radiusOuter": 7.5,
+      "radiusShockwave": 12,
+      "demolition": null,
+      "stagger": 60,
+      "push": null,
+      "confidence": "HIGH",
+      "notes": "AP Heavy (4). Radio de explosión notablemente mayor que el modo HEAT."
+    }
+  ],
+  "history": [
+    { "patch": "1.001.104", "date": "2024-10-15", "field": "firingModes", "from": "solo HEAT", "to": "munición programable HEAT/HE", "note": null },
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "heat-projectile.standard", "from": 650, "to": 3200, "note": "Gran aumento de daño en el parche de rebalanceo de armas pesadas de septiembre 2024." }
+  ]
+}

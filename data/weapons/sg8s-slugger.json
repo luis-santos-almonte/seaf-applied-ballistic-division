@@ -1,0 +1,43 @@
+{
+  "id": "sg8s-slugger",
+  "name": "SG-8S Slugger",
+  "category": "Primary Weapon",
+  "rpm": 80,
+  "magazine": 16,
+  "reload": {
+    "clipSize": 1,
+    "partial": 0.4,
+    "full": 6.4,
+    "confidence": "MEDIUM",
+    "notes": "La wiki confirma 6.4s para recargar el cargador completo de 16 cartuchos (carga uno por uno). El valor por cartucho (0.4s) se deriva de esa división, no está confirmado como cifra independiente."
+  },
+  "source": {
+    "name": "Helldivers Wiki — SG-8S Slugger",
+    "url": "https://helldivers.wiki.gg/wiki/SG-8S_Slugger",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "slug",
+      "label": "Bala (slug)",
+      "internalName": "10g RIFLED SLUGS P",
+      "kind": "projectile",
+      "standard": 330,
+      "durable": 90,
+      "ap": [3, 3, 3, 0],
+      "demolition": 10,
+      "stagger": 30,
+      "confidence": "HIGH",
+      "notes": "Un solo proyectil sólido por cartucho, no perdigones."
+    }
+  ],
+  "history": [
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "slug.standard", "from": 280, "to": 330, "note": "Durable subió de 75 a 90." },
+    { "patch": "1.002.200", "date": "2025-03-18", "field": "slug.standard", "from": 250, "to": 280, "note": null },
+    { "patch": "1.001.002", "date": "2024-08-06", "field": "stagger", "from": 20, "to": 30, "note": null },
+    { "patch": "1.000.200", "date": "2024-04-02", "field": "slug.standard", "from": 280, "to": 250, "note": "Demolition bajó de 20 a 10." }
+  ]
+}

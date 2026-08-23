@@ -1,0 +1,38 @@
+{
+  "id": "r6-deadeye",
+  "name": "R-6 Deadeye",
+  "category": "Primary Weapon",
+  "rpm": 100,
+  "magazine": 8,
+  "reload": {
+    "clipSize": 1,
+    "partial": 0.4,
+    "full": 3.2,
+    "confidence": "LOW",
+    "notes": "Carga bala por bala en un tubo bajo el cañón, con un round adicional en la recámara. La wiki no da un tiempo numérico, solo que la recarga es 'lenta'. Se estima 0.4s por bala (misma proporción usada para escopetas tubulares, derivada de SG-8S Slugger) y 3.2s para las 8 balas del cargador; no confirmado en la fuente."
+  },
+  "source": {
+    "name": "Helldivers Wiki — R-6 Deadeye",
+    "url": "https://helldivers.wiki.gg/wiki/R-6_Deadeye",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "R-6 P",
+      "kind": "projectile",
+      "standard": 300,
+      "durable": 100,
+      "ap": [3, 3, 3, 0],
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": [
+    { "patch": "1.002.200", "date": "2025-03-18", "field": "weapon", "from": null, "to": null, "note": "Agregada al juego." }
+  ]
+}

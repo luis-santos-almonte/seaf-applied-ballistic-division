@@ -1,0 +1,47 @@
+{
+  "id": "ted-63-dynamite",
+  "name": "TED-63 Dynamite",
+  "category": "Grenade",
+  "rpm": 30,
+  "magazine": 4,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 0,
+    "confidence": "LOW",
+    "notes": "Las granadas no tienen cadencia de disparo real ni recarga por cargador. 'rpm' (30, equivalente a una tirada cada ~2s) y 'reload.full' (0) son valores de compatibilidad con el esquema de armas de fuego sin significado en el juego real. 'magazine' = 4 es la capacidad máxima documentada por la wiki (subida de 3 a 4 en el parche 1.006.300; se reabastecen 2 por punto de suministro). 'clipSize' y 'partial' quedan en null: no hay cargador parcial, solo reabastecimiento en punto de suministro."
+  },
+  "source": {
+    "name": "Helldivers Wiki — TED-63 Dynamite",
+    "url": "https://helldivers.wiki.gg/wiki/TED-63_Dynamite",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "explosion",
+      "label": "Explosión",
+      "internalName": "TED-63 DYNAMITE E",
+      "kind": "explosion",
+      "standard": 1000,
+      "durable": null,
+      "ap": 4,
+      "triggersExplosion": null,
+      "radiusInner": 6,
+      "radiusOuter": 12,
+      "radiusShockwave": 16,
+      "demolition": 40,
+      "stagger": 40,
+      "push": 40,
+      "confidence": "HIGH",
+      "notes": "AP4 (Heavy). Fusible programable con tres duraciones seleccionables: 5, 15 o 60 segundos (no es un valor único fijo como en otras granadas). Considerada una 'mejora' del G-12 High Explosive: más daño y radio, pero una granada menos de capacidad y fusible más largo. Daño subido de 700 a 1000 y penetración/fuerzas mejoradas en el parche 1.004.100."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.300", "date": "2026-06-16", "field": "magazine", "from": 3, "to": 4, "note": null },
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "explosion.standard", "from": 700, "to": 1000, "note": "También subió la penetración y demolición/stagger a 40." },
+    { "patch": "1.002.200", "date": "2025-03-01", "field": "added", "from": null, "to": "TED-63 Dynamite agregada al juego", "note": "Fecha de día aproximada (2025-03): la wiki solo documentó mes y año del parche 1.002.200, no el día exacto." }
+  ]
+}

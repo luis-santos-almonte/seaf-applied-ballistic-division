@@ -1,0 +1,43 @@
+{
+  "id": "m-105-stalwart",
+  "name": "M-105 Stalwart",
+  "category": "Support Weapon",
+  "rpm": 1150,
+  "magazine": 250,
+  "reload": {
+    "clipSize": null,
+    "partial": 4,
+    "full": 5.333,
+    "confidence": "HIGH",
+    "notes": "Recarga táctica 4 s; recarga completa desde vacío 5.333 s. Cadencia seleccionable entre 700/850/1150 rpm; se usa el máximo (1150) como valor de referencia."
+  },
+  "source": {
+    "name": "Helldivers Wiki — M-105 Stalwart",
+    "url": "https://helldivers.wiki.gg/wiki/M-105_Stalwart",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "fmj-projectile",
+      "label": "FMJ · proyectil",
+      "internalName": "5.5x50mm FULL METAL JACKET P",
+      "kind": "projectile",
+      "standard": 90,
+      "durable": 22,
+      "ap": [2, 2, 2, 0],
+      "demolition": 10,
+      "stagger": 15,
+      "push": 10,
+      "confidence": "HIGH",
+      "notes": "AP Light (0-80°), Unarmored a ángulo extremo."
+    }
+  ],
+  "history": [
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "fmj-projectile.standard", "from": 80, "to": 90, "note": "Durable 15→22." },
+    { "patch": "1.002.200", "date": "2025-03-18", "field": "fmj-projectile.standard", "from": 70, "to": 80, "note": null },
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "fmj-projectile.standard", "from": 60, "to": 70, "note": "Stagger 10→15." }
+  ]
+}

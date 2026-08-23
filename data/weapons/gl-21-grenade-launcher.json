@@ -1,0 +1,61 @@
+{
+  "id": "gl-21-grenade-launcher",
+  "name": "GL-21 Grenade Launcher",
+  "category": "Support Weapon",
+  "rpm": 160,
+  "magazine": 10,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 3,
+    "confidence": "LOW",
+    "notes": "El cargador de 10 se cambia entero (no por peines como el AC-8). La wiki no publica el tiempo exacto de recarga; se estima 3.0 s por analogía con armas de cargador extraíble de tamaño similar. Requiere verificación manual."
+  },
+  "source": {
+    "name": "Helldivers Wiki — GL-21 Grenade Launcher",
+    "url": "https://helldivers.wiki.gg/wiki/GL-21_Grenade_Launcher",
+    "dateChecked": "2026-08-22",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "El historial de parches indica que en 1.006.100 (2026-03-17) el AP de la explosión se revirtió de Heavy a Medium, pero la tabla de ataque actual consultada sigue mostrando Heavy. Se prioriza el valor de la tabla de ataque actual (Heavy=4) y se deja constancia del conflicto para verificación manual."
+  },
+  "attacks": [
+    {
+      "id": "he-projectile",
+      "label": "HE · proyectil",
+      "internalName": "40mm HE GRENADE P",
+      "kind": "projectile",
+      "standard": 400,
+      "durable": 400,
+      "ap": [4, 4, 4, 0],
+      "triggersExplosion": "he-explosion",
+      "demolition": null,
+      "stagger": null,
+      "push": null,
+      "confidence": "MEDIUM",
+      "notes": "AP Heavy (0-80°), Unarmored a ángulo extremo. Ver conflicto de fuente en source.conflict."
+    },
+    {
+      "id": "he-explosion",
+      "label": "HE · explosión",
+      "internalName": "40mm HE GRENADE P IE",
+      "kind": "explosion",
+      "standard": 400,
+      "durable": 400,
+      "ap": 4,
+      "radiusInner": 3.5,
+      "radiusOuter": 7.5,
+      "radiusShockwave": 8,
+      "demolition": 30,
+      "stagger": 25,
+      "push": 30,
+      "confidence": "MEDIUM",
+      "notes": "Ver conflicto de fuente en source.conflict sobre si el AP actual es Heavy(4) o Medium(3)."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.100", "date": "2026-03-17", "field": "he-explosion.ap", "from": 4, "to": 3, "note": "Revertido de Heavy a Medium; ver conflicto con la tabla de ataque consultada." },
+    { "patch": "1.006.001", "date": "2026-02-03", "field": "he-explosion.ap", "from": 3, "to": 4, "note": "AP de la explosión subido a Heavy." },
+    { "patch": "1.000.400", "date": "2024-06-13", "field": "he-explosion.standard", "from": 350, "to": 400, "note": null }
+  ]
+}

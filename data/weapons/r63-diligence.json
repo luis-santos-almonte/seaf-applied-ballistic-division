@@ -1,0 +1,40 @@
+{
+  "id": "r63-diligence",
+  "name": "R-63 Diligence",
+  "category": "Primary Weapon",
+  "rpm": 350,
+  "magazine": 25,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 2.83,
+    "confidence": "HIGH",
+    "notes": null
+  },
+  "source": {
+    "name": "Helldivers Wiki — R-63 Diligence",
+    "url": "https://helldivers.wiki.gg/wiki/R-63_Diligence",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "9x70mm FULL METAL JACKET P",
+      "kind": "projectile",
+      "standard": 165,
+      "durable": 45,
+      "ap": [2, 2, 2, 0],
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": [
+    { "patch": "1.002.200", "date": "2025-03-18", "field": "magazine", "from": 20, "to": 25, "note": null },
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "projectile.standard", "from": 125, "to": 165, "note": "Durable subió de 32 a 45." },
+    { "patch": "1.000.300", "date": "2024-04-29", "field": "projectile.standard", "from": 112, "to": 125, "note": null }
+  ]
+}

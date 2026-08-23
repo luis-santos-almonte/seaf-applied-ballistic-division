@@ -1,0 +1,72 @@
+{
+  "id": "rs-422-railgun",
+  "name": "RS-422 Railgun",
+  "category": "Support Weapon",
+  "rpm": 60,
+  "magazine": 1,
+  "reload": {
+    "clipSize": 1,
+    "partial": null,
+    "full": 2,
+    "confidence": "LOW",
+    "notes": "No se encontró un valor numérico explícito de recarga en la wiki (ni en el cuadro de estadísticas ni en el histórico de parches). Se usa 2.0 s como estimación conservadora en base al tiempo de animación típico de armas de una sola bala de esta familia; requiere verificación manual contra la página en vivo."
+  },
+  "source": {
+    "name": "Helldivers Wiki — RS-422 Railgun",
+    "url": "https://helldivers.wiki.gg/wiki/RS-422_Railgun",
+    "dateChecked": "2026-08-22",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "La wiki muestra dos valores de cadencia distintos para esta arma: '34 rpm' en la ficha resumida y '60 rpm' en las estadísticas detalladas. Se usó 60 rpm (coincide con 1 disparo/seg tras la carga) por ser el valor de las estadísticas detalladas, pero el origen de la discrepancia no quedó claro."
+  },
+  "attacks": [
+    {
+      "id": "safe-shot",
+      "label": "Modo seguro",
+      "internalName": "RAILGUN ROUND P",
+      "kind": "projectile",
+      "standard": 600,
+      "durable": 225,
+      "ap": 5,
+      "demolition": 10,
+      "stagger": 35,
+      "push": 15,
+      "confidence": "HIGH",
+      "notes": "AP Anti-Tank I, uniforme en los 4 ángulos según la wiki."
+    },
+    {
+      "id": "unsafe-shot",
+      "label": "Modo sobrecargado (unsafe, carga máxima)",
+      "internalName": "Railgun Max Charge",
+      "kind": "projectile",
+      "standard": 1500,
+      "durable": 562,
+      "ap": 5,
+      "demolition": 10,
+      "stagger": 35,
+      "push": 15,
+      "confidence": "HIGH",
+      "notes": "Daño escalable con el nivel de carga hasta este máximo al 100% ('unsafe mode'); AP se mantiene igual al modo seguro según la wiki. Cargar más allá del límite seguro puede hacer explotar el arma."
+    },
+    {
+      "id": "overcharge-explosion",
+      "label": "Autodestrucción por sobrecarga",
+      "internalName": "RS-422 RAILGUN Overcharge E",
+      "kind": "explosion",
+      "standard": 300,
+      "durable": 300,
+      "ap": 3,
+      "demolition": null,
+      "stagger": null,
+      "push": null,
+      "confidence": "MEDIUM",
+      "notes": "Explosión que ocurre si el arma se sobrecarga más allá del límite seguro (autodestrucción del arma/usuario); no es un ataque ofensivo normal contra enemigos."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.001", "date": "2026-02-03", "field": "safe/unsafe", "from": null, "to": "reposicionamiento de la función de modo seguro/inseguro", "note": null },
+    { "patch": "1.003.000", "date": "2025-05-13", "field": "spread", "from": 10, "to": 0.1, "note": "Reducción drástica de dispersión." },
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "safe-shot.durable", "from": 60, "to": 225, "note": "Daño de sobrecarga aumentado a 250%." },
+    { "patch": "1.000.300", "date": "2024-04-29", "field": "ap", "from": "Medium", "to": "Anti-Tank I", "note": null }
+  ]
+}

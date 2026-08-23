@@ -1,0 +1,39 @@
+{
+  "id": "cqc-9-defoliation-tool",
+  "name": "CQC-9 Defoliation Tool",
+  "category": "Support Weapon",
+  "rpm": 120,
+  "magazine": 1,
+  "reload": {
+    "clipSize": null,
+    "partial": null,
+    "full": 0,
+    "confidence": "MEDIUM",
+    "notes": "Arma cuerpo a cuerpo (categoría de la wiki: 'Weapon Category: Support Weapons', tipo 'Melee') con usos ilimitados, sin munición ni recarga. rpm=120 se deriva de la ventana de escalado de daño por contacto sostenido documentada (0.5s), asumiendo un ciclo de aplicación cada 0.5s (60/0.5=120); es una aproximación porque la wiki no da un RPM tradicional para esta mecánica de contacto continuo."
+  },
+  "source": {
+    "name": "Helldivers Wiki — CQC-9 Defoliation Tool",
+    "url": "https://helldivers.wiki.gg/wiki/CQC-9_Defoliation_Tool",
+    "dateChecked": "2026-08-22",
+    "confidence": "LOW",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "contact",
+      "label": "Contacto sostenido",
+      "internalName": null,
+      "kind": "projectile",
+      "standard": 450,
+      "durable": 225,
+      "ap": [3, 0, 0, 0],
+      "demolition": null,
+      "stagger": null,
+      "push": null,
+      "confidence": "MEDIUM",
+      "notes": "El daño y la penetración de esta herramienta escalan con hasta 0.5s de contacto sostenido contra el objetivo; se modela el valor base documentado (450/225) sin el escalado adicional, que no quedó cuantificado con precisión en la fuente consultada."
+    }
+  ],
+  "history": []
+}

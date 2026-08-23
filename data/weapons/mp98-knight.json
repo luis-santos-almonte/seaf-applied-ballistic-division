@@ -1,0 +1,41 @@
+{
+  "id": "mp98-knight",
+  "name": "MP-98 Knight",
+  "category": "Primary Weapon",
+  "rpm": 1380,
+  "magazine": 50,
+  "reload": {
+    "clipSize": null,
+    "partial": 1.7,
+    "full": 2.5,
+    "confidence": "HIGH",
+    "notes": null
+  },
+  "source": {
+    "name": "Helldivers Wiki — MP-98 Knight",
+    "url": "https://helldivers.wiki.gg/wiki/MP-98_Knight",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "9x20mm FULL METAL JACKET P",
+      "kind": "projectile",
+      "standard": 90,
+      "durable": 18,
+      "ap": [2, 2, 2, 0],
+      "confidence": "HIGH",
+      "notes": null
+    }
+  ],
+  "history": [
+    { "patch": "1.004.100", "date": "2025-10-23", "field": "projectile.standard", "from": 70, "to": 90, "note": "Durable subió de 7 a 18." },
+    { "patch": "1.003.000", "date": "2025-05-13", "field": "spread", "from": 25, "to": 5, "note": null },
+    { "patch": "1.002.200", "date": "2025-03-18", "field": "projectile.standard", "from": 65, "to": 70, "note": null },
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "projectile.standard", "from": 50, "to": 65, "note": "Durable subió de 5 a 7." }
+  ]
+}

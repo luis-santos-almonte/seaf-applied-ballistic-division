@@ -1,0 +1,50 @@
+{
+  "id": "r2124-constitution",
+  "name": "R-2124 Constitution",
+  "category": "Primary Weapon",
+  "rpm": 60,
+  "magazine": 5,
+  "reload": {
+    "clipSize": 5,
+    "partial": null,
+    "full": 4,
+    "confidence": "LOW",
+    "notes": "Mecánica de peine cargador (stripper clip) de 5 balas. La wiki NO da tiempos numéricos, pero describe una mecánica inversa a la habitual: recargar con el cargador NO vacío se hace bala por bala (lento), mientras que agotar el cargador por completo permite insertar el peine de 5 de una vez (más rápido). Por eso no se puede modelar como 'partial' más rápido que 'full' según el comentario del esquema; se deja partial=null y se usa 4s como estimación plausible solo para la recarga completa (vacío + peine), sin verificar."
+  },
+  "source": {
+    "name": "Helldivers Wiki — R-2124 Constitution",
+    "url": "https://helldivers.wiki.gg/wiki/R-2124_Constitution",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "projectile",
+      "label": "Proyectil",
+      "internalName": "R-2124 P",
+      "kind": "projectile",
+      "standard": 180,
+      "durable": 50,
+      "ap": [3, 3, 3, 0],
+      "confidence": "HIGH",
+      "notes": null
+    },
+    {
+      "id": "bayonet",
+      "label": "Bayoneta (cuerpo a cuerpo)",
+      "internalName": null,
+      "kind": "projectile",
+      "standard": 165,
+      "durable": 83,
+      "ap": [3, 0, 0, 0],
+      "confidence": "HIGH",
+      "notes": "Ataque cuerpo a cuerpo con bayoneta calada; usa 'projectile' por restricción del esquema. AP Medium solo en golpe directo; el resto de ángulos es Unarmored."
+    }
+  ],
+  "history": [
+    { "patch": "1.007.000", "date": "2026-08-12", "field": "reload", "from": "sin peine", "to": "recarga por peine de 5", "note": "Munición de reserva subió de 99 a 100." },
+    { "patch": "1.006.001", "date": "2026-02-03", "field": "bayonet.standard", "from": 110, "to": 165, "note": "Durable de bayoneta subió de 55 a 83." }
+  ]
+}

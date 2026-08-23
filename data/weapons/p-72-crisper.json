@@ -1,0 +1,36 @@
+{
+  "id": "p-72-crisper",
+  "name": "P-72 Crisper",
+  "category": "Secondary Weapon",
+  "rpm": 4500,
+  "magazine": 50,
+  "reload": {
+    "clipSize": 50,
+    "partial": null,
+    "full": 3.0,
+    "confidence": "LOW",
+    "notes": "La wiki no publica fire_rate ni tiempo de recarga en segundos para esta arma (lanzallamas de bolsillo, chorro continuo). rpm=4500 es un valor derivado, no publicado directamente: la infobox indica 150 DPS con 2 de daño 'por tick', lo que implica 75 ticks/segundo = 4500 ciclos/minuto para que rpm × standard / 60 reproduzca el DPS documentado. El tiempo de recarga (cambio de tanque de combustible) se estima en 3.0 s por analogía con armas de combustible pesado; no hay dato publicado."
+  },
+  "source": {
+    "name": "Helldivers Wiki — P-72 Crisper",
+    "url": "https://helldivers.wiki.gg/wiki/P-72_Crisper",
+    "dateChecked": "2026-08-22",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "chorro",
+      "label": "Chorro de fuego",
+      "internalName": "P-72 CRISPER S",
+      "kind": "projectile",
+      "standard": 2,
+      "durable": 2,
+      "ap": [4, 4, 4, 0],
+      "confidence": "MEDIUM",
+      "notes": "Daño por tick del chorro continuo (75 ticks/seg ≈ 150 DPS documentado). Además aplica un efecto de quemadura por separado: 100 de daño de fuego repartido en 3 segundos tras el impacto, con el mismo AP Heavy/Heavy/Heavy/Unarmored. No se modela como ataque independiente en este catálogo porque su cadencia (una quemadura de 3s por impacto) no encaja con el rpm=4500 del chorro base y generaría un DPS calculado incorrecto si se le aplicara la misma cadencia; queda documentado aquí solo como referencia."
+    }
+  ],
+  "history": []
+}

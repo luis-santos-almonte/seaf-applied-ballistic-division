@@ -1,0 +1,54 @@
+{
+  "id": "p-40-k-bolt-pistol",
+  "name": "P/40-K Bolt Pistol",
+  "category": "Secondary Weapon",
+  "rpm": 150,
+  "magazine": 6,
+  "reload": {
+    "clipSize": 6,
+    "partial": 1.3,
+    "full": 2.45,
+    "confidence": "HIGH",
+    "notes": "Full Reload Time=2.45s, Tactical Reload Time=1.3s documentados en la wiki."
+  },
+  "source": {
+    "name": "Helldivers Wiki — P/40-K Bolt Pistol",
+    "url": "https://helldivers.wiki.gg/wiki/P/40-K_Bolt_Pistol",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "proyectil",
+      "label": "Proyectil",
+      "internalName": null,
+      "kind": "projectile",
+      "standard": 325,
+      "durable": 115,
+      "ap": [4, 4, 4, 0],
+      "triggersExplosion": "explosion",
+      "demolition": 20,
+      "stagger": 35,
+      "push": 15,
+      "confidence": "HIGH",
+      "notes": null
+    },
+    {
+      "id": "explosion",
+      "label": "Explosión",
+      "internalName": null,
+      "kind": "explosion",
+      "standard": 175,
+      "durable": 175,
+      "ap": 3,
+      "demolition": 10,
+      "stagger": 35,
+      "push": 5,
+      "confidence": "MEDIUM",
+      "notes": "La wiki documenta el daño interno de la explosión (175) y su AP (Medium/3) pero no publica los radios inner/outer/shockwave para esta arma; se dejan en null."
+    }
+  ],
+  "history": []
+}

@@ -1,0 +1,60 @@
+{
+  "id": "mls-4x-commando",
+  "name": "MLS-4X Commando",
+  "category": "Support Weapon",
+  "rpm": 240,
+  "magazine": 4,
+  "reload": {
+    "clipSize": 4,
+    "partial": null,
+    "full": 0,
+    "confidence": "MEDIUM",
+    "notes": "Lanzador desechable: cada estratagema entrega un lanzador ya cargado con 4 misiles; no existe recarga real, se agota y se descarta (se necesita volver a llamar la estratagema para obtener otro)."
+  },
+  "source": {
+    "name": "Helldivers Wiki — MLS-4X Commando",
+    "url": "https://helldivers.wiki.gg/wiki/MLS-4X_Commando",
+    "dateChecked": "2026-08-22",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "attacks": [
+    {
+      "id": "missile-projectile",
+      "label": "Misil guiado · proyectil",
+      "internalName": "66mm MISSILE P",
+      "kind": "projectile",
+      "standard": 1100,
+      "durable": 1100,
+      "ap": [6, 6, 6, 3],
+      "triggersExplosion": "missile-explosion",
+      "demolition": 30,
+      "stagger": 40,
+      "push": 25,
+      "confidence": "HIGH",
+      "notes": "AP Anti-Tank II (0-80°), Medium a ángulo extremo. Misil semi-guiado por láser."
+    },
+    {
+      "id": "missile-explosion",
+      "label": "Misil guiado · explosión",
+      "internalName": "66mm MISSILE P IE",
+      "kind": "explosion",
+      "standard": 150,
+      "durable": 150,
+      "ap": 3,
+      "radiusInner": 1,
+      "radiusOuter": 2,
+      "radiusShockwave": 4,
+      "demolition": 30,
+      "stagger": 40,
+      "push": 40,
+      "confidence": "HIGH",
+      "notes": "Falloff de outer radius: 149→0."
+    }
+  ],
+  "history": [
+    { "patch": "1.006.001", "date": "2026-02-03", "field": "targeting", "from": "apuntaba al último punto mirado", "to": "apunta correctamente al objetivo marcado", "note": null },
+    { "patch": "1.001.100", "date": "2024-09-17", "field": "missile-projectile.standard", "from": 450, "to": 1100, "note": "Demolición 40→30." }
+  ]
+}
