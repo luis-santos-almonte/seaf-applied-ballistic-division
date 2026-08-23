@@ -1,5 +1,0 @@
-name = "seaf-applied-ballistics-division"
-compatibility_date = "2026-08-22"
-
-[assets]
-directory = "./dist"
