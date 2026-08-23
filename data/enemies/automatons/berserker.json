@@ -1,0 +1,68 @@
+{
+  "id": "berserker",
+  "name": "Berserker",
+  "faction": "AUTOMATONS",
+  "size": "medium",
+  "fireDamageMultiplier": 1.25,
+  "staggerThreshold": 30,
+  "source": {
+    "name": "Helldivers Wiki — Berserker",
+    "url": "https://helldivers.wiki.gg/wiki/Berserker",
+    "dateChecked": "2026-08-23",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "La tabla de la wiki marca 'Hombros' y 'Piernas' con 0% de transferencia a Main, pero las Piernas igual figuran como Fatal (Sí). Se dejó tal cual está documentado (fatal es un gatillo independiente del %ToMain), pero no se pudo confirmar con una segunda fuente si de verdad basta con destruir una sola pierna para matarlo o si hace falta romper ambas."
+  },
+  "main": { "hp": 750, "av": 0, "durability": 0, "exdr": 0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 110, "av": 1, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "chest", "name": "Pecho", "count": 1,
+      "hp": 425, "av": 2, "durability": 0.4,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "stomach", "name": "Abdomen", "count": 1,
+      "hp": 350, "av": 1, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "pelvis", "name": "Pelvis", "count": 1,
+      "hp": 600, "av": 1, "durability": 0.0,
+      "toMain": 0.65, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "shoulders", "name": "Hombros", "count": 2,
+      "hp": 180, "av": 0, "durability": 0.0,
+      "toMain": 0.0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": "No transfieren nada a Main; son puramente cosméticos/de cobertura."
+    },
+    {
+      "id": "arms", "name": "Brazos (sierras)", "count": 2,
+      "hp": 260, "av": 1, "durability": 0.3,
+      "toMain": 0.5, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Portan las sierras circulares de melé; a diferencia del Devastator, aquí sí tienen tope de overflow."
+    },
+    {
+      "id": "legs", "name": "Piernas", "count": 2,
+      "hp": 750, "av": 1, "durability": 0.3,
+      "toMain": 0.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": "0% de transferencia a Main pero marcadas como Fatal: ver 'conflict' del enemigo, dato documentado pero no cruzado con una segunda fuente."
+    }
+  ]
+}

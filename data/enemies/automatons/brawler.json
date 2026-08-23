@@ -1,0 +1,54 @@
+{
+  "id": "brawler",
+  "name": "Brawler",
+  "faction": "AUTOMATONS",
+  "size": "small",
+  "fireDamageMultiplier": 0.5,
+  "staggerThreshold": 10,
+  "source": {
+    "name": "Helldivers Wiki — Brawler",
+    "url": "https://helldivers.wiki.gg/wiki/Brawler",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "main": { "hp": 125, "av": 0, "durability": 0, "exdr": 0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": null, "hpIsMain": true, "av": 0, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": "No tiene vida propia: la tabla la lista como 'Main', o sea que apunta directo al HP del cuerpo principal."
+    },
+    {
+      "id": "torso", "name": "Torso", "count": 1,
+      "hp": 100, "av": 0, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "left-arm", "name": "Brazo izquierdo (escudo)", "count": 1,
+      "hp": 85, "av": 0, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": "Sostiene el escudo antidisturbios; a diferencia de los brazos genéricos de otros soldados, este cuenta como fatal y transfiere el 100% a Main."
+    },
+    {
+      "id": "right-arm", "name": "Brazo derecho (porra)", "count": 1,
+      "hp": 65, "av": 0, "durability": 0.0,
+      "toMain": 0.5, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Sostiene la porra eléctrica de melé. Sin tope de overflow: el exceso sí se transfiere a Main."
+    },
+    {
+      "id": "legs", "name": "Piernas", "count": 2,
+      "hp": 90, "av": 0, "durability": 0.0,
+      "toMain": 0.65, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    }
+  ]
+}

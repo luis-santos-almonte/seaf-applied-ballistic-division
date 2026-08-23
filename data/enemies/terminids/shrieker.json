@@ -1,0 +1,11 @@
+{
+  "id": "shrieker", "name": "Shrieker", "faction": "TERMINIDS", "size": "small",
+  "fireDamageMultiplier": 1.0, "staggerThreshold": 20,
+  "source": { "name": "Helldivers Wiki — Shrieker", "url": "https://helldivers.wiki.gg/wiki/Shrieker", "dateChecked": "2026-08-23", "confidence": "HIGH", "status": "verified", "conflict": "Algunas fuentes de terceros (p.ej. GamesRadar) describen al Shrieker como un bicho de tamaño 'medium'. El infobox de helldivers.wiki.gg lo clasifica como Small; se prioriza esta fuente por ser la más detallada y explícita." },
+  "main": { "hp": 80, "av": 0, "durability": 0, "exdr": 0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    { "id": "head", "name": "Cabeza", "count": 1, "hp": 30, "av": 0, "durability": 0, "toMain": 1.0, "overflowCap": true, "fatal": true, "exdr": 1.0, "notes": null },
+    { "id": "limbs", "name": "Patas", "count": 1, "hp": 30, "av": 0, "durability": 0, "toMain": 0.4, "overflowCap": false, "fatal": false, "exdr": 1.0, "notes": "La wiki lista esta fila como 'Limbs' sin número de copias (a diferencia de otros bichos con 'Limbs (6)'), y aclara que estas partes comparten un único pool de vida en vez de tener copias independientes. Modelada como count=1 con el pool combinado de 30 HP." },
+    { "id": "wings", "name": "Alas", "count": 2, "hp": 20, "av": 0, "durability": 0, "toMain": 0.3, "overflowCap": true, "fatal": true, "exdr": 1.0, "notes": "Volar el ala es la forma más rápida de derribarlo, según la wiki." }
+  ]
+}

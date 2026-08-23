@@ -1,0 +1,143 @@
+{
+  "id": "veracitor",
+  "name": "Veracitor",
+  "faction": "ILLUMINATE",
+  "size": "heavy",
+  "fireDamageMultiplier": 1.0,
+  "staggerThreshold": 40,
+  "source": {
+    "name": "Helldivers Wiki — Veracitor",
+    "url": "https://helldivers.wiki.gg/wiki/Veracitor",
+    "dateChecked": "2026-08-23",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "Mech de la subfacción Appropriators, estructuralmente muy similar al Gatekeeper. La wiki no documenta el % de Durabilidad de casi ninguna parte (columna en blanco/'—' en la tabla fuente), por lo que se asumió 0 en esos casos; esto es una estimación, no un dato confirmado. Todos los brazos/piernas tienen 100% de resistencia a explosivos según la página, lo cual está reflejado en el ExDR de cada parte. No se encontró clasificación de tamaño explícita; se asignó 'heavy' por analogía directa con el Gatekeeper."
+  },
+  "main": { "hp": 3000, "av": 3, "durability": 0, "exdr": 0 },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 300, "av": 3, "durability": 0,
+      "toMain": 0, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Al destruirla se desactiva la cobertura del escudo de forma permanente, según la wiki."
+    },
+    {
+      "id": "chassis", "name": "Chasis", "count": 1,
+      "hp": 1600, "av": 3, "durability": 0,
+      "toMain": 0.75, "overflowCap": false,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "carapace", "name": "Caparazón", "count": 2,
+      "hp": 400, "av": 3, "durability": 0,
+      "toMain": 0.5, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "breakablePlating": true,
+      "notes": "Placas exteriores independientes; no exponen los internos al destruirse."
+    },
+    {
+      "id": "internals", "name": "Internos", "count": 2,
+      "hp": 600, "av": 1, "durability": 0,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "shield", "name": "Escudo", "count": 1,
+      "hp": 1300, "av": 2, "durability": 0,
+      "toMain": 0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "breakablePlating": true, "protects": "cockpit",
+      "notes": "Protege Cabina y Piloto mientras está activo."
+    },
+    {
+      "id": "pilot", "name": "Piloto", "count": 1,
+      "hp": 700, "av": 2, "durability": 0,
+      "toMain": 0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "requiresBroken": "shield",
+      "notes": "Destruir al Piloto elimina el mech completo, según la wiki."
+    },
+    {
+      "id": "cockpit", "name": "Cabina", "count": 1,
+      "hp": 1600, "av": 3, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "requiresBroken": "shield",
+      "notes": null
+    },
+    {
+      "id": "cockpit-weakspot", "name": "Punto débil de cabina", "count": 1,
+      "hp": 800, "av": 1, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "requiresBroken": "shield",
+      "notes": null
+    },
+    {
+      "id": "shoulders", "name": "Hombros", "count": 2,
+      "hp": 800, "av": 2, "durability": 0,
+      "toMain": 0.75, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "upper-arms", "name": "Brazos superiores", "count": 2,
+      "hp": 800, "av": 2, "durability": 0,
+      "toMain": 0.75, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "lower-arms", "name": "Brazos inferiores", "count": 2,
+      "hp": 800, "av": 3, "durability": 0,
+      "toMain": 0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "arm-weakspots", "name": "Puntos débiles de brazos", "count": 2,
+      "hp": 800, "av": 1, "durability": 0,
+      "toMain": 0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "hips", "name": "Caderas", "count": 2,
+      "hp": 1600, "av": 2, "durability": 0,
+      "toMain": 0.75, "overflowCap": false,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "rear-hip", "name": "Cadera trasera", "count": 1,
+      "hp": 1600, "av": 3, "durability": 0,
+      "toMain": 0.75, "overflowCap": false,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "upper-legs", "name": "Piernas superiores", "count": 2,
+      "hp": 1600, "av": 2, "durability": 0,
+      "toMain": 0.75, "overflowCap": false,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "lower-legs", "name": "Piernas inferiores", "count": 2,
+      "hp": 1600, "av": 3, "durability": 0,
+      "toMain": 0.75, "overflowCap": false,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "rear-leg", "name": "Pierna trasera", "count": 1,
+      "hp": 1600, "av": 3, "durability": 0,
+      "toMain": 0.75, "overflowCap": false,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    }
+  ]
+}

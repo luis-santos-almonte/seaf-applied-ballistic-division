@@ -1,0 +1,83 @@
+{
+  "id": "heavy-devastator",
+  "name": "Heavy Devastator",
+  "faction": "AUTOMATONS",
+  "size": "medium",
+  "fireDamageMultiplier": 1.25,
+  "staggerThreshold": 30,
+  "source": {
+    "name": "Helldivers Wiki — Heavy Devastator",
+    "url": "https://helldivers.wiki.gg/wiki/Heavy_Devastator",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "main": { "hp": 750, "av": 2, "durability": 0, "exdr": 0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 110, "av": 1, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": "Muchas armas la revientan de un tiro y matan al instante."
+    },
+    {
+      "id": "torso", "name": "Torso", "count": 1,
+      "hp": 425, "av": 3, "durability": 0.3,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": "AV3: los disparos que fallan la cabeza rebotan aquí si el arma es AP2 o menos."
+    },
+    {
+      "id": "shoulders", "name": "Hombros", "count": 2,
+      "hp": 150, "av": 2, "durability": 0.0,
+      "toMain": 0.25, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "arms", "name": "Brazos", "count": 2,
+      "hp": 260, "av": 1, "durability": 0.0,
+      "toMain": 0.5, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Sin tope de overflow: el exceso sí se transfiere a Main."
+    },
+    {
+      "id": "stomach", "name": "Abdomen", "count": 1,
+      "hp": 350, "av": 1, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": "AV1 y fatal: alternativa más consistente que la cabeza."
+    },
+    {
+      "id": "pelvis", "name": "Pelvis", "count": 1,
+      "hp": 500, "av": 2, "durability": 0.0,
+      "toMain": 0.75, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "legs", "name": "Piernas", "count": 2,
+      "hp": 500, "av": 2, "durability": 0.3,
+      "toMain": 0.6, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "backpack", "name": "Mochila generadora", "count": 1,
+      "hp": 600, "av": 2, "durability": 0.0,
+      "toMain": 0.4, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": "Alimenta el escudo balístico frontal."
+    },
+    {
+      "id": "shield", "name": "Escudo balístico", "count": 1,
+      "hp": 800, "av": 4, "durability": 0.7,
+      "toMain": 0.0, "overflowCap": false,
+      "fatal": false, "exdr": 0.0,
+      "breakablePlating": true,
+      "notes": "AV4 (Pesada) y 70% durable: cubre todo el frente y no transfiere daño a Main; solo se puede destruir o rodear, no aporta al desgaste del cuerpo. Al destruirse, el Devastator la suelta y queda expuesto de frente."
+    }
+  ]
+}

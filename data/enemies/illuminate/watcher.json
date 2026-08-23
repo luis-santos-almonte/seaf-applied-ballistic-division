@@ -1,0 +1,54 @@
+{
+  "id": "watcher",
+  "name": "Watcher",
+  "faction": "ILLUMINATE",
+  "size": "medium",
+  "fireDamageMultiplier": null,
+  "staggerThreshold": null,
+  "source": {
+    "name": "Helldivers Wiki — Watcher",
+    "url": "https://helldivers.wiki.gg/wiki/Watcher",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "main": { "hp": 600, "av": 0, "durability": 0, "exdr": 0 },
+  "parts": [
+    {
+      "id": "body", "name": "Cuerpo", "count": 1,
+      "hp": 400, "av": 2, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "eye", "name": "Ojo", "count": 1,
+      "hp": 300, "av": 0, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "upper-fin", "name": "Aleta superior", "count": 1,
+      "hp": 200, "av": 0, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "lower-fin", "name": "Aleta inferior", "count": 1,
+      "hp": 200, "av": 0, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "side-fins", "name": "Aletas laterales", "count": 2,
+      "hp": 150, "av": 2, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    }
+  ]
+}

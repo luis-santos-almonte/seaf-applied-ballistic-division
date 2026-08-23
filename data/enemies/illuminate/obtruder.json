@@ -1,0 +1,47 @@
+{
+  "id": "obtruder",
+  "name": "Obtruder",
+  "faction": "ILLUMINATE",
+  "size": "medium",
+  "fireDamageMultiplier": null,
+  "staggerThreshold": null,
+  "source": {
+    "name": "Helldivers Wiki — Obtruder",
+    "url": "https://helldivers.wiki.gg/wiki/Obtruder",
+    "dateChecked": "2026-08-23",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "La wiki no documenta explícitamente la durabilidad del Main ni el multiplicador de daño por fuego ni el umbral de stagger para este enemigo; se asumió durability 0 para Main por consistencia con enemigos voladores similares (Watcher, Gazer) que comparten estructura de partes, pero no está confirmado en la página."
+  },
+  "main": { "hp": 400, "av": 0, "durability": 0, "exdr": 0 },
+  "parts": [
+    {
+      "id": "body", "name": "Cuerpo", "count": 1,
+      "hp": 400, "av": 1, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "eye", "name": "Ojo", "count": 1,
+      "hp": 300, "av": 0, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "vertical-fins", "name": "Aletas verticales", "count": 2,
+      "hp": 100, "av": 0, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "lateral-fins", "name": "Aletas laterales", "count": 2,
+      "hp": 100, "av": 0, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Objetivo recomendado para el lanzador W.A.S.P. según la wiki."
+    }
+  ]
+}

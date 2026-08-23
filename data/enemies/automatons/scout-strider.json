@@ -1,0 +1,62 @@
+{
+  "id": "scout-strider",
+  "name": "Scout Strider",
+  "faction": "AUTOMATONS",
+  "size": "medium",
+  "fireDamageMultiplier": 1.0,
+  "staggerThreshold": 30,
+  "source": {
+    "name": "Helldivers Wiki — Scout Strider",
+    "url": "https://helldivers.wiki.gg/wiki/Scout_Strider",
+    "dateChecked": "2026-08-23",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "Varias celdas de la tabla de Anatomía (Durable%, Overflow Cap del Main/Piloto/Placa frontal) llegaron como guiones ('—') en la extracción automática. Se asumió 0%/false donde faltaba el dato explícito en vez de omitir el campo obligatorio; ver notas de cada parte."
+  },
+  "main": { "hp": 500, "av": 4, "durability": 0.0, "exdr": 0.0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "pilot", "name": "Piloto expuesto", "count": 1,
+      "hp": 125, "av": 0, "durability": 0.0,
+      "toMain": 0.0, "overflowCap": false,
+      "fatal": true, "exdr": 0.5,
+      "notes": "Trooper piloto visible por atrás/arriba, protegido de frente por la placa. Matarlo destruye el Strider al instante y el Trooper sigue peleando a pie; no resta HP de Main en este modelo (ver conflict)."
+    },
+    {
+      "id": "front-plate", "name": "Placa frontal", "count": 1,
+      "hp": 350, "av": 4, "durability": 0.4,
+      "toMain": 0.0, "overflowCap": false,
+      "fatal": true, "exdr": 0.0,
+      "breakablePlating": true, "protects": "pilot",
+      "notes": "Cubre al piloto de frente; no transfiere daño a Main directamente."
+    },
+    {
+      "id": "hmg", "name": "Ametralladora pesada", "count": 1,
+      "hp": 300, "av": 4, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": true, "exdr": 0.0,
+      "notes": "Arma montada en el 'brazo' del Strider."
+    },
+    {
+      "id": "turret-system", "name": "Sistema de la torreta", "count": 1,
+      "hp": 300, "av": 3, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "waist", "name": "Cintura", "count": 1,
+      "hp": 300, "av": 3, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": "Destruir la cintura destruye el vehículo entero y expulsa al piloto."
+    },
+    {
+      "id": "legs", "name": "Piernas", "count": 2,
+      "hp": 400, "av": 2, "durability": 0.75,
+      "toMain": 0.5, "overflowCap": true,
+      "fatal": true, "exdr": 0.0,
+      "notes": null
+    }
+  ]
+}

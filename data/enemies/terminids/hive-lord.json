@@ -1,0 +1,88 @@
+{
+  "id": "hive-lord",
+  "name": "Hive Lord",
+  "faction": "TERMINIDS",
+  "size": "boss",
+  "fireDamageMultiplier": 1.0,
+  "staggerThreshold": null,
+  "source": {
+    "name": "Helldivers Wiki — Hive Lord",
+    "url": "https://helldivers.wiki.gg/wiki/Hive_Lord",
+    "dateChecked": "2026-08-23",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "Enemigo agregado en la actualización 'Into the Unjust' (parche 1.004.000, 2 de septiembre de 2025), confirmado como real por múltiples fuentes independientes (GamesRadar, PC Gamer, Kotaku, TheGamer) con HP principal de 150.000 y patrón de armadura Tank en casi todo el cuerpo salvo boca/carne interior — estos datos son de confianza HIGH. Sin embargo, el desglose fila por fila de la tabla de anatomía (Corona, Quijada, Mandíbulas, placas dorsales/esternales, aletas, etc.) proviene de una sola consulta a la wiki y no pudo corroborarse número por número con una segunda fuente independiente, por ser un enemigo muy reciente y poco cubierto en detalle. Por eso se baja la confianza general a MEDIUM. La tasa de decaimiento (constitutionDecay) de las placas dorsal/esternal/esternón inferior no está documentada en ninguna fuente encontrada y se dejó en null. El Stagger Threshold no aparece documentado (consistente con que se lo describe como esencialmente imposible de aturdir por su escala) y se dejó en null en vez de inventarlo. El esquema solo permite una referencia 'requiresBroken' por parte: se eligió 'dorsal-plate' para 'inner-flesh', pero la wiki sugiere que tanto las placas dorsales como las esternales protegen la carne interior; esto queda documentado en las notas de cada parte."
+  },
+  "main": { "hp": 150000, "av": 5, "durability": 0.0, "exdr": 0.25, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "crown", "name": "Corona", "count": 1,
+      "hp": null, "hpIsMain": true, "av": 10, "durability": 0.0,
+      "toMain": 0.25, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Blindaje Tank VI, el más alto del cuerpo. La wiki lista su Health como igual al de Main, interpretado aquí como pass-through (hpIsMain) en vez de un pool propio de 150.000."
+    },
+    {
+      "id": "jaws", "name": "Quijada", "count": 1,
+      "hp": null, "hpIsMain": true, "av": 6, "durability": 0.0,
+      "toMain": 0.5, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Health igual al de Main en la tabla de la wiki; interpretado como pass-through (hpIsMain)."
+    },
+    {
+      "id": "mandibles", "name": "Mandíbulas", "count": 2,
+      "hp": 10000, "av": 6, "durability": 0.0,
+      "toMain": 0.5, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Única parte de la cabeza con un pool de vida propio distinto al de Main (10.000)."
+    },
+    {
+      "id": "mouth", "name": "Boca", "count": 1,
+      "hp": null, "hpIsMain": true, "av": 2, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Punto más débil de la cabeza (Light, AV2) pero sin armadura Tank. Health igual al de Main en la wiki; interpretado como pass-through."
+    },
+    {
+      "id": "dorsal-plate", "name": "Placa dorsal", "count": 6,
+      "hp": 15000, "av": 5, "durability": 0.0,
+      "toMain": 0.10, "overflowCap": true,
+      "constitution": 35000, "constitutionDecay": null,
+      "fatal": false, "exdr": 0.25,
+      "breakablePlating": true, "protects": "inner-flesh",
+      "notes": "Constitution de 35.000 documentada en la wiki; la tasa de decaimiento por segundo no aparece especificada en ninguna fuente encontrada."
+    },
+    {
+      "id": "sterna-plate", "name": "Placa esternal", "count": 6,
+      "hp": 15000, "av": 5, "durability": 0.0,
+      "toMain": 0.10, "overflowCap": true,
+      "constitution": 35000, "constitutionDecay": null,
+      "fatal": false, "exdr": 0.25,
+      "breakablePlating": true, "protects": "inner-flesh",
+      "notes": "Constitution de 35.000 documentada en la wiki; tasa de decaimiento no documentada."
+    },
+    {
+      "id": "lower-sterna", "name": "Esternón inferior", "count": 1,
+      "hp": 20000, "av": 5, "durability": 0.0,
+      "toMain": 0.10, "overflowCap": true,
+      "constitution": 35000, "constitutionDecay": null,
+      "fatal": false, "exdr": 1.0,
+      "notes": "A diferencia de las placas dorsal/esternal, esta parte tiene 100% de ExDR según la tabla."
+    },
+    {
+      "id": "inner-flesh", "name": "Carne interior", "count": 6,
+      "hp": null, "hpIsMain": true, "av": 2, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "requiresBroken": "dorsal-plate",
+      "notes": "El esquema solo admite una referencia 'requiresBroken'; la wiki sugiere que la carne interior queda expuesta al romper las placas dorsales y/o esternales que la cubren, no solo la dorsal. Se modeló con 'dorsal-plate' como referencia principal."
+    },
+    {
+      "id": "fins", "name": "Aletas", "count": 14,
+      "hp": 5000, "av": 5, "durability": 0.0,
+      "toMain": 0.25, "overflowCap": true,
+      "fatal": false, "exdr": 0.5,
+      "notes": null
+    }
+  ]
+}

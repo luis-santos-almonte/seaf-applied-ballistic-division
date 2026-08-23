@@ -1,0 +1,41 @@
+{
+  "id": "alpha-commander",
+  "name": "Alpha Commander",
+  "faction": "TERMINIDS",
+  "size": "large",
+  "fireDamageMultiplier": 1.0,
+  "staggerThreshold": 25,
+  "source": {
+    "name": "Helldivers Wiki — Alpha Commander",
+    "url": "https://helldivers.wiki.gg/wiki/Alpha_Commander",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": "Es una variante fuertemente blindada del Brood Commander (mismo tamaño, más vida y constitución en la cabeza). Búsqueda web corrobora que reemplaza al Brood Commander desde dificultad 'Impossible' y comparte comportamiento; no se encontró contradicción de datos numéricos entre fuentes."
+  },
+  "main": { "hp": 1000, "av": 2, "durability": 0.70, "exdr": 0.0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 250, "av": 2, "durability": 0.70,
+      "toMain": 1.0, "overflowCap": false,
+      "constitution": 300, "constitutionDecay": 100,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "claws", "name": "Garras", "count": 2,
+      "hp": 200, "av": 2, "durability": 0.50,
+      "toMain": 0.5, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Guías de comunidad afirman que destruir ambas garras puede matar al Alpha Commander; no se encontró esto formalizado en la tabla de anatomía de la wiki (que no tiene una columna para ese tipo de mecánica combinada), así que se deja como nota sin modelar como regla del esquema."
+    },
+    {
+      "id": "legs", "name": "Patas", "count": 4,
+      "hp": 200, "av": 1, "durability": 0.50,
+      "toMain": 0.6, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "scavenger", "name": "Scavenger", "faction": "TERMINIDS", "size": "small",
+  "fireDamageMultiplier": 0.5, "staggerThreshold": 1,
+  "source": { "name": "Helldivers Wiki — Scavenger", "url": "https://helldivers.wiki.gg/wiki/Scavenger", "dateChecked": "2026-08-23", "confidence": "HIGH", "status": "verified", "conflict": null },
+  "main": { "hp": 60, "av": 0, "durability": 0, "exdr": 0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    { "id": "head", "name": "Cabeza", "count": 1, "hp": 20, "av": 0, "durability": 0, "toMain": 1.0, "overflowCap": true, "fatal": true, "exdr": 1.0, "notes": null },
+    { "id": "limbs", "name": "Patas", "count": 6, "hp": 30, "av": 0, "durability": 0, "toMain": 0.3, "overflowCap": true, "fatal": false, "exdr": 1.0, "notes": "Cada pata tiene salud independiente (6 copias)." }
+  ]
+}

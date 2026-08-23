@@ -1,0 +1,40 @@
+{
+  "id": "gazer",
+  "name": "Gazer",
+  "faction": "ILLUMINATE",
+  "size": "medium",
+  "fireDamageMultiplier": null,
+  "staggerThreshold": 0,
+  "source": {
+    "name": "Helldivers Wiki — Gazer",
+    "url": "https://helldivers.wiki.gg/wiki/Gazer",
+    "dateChecked": "2026-08-23",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "La wiki no indica una clase de tamaño (small/medium/large) explícita para el Gazer; se asignó 'medium' como estimación razonable dado su rol de dron/torreta flotante con 900 HP y AV5 (Tank I), no confirmada literalmente en la página."
+  },
+  "main": { "hp": 900, "av": 5, "durability": 1.0, "exdr": 0 },
+  "parts": [
+    {
+      "id": "eye", "name": "Ojo", "count": 1,
+      "hp": 700, "av": 1, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 0,
+      "notes": null
+    },
+    {
+      "id": "sphere", "name": "Esfera", "count": 1,
+      "hp": 900, "av": 5, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 0,
+      "notes": null
+    },
+    {
+      "id": "base", "name": "Base", "count": 1,
+      "hp": 900, "av": 5, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": "0 de Stagger Force documentado: el Gazer no puede ser tambaleado."
+    }
+  ]
+}

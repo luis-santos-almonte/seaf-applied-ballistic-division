@@ -1,0 +1,103 @@
+{
+  "id": "rupture-charger",
+  "name": "Rupture Charger",
+  "faction": "TERMINIDS",
+  "size": "large",
+  "fireDamageMultiplier": 1.5,
+  "staggerThreshold": 38,
+  "source": {
+    "name": "Helldivers Wiki — Rupture Charger",
+    "url": "https://helldivers.wiki.gg/wiki/Rupture_Charger",
+    "dateChecked": "2026-08-23",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "La tabla de anatomía es propia y dedicada (no remite al Charger base), y confirma que la cabeza y una placa adicional en las patas delanteras ('Frontal Tarsal Plate Armor') tienen AV5 ('Tank I') en vez de AV4 ('Heavy') — esto coincide con una búsqueda cruzada independiente que describe AP5 frontal en cabeza/patas para esta cepa. Sin embargo, la wiki NO documenta explícitamente en texto el orden de capas entre 'Frontal Tarsal Plate Armor' (AV5) y 'Front Leg Armor' (AV4) en la pata delantera: ambas filas aparecen como partes separadas con el mismo HP/durable/%ToMain. Se asumió, por analogía con el patrón armadura-rompible->carne del Charger base, que la Tarsal Plate es la capa externa y protege a Front Leg Armor, y que Front Leg Armor a su vez protege leg-flesh. Esta cadena de 3 capas es una estimación no confirmada por la wiki; de ahí la confidence MEDIUM y status partially_verified."
+  },
+  "main": { "hp": 2400, "av": 4, "durability": 1.0, "exdr": 0.25, "constitution": 750, "constitutionDecay": 100 },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 1200, "av": 5, "durability": 0.75,
+      "toMain": 0.7, "overflowCap": false,
+      "fatal": true, "exdr": 0.25,
+      "notes": "Diferencia real y verificada frente al Charger base: AV5 ('Tank I') en vez de AV4 ('Heavy'). Confirmado por el ícono de armadura de la wiki (Armor_AV5_Icon) y por fuentes cruzadas que describen requerimiento de armas anti-tanque (AP5+) para penetrar la cabeza desde el frente."
+    },
+    {
+      "id": "torso-armor", "name": "Placas de torso", "count": 2,
+      "hp": 800, "av": 4, "durability": 0.85,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": false, "exdr": 0.25,
+      "breakablePlating": true, "protects": "inner-flesh",
+      "notes": "Idéntico al Charger base."
+    },
+    {
+      "id": "inner-flesh", "name": "Carne interior", "count": 1,
+      "hp": null, "hpIsMain": true, "av": 1, "durability": 0.3,
+      "toMain": 3.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "requiresBroken": "torso-armor",
+      "notes": "Idéntico al Charger base. 300% a Main."
+    },
+    {
+      "id": "underside", "name": "Vientre", "count": 1,
+      "hp": null, "hpIsMain": true, "av": 2, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": "Idéntico al Charger base."
+    },
+    {
+      "id": "rear-armor", "name": "Placas traseras", "count": 1,
+      "hp": 2200, "av": 4, "durability": 0.75,
+      "toMain": 0.75, "overflowCap": false,
+      "fatal": true, "exdr": 1.0,
+      "breakablePlating": true, "protects": "butt",
+      "notes": "Idéntico al Charger base."
+    },
+    {
+      "id": "butt", "name": "Trasero", "count": 1,
+      "hp": 950, "av": 0, "durability": 0.8,
+      "toMain": 1.5, "overflowCap": false,
+      "fatal": false, "exdr": 0.25,
+      "notes": "Mismos valores numéricos que el Charger base, pero la tabla de la wiki marca esta parte como 'No Fatal' para esta cepa (a diferencia del Charger base, donde sí es fatal), aunque Constitution sigue indicando 'Yes (Downs)'."
+    },
+    {
+      "id": "claws", "name": "Garras", "count": 2,
+      "hp": 500, "av": 4, "durability": 0.7,
+      "toMain": 0.7, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Idéntico al Charger base."
+    },
+    {
+      "id": "frontal-tarsal-plate", "name": "Placa tarsal delantera", "count": 2,
+      "hp": 800, "av": 5, "durability": 0.7,
+      "toMain": 0.6, "overflowCap": false,
+      "fatal": false, "exdr": 0.25,
+      "breakablePlating": true, "protects": "front-leg-armor",
+      "notes": "Parte exclusiva de esta cepa (no existe en el Charger base): placa adicional AV5 ('Tank I') sobre la pata delantera, más resistente a penetración que el resto de la armadura de pata (AV4). La wiki confirma que existe como fila separada de 'Front Leg Armor', pero NO especifica el orden de capas exacto entre ambas; se asumió que esta placa es la capa externa (estimación documentada, ver 'conflict' del source)."
+    },
+    {
+      "id": "front-leg-armor", "name": "Armadura pata delantera", "count": 2,
+      "hp": 800, "av": 4, "durability": 0.7,
+      "toMain": 0.6, "overflowCap": false,
+      "fatal": false, "exdr": 0.25,
+      "breakablePlating": true, "requiresBroken": "frontal-tarsal-plate", "protects": "leg-flesh",
+      "notes": "Mismos valores que el Charger base. El requisito de romper primero 'frontal-tarsal-plate' es una estimación (ver 'conflict' del source), ya que la wiki no confirma el orden exacto de capas."
+    },
+    {
+      "id": "rear-leg-armor", "name": "Armadura pata trasera", "count": 2,
+      "hp": 800, "av": 4, "durability": 0.7,
+      "toMain": 0.5, "overflowCap": false,
+      "fatal": false, "exdr": 0.25,
+      "breakablePlating": true, "protects": "leg-flesh",
+      "notes": "Idéntico al Charger base. Las patas traseras no tienen placa tarsal adicional (esa mejora es exclusiva de las patas delanteras)."
+    },
+    {
+      "id": "leg-flesh", "name": "Carne de pata", "count": 4,
+      "hp": 800, "av": 2, "durability": 0.7,
+      "toMain": 0.5, "overflowCap": false,
+      "fatal": true, "exdr": 0.25,
+      "requiresBroken": "front-leg-armor",
+      "notes": "Idéntico al Charger base."
+    }
+  ]
+}

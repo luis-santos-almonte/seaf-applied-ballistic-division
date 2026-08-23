@@ -1,0 +1,47 @@
+{
+  "id": "wretch",
+  "name": "Wretch",
+  "faction": "ILLUMINATE",
+  "size": "small",
+  "fireDamageMultiplier": 1.5,
+  "staggerThreshold": 20,
+  "source": {
+    "name": "Helldivers Wiki — Wretch",
+    "url": "https://helldivers.wiki.gg/wiki/Wretch",
+    "dateChecked": "2026-08-23",
+    "confidence": "LOW",
+    "status": "partially_verified",
+    "conflict": "Contenido nuevo del patch 7.0.0 'Devoid of Liberty' (2026-08-12), parte de la subfacción Vote Snatchers. La página de la wiki lleva una marca general de 'stub' (aunque la tabla de Anatomy en sí aparece completa numéricamente). A diferencia de la mayoría de enemigos Illuminate, NINGUNA parte individual está marcada 'Fatal: Yes' en la tabla —incluida la Cabeza—, lo cual coincide con la guía de la comunidad de que 'destruir solo la cabeza no lo mata al instante'. Se interpreta que este enemigo se derrota únicamente vaciando el HP de Main (450) mediante el daño transferido desde las partes, sin atajo de instakill documentado. Reverificar si la wiki actualiza/consolida la página en el futuro."
+  },
+  "main": { "hp": 450, "av": 1, "durability": 0, "exdr": 0 },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 100, "av": 1, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": "IMPORTANTE: a diferencia de casi todos los demás enemigos Illuminate, la wiki NO marca esta parte como fatal. Destruir la cabeza no garantiza matar al Wretch; el patch notes y las guías comunitarias indican apuntar a las extremidades (brazos/guadañas) en su lugar."
+    },
+    {
+      "id": "arms", "name": "Brazos", "count": 4,
+      "hp": 50, "av": 1, "durability": 0,
+      "toMain": 0.5, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": "HP muy bajo (50) y 50% a Main: el objetivo más eficiente para derribarlo rápido según las guías de la comunidad, aunque la wiki no lo marca como 'fatal' en sentido estricto (sin instakill documentado, solo transferencia acumulada de daño a Main)."
+    },
+    {
+      "id": "claws", "name": "Guadañas", "count": 2,
+      "hp": 200, "av": 3, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Las dos guadañas mencionadas en el patch; más HP y armadura que los brazos, pero 100% a Main, por lo que siguen siendo un buen objetivo secundario."
+    },
+    {
+      "id": "legs", "name": "Piernas", "count": 2,
+      "hp": 450, "av": 1, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    }
+  ]
+}

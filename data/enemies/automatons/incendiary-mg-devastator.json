@@ -1,0 +1,75 @@
+{
+  "id": "incendiary-mg-devastator",
+  "name": "Incendiary MG Devastator",
+  "faction": "AUTOMATONS",
+  "size": "medium",
+  "fireDamageMultiplier": 1.25,
+  "staggerThreshold": 30,
+  "source": {
+    "name": "Helldivers Wiki — Incendiary MG Devastator",
+    "url": "https://helldivers.wiki.gg/wiki/Incendiary_MG_Devastator",
+    "dateChecked": "2026-08-23",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "La tabla de esta variante (subfacción Incineration Corps) no listó explícitamente Overflow Cap para el cuerpo base (llegó como guion '—'); se completó igual que el Devastator base, del que hereda el resto de valores. El escudo figura con vida 'Infinite' (indestructible) en la wiki: se representó con un HP centinela muy alto (99999) en vez de un número real, ya que el esquema exige un valor numérico positivo."
+  },
+  "main": { "hp": 750, "av": 2, "durability": 0, "exdr": 0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 110, "av": 1, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "torso", "name": "Torso", "count": 1,
+      "hp": 425, "av": 3, "durability": 0.3,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "shoulders", "name": "Hombros", "count": 2,
+      "hp": 150, "av": 2, "durability": 0.0,
+      "toMain": 0.25, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "arms", "name": "Brazos", "count": 2,
+      "hp": 260, "av": 1, "durability": 0.0,
+      "toMain": 0.5, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Sin tope de overflow: el exceso sí se transfiere a Main."
+    },
+    {
+      "id": "stomach", "name": "Abdomen", "count": 1,
+      "hp": 350, "av": 1, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "pelvis", "name": "Pelvis", "count": 1,
+      "hp": 500, "av": 2, "durability": 0.0,
+      "toMain": 0.75, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "legs", "name": "Piernas", "count": 2,
+      "hp": 500, "av": 2, "durability": 0.3,
+      "toMain": 0.6, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "shield", "name": "Escudo balístico portátil", "count": 1,
+      "hp": 99999, "av": 5, "durability": 0.0,
+      "toMain": 0.0, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": "La wiki documenta este escudo como de vida 'Infinita' (no se destruye con daño convencional). El valor de HP es un centinela, no un dato real: ver 'conflict' del enemigo."
+    }
+  ]
+}

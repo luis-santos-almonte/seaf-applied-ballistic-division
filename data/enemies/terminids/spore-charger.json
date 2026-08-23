@@ -1,0 +1,102 @@
+{
+  "id": "spore-charger",
+  "name": "Spore Charger",
+  "faction": "TERMINIDS",
+  "size": "large",
+  "fireDamageMultiplier": 1.5,
+  "staggerThreshold": 38,
+  "source": {
+    "name": "Helldivers Wiki — Spore Charger",
+    "url": "https://helldivers.wiki.gg/wiki/Spore_Charger",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "main": { "hp": 2400, "av": 4, "durability": 1.0, "exdr": 0.25, "constitution": 750, "constitutionDecay": 100 },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 1200, "av": 4, "durability": 0.75,
+      "toMain": 0.7, "overflowCap": false,
+      "fatal": true, "exdr": 0.25,
+      "notes": "Idéntico al Charger base."
+    },
+    {
+      "id": "torso-armor", "name": "Placas de torso", "count": 2,
+      "hp": 800, "av": 4, "durability": 0.85,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": false, "exdr": 0.25,
+      "breakablePlating": true, "protects": "inner-flesh",
+      "notes": "Idéntico al Charger base."
+    },
+    {
+      "id": "inner-flesh", "name": "Carne interior", "count": 1,
+      "hp": null, "hpIsMain": true, "av": 1, "durability": 1.0,
+      "toMain": 3.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "requiresBroken": "torso-armor",
+      "notes": "Diferencia real frente al Charger base: 100% durable (vs 30% en el Charger base). El 300% a Main se mantiene igual. Confirmado dos veces contra la tabla dedicada de esta cepa."
+    },
+    {
+      "id": "underside", "name": "Vientre", "count": 1,
+      "hp": null, "hpIsMain": true, "av": 2, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": "Idéntico al Charger base."
+    },
+    {
+      "id": "rear-armor", "name": "Placas traseras", "count": 1,
+      "hp": 2200, "av": 4, "durability": 0.75,
+      "toMain": 0.75, "overflowCap": false,
+      "fatal": true, "exdr": 1.0,
+      "breakablePlating": true, "protects": "butt",
+      "notes": "Idéntico al Charger base."
+    },
+    {
+      "id": "butt", "name": "Trasero", "count": 1,
+      "hp": 950, "av": 0, "durability": 1.0,
+      "toMain": 1.5, "overflowCap": false,
+      "fatal": false, "exdr": 0.25,
+      "notes": "Diferencia frente al Charger base: 100% durable (vs 80%) y la tabla de la wiki marca esta parte como 'No Fatal' para esta cepa (a diferencia del Charger base y Charger Behemoth, donde sí es fatal), aunque la columna Constitution sigue indicando 'Yes (Downs)', o sea que igual puede derribarlo por sangrado vía constitution sin contar como 'fatal' en la clasificación de la wiki. Confirmado dos veces."
+    },
+    {
+      "id": "spore-flesh", "name": "Carne esporulada", "count": 6,
+      "hp": 500, "av": 1, "durability": 1.0,
+      "toMain": 0.2, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Parte exclusiva de esta cepa (no existe en el Charger base): protuberancias esporuladas repartidas por el cuerpo. Solo transfiere 20% del daño a Main, siendo su punto más ineficiente de golpear pese a su baja armadura. Al morir, el Spore Charger libera una erupción de esporas (aprox. 300 de daño explosivo en 15m de radio, con quemadura ácida de 3/s durante 4s) — cuidado al rematarlo de cerca."
+    },
+    {
+      "id": "claws", "name": "Garras", "count": 2,
+      "hp": 500, "av": 4, "durability": 0.7,
+      "toMain": 0.7, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Idéntico al Charger base."
+    },
+    {
+      "id": "front-leg-armor", "name": "Armadura pata delantera", "count": 2,
+      "hp": 800, "av": 4, "durability": 0.7,
+      "toMain": 0.6, "overflowCap": false,
+      "fatal": false, "exdr": 0.25,
+      "breakablePlating": true, "protects": "leg-flesh",
+      "notes": "Idéntico al Charger base."
+    },
+    {
+      "id": "rear-leg-armor", "name": "Armadura pata trasera", "count": 2,
+      "hp": 800, "av": 4, "durability": 0.7,
+      "toMain": 0.5, "overflowCap": false,
+      "fatal": false, "exdr": 0.25,
+      "breakablePlating": true, "protects": "leg-flesh",
+      "notes": "Idéntico al Charger base."
+    },
+    {
+      "id": "leg-flesh", "name": "Carne de pata", "count": 4,
+      "hp": 800, "av": 2, "durability": 0.7,
+      "toMain": 0.5, "overflowCap": false,
+      "fatal": true, "exdr": 0.25,
+      "requiresBroken": "front-leg-armor",
+      "notes": "Idéntico al Charger base."
+    }
+  ]
+}

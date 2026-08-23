@@ -1,0 +1,10 @@
+{
+  "id": "bile-spitter", "name": "Bile Spitter", "faction": "TERMINIDS", "size": "small",
+  "fireDamageMultiplier": 0.5, "staggerThreshold": 1,
+  "source": { "name": "Helldivers Wiki — Bile Spitter", "url": "https://helldivers.wiki.gg/wiki/Bile_Spitter", "dateChecked": "2026-08-23", "confidence": "HIGH", "status": "verified", "conflict": "La tabla de anatomía propia de Bile Spitter marca Fatal=Yes para las Patas, a diferencia de la parte análoga en Scavenger (Fatal=No), pese a que ambos bichos comparten los mismos valores de Health/AV/Durability/%ToMain/ExDR. Confirmado en dos consultas independientes a la página; se respeta el dato propio de esta página en vez de asumir paridad total con Scavenger." },
+  "main": { "hp": 60, "av": 0, "durability": 0, "exdr": 0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    { "id": "head", "name": "Cabeza", "count": 1, "hp": 20, "av": 0, "durability": 0, "toMain": 1.0, "overflowCap": true, "fatal": true, "exdr": 1.0, "notes": null },
+    { "id": "limbs", "name": "Patas", "count": 6, "hp": 30, "av": 0, "durability": 0, "toMain": 0.3, "overflowCap": true, "fatal": true, "exdr": 1.0, "notes": "La wiki marca Fatal=Yes para esta parte (a diferencia de la Scavenger, que es Fatal=No pese a tener stats idénticos). Confirmado dos veces en la página propia de Bile Spitter." }
+  ]
+}

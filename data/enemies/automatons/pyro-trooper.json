@@ -1,0 +1,65 @@
+{
+  "id": "pyro-trooper",
+  "name": "Pyro Trooper",
+  "faction": "AUTOMATONS",
+  "size": "small",
+  "fireDamageMultiplier": 0.5,
+  "staggerThreshold": 10,
+  "source": {
+    "name": "Helldivers Wiki — Pyro Trooper",
+    "url": "https://helldivers.wiki.gg/wiki/Pyro_Trooper",
+    "dateChecked": "2026-08-23",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "Subfacción Incineration Corps del Trooper base con un tanque de combustible añadido en la espalda. No se pudo confirmar en una segunda fuente el %ToMain exacto del tanque principal (10hp); se modeló siguiendo el mismo patrón placa+núcleo del MG Raider (mochila generadora)."
+  },
+  "main": { "hp": 125, "av": 0, "durability": 0, "exdr": 0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 40, "av": 0, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "torso", "name": "Torso", "count": 1,
+      "hp": 100, "av": 0, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "arms", "name": "Brazos", "count": 2,
+      "hp": 65, "av": 0, "durability": 0.0,
+      "toMain": 0.5, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Sin tope de overflow: el exceso de daño sí se transfiere a Main."
+    },
+    {
+      "id": "legs", "name": "Piernas", "count": 2,
+      "hp": 90, "av": 0, "durability": 0.0,
+      "toMain": 0.65, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "fuel-tank", "name": "Tanque de combustible", "count": 1,
+      "hp": 200, "av": 2, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "constitution": 1000, "constitutionDecay": 200,
+      "fatal": true, "exdr": 1.0,
+      "breakablePlating": true, "protects": "fuel-tank-core",
+      "notes": "Tanque incendiario en la espalda; puede explotar y quemar al Pyro Trooper y a lo que esté cerca."
+    },
+    {
+      "id": "fuel-tank-core", "name": "Núcleo del tanque", "count": 1,
+      "hp": 10, "av": 2, "durability": 0.0,
+      "toMain": 0.0, "overflowCap": false,
+      "constitution": 100, "constitutionDecay": 50,
+      "fatal": true, "exdr": 0.0,
+      "requiresBroken": "fuel-tank",
+      "notes": "Subsistema interno del tanque; solo queda expuesto tras romper la carcasa externa."
+    }
+  ]
+}

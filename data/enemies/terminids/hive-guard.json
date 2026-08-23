@@ -1,0 +1,60 @@
+{
+  "id": "hive-guard",
+  "name": "Hive Guard",
+  "faction": "TERMINIDS",
+  "size": "medium",
+  "fireDamageMultiplier": 0.8,
+  "staggerThreshold": 20,
+  "source": {
+    "name": "Helldivers Wiki — Hive Guard",
+    "url": "https://helldivers.wiki.gg/wiki/Hive_Guard",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "main": { "hp": 500, "av": 2, "durability": 0.3, "exdr": 0.0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 250, "av": 3, "durability": 0.35,
+      "toMain": 0.75, "overflowCap": false,
+      "constitution": 200, "constitutionDecay": 75,
+      "fatal": true, "fatalNote": null,
+      "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "claws", "name": "Garras", "count": 2,
+      "hp": 100, "av": 1, "durability": 0.0,
+      "toMain": 0.25, "overflowCap": false,
+      "fatal": false,
+      "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "tarsal-plate-armor", "name": "Placa tarsal frontal", "count": 2,
+      "hp": 125, "av": 3, "durability": 0.0,
+      "toMain": 0.45, "overflowCap": false,
+      "fatal": false,
+      "exdr": 1.0,
+      "notes": "Cubre parcialmente la pata delantera desde el frente. La wiki dice que se puede amputar la pata 'disparando a la sección sin armadura detrás de la placa', pero la tabla de anatomía no modela una relación formal de placa-rota-expone-carne (no hay campo de romper primero): son dos hitboxes independientes con sus propios HP/AV, no una capa que deba destruirse antes de dañar la de abajo. Por eso NO se modeló con breakablePlating/protects/requiresBroken; se documenta acá la duda."
+    },
+    {
+      "id": "front-legs", "name": "Patas delanteras", "count": 2,
+      "hp": 125, "av": 1, "durability": 0.0,
+      "toMain": 0.45, "overflowCap": false,
+      "fatal": false,
+      "exdr": 1.0,
+      "notes": "Sección sin armadura de la pata delantera, distinta de la Placa tarsal frontal que la cubre por delante (ver nota en esa parte)."
+    },
+    {
+      "id": "rear-legs", "name": "Patas traseras", "count": 2,
+      "hp": 125, "av": 1, "durability": 0.0,
+      "toMain": 0.35, "overflowCap": false,
+      "fatal": false,
+      "exdr": 1.0,
+      "notes": null
+    }
+  ]
+}

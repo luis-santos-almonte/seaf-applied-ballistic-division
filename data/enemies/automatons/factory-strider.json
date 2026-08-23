@@ -1,0 +1,144 @@
+{
+  "id": "factory-strider",
+  "name": "Factory Strider",
+  "faction": "AUTOMATONS",
+  "size": "boss",
+  "fireDamageMultiplier": 1.5,
+  "staggerThreshold": null,
+  "source": {
+    "name": "Helldivers Wiki — Factory Strider",
+    "url": "https://helldivers.wiki.gg/wiki/Factory_Strider",
+    "dateChecked": "2026-08-23",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "No hay umbral de stagger documentado para este jefe (queda null). Las piernas y paneles del vientre usan 'constitution' propia además de HP; se modelaron ambos campos según la tabla, pero la wiki no detalla completamente cómo interactúa esa constitution con el resto del modelo de daño del proyecto, así que se marca confianza MEDIA."
+  },
+  "main": { "hp": 10000, "av": 4, "durability": 1.0, "exdr": 0.4, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "cannon-turret", "name": "Torreta cañón", "count": 1,
+      "hp": 900, "av": 5, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": false, "exdr": 0.5,
+      "notes": "Requiere penetración anti-tanque (AV5); puede destruir estructuras de demolición 50 como Fabricadores o Inhibidores de Estratagemas."
+    },
+    {
+      "id": "fusion-gatling-guns", "name": "Cañones gatling de fusión", "count": 2,
+      "hp": 300, "av": 3, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Conviene destruirlos antes de intentar exponer el ojo."
+    },
+    {
+      "id": "head-armor", "name": "Blindaje de la cabeza", "count": 1,
+      "hp": 1500, "av": 5, "durability": 1.0,
+      "toMain": 0.3, "overflowCap": true,
+      "fatal": false, "exdr": 0.4,
+      "breakablePlating": true, "protects": "head-body",
+      "notes": null
+    },
+    {
+      "id": "head-body", "name": "Cabeza / Ojo", "count": 1,
+      "hp": 2500, "av": 4, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": true, "exdr": 0.4,
+      "requiresBroken": "head-armor",
+      "notes": "El ojo es zona fatal, pero solo queda expuesto tras romper el blindaje de la cabeza."
+    },
+    {
+      "id": "neck-armor", "name": "Blindaje del cuello", "count": 1,
+      "hp": 1500, "av": 5, "durability": 1.0,
+      "toMain": 0.3, "overflowCap": true,
+      "fatal": false, "exdr": 0.4,
+      "breakablePlating": true, "protects": "neck",
+      "notes": null
+    },
+    {
+      "id": "neck", "name": "Cuello", "count": 1,
+      "hp": 2500, "av": 4, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": true, "exdr": 0.4,
+      "requiresBroken": "neck-armor",
+      "notes": null
+    },
+    {
+      "id": "front-top-armor", "name": "Blindaje superior frontal", "count": 1,
+      "hp": 2200, "av": 5, "durability": 1.0,
+      "toMain": 0.3, "overflowCap": true,
+      "fatal": false, "exdr": 0.4,
+      "notes": null
+    },
+    {
+      "id": "front-engine", "name": "Motor frontal (punto débil)", "count": 1,
+      "hp": 2000, "av": 4, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 0.4,
+      "notes": "Punto débil frontal; requiere penetración pesada (AV4)."
+    },
+    {
+      "id": "front-armor", "name": "Blindaje frontal", "count": 1,
+      "hp": 2200, "av": 5, "durability": 1.0,
+      "toMain": 0.3, "overflowCap": true,
+      "fatal": false, "exdr": 0.4,
+      "notes": null
+    },
+    {
+      "id": "side-armor", "name": "Blindaje lateral", "count": 2,
+      "hp": 2200, "av": 5, "durability": 1.0,
+      "toMain": 0.3, "overflowCap": true,
+      "fatal": false, "exdr": 0.4,
+      "notes": null
+    },
+    {
+      "id": "rear-engine-armor", "name": "Blindaje del motor trasero", "count": 1,
+      "hp": 2200, "av": 5, "durability": 1.0,
+      "toMain": 0.5, "overflowCap": true,
+      "fatal": false, "exdr": 0.4,
+      "notes": null
+    },
+    {
+      "id": "rear-engine", "name": "Motor trasero (punto débil)", "count": 1,
+      "hp": 1500, "av": 3, "durability": 0.75,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 0.4,
+      "notes": "Solo requiere penetración media (AV3), más accesible que el motor frontal."
+    },
+    {
+      "id": "rear-armor", "name": "Blindaje trasero", "count": 1,
+      "hp": 2200, "av": 5, "durability": 1.0,
+      "toMain": 0.3, "overflowCap": true,
+      "fatal": false, "exdr": 0.4,
+      "notes": null
+    },
+    {
+      "id": "leg-armor", "name": "Blindaje de patas", "count": 8,
+      "hp": 1500, "av": 5, "durability": 1.0,
+      "toMain": 0.3, "overflowCap": true,
+      "fatal": false, "exdr": 0.4,
+      "notes": null
+    },
+    {
+      "id": "knee-armor", "name": "Blindaje de rodillas", "count": 4,
+      "hp": 800, "av": 5, "durability": 1.0,
+      "toMain": 0.2, "overflowCap": true,
+      "fatal": false, "exdr": 0.4,
+      "notes": null
+    },
+    {
+      "id": "leg-assembly", "name": "Ensamble de patas", "count": 4,
+      "hp": 1500, "av": 4, "durability": 1.0,
+      "toMain": 0.4, "overflowCap": true,
+      "constitution": 2000, "constitutionDecay": 0,
+      "fatal": true, "exdr": 0.4,
+      "notes": null
+    },
+    {
+      "id": "belly-panels", "name": "Paneles del vientre", "count": 2,
+      "hp": 1200, "av": 3, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": false,
+      "constitution": 1200, "constitutionDecay": 0,
+      "fatal": true, "exdr": 0.4,
+      "notes": "Punto débil alternativo al ojo: solo requiere penetración media (AV3) y tiene algo menos de HP efectivo (2400 total entre los dos paneles). Muy eficaz con armas de alta cadencia de tiro."
+    }
+  ]
+}

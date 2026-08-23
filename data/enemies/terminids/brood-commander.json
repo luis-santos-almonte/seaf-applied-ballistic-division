@@ -1,0 +1,41 @@
+{
+  "id": "brood-commander",
+  "name": "Brood Commander",
+  "faction": "TERMINIDS",
+  "size": "large",
+  "fireDamageMultiplier": 1.0,
+  "staggerThreshold": 25,
+  "source": {
+    "name": "Helldivers Wiki — Brood Commander",
+    "url": "https://helldivers.wiki.gg/wiki/Brood_Commander",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": "La clasificación de tamaño varía entre fuentes de comunidad (algunas lo llaman 'mediano', otras 'grande'); búsqueda web adicional confirma que se lo describe mayormente como Terminid grande ('large Terminid') que convoca Warriors, por lo que se adoptó 'large'."
+  },
+  "main": { "hp": 800, "av": 2, "durability": 0.60, "exdr": 0.0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 200, "av": 2, "durability": 0.60,
+      "toMain": 0.5, "overflowCap": false,
+      "constitution": 300, "constitutionDecay": 75,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "claws", "name": "Garras", "count": 2,
+      "hp": 200, "av": 2, "durability": 0.50,
+      "toMain": 0.5, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "legs", "name": "Patas", "count": 4,
+      "hp": 170, "av": 1, "durability": 0.40,
+      "toMain": 0.6, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    }
+  ]
+}

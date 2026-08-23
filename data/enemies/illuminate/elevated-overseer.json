@@ -1,0 +1,85 @@
+{
+  "id": "elevated-overseer",
+  "name": "Elevated Overseer",
+  "faction": "ILLUMINATE",
+  "size": "medium",
+  "fireDamageMultiplier": null,
+  "staggerThreshold": 30,
+  "source": {
+    "name": "Helldivers Wiki — Elevated Overseer",
+    "url": "https://helldivers.wiki.gg/wiki/Elevated_Overseer",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "main": { "hp": 450, "av": 0, "durability": 0, "exdr": 0 },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 200, "av": 2, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": "Más HP que la del Overseer base (200 vs 150) pero menor AV (2 vs 3): esta variante voladora carece de escudo, por lo que la cabeza está algo más reforzada en HP."
+    },
+    {
+      "id": "jetpack", "name": "Mochila propulsora", "count": 1,
+      "hp": 300, "av": 2, "durability": 0,
+      "toMain": 0.5, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": "Reemplaza al Escudo del Overseer base. Al destruirla, la unidad pierde la capacidad de volar."
+    },
+    {
+      "id": "chest-armor", "name": "Armadura de pecho", "count": 1,
+      "hp": 150, "av": 2, "durability": 0,
+      "toMain": 0.2, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "breakablePlating": true,
+      "notes": null
+    },
+    {
+      "id": "crotch-armor", "name": "Armadura de entrepierna", "count": 1,
+      "hp": 200, "av": 2, "durability": 0,
+      "toMain": 0.2, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "breakablePlating": true,
+      "notes": null
+    },
+    {
+      "id": "limb-armor", "name": "Armadura de extremidades", "count": 8,
+      "hp": 100, "av": 2, "durability": 0,
+      "toMain": 0.2, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "breakablePlating": true,
+      "notes": null
+    },
+    {
+      "id": "torso", "name": "Torso expuesto", "count": 1,
+      "hp": 600, "av": 1, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "right-arm", "name": "Brazo derecho expuesto", "count": 1,
+      "hp": 300, "av": 1, "durability": 0,
+      "toMain": 0.5, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "left-arm", "name": "Brazo izquierdo expuesto", "count": 1,
+      "hp": 300, "av": 1, "durability": 0,
+      "toMain": 0.5, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "legs", "name": "Piernas", "count": 2,
+      "hp": null, "hpIsMain": true, "av": 0, "durability": 0,
+      "toMain": 0.7, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Sin vida propia: la columna Health de la wiki dice 'Main'."
+    }
+  ]
+}

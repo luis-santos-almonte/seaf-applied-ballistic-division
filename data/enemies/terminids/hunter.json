@@ -1,0 +1,12 @@
+{
+  "id": "hunter", "name": "Hunter", "faction": "TERMINIDS", "size": "small",
+  "fireDamageMultiplier": 0.7, "staggerThreshold": 15,
+  "source": { "name": "Helldivers Wiki — Hunter", "url": "https://helldivers.wiki.gg/wiki/Hunter", "dateChecked": "2026-08-23", "confidence": "HIGH", "status": "verified", "conflict": "El HP de Main, Garras y Patas escala con la dificultad de la misión: Main 130 / Garras y Patas 45 en Trivial-Media, subiendo a Main 160 / Garras y Patas 60 en Desafiante o superior. Se usaron los valores de dificultad Desafiante+ (más representativos para el rango de dificultad donde se usa esta calculadora); el valor inferior de dificultades bajas queda documentado en las notas de cada parte afectada." },
+  "main": { "hp": 160, "av": 0, "durability": 0, "exdr": 0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    { "id": "head", "name": "Cabeza", "count": 1, "hp": 40, "av": 0, "durability": 0, "toMain": 1.0, "overflowCap": true, "fatal": true, "exdr": 1.0, "notes": null },
+    { "id": "claws", "name": "Garras", "count": 2, "hp": 60, "av": 0, "durability": 0, "toMain": 0.4, "overflowCap": false, "fatal": false, "exdr": 1.0, "notes": "HP escala con dificultad: 45 en Trivial-Media, 60 en Desafiante o superior (valor usado aquí)." },
+    { "id": "legs", "name": "Patas", "count": 4, "hp": 60, "av": 0, "durability": 0, "toMain": 0.5, "overflowCap": false, "fatal": false, "exdr": 1.0, "notes": "HP escala con dificultad: 45 en Trivial-Media, 60 en Desafiante o superior (valor usado aquí)." },
+    { "id": "wings", "name": "Alas", "count": 2, "hp": 20, "av": 0, "durability": 0, "toMain": 0.3, "overflowCap": false, "fatal": false, "exdr": 1.0, "notes": null }
+  ]
+}

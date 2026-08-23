@@ -1,0 +1,40 @@
+{
+  "id": "gunship",
+  "name": "Gunship",
+  "faction": "AUTOMATONS",
+  "size": "large",
+  "fireDamageMultiplier": null,
+  "staggerThreshold": null,
+  "source": {
+    "name": "Helldivers Wiki — Gunship",
+    "url": "https://helldivers.wiki.gg/wiki/Gunship",
+    "dateChecked": "2026-08-23",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "La wiki no documenta multiplicador de daño por fuego ni umbral de stagger para esta unidad voladora (se dejaron en null). El HP del Fuselaje aparece como 'Main' en la tabla (comparte el pool principal)."
+  },
+  "main": { "hp": 950, "av": 3, "durability": 0.0, "exdr": 0.0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "fuselage", "name": "Fuselaje", "count": 1,
+      "hp": null, "hpIsMain": true, "av": 3, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": "Cuerpo principal de la nave; comparte el HP de Main."
+    },
+    {
+      "id": "front-thrusters", "name": "Propulsores delanteros", "count": 2,
+      "hp": 400, "av": 3, "durability": 0.85,
+      "toMain": 0.0, "overflowCap": true,
+      "fatal": true, "exdr": 0.0,
+      "notes": "Destruir cualquier propulsor derriba la nave. Son el punto más débil (menos HP y durability que el fuselaje)."
+    },
+    {
+      "id": "rear-thrusters", "name": "Propulsores traseros", "count": 2,
+      "hp": 400, "av": 3, "durability": 0.8,
+      "toMain": 0.0, "overflowCap": true,
+      "fatal": true, "exdr": 0.0,
+      "notes": "Ligeramente menos durables que los delanteros, pero más difíciles de encarar porque la nave suele mantenerse de frente al jugador."
+    }
+  ]
+}

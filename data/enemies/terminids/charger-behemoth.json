@@ -1,0 +1,96 @@
+{
+  "id": "charger-behemoth",
+  "name": "Charger Behemoth",
+  "faction": "TERMINIDS",
+  "size": "large",
+  "fireDamageMultiplier": 1.5,
+  "staggerThreshold": 38,
+  "source": {
+    "name": "Helldivers Wiki — Charger Behemoth",
+    "url": "https://helldivers.wiki.gg/wiki/Charger_Behemoth",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": "La página tiene tabla de anatomía propia y dedicada (no remite al Charger base). Algunas fuentes de terceros (switchbladegaming.com, prodigygamers.com) afirman que el Behemoth tiene AV5 ('Tank I') en su armadura principal citando el breakpoint AP6-vs-AV5; sin embargo la tabla vigente de helldivers.wiki.gg (consultada 2026-08-23) muestra AV4 ('Heavy') en cabeza/torso/patas/garras, y el propio historial de parches de la wiki indica que la armadura fue 'reducida de Tank I a Heavy' en el parche 1.001.100 (que también subió el HP principal de 1800 a 3000). Se prioriza la tabla vigente de la wiki oficial por ser la fuente más detallada y actualizada."
+  },
+  "main": { "hp": 3000, "av": 4, "durability": 1.0, "exdr": 0.25, "constitution": 1000, "constitutionDecay": 100 },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 1600, "av": 4, "durability": 1.0,
+      "toMain": 0.7, "overflowCap": false,
+      "fatal": true, "exdr": 0.25,
+      "notes": "A diferencia del Charger base (75% durable), la cabeza del Behemoth es 100% durable: todo el daño que recibe cuenta como daño 'durable', confirmando que es una variante más resistente."
+    },
+    {
+      "id": "torso-armor", "name": "Placas de torso", "count": 2,
+      "hp": 1000, "av": 4, "durability": 0.85,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": false, "exdr": 0.25,
+      "breakablePlating": true, "protects": "inner-flesh",
+      "notes": "HP subido a 1000 respecto a los 800 del Charger base; el resto de los valores coincide con el Charger base."
+    },
+    {
+      "id": "inner-flesh", "name": "Carne interior", "count": 1,
+      "hp": null, "hpIsMain": true, "av": 1, "durability": 0.3,
+      "toMain": 3.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "requiresBroken": "torso-armor",
+      "notes": "300% a Main, igual que el Charger base. Solo existe tras romper las placas de torso."
+    },
+    {
+      "id": "underside", "name": "Vientre", "count": 1,
+      "hp": null, "hpIsMain": true, "av": 2, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": "100% durable, igual que el Charger base."
+    },
+    {
+      "id": "rear-armor", "name": "Placas traseras", "count": 1,
+      "hp": 2200, "av": 4, "durability": 0.75,
+      "toMain": 0.75, "overflowCap": false,
+      "fatal": true, "exdr": 1.0,
+      "breakablePlating": true, "protects": "butt",
+      "notes": "Idéntico al Charger base."
+    },
+    {
+      "id": "butt", "name": "Trasero", "count": 1,
+      "hp": 950, "av": 0, "durability": 1.0,
+      "toMain": 0.5, "overflowCap": false,
+      "fatal": true, "fatalNote": "Lo tumba y lo pone a desangrarse por constitution.",
+      "exdr": 0.25,
+      "notes": "Mismo HP que el Charger base (950), pero 100% durable (vs 80%) y solo 50% a Main (vs 150% en el Charger base): es un punto mucho menos rentable de disparar en el Behemoth que en el Charger normal."
+    },
+    {
+      "id": "claws", "name": "Garras", "count": 2,
+      "hp": 500, "av": 4, "durability": 0.7,
+      "toMain": 0.7, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Idéntico al Charger base."
+    },
+    {
+      "id": "front-leg-armor", "name": "Armadura pata delantera", "count": 2,
+      "hp": 1000, "av": 4, "durability": 0.8,
+      "toMain": 0.6, "overflowCap": false,
+      "fatal": false, "exdr": 0.25,
+      "breakablePlating": true, "protects": "leg-flesh",
+      "notes": "HP subido a 1000 (vs 800) y durable subido a 80% (vs 70%) respecto al Charger base."
+    },
+    {
+      "id": "rear-leg-armor", "name": "Armadura pata trasera", "count": 2,
+      "hp": 1000, "av": 4, "durability": 0.8,
+      "toMain": 0.5, "overflowCap": false,
+      "fatal": false, "exdr": 0.25,
+      "breakablePlating": true, "protects": "leg-flesh",
+      "notes": "HP subido a 1000 (vs 800) y durable subido a 80% (vs 70%) respecto al Charger base."
+    },
+    {
+      "id": "leg-flesh", "name": "Carne de pata", "count": 4,
+      "hp": 800, "av": 2, "durability": 0.7,
+      "toMain": 0.5, "overflowCap": false,
+      "fatal": true, "exdr": 0.25,
+      "requiresBroken": "front-leg-armor",
+      "notes": "Idéntico al Charger base. Fatal, queda expuesta tras romper la armadura de la pata."
+    }
+  ]
+}

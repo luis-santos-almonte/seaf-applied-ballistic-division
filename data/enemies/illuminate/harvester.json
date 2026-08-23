@@ -1,0 +1,94 @@
+{
+  "id": "harvester",
+  "name": "Harvester",
+  "faction": "ILLUMINATE",
+  "size": "large",
+  "fireDamageMultiplier": 1.5,
+  "staggerThreshold": 40,
+  "source": {
+    "name": "Helldivers Wiki — Harvester",
+    "url": "https://helldivers.wiki.gg/wiki/Harvester",
+    "dateChecked": "2026-08-23",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "Trípode con múltiples capas de armadura por pierna (muslo/espinilla/pie). Para evitar duplicar ~9 filas casi idénticas, se consolidaron esas placas en una sola parte agregada 'leg-armor' (count 3) que protege 'exposed-leg-internals'; la wiki en realidad lista muslo, espinilla y pie por separado con HP muy similar (600-900) y pequeñas asimetrías (p.ej. la pierna izquierda difiere levemente de las otras dos). El valor de '% a Main' del Ojo se extrajo de forma inconsistente entre dos consultas a la wiki (una vez 0%, otra vez un valor no numérico); se dejó en 0% como la lectura más consistente, marcado aquí como dudoso."
+  },
+  "main": { "hp": 3000, "av": 4, "durability": 0.75, "exdr": 0 },
+  "parts": [
+    {
+      "id": "eye", "name": "Ojo", "count": 1,
+      "hp": 350, "av": 2, "durability": 0,
+      "toMain": 0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Valor de %ToMain incierto (ver source.conflict); la wiki no lo marca como parte fatal a pesar de su rol visual de 'ojo'."
+    },
+    {
+      "id": "shield-generators", "name": "Generadores de escudo", "count": 3,
+      "hp": 350, "av": 3, "durability": 0,
+      "toMain": 0.1, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Basta con destruir uno solo de los tres para desactivar el escudo de forma permanente."
+    },
+    {
+      "id": "shield", "name": "Escudo", "count": 1,
+      "hp": 1500, "av": 0, "durability": 0,
+      "toMain": 0, "overflowCap": false,
+      "fatal": false, "exdr": 0,
+      "breakablePlating": true,
+      "notes": "Se regenera mientras al menos un generador de escudo siga intacto."
+    },
+    {
+      "id": "chassis", "name": "Chasis", "count": 1,
+      "hp": 2000, "av": 4, "durability": 0.75,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 0,
+      "notes": null
+    },
+    {
+      "id": "carapace", "name": "Caparazón", "count": 2,
+      "hp": 800, "av": 4, "durability": 0.75,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "breakablePlating": true, "protects": "carapace-weakspot",
+      "notes": null
+    },
+    {
+      "id": "carapace-weakspot", "name": "Punto débil del caparazón", "count": 2,
+      "hp": 500, "av": 1, "durability": 0.8,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "requiresBroken": "carapace",
+      "notes": null
+    },
+    {
+      "id": "left-hip-joint", "name": "Articulación de cadera izquierda", "count": 1,
+      "hp": 1000, "av": 3, "durability": 0.7,
+      "toMain": 0.45, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "hip-joints", "name": "Articulaciones de cadera (derecha y central)", "count": 2,
+      "hp": 1000, "av": 3, "durability": 0.7,
+      "toMain": 0.6, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "leg-armor", "name": "Armadura de piernas (muslo/espinilla/pie)", "count": 3,
+      "hp": 900, "av": 4, "durability": 0.75,
+      "toMain": 0.3, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "breakablePlating": true, "protects": "exposed-leg-internals",
+      "notes": "Agrega las placas de muslo, espinilla y pie de cada pierna (ver source.conflict). La pierna izquierda tiene ligeras variaciones de HP no reflejadas aquí."
+    },
+    {
+      "id": "exposed-leg-internals", "name": "Internos de pierna expuestos", "count": 1,
+      "hp": 1000, "av": 3, "durability": 0.25,
+      "toMain": 0.6, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "requiresBroken": "leg-armor",
+      "notes": null
+    }
+  ]
+}

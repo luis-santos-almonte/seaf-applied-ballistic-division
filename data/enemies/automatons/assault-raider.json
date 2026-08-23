@@ -1,0 +1,55 @@
+{
+  "id": "assault-raider",
+  "name": "Assault Raider",
+  "faction": "AUTOMATONS",
+  "size": "small",
+  "fireDamageMultiplier": 0.5,
+  "staggerThreshold": 10,
+  "source": {
+    "name": "Helldivers Wiki — Assault Raider",
+    "url": "https://helldivers.wiki.gg/wiki/Assault_Raider",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "main": { "hp": 125, "av": 0, "durability": 0, "exdr": 0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 40, "av": 0, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "torso", "name": "Torso", "count": 1,
+      "hp": 100, "av": 0, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "arms", "name": "Brazos", "count": 2,
+      "hp": 65, "av": 0, "durability": 0.0,
+      "toMain": 0.5, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Sin tope de overflow: el exceso de daño sí se transfiere a Main."
+    },
+    {
+      "id": "legs", "name": "Piernas", "count": 2,
+      "hp": 90, "av": 0, "durability": 0.0,
+      "toMain": 0.65, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "jetpack", "name": "Mochila propulsora", "count": 1,
+      "hp": 50, "av": 2, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "constitution": 100, "constitutionDecay": 50,
+      "fatal": true, "exdr": 1.0,
+      "notes": "Usa un jetpack para saltar y flanquear; destruirlo lo deja en tierra y puede detonar (constitution 100, decae a 50/s)."
+    }
+  ]
+}

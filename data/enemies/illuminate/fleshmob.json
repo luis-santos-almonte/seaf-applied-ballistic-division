@@ -1,0 +1,47 @@
+{
+  "id": "fleshmob",
+  "name": "Fleshmob",
+  "faction": "ILLUMINATE",
+  "size": "large",
+  "fireDamageMultiplier": 1.8,
+  "staggerThreshold": 45,
+  "source": {
+    "name": "Helldivers Wiki — Fleshmob",
+    "url": "https://helldivers.wiki.gg/wiki/Fleshmob",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "main": { "hp": 5000, "av": 0, "durability": 0.4, "exdr": 0 },
+  "parts": [
+    {
+      "id": "head-chunks", "name": "Fragmentos de cabeza", "count": 6,
+      "hp": 400, "av": 0, "durability": 0.25,
+      "toMain": 1.5, "overflowCap": false,
+      "fatal": false, "exdr": 0.25,
+      "notes": "150% a Main sin tope de overflow: el exceso de daño sí se transfiere al cuerpo principal."
+    },
+    {
+      "id": "stomach-chunks", "name": "Fragmentos de estómago", "count": 2,
+      "hp": 400, "av": 0, "durability": 0.4,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": false, "exdr": 0.25,
+      "notes": null
+    },
+    {
+      "id": "arms", "name": "Brazos", "count": 4,
+      "hp": 200, "av": 0, "durability": 0.4,
+      "toMain": 0.25, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "legs", "name": "Piernas", "count": 2,
+      "hp": 400, "av": 0, "durability": 0.4,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": false, "exdr": 0.25,
+      "notes": null
+    }
+  ]
+}

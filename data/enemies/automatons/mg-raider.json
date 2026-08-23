@@ -1,0 +1,65 @@
+{
+  "id": "mg-raider",
+  "name": "MG Raider",
+  "faction": "AUTOMATONS",
+  "size": "small",
+  "fireDamageMultiplier": 0.5,
+  "staggerThreshold": 10,
+  "source": {
+    "name": "Helldivers Wiki — MG Raider",
+    "url": "https://helldivers.wiki.gg/wiki/MG_Raider",
+    "dateChecked": "2026-08-23",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "La tabla de la wiki lista dos filas de mochila ('Backpack Main' y 'Backpack') con mecánica de constitution anidada que no está descrita en detalle; se modeló como placa externa + núcleo interno según el patrón general de piezas con 'requiresBroken', pero el toMain/ExDR exacto del núcleo interno es una estimación razonable, no un dato confirmado literalmente."
+  },
+  "main": { "hp": 125, "av": 0, "durability": 0, "exdr": 0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 40, "av": 0, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "torso", "name": "Torso", "count": 1,
+      "hp": 100, "av": 0, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "arms", "name": "Brazos", "count": 2,
+      "hp": 65, "av": 0, "durability": 0.0,
+      "toMain": 0.5, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Sin tope de overflow: el exceso de daño sí se transfiere a Main."
+    },
+    {
+      "id": "legs", "name": "Piernas", "count": 2,
+      "hp": 90, "av": 0, "durability": 0.0,
+      "toMain": 0.65, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "backpack", "name": "Mochila generadora", "count": 1,
+      "hp": 50, "av": 2, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "constitution": 1000, "constitutionDecay": 200,
+      "fatal": true, "exdr": 1.0,
+      "breakablePlating": true, "protects": "backpack-core",
+      "notes": "Es volátil: si se destruye puede explotar, matando al Raider al instante y dañando/quemando a lo que esté cerca (aliados incluidos)."
+    },
+    {
+      "id": "backpack-core", "name": "Núcleo de la mochila", "count": 1,
+      "hp": 10, "av": 2, "durability": 0.0,
+      "toMain": 0.0, "overflowCap": false,
+      "constitution": 100, "constitutionDecay": 50,
+      "fatal": true, "exdr": 0.0,
+      "requiresBroken": "backpack",
+      "notes": "Subsistema interno de la mochila (constitution propia); solo queda expuesto tras romper la carcasa externa. Mecánica documentada de forma incompleta en la wiki, ver 'conflict' del enemigo."
+    }
+  ]
+}

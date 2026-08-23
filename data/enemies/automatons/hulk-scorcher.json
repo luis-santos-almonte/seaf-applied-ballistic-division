@@ -1,0 +1,51 @@
+{
+  "id": "hulk-scorcher",
+  "name": "Hulk Scorcher",
+  "faction": "AUTOMATONS",
+  "size": "heavy",
+  "fireDamageMultiplier": 1.5,
+  "staggerThreshold": 40,
+  "source": {
+    "name": "Helldivers Wiki — Hulk Scorcher",
+    "url": "https://helldivers.wiki.gg/wiki/Hulk_Scorcher",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "main": { "hp": 1800, "av": 4, "durability": 0.6, "exdr": 0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza (ojo)", "count": 1,
+      "hp": 250, "av": 4, "durability": 0.25,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": "El ojo/visor es el punto débil clásico: requiere penetración alta pero mata al instante."
+    },
+    {
+      "id": "arms", "name": "Brazos", "count": 2,
+      "hp": 500, "av": 4, "durability": 0.7,
+      "toMain": 0.8, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Un brazo porta el lanzallamas; volárselo lo desarma. Sin tope de overflow."
+    },
+    {
+      "id": "legs", "name": "Piernas", "count": 2,
+      "hp": 500, "av": 4, "durability": 0.8,
+      "toMain": 0.8, "overflowCap": false,
+      "constitution": 500, "constitutionDecay": 0,
+      "fatal": false, "fatalNote": "No lo mata, pero lo derriba (queda 'Downed').",
+      "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "heatsink", "name": "Disipador trasero", "count": 1,
+      "hp": 900, "av": 1, "durability": 0.6,
+      "toMain": 0.6, "overflowCap": true,
+      "constitution": 650, "constitutionDecay": 50,
+      "fatal": true, "fatalNote": "Al romperse lo derriba y luego muere por sobrecalentamiento (constitution 650, decae a 50/s).",
+      "exdr": 0.0,
+      "notes": "Punto débil AV1 en la espalda; mucho más fácil de penetrar que el frente."
+    }
+  ]
+}

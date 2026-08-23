@@ -1,0 +1,82 @@
+{
+  "id": "war-strider",
+  "name": "War Strider",
+  "faction": "AUTOMATONS",
+  "size": "heavy",
+  "fireDamageMultiplier": 1.5,
+  "staggerThreshold": 40,
+  "source": {
+    "name": "Helldivers Wiki — War Strider",
+    "url": "https://helldivers.wiki.gg/wiki/War_Strider",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "main": { "hp": 3500, "av": 4, "durability": 0.0, "exdr": 0.0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "torso", "name": "Torso", "count": 1,
+      "hp": 3300, "av": 4, "durability": 1.0,
+      "toMain": 0.8, "overflowCap": true,
+      "fatal": true, "exdr": 0.0,
+      "notes": null
+    },
+    {
+      "id": "eyes", "name": "Ojos", "count": 2,
+      "hp": 500, "av": 4, "durability": 0.7,
+      "toMain": 0.3, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "fusion-cannons", "name": "Cañones de fusión", "count": 2,
+      "hp": 500, "av": 4, "durability": 0.8,
+      "toMain": 0.0, "overflowCap": false,
+      "fatal": false, "exdr": 0.4,
+      "notes": "Arma principal montada en los brazos."
+    },
+    {
+      "id": "grenade-launchers", "name": "Lanzagranadas", "count": 2,
+      "hp": 400, "av": 4, "durability": 0.7,
+      "toMain": 0.0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Arma secundaria montada en los brazos."
+    },
+    {
+      "id": "crotch", "name": "Entrepierna", "count": 1,
+      "hp": 1800, "av": 4, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "heatsink", "name": "Disipador", "count": 1,
+      "hp": 700, "av": 4, "durability": 0.7,
+      "toMain": 0.7, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "hip-joints", "name": "Articulaciones de cadera", "count": 2,
+      "hp": 750, "av": 3, "durability": 0.8,
+      "toMain": 0.5, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "legs", "name": "Piernas", "count": 2,
+      "hp": 1500, "av": 4, "durability": 0.8,
+      "toMain": 0.8, "overflowCap": true,
+      "fatal": true, "exdr": 0.4,
+      "notes": null
+    },
+    {
+      "id": "greaves", "name": "Grebas (pies)", "count": 2,
+      "hp": 150, "av": 5, "durability": 0.0,
+      "toMain": 0.5, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": "AV5 (Tank I) a pesar de su bajo HP: hace falta penetración anti-tanque para dañarlas eficazmente."
+    }
+  ]
+}

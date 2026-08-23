@@ -1,0 +1,68 @@
+{
+  "id": "radical",
+  "name": "Radical",
+  "faction": "AUTOMATONS",
+  "size": "medium",
+  "fireDamageMultiplier": 0.5,
+  "staggerThreshold": 20,
+  "source": {
+    "name": "Helldivers Wiki — Radical",
+    "url": "https://helldivers.wiki.gg/wiki/Radical",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "main": { "hp": 750, "av": 1, "durability": 0.2, "exdr": 0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 150, "av": 1, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "torso-circuits", "name": "Circuitos del torso", "count": 1,
+      "hp": 1200, "av": 2, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": true, "exdr": 1.0,
+      "notes": "Núcleo cibernético expuesto bajo la armadura del torso."
+    },
+    {
+      "id": "pauldron", "name": "Hombrera", "count": 1,
+      "hp": 200, "av": 2, "durability": 0.0,
+      "toMain": 0.3, "overflowCap": false,
+      "fatal": false, "exdr": 0.65,
+      "notes": null
+    },
+    {
+      "id": "upper-arms", "name": "Brazos superiores", "count": 2,
+      "hp": 300, "av": 1, "durability": 0.0,
+      "toMain": 0.8, "overflowCap": true,
+      "fatal": false, "exdr": 0.55,
+      "notes": null
+    },
+    {
+      "id": "forearms", "name": "Antebrazos", "count": 2,
+      "hp": 300, "av": 2, "durability": 0.0,
+      "toMain": 0.75, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "pelvis-left-leg", "name": "Pelvis y pierna izquierda", "count": 1,
+      "hp": 1400, "av": 2, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": true, "exdr": 1.0,
+      "notes": "La wiki lista la pelvis y la pierna izquierda como una única hitbox fusionada."
+    },
+    {
+      "id": "right-leg", "name": "Pierna derecha", "count": 1,
+      "hp": 1400, "av": 2, "durability": 0.0,
+      "toMain": 0.75, "overflowCap": false,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "id": "leviathan",
+  "name": "Leviathan",
+  "faction": "ILLUMINATE",
+  "size": "boss",
+  "fireDamageMultiplier": null,
+  "staggerThreshold": null,
+  "source": {
+    "name": "Helldivers Wiki — Leviathan",
+    "url": "https://helldivers.wiki.gg/wiki/Leviathan",
+    "dateChecked": "2026-08-23",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "La wiki describe un estado 'roto' en el que, tras destruir aletas/vértebras/cola, se exponen 'Internos' con la misma vida que el Main (15,000) y AV más bajo (Heavy/AV4 en vez de Tank I/AV5); esto se interpreta como que romper el caparazón exterior simplemente baja el AV efectivo para golpear directamente al Main, no como una parte de vida adicional independiente — por eso no se creó una parte 'internals' separada, y en su lugar se documenta la relación en las notas de cada placa exterior. El multiplicador de daño por fuego y el umbral de stagger no están documentados."
+  },
+  "main": { "hp": 15000, "av": 4, "durability": 0, "exdr": 0 },
+  "parts": [
+    {
+      "id": "turrets", "name": "Torretas", "count": 4,
+      "hp": 1500, "av": 4, "durability": 0.85,
+      "toMain": 0, "overflowCap": false,
+      "fatal": false, "exdr": 0,
+      "notes": "No transfieren daño al Main; son objetivos independientes para neutralizar su capacidad ofensiva."
+    },
+    {
+      "id": "front-vertebra", "name": "Vértebra delantera", "count": 1,
+      "hp": 7000, "av": 5, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 0.35,
+      "breakablePlating": true,
+      "notes": "Destruirla expone los internos del Main, bajando el AV efectivo de Tank I (5) a Heavy (4) en esa zona."
+    },
+    {
+      "id": "front-fins", "name": "Aletas delanteras", "count": 2,
+      "hp": 5500, "av": 5, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 0.35,
+      "breakablePlating": true,
+      "notes": "Destruirlas expone los internos del Main (ver notas de Vértebra delantera)."
+    },
+    {
+      "id": "warp-disc", "name": "Disco de salto", "count": 1,
+      "hp": 3000, "av": 5, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "forward-middle-vertebra", "name": "Vértebra medio-delantera", "count": 1,
+      "hp": 5500, "av": 5, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 0.35,
+      "breakablePlating": true,
+      "notes": "Destruirla expone los internos del Main."
+    },
+    {
+      "id": "forward-middle-fins", "name": "Aletas medio-delanteras", "count": 2,
+      "hp": 5000, "av": 5, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 0.35,
+      "breakablePlating": true,
+      "notes": "Destruirlas expone los internos del Main."
+    },
+    {
+      "id": "rearward-middle-vertebra", "name": "Vértebra medio-trasera", "count": 1,
+      "hp": 5500, "av": 5, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 0.35,
+      "breakablePlating": true,
+      "notes": "Destruirla expone los internos del Main."
+    },
+    {
+      "id": "rearward-middle-fins", "name": "Aletas medio-traseras", "count": 2,
+      "hp": 3900, "av": 5, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 0.35,
+      "breakablePlating": true,
+      "notes": "Destruirlas expone los internos del Main."
+    },
+    {
+      "id": "rear-vertebra", "name": "Vértebra trasera", "count": 1,
+      "hp": 5000, "av": 5, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 0.35,
+      "breakablePlating": true,
+      "notes": "Destruirla expone los internos del Main."
+    },
+    {
+      "id": "rear-fins", "name": "Aletas traseras", "count": 2,
+      "hp": 3000, "av": 5, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 0.35,
+      "breakablePlating": true,
+      "notes": "Destruirlas expone los internos del Main."
+    },
+    {
+      "id": "tail", "name": "Cola", "count": 1,
+      "hp": 3900, "av": 5, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 0.35,
+      "breakablePlating": true,
+      "notes": "Destruirla expone los internos del Main."
+    }
+  ]
+}

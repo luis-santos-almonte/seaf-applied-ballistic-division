@@ -1,0 +1,12 @@
+{
+  "id": "spore-burst-hunter", "name": "Spore Burst Hunter", "faction": "TERMINIDS", "size": "small",
+  "fireDamageMultiplier": 0.7, "staggerThreshold": 15,
+  "source": { "name": "Helldivers Wiki — Spore Burst Hunter", "url": "https://helldivers.wiki.gg/wiki/Spore_Burst_Hunter", "dateChecked": "2026-08-23", "confidence": "HIGH", "status": "verified", "conflict": null },
+  "main": { "hp": 160, "av": 0, "durability": 0, "exdr": 0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    { "id": "head", "name": "Cabeza", "count": 1, "hp": 40, "av": 0, "durability": 0, "toMain": 1.0, "overflowCap": true, "fatal": true, "exdr": 1.0, "notes": "Variante mutada de la cepa 'Spore Burst': al morir libera una nube de esporas que daña a Helldivers cercanos, reduce visión y potencia a otros Terminids Spore Burst cercanos." },
+    { "id": "claws", "name": "Garras", "count": 2, "hp": 60, "av": 0, "durability": 0, "toMain": 0.4, "overflowCap": false, "fatal": false, "exdr": 1.0, "notes": null },
+    { "id": "legs", "name": "Patas", "count": 4, "hp": 60, "av": 0, "durability": 0, "toMain": 0.5, "overflowCap": false, "fatal": false, "exdr": 1.0, "notes": null },
+    { "id": "wings", "name": "Alas", "count": 2, "hp": 20, "av": 0, "durability": 0, "toMain": 0.3, "overflowCap": false, "fatal": false, "exdr": 1.0, "notes": "Main de esta variante (160 HP) coincide con el Hunter base en dificultad Desafiante+; esta página no documenta escalado adicional por dificultad." }
+  ]
+}

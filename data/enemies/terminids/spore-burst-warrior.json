@@ -1,0 +1,44 @@
+{
+  "id": "spore-burst-warrior",
+  "name": "Spore Burst Warrior",
+  "faction": "TERMINIDS",
+  "size": "medium",
+  "fireDamageMultiplier": 0.8,
+  "staggerThreshold": 20,
+  "source": {
+    "name": "Helldivers Wiki — Spore Burst Warrior",
+    "url": "https://helldivers.wiki.gg/wiki/Spore_Burst_Warrior",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "main": { "hp": 325, "av": 1, "durability": 0.5, "exdr": 0.0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 150, "av": 1, "durability": 0.4,
+      "toMain": 1.0, "overflowCap": false,
+      "constitution": 200, "constitutionDecay": 65,
+      "fatal": true, "fatalNote": "Se asume el mismo mecanismo berserker/desangrado por Constitution que el Warrior base al destruirla (la página no lo repite explícitamente para esta variante, pero el patrón de comportamiento es heredado).",
+      "exdr": 1.0,
+      "notes": "Variante de la cepa 'Spore Burst Strain', con tabla de anatomía propia y verificada (no remite a la del Warrior base). Al morir libera una detonación micótica (Mycotic Detonation): 50 de daño explosivo (radio interior 2m, exterior 4m, onda de choque 8m) más quemadura ácida 3/s por 4s."
+    },
+    {
+      "id": "claws", "name": "Garras", "count": 2,
+      "hp": 100, "av": 1, "durability": 0.25,
+      "toMain": 0.4, "overflowCap": false,
+      "fatal": false,
+      "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "legs", "name": "Patas", "count": 4,
+      "hp": 100, "av": 1, "durability": 0.35,
+      "toMain": 0.4, "overflowCap": false,
+      "fatal": false,
+      "exdr": 1.0,
+      "notes": "Novedad frente al Warrior base: esta cepa tiene durabilidad marcadamente más alta en todas sus partes (Main 50%, Cabeza 40%, Garras 25%, Patas 35% vs 20%/20%/0%/0% del Warrior común), por lo que las armas no-durables rinden peor contra ella."
+    }
+  ]
+}

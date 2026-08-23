@@ -1,0 +1,103 @@
+{
+  "id": "spore-burst-bile-titan",
+  "name": "Spore Burst Bile Titan",
+  "faction": "TERMINIDS",
+  "size": "boss",
+  "fireDamageMultiplier": 1.7,
+  "staggerThreshold": 50,
+  "source": {
+    "name": "Helldivers Wiki — Spore Burst Bile Titan",
+    "url": "https://helldivers.wiki.gg/wiki/Spore_Burst_Bile_Titan",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": "La wiki clasifica al Bile Titan como tamaño 'Massive' (categoría propia de la wiki); se mapeó a size='boss'. La tabla de esta cepa confirma diferencias reales frente al Bile Titan base: +500 HP en Main (7000 vs 6500), +1000 HP en cabeza (2500 vs 1500) y +250 HP en cada saco biliar (1000 vs 750 c/u); el resto de las partes (vientre, garras, armadura de pata, carne de pata) coincide con el Bile Titan base. La wiki indica que por el HP extra de Main, el EAT-17 y el LAS-99 ya no la matan de un solo golpe a la cabeza como sí pueden con el Bile Titan base."
+  },
+  "main": { "hp": 7000, "av": 4, "durability": 1.0, "exdr": 0.5, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 2500, "av": 4, "durability": 0.95,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": true, "exdr": 0.5,
+      "notes": "1000 HP más que la cabeza del Bile Titan base (1500). Por esto, según la wiki, armas de un solo golpe como el EAT-17 o el LAS-99 ya no la matan de un tiro a la cabeza."
+    },
+    {
+      "id": "torso-armor", "name": "Placas de torso", "count": 2,
+      "hp": 1500, "av": 4, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": false, "exdr": 0.5,
+      "breakablePlating": true, "protects": "inner-flesh",
+      "notes": "Idéntico al Bile Titan base. La relación 'protege a la carne interior' se infiere por el orden de la tabla y el patrón estándar armadura-rompible->carne, igual que en el Bile Titan base."
+    },
+    {
+      "id": "inner-flesh", "name": "Carne interior", "count": 1,
+      "hp": null, "hpIsMain": true, "av": 0, "durability": 0.7,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 0.5,
+      "requiresBroken": "torso-armor",
+      "notes": "Idéntico al Bile Titan base."
+    },
+    {
+      "id": "upper-bile-sac", "name": "Saco biliar superior", "count": 1,
+      "hp": 1000, "av": 0, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 0.5,
+      "notes": "250 HP más que el saco superior del Bile Titan base (750). Esta cepa cambia la bilis corrosiva por ataques de esporas que hacen ragdoll a los Helldivers sin el pasivo Rock Solid, y las nubes de esporas aceleran a otros Terminids de cepa Spore Burst cercanos."
+    },
+    {
+      "id": "lower-bile-sac", "name": "Saco biliar inferior", "count": 1,
+      "hp": 1000, "av": 0, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 0.5,
+      "notes": "250 HP más que el saco inferior del Bile Titan base (750)."
+    },
+    {
+      "id": "underside", "name": "Vientre", "count": 1,
+      "hp": 4000, "av": 2, "durability": 0.8,
+      "toMain": 0.6, "overflowCap": false,
+      "fatal": true, "exdr": 0.0,
+      "notes": "Idéntico al Bile Titan base. ExDR 0%: los explosivos no sufren reducción de daño acá."
+    },
+    {
+      "id": "butt-armor", "name": "Placa trasera", "count": 1,
+      "hp": 3500, "av": 4, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 0.5,
+      "notes": "Idéntico al Bile Titan base."
+    },
+    {
+      "id": "claws", "name": "Garras", "count": 2,
+      "hp": 1000, "av": 4, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": false, "exdr": 0.5,
+      "notes": "Idéntico al Bile Titan base. 0% durable."
+    },
+    {
+      "id": "leg-armor", "name": "Armadura de pata", "count": 12,
+      "hp": 1000, "av": 4, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": false, "exdr": 0.5,
+      "breakablePlating": true, "protects": "leg-flesh",
+      "notes": "Idéntico al Bile Titan base. 12 segmentos (3 por pata x 4 patas)."
+    },
+    {
+      "id": "front-left-leg-flesh", "name": "Carne de pata delantera izquierda", "count": 1,
+      "hp": 2000, "av": 4, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": false,
+      "constitution": 1500, "constitutionDecay": 0,
+      "fatal": true, "exdr": 0.5,
+      "requiresBroken": "leg-armor",
+      "notes": "Idéntico al Bile Titan base: Constitution 1500 [0/s] en esta pata específica, confirmado como fila separada en la tabla de esta cepa."
+    },
+    {
+      "id": "leg-flesh", "name": "Carne de pata", "count": 3,
+      "hp": 2000, "av": 4, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": false,
+      "constitution": 2000, "constitutionDecay": 0,
+      "fatal": true, "exdr": 0.5,
+      "requiresBroken": "leg-armor",
+      "notes": "Idéntico al Bile Titan base: las otras tres patas, Constitution 2000 [0/s]."
+    }
+  ]
+}

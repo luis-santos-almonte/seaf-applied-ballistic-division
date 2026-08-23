@@ -1,0 +1,64 @@
+{
+  "id": "crusher",
+  "name": "Crusher",
+  "faction": "ILLUMINATE",
+  "size": "large",
+  "fireDamageMultiplier": 1.5,
+  "staggerThreshold": 40,
+  "source": {
+    "name": "Helldivers Wiki — Crusher",
+    "url": "https://helldivers.wiki.gg/wiki/Crusher",
+    "dateChecked": "2026-08-23",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "Contenido nuevo del patch 7.0.0 'Devoid of Liberty' (2026-08-12), parte de la subfacción Vote Snatchers. La tabla de Anatomy de la wiki está numéricamente completa (HP, AV, Durable%, %ToMain, Overflow Cap, Fatal, ExDR para cada parte), pero la mecánica de regeneración de vida ('~30 HP/s tras 0.5s sin recibir daño', aplicable a Torso/Brazos/Pelvis/Piernas pero no a Casco ni Cabeza) no tiene un campo equivalente en este esquema (constitution/constitutionDecay modelan sangrado, no regeneración de HP), así que solo se documenta en las notas de las partes afectadas. Al ser contenido recién salido, conviene reverificar estos números si la wiki los ajusta en parches posteriores."
+  },
+  "main": { "hp": 6000, "av": 1, "durability": 0.7, "exdr": 0 },
+  "parts": [
+    {
+      "id": "helmet", "name": "Casco", "count": 1,
+      "hp": 300, "av": 4, "durability": 0,
+      "toMain": 0, "overflowCap": true,
+      "fatal": false, "exdr": 0.3,
+      "breakablePlating": true, "protects": "head",
+      "notes": "Casco pesado (AV4) que cubre la Cabeza; hay que romperlo para exponer la carne de abajo. No regenera vida."
+    },
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 300, "av": 1, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "fatalNote": "Solo alcanzable tras romper el Casco. No regenera vida.",
+      "exdr": 1.0,
+      "requiresBroken": "helmet",
+      "notes": null
+    },
+    {
+      "id": "torso", "name": "Torso", "count": 1,
+      "hp": 6000, "av": 1, "durability": 0.7,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Regenera aproximadamente 30 HP/s tras 0.5s sin recibir daño (mecánica descrita en el patch, no representable numéricamente en este esquema). Mantener fuego sostenido es clave para evitar que se recupere."
+    },
+    {
+      "id": "arms", "name": "Brazos", "count": 2,
+      "hp": 2000, "av": 1, "durability": 0.7,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 0.2,
+      "notes": "Regenera vida igual que el Torso (ver notas de esa parte)."
+    },
+    {
+      "id": "pelvis", "name": "Pelvis", "count": 1,
+      "hp": 4000, "av": 1, "durability": 0.6,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Regenera vida igual que el Torso (ver notas de esa parte)."
+    },
+    {
+      "id": "legs", "name": "Piernas", "count": 2,
+      "hp": 4000, "av": 1, "durability": 0.6,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 0.7,
+      "notes": "Regenera vida igual que el Torso (ver notas de esa parte)."
+    }
+  ]
+}

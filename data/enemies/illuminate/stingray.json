@@ -1,0 +1,26 @@
+{
+  "id": "stingray",
+  "name": "Stingray",
+  "faction": "ILLUMINATE",
+  "size": "large",
+  "fireDamageMultiplier": null,
+  "staggerThreshold": null,
+  "source": {
+    "name": "Helldivers Wiki — Stingray",
+    "url": "https://helldivers.wiki.gg/wiki/Stingray",
+    "dateChecked": "2026-08-23",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "La wiki no da un único valor de Stagger Force (menciona un rango de 5 a 50 según el tipo de impacto), por lo que se dejó staggerThreshold en null en vez de elegir un número dentro del rango sin fundamento claro. Tampoco documenta multiplicador de daño por fuego."
+  },
+  "main": { "hp": 800, "av": 3, "durability": 0, "exdr": 0 },
+  "parts": [
+    {
+      "id": "gun-ports", "name": "Cañones", "count": 1,
+      "hp": null, "hpIsMain": true, "av": 3, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Sin vida propia (la wiki indica '—' en Health): 100% de resistencia a explosivos, por lo que el daño de explosión que recibe esta parte se redirige al Main en vez de acumularse aquí."
+    }
+  ]
+}

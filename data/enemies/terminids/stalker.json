@@ -1,0 +1,25 @@
+{
+  "id": "stalker",
+  "name": "Stalker",
+  "faction": "TERMINIDS",
+  "size": "large",
+  "fireDamageMultiplier": 1.25,
+  "staggerThreshold": 30,
+  "source": {
+    "name": "Helldivers Wiki — Stalker",
+    "url": "https://helldivers.wiki.gg/wiki/Stalker",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "main": { "hp": 800, "av": 1, "durability": 0.5, "exdr": 0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    { "id": "head", "name": "Cabeza", "count": 1, "hp": 175, "av": 1, "durability": 0, "toMain": 1.0, "overflowCap": true, "fatal": true, "exdr": 1.0, "notes": null },
+    { "id": "body-armor", "name": "Armadura corporal", "count": 1, "hp": null, "hpIsMain": true, "av": 2, "durability": 0.5, "toMain": 1.0, "overflowCap": true, "fatal": false, "exdr": 1.0, "notes": "Sin vida propia: todo el daño va directo al pool Main." },
+    { "id": "underbelly", "name": "Vientre", "count": 1, "hp": null, "hpIsMain": true, "av": 1, "durability": 0.5, "toMain": 1.0, "overflowCap": true, "fatal": true, "exdr": 1.0, "notes": "Sin vida propia: todo el daño va directo al pool Main." },
+    { "id": "claws", "name": "Garras", "count": 2, "hp": null, "hpIsMain": true, "av": 1, "durability": 0.5, "toMain": 1.0, "overflowCap": true, "fatal": false, "exdr": 1.0, "notes": "Sin vida propia: todo el daño va directo al pool Main." },
+    { "id": "legs", "name": "Patas", "count": 4, "hp": null, "hpIsMain": true, "av": 1, "durability": 0.5, "toMain": 1.0, "overflowCap": true, "fatal": false, "exdr": 1.0, "notes": "Sin vida propia: todo el daño va directo al pool Main." },
+    { "id": "wings", "name": "Alas", "count": 1, "hp": 125, "av": 0, "durability": 0.5, "toMain": 0.3, "overflowCap": true, "fatal": false, "exdr": 1.0, "notes": null }
+  ]
+}

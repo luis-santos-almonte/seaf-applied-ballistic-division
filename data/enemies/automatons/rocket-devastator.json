@@ -1,0 +1,82 @@
+{
+  "id": "rocket-devastator",
+  "name": "Rocket Devastator",
+  "faction": "AUTOMATONS",
+  "size": "medium",
+  "fireDamageMultiplier": 1.25,
+  "staggerThreshold": 30,
+  "source": {
+    "name": "Helldivers Wiki — Rocket Devastator",
+    "url": "https://helldivers.wiki.gg/wiki/Rocket_Devastator",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "main": { "hp": 750, "av": 2, "durability": 0, "exdr": 0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 110, "av": 1, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": "Muchas armas la revientan de un tiro y matan al instante."
+    },
+    {
+      "id": "torso", "name": "Torso", "count": 1,
+      "hp": 425, "av": 3, "durability": 0.3,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": "AV3: los disparos que fallan la cabeza rebotan aquí si el arma es AP2 o menos."
+    },
+    {
+      "id": "shoulders", "name": "Hombros", "count": 2,
+      "hp": 150, "av": 2, "durability": 0.0,
+      "toMain": 0.25, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "arms", "name": "Brazos", "count": 2,
+      "hp": 260, "av": 1, "durability": 0.0,
+      "toMain": 0.5, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Sin tope de overflow: el exceso sí se transfiere a Main."
+    },
+    {
+      "id": "stomach", "name": "Abdomen", "count": 1,
+      "hp": 350, "av": 1, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": "AV1 y fatal: alternativa más consistente que la cabeza."
+    },
+    {
+      "id": "pelvis", "name": "Pelvis", "count": 1,
+      "hp": 500, "av": 2, "durability": 0.0,
+      "toMain": 0.75, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "legs", "name": "Piernas", "count": 2,
+      "hp": 500, "av": 2, "durability": 0.3,
+      "toMain": 0.6, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "rockets", "name": "Cohetes montados", "count": 1,
+      "hp": 200, "av": 0, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Munición expuesta en el hombro; destruirla no lo mata pero le quita el lanzacohetes."
+    },
+    {
+      "id": "rocket-pods", "name": "Contenedores de cohetes", "count": 1,
+      "hp": 300, "av": 1, "durability": 1.0,
+      "toMain": 0.3, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": "100% durable: casi todo el daño que cuenta es el valor 'durable' del arma."
+    }
+  ]
+}

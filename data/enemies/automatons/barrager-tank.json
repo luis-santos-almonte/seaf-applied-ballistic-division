@@ -1,0 +1,61 @@
+{
+  "id": "barrager-tank",
+  "name": "Barrager Tank",
+  "faction": "AUTOMATONS",
+  "size": "heavy",
+  "fireDamageMultiplier": 1.5,
+  "staggerThreshold": null,
+  "source": {
+    "name": "Helldivers Wiki — Barrager Tank",
+    "url": "https://helldivers.wiki.gg/wiki/Barrager_Tank",
+    "dateChecked": "2026-08-23",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "Igual que el Annihilator, tiene dos pools de vida (casco 4000hp y torreta 2100hp) y cualquiera destruye el vehículo. Se modeló el casco como Main y la torreta (aquí con los tubos de lanzamiento como punto débil, en vez de un disipador) como partes con toMain=0 pero fatal=true. Ver la nota equivalente en annihilator-tank.json."
+  },
+  "main": { "hp": 4000, "av": 5, "durability": 1.0, "exdr": 0.35, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "hull-front", "name": "Casco frontal", "count": 1,
+      "hp": null, "hpIsMain": true, "av": 5, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": true, "exdr": 0.35,
+      "notes": "Blindaje frontal grueso; esta cara apunta directo al HP del casco (Main)."
+    },
+    {
+      "id": "hull-sides", "name": "Costados del casco", "count": 2,
+      "hp": null, "hpIsMain": true, "av": 5, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": true, "exdr": 0.35,
+      "notes": null
+    },
+    {
+      "id": "engine-bay", "name": "Compartimento del motor", "count": 1,
+      "hp": 1500, "av": 4, "durability": 1.0,
+      "toMain": 1.5, "overflowCap": false,
+      "fatal": true, "exdr": 0.5,
+      "notes": "Uno de los dos puntos que destruyen el tanque al llegar a 0 (junto con la torreta). Ubicado en la parte trasera."
+    },
+    {
+      "id": "tracks", "name": "Orugas", "count": 2,
+      "hp": 750, "av": 3, "durability": 0.8,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Inmoviliza el tanque, pero no lo destruye."
+    },
+    {
+      "id": "turret", "name": "Torreta (lanzacohetes múltiple)", "count": 1,
+      "hp": 2100, "av": 5, "durability": 1.0,
+      "toMain": 0.0, "overflowCap": false,
+      "fatal": true, "exdr": 1.0,
+      "notes": "Pool de vida propio de la torreta MRLS, independiente del casco (ver 'conflict' del enemigo). Agotarlo también destruye el tanque."
+    },
+    {
+      "id": "launch-tubes", "name": "Tubos de lanzamiento", "count": 1,
+      "hp": 1500, "av": 3, "durability": 1.0,
+      "toMain": 0.0, "overflowCap": true,
+      "fatal": true, "exdr": 0.0,
+      "notes": "Punto débil expuesto de la torreta MRLS, equivalente funcional al disipador del Annihilator Tank."
+    }
+  ]
+}

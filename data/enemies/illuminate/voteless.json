@@ -1,0 +1,49 @@
+{
+  "id": "voteless",
+  "name": "Voteless",
+  "faction": "ILLUMINATE",
+  "size": "small",
+  "fireDamageMultiplier": 0.75,
+  "staggerThreshold": 1,
+  "source": {
+    "name": "Helldivers Wiki — Voteless",
+    "url": "https://helldivers.wiki.gg/wiki/Voteless",
+    "dateChecked": "2026-08-23",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "La wiki documenta tres variantes de Voteless (Light, Medium, Heavy) en una sola tabla de Anatomy, con Main HP 100/130/160 respectivamente y ligeras diferencias en brazos/cabeza. Este archivo modela la variante Medium (la más citada como 'estándar'); las otras dos se documentan en las notas de cada parte en vez de crear archivos separados, ya que la wiki no las trata como enemigos con página propia."
+  },
+  "main": { "hp": 130, "av": 0, "durability": 0, "exdr": 0, "constitution": 100, "constitutionDecay": 5 },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 50, "av": 1, "durability": 0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": "Variante Light: 40 HP. Variante Heavy: 60 HP. El resto de parámetros (AV1, 100% a Main, overflow con tope) se mantiene igual en las tres variantes según la wiki."
+    },
+    {
+      "id": "upper-arms", "name": "Brazos superiores", "count": 2,
+      "hp": 65, "av": 0, "durability": 0,
+      "toMain": 0.4, "overflowCap": true,
+      "constitution": 1000, "constitutionDecay": 40,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Variante Light: 50 HP c/u. Variante Heavy: 80 HP c/u."
+    },
+    {
+      "id": "forearms", "name": "Antebrazos", "count": 2,
+      "hp": 50, "av": 0, "durability": 0,
+      "toMain": 0.3, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": "50 HP c/u en las tres variantes (Light/Medium/Heavy), salvo la Heavy que sube a 65 HP."
+    },
+    {
+      "id": "legs", "name": "Piernas", "count": 1,
+      "hp": 80, "av": 0, "durability": 0,
+      "toMain": 0.3, "overflowCap": true,
+      "fatal": true, "fatalNote": "La wiki marca esta parte como 'Downs' en vez de constitution: destruirla derriba/inhabilita al Voteless en lugar de aplicar un sangrado por tiempo.",
+      "exdr": 1.0,
+      "notes": "80 HP en las tres variantes de tamaño según la wiki."
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "id": "bile-titan",
+  "name": "Bile Titan",
+  "faction": "TERMINIDS",
+  "size": "boss",
+  "fireDamageMultiplier": 1.7,
+  "staggerThreshold": 50,
+  "source": {
+    "name": "Helldivers Wiki — Bile Titan",
+    "url": "https://helldivers.wiki.gg/wiki/Bile_Titan",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": "La wiki clasifica al Bile Titan como tamaño 'Massive' (categoría propia de la wiki, no existe en nuestro esquema); se mapeó a size='boss' por ser el jefe terrestre terminid más grande. La celda de 'Durable %' de la fila Main aparece en blanco en la tabla (no aplica, porque Main no se golpea directamente sino que recibe overflow), así que se asumió durability=1.0 por analogía con el Charger base, donde Main también es 100% durable."
+  },
+  "main": { "hp": 6500, "av": 4, "durability": 1.0, "exdr": 0.5, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 1500, "av": 4, "durability": 0.95,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": true, "exdr": 0.5,
+      "notes": "Punto de un solo disparo con armas anti-tanque como el GR-8 Recoilless Rifle o el EAT-17 según la wiki."
+    },
+    {
+      "id": "torso-armor", "name": "Placas de torso", "count": 2,
+      "hp": 1500, "av": 4, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": false, "exdr": 0.5,
+      "breakablePlating": true, "protects": "inner-flesh",
+      "notes": "La relación 'protege a la carne interior' se infiere del orden de la tabla (Torso Armor está inmediatamente antes de Inner Flesh) y del patrón estándar armadura-rompible->carne ya usado en el Charger base; no hay texto explícito en la página que lo confirme literalmente."
+    },
+    {
+      "id": "inner-flesh", "name": "Carne interior", "count": 1,
+      "hp": null, "hpIsMain": true, "av": 0, "durability": 0.7,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 0.5,
+      "requiresBroken": "torso-armor",
+      "notes": "A diferencia del Charger base (donde la carne interior da 300% a Main), aquí transfiere 100% a Main. Ver nota de 'protects' en torso-armor sobre la relación inferida."
+    },
+    {
+      "id": "upper-bile-sac", "name": "Saco biliar superior", "count": 1,
+      "hp": 750, "av": 0, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 0.5,
+      "notes": "Punto expuesto sin armadura, no requiere romper nada antes."
+    },
+    {
+      "id": "lower-bile-sac", "name": "Saco biliar inferior", "count": 1,
+      "hp": 750, "av": 0, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 0.5,
+      "notes": "Punto expuesto sin armadura, no requiere romper nada antes."
+    },
+    {
+      "id": "underside", "name": "Vientre", "count": 1,
+      "hp": 4000, "av": 2, "durability": 0.8,
+      "toMain": 0.6, "overflowCap": false,
+      "fatal": true, "exdr": 0.0,
+      "notes": "ExDR 0%: los explosivos no sufren ninguna reducción de daño acá, es el punto clásico para pegarle con explosivos por debajo."
+    },
+    {
+      "id": "butt-armor", "name": "Placa trasera", "count": 1,
+      "hp": 3500, "av": 4, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 0.5,
+      "notes": null
+    },
+    {
+      "id": "claws", "name": "Garras", "count": 2,
+      "hp": 1000, "av": 4, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": false, "exdr": 0.5,
+      "notes": "0% durable: todo el daño que recibe cuenta como no-durable (confirmado dos veces contra la tabla)."
+    },
+    {
+      "id": "leg-armor", "name": "Armadura de pata", "count": 12,
+      "hp": 1000, "av": 4, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": false, "exdr": 0.5,
+      "breakablePlating": true, "protects": "leg-flesh",
+      "notes": "12 segmentos de armadura en total (3 por pata x 4 patas). Protege tanto a 'leg-flesh' como a 'front-left-leg-flesh' (ambas exigen requiresBroken hacia esta parte)."
+    },
+    {
+      "id": "front-left-leg-flesh", "name": "Carne de pata delantera izquierda", "count": 1,
+      "hp": 2000, "av": 4, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": false,
+      "constitution": 1500, "constitutionDecay": 0,
+      "fatal": true, "exdr": 0.5,
+      "requiresBroken": "leg-armor",
+      "notes": "La wiki distingue esta pata específica del resto con un Constitution propio de 1500 [0/s] (vs 2000 [0/s] en las otras tres patas), una asimetría documentada y confirmada en múltiples consultas a la página."
+    },
+    {
+      "id": "leg-flesh", "name": "Carne de pata", "count": 3,
+      "hp": 2000, "av": 4, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": false,
+      "constitution": 2000, "constitutionDecay": 0,
+      "fatal": true, "exdr": 0.5,
+      "requiresBroken": "leg-armor",
+      "notes": "Las otras tres patas (no la delantera izquierda), con Constitution 2000 [0/s]."
+    }
+  ]
+}

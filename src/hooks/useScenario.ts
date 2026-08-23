@@ -72,11 +72,13 @@ export interface ResolvedScenario {
 
 /** Arma con la que arranca la consola: la primera que recibe el jugador en el juego. */
 const DEFAULT_WEAPON_ID = 'ar23-liberator';
+/** Enemigo con el que arranca la consola: el ejemplo original del proyecto, no un accidente alfabético. */
+const DEFAULT_ENEMY_ID = 'charger';
 
-/** Semilla: el arma por defecto (o la primera disponible) y el primer enemigo del catálogo. */
+/** Semilla: el arma y el enemigo por defecto (o los primeros disponibles si faltan). */
 function seed() {
   const weapon = findWeapon(DEFAULT_WEAPON_ID) ?? weapons[0];
-  const enemy = enemies[0];
+  const enemy = findEnemy(DEFAULT_ENEMY_ID) ?? enemies[0];
   if (!weapon || !enemy) throw new Error('El catálogo está vacío: no hay armas o enemigos.');
   const attack = weapon.attacks[0];
   const part = enemy.parts[0];

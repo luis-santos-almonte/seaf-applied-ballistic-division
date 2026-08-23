@@ -1,0 +1,44 @@
+{
+  "id": "warrior",
+  "name": "Warrior",
+  "faction": "TERMINIDS",
+  "size": "medium",
+  "fireDamageMultiplier": 0.8,
+  "staggerThreshold": 20,
+  "source": {
+    "name": "Helldivers Wiki — Warrior",
+    "url": "https://helldivers.wiki.gg/wiki/Warrior",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "main": { "hp": 325, "av": 1, "durability": 0.2, "exdr": 0.0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 150, "av": 1, "durability": 0.2,
+      "toMain": 1.0, "overflowCap": false,
+      "constitution": 200, "constitutionDecay": 70,
+      "fatal": true, "fatalNote": "Al destruirla entra en estado berserker (más velocidad) y muere desangrado por Constitution.",
+      "exdr": 1.0,
+      "notes": "La wiki lista HP escalado por dificultad: 250 (Main) / 110 (Cabeza) / 75 (Garras y Patas) en dificultad 1-3, subiendo a 325/150/100 desde dificultad 4 (Challenging) en adelante. Se usaron los valores de dificultad 4+ como referencia principal por ser el rango de juego más común."
+    },
+    {
+      "id": "claws", "name": "Garras", "count": 2,
+      "hp": 100, "av": 1, "durability": 0.0,
+      "toMain": 0.4, "overflowCap": false,
+      "fatal": false,
+      "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "legs", "name": "Patas", "count": 4,
+      "hp": 100, "av": 1, "durability": 0.0,
+      "toMain": 0.4, "overflowCap": false,
+      "fatal": false,
+      "exdr": 1.0,
+      "notes": "Destruir una pata evita el aumento de velocidad de movimiento (no es un aumento por cabeza rota, es un mecanismo aparte de movilidad)."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "rupture-spewer",
+  "name": "Rupture Spewer",
+  "faction": "TERMINIDS",
+  "size": "medium",
+  "fireDamageMultiplier": null,
+  "staggerThreshold": 30,
+  "source": {
+    "name": "Helldivers Wiki — Rupture Spewer",
+    "url": "https://helldivers.wiki.gg/wiki/Rupture_Spewer",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": "Variante de la cepa Rupture Strain, tuneladora (ataca emergiendo del subsuelo). Aparece solo desde dificultad Extreme en adelante. Tiene tabla de anatomía propia y confirmada (dos consultas independientes coincidieron): Cabeza y Patas delanteras suben a armadura Media (AV3) frente al AV2 del Bile Spewer base. La página no documenta un 'Fire Damage Multiplier' explícito (solo indica en las notas de parche que 'le cuesta un poco más prenderse fuego' que al Bile Spewer base), por lo que se dejó fireDamageMultiplier en null en vez de asumir el 1x del Bile Spewer. Al morir libera una 'Ruptura Presurizada': explosión de 300 de daño de impacto con quemadura ácida de ~3/s durante 4s adicionales."
+  },
+  "main": { "hp": 750, "av": 2, "durability": 0.5, "exdr": 0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    { "id": "head", "name": "Cabeza", "count": 1, "hp": 300, "av": 3, "durability": 0, "toMain": 1.0, "overflowCap": true, "fatal": true, "exdr": 1.0, "notes": "Armadura Media (AV3), más alta que la del Bile Spewer base (AV2)." },
+    { "id": "mouth", "name": "Boca", "count": 1, "hp": 250, "av": 0, "durability": 0, "toMain": 1.0, "overflowCap": true, "fatal": true, "exdr": 1.0, "notes": "Sin armadura; punto débil secundario visible cuando escupe." },
+    { "id": "spinal-plates", "name": "Placas espinales", "count": 1, "hp": 500, "av": 2, "durability": 0.8, "toMain": 0.2, "overflowCap": true, "fatal": true, "exdr": 0, "notes": null },
+    { "id": "butt", "name": "Trasero", "count": 1, "hp": 750, "av": 0, "durability": 1.0, "toMain": 0.6, "overflowCap": true, "fatal": true, "exdr": 0, "fatalNote": "Un disparo letal al trasero provoca que explote.", "notes": "Al morir (por cualquier causa) libera además la 'Ruptura Presurizada': explosión de 300 de daño con quemadura ácida de área." },
+    { "id": "front-legs", "name": "Patas delanteras", "count": 2, "hp": 200, "av": 3, "durability": 0, "toMain": 0.5, "overflowCap": false, "fatal": false, "exdr": 1.0, "notes": "Armadura Media (AV3), más alta que la del Bile Spewer base (AV2)." },
+    { "id": "rear-legs", "name": "Patas traseras", "count": 2, "hp": 250, "av": 2, "durability": 0.3, "toMain": 0.5, "overflowCap": false, "fatal": false, "exdr": 1.0, "notes": null }
+  ]
+}

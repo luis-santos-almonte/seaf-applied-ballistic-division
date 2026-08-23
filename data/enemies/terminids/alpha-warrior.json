@@ -1,0 +1,44 @@
+{
+  "id": "alpha-warrior",
+  "name": "Alpha Warrior",
+  "faction": "TERMINIDS",
+  "size": "medium",
+  "fireDamageMultiplier": 0.8,
+  "staggerThreshold": 20,
+  "source": {
+    "name": "Helldivers Wiki — Alpha Warrior",
+    "url": "https://helldivers.wiki.gg/wiki/Alpha_Warrior",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "main": { "hp": 325, "av": 1, "durability": 0.2, "exdr": 0.0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 150, "av": 1, "durability": 0.2,
+      "toMain": 0.5, "overflowCap": false,
+      "constitution": 200, "constitutionDecay": 70,
+      "fatal": true, "fatalNote": "Al destruirla entra en estado berserker (más velocidad) y sangra por Constitution. La wiki recomienda rematarlo en vez de dejarlo desangrar, porque en ese estado es más peligroso.",
+      "exdr": 1.0,
+      "notes": "Exclusivo de Alpha Commanders desde dificultad 8+. A diferencia del Warrior base, reparte el % a Main de forma pareja (50%/50%/50% entre Cabeza/Garras/Patas en vez de 100%/40%/40%)."
+    },
+    {
+      "id": "claws", "name": "Garras", "count": 2,
+      "hp": 100, "av": 1, "durability": 0.0,
+      "toMain": 0.5, "overflowCap": false,
+      "fatal": false,
+      "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "legs", "name": "Patas", "count": 4,
+      "hp": 100, "av": 1, "durability": 0.0,
+      "toMain": 0.5, "overflowCap": false,
+      "fatal": false,
+      "exdr": 1.0,
+      "notes": null
+    }
+  ]
+}

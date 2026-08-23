@@ -1,0 +1,26 @@
+{
+  "id": "predator-stalker",
+  "name": "Predator Stalker",
+  "faction": "TERMINIDS",
+  "size": "large",
+  "fireDamageMultiplier": 1.25,
+  "staggerThreshold": 30,
+  "source": {
+    "name": "Helldivers Wiki — Predator Stalker",
+    "url": "https://helldivers.wiki.gg/wiki/Predator_Stalker",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": "Variante de la cepa Predator Strain (Gloom). Tiene tabla de anatomía propia, distinta de la del Stalker base: menos vida en Main (650 vs 800) y una asimetría entre Garras/Patas izquierdas (transfieren 100% con overflow cap, sin vida propia) y Garras/Patas derechas (vida propia de 200, transfieren 70% sin overflow cap). Se verificó el mismo resultado en dos consultas independientes a la wiki. A diferencia del Stalker base, no puede camuflarse ni atacar con la lengua, y ataca solo con garras; tampoco huye al recibir daño."
+  },
+  "main": { "hp": 650, "av": 1, "durability": 0.5, "exdr": 0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    { "id": "head", "name": "Cabeza", "count": 1, "hp": 175, "av": 1, "durability": 0, "toMain": 1.0, "overflowCap": true, "fatal": true, "exdr": 1.0, "notes": null },
+    { "id": "body-armor", "name": "Armadura corporal", "count": 1, "hp": null, "hpIsMain": true, "av": 2, "durability": 0.5, "toMain": 1.0, "overflowCap": true, "fatal": false, "exdr": 1.0, "notes": "Sin vida propia: todo el daño va directo al pool Main." },
+    { "id": "underbelly", "name": "Vientre", "count": 1, "hp": null, "hpIsMain": true, "av": 1, "durability": 0.5, "toMain": 1.0, "overflowCap": true, "fatal": true, "exdr": 1.0, "notes": "Sin vida propia: todo el daño va directo al pool Main." },
+    { "id": "claws", "name": "Garras", "count": 2, "hp": 200, "av": 1, "durability": 0.5, "toMain": 0.7, "overflowCap": false, "fatal": false, "exdr": 1.0, "notes": "A diferencia del Stalker base, tiene vida propia (no transfiere el 100% ni tiene overflow cap)." },
+    { "id": "left-legs", "name": "Patas izquierdas", "count": 2, "hp": 200, "av": 1, "durability": 0.5, "toMain": 1.0, "overflowCap": true, "fatal": false, "exdr": 1.0, "notes": null },
+    { "id": "right-legs", "name": "Patas derechas", "count": 2, "hp": 200, "av": 1, "durability": 0.5, "toMain": 0.7, "overflowCap": false, "fatal": false, "exdr": 1.0, "notes": "Asimétrica respecto a las patas izquierdas: transfiere solo 70% y sin overflow cap." },
+    { "id": "wings", "name": "Alas", "count": 1, "hp": 125, "av": 0, "durability": 0.5, "toMain": 0.3, "overflowCap": true, "fatal": false, "exdr": 1.0, "notes": null }
+  ]
+}

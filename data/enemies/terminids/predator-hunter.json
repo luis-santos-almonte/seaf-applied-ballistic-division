@@ -1,0 +1,12 @@
+{
+  "id": "predator-hunter", "name": "Predator Hunter", "faction": "TERMINIDS", "size": "small",
+  "fireDamageMultiplier": 0.7, "staggerThreshold": 15,
+  "source": { "name": "Helldivers Wiki — Predator Hunter", "url": "https://helldivers.wiki.gg/wiki/Predator_Hunter", "dateChecked": "2026-08-23", "confidence": "HIGH", "status": "verified", "conflict": null },
+  "main": { "hp": 175, "av": 0, "durability": 0, "exdr": 0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    { "id": "head", "name": "Cabeza", "count": 1, "hp": 40, "av": 0, "durability": 0, "toMain": 1.0, "overflowCap": true, "fatal": true, "exdr": 1.0, "notes": null },
+    { "id": "claws", "name": "Garras", "count": 2, "hp": 60, "av": 0, "durability": 0, "toMain": 0.4, "overflowCap": false, "fatal": false, "exdr": 1.0, "notes": null },
+    { "id": "legs", "name": "Patas", "count": 4, "hp": 60, "av": 0, "durability": 0, "toMain": 0.5, "overflowCap": false, "fatal": false, "exdr": 1.0, "notes": null },
+    { "id": "wings", "name": "Alas", "count": 2, "hp": 20, "av": 0, "durability": 0, "toMain": 0.3, "overflowCap": false, "fatal": false, "exdr": 1.0, "notes": "Variante mutada del Hunter de la cepa 'Predator Strain': más agresiva, capaz de camuflarse (cloaking) y de escupir bilis. Tiene su propia tabla de anatomía, con Main 175 HP (por encima incluso del Hunter base en dificultad Desafiante+, que tiene 160), sin escalado documentado por dificultad." }
+  ]
+}

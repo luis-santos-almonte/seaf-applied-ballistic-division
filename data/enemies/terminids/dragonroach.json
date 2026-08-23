@@ -1,0 +1,92 @@
+{
+  "id": "dragonroach",
+  "name": "Dragonroach",
+  "faction": "TERMINIDS",
+  "size": "boss",
+  "fireDamageMultiplier": 1.7,
+  "staggerThreshold": 38,
+  "source": {
+    "name": "Helldivers Wiki — Dragonroach",
+    "url": "https://helldivers.wiki.gg/wiki/Dragonroach",
+    "dateChecked": "2026-08-23",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "Enemigo real agregado en la actualización 'Into the Unjust' (parche 1.004.000, 2 de septiembre de 2025); su existencia, rol (descrito por los desarrolladores como 'un Bile Titan volador grande'), tamaño y puntos débiles generales (cabeza pequeña, abdomen expuesto, alas disparables para derribarlo) están confirmados por múltiples guías independientes (GamesRadar, PC Gamer, TheGamer, dotesports, etc.). Sin embargo, ninguna de esas guías publica las cifras exactas de HP/armadura por parte; los números de esta ficha (HP principal 6500, valores de cada parte) provienen de una sola consulta a la tabla de anatomía de la wiki y no pudieron cruzarse con una segunda fuente numérica independiente. Por eso la confianza general se baja a MEDIUM."
+  },
+  "main": { "hp": 6500, "av": 4, "durability": 1.0, "exdr": 0.5, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 1500, "av": 4, "durability": 0.95,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": true, "exdr": 0.5,
+      "notes": "Punto débil principal, análogo a la cabeza del Bile Titan."
+    },
+    {
+      "id": "carapace", "name": "Caparazón", "count": 2,
+      "hp": 1500, "av": 4, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": false, "exdr": 0.5,
+      "notes": null
+    },
+    {
+      "id": "claws", "name": "Garras", "count": 2,
+      "hp": 1000, "av": 4, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": false, "exdr": 0.5,
+      "notes": "0% durable: solo el daño 'durable' del arma cuenta contra esta parte."
+    },
+    {
+      "id": "wings", "name": "Alas", "count": 4,
+      "hp": 1500, "av": 0, "durability": 1.0,
+      "toMain": 0.30, "overflowCap": false,
+      "constitution": 2500, "constitutionDecay": 0,
+      "fatal": true, "exdr": 0.5,
+      "notes": "Sin armadura. Guías de comunidad indican que disparar a las alas puede derribar al Dragonroach en pleno vuelo; la wiki marca esta parte como Fatal en la tabla, posiblemente relacionado con ese derribo forzado."
+    },
+    {
+      "id": "thorax-sac", "name": "Saco torácico", "count": 1,
+      "hp": 750, "av": 0, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 0.5,
+      "notes": null
+    },
+    {
+      "id": "abdomen-sac", "name": "Saco abdominal", "count": 1,
+      "hp": 750, "av": 0, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 0.5,
+      "notes": null
+    },
+    {
+      "id": "thorax-innards", "name": "Entrañas torácicas", "count": 1,
+      "hp": 3000, "av": 4, "durability": 0.80,
+      "toMain": 0.60, "overflowCap": false,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "abdomen-innards", "name": "Entrañas abdominales", "count": 1,
+      "hp": null, "hpIsMain": true, "av": 4, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": true, "exdr": 1.0,
+      "requiresBroken": "abdomen-armor",
+      "notes": "La tabla de la wiki no lista una vida propia (columna Health en blanco); se interpreta como pass-through hacia Main una vez expuesta."
+    },
+    {
+      "id": "abdomen-armor", "name": "Armadura abdominal", "count": 1,
+      "hp": 3500, "av": 4, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 0.5,
+      "breakablePlating": true, "protects": "abdomen-innards",
+      "notes": null
+    },
+    {
+      "id": "leg-armor", "name": "Armadura de pata", "count": 12,
+      "hp": 1000, "av": 4, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": false, "exdr": 0.5,
+      "notes": "0% durable."
+    }
+  ]
+}

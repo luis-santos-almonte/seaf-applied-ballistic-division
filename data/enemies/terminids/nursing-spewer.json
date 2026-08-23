@@ -1,0 +1,25 @@
+{
+  "id": "nursing-spewer",
+  "name": "Nursing Spewer",
+  "faction": "TERMINIDS",
+  "size": "medium",
+  "fireDamageMultiplier": 1,
+  "staggerThreshold": 30,
+  "source": {
+    "name": "Helldivers Wiki — Nursing Spewer",
+    "url": "https://helldivers.wiki.gg/wiki/Nursing_Spewer",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "main": { "hp": 750, "av": 2, "durability": 0.5, "exdr": 0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    { "id": "head", "name": "Cabeza", "count": 1, "hp": 300, "av": 2, "durability": 0, "toMain": 1.0, "overflowCap": true, "fatal": true, "exdr": 1.0, "notes": "Punto débil principal." },
+    { "id": "mouth", "name": "Boca", "count": 1, "hp": 250, "av": 0, "durability": 0, "toMain": 1.0, "overflowCap": true, "fatal": true, "exdr": 1.0, "notes": "Sin armadura; punto débil secundario visible cuando escupe." },
+    { "id": "spinal-plates", "name": "Placas espinales", "count": 1, "hp": 500, "av": 2, "durability": 0.8, "toMain": 0.2, "overflowCap": true, "fatal": true, "exdr": 0, "notes": null },
+    { "id": "butt", "name": "Trasero", "count": 1, "hp": 750, "av": 0, "durability": 1.0, "toMain": 0.6, "overflowCap": true, "fatal": true, "exdr": 0, "fatalNote": "Sin armadura y sin resistencia a explosivos: muy vulnerable a armas explosivas/de fragmentación.", "notes": "A diferencia del Bile Spewer, el Nursing Spewer no puede lanzar bombas de bilis al aire en ninguna dificultad." },
+    { "id": "front-legs", "name": "Patas delanteras", "count": 2, "hp": 200, "av": 2, "durability": 0, "toMain": 0.5, "overflowCap": false, "fatal": false, "exdr": 1.0, "notes": null },
+    { "id": "rear-legs", "name": "Patas traseras", "count": 2, "hp": 250, "av": 2, "durability": 0.3, "toMain": 0.5, "overflowCap": false, "fatal": false, "exdr": 1.0, "notes": null }
+  ]
+}

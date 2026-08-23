@@ -1,0 +1,34 @@
+{
+  "id": "dropship",
+  "name": "Dropship",
+  "faction": "AUTOMATONS",
+  "size": "large",
+  "fireDamageMultiplier": null,
+  "staggerThreshold": null,
+  "source": {
+    "name": "Helldivers Wiki — Dropship",
+    "url": "https://helldivers.wiki.gg/wiki/Dropship",
+    "dateChecked": "2026-08-23",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "No tiene armamento propio (solo transporta refuerzos), por lo que no es un 'enemigo' en el sentido tradicional, pero sí tiene tabla de Anatomía y se puede derribar. La wiki no documenta multiplicador de daño por fuego ni umbral de stagger, y tampoco especifica el % de durabilidad de Main (se asumió 0%)."
+  },
+  "main": { "hp": 3500, "av": 5, "durability": 0.0, "exdr": 0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "fuselage", "name": "Fuselaje", "count": 1,
+      "hp": null, "hpIsMain": true, "av": 5, "durability": 1.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": "Comparte el HP de Main; blindaje frontal/lateral."
+    },
+    {
+      "id": "thrusters", "name": "Propulsores", "count": 4,
+      "hp": 1500, "av": 5, "durability": 1.0,
+      "toMain": 0.0, "overflowCap": true,
+      "fatal": false, "fatalNote": "No lo destruye, pero derriba la nave al instante (queda 'Downed'). Basta con un propulsor de los cuatro.",
+      "exdr": 0.0,
+      "notes": "Punto débil principal; requiere penetración anti-tanque (AV5)."
+    }
+  ]
+}

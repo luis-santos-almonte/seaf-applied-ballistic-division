@@ -109,17 +109,20 @@ duplicados, referencias rotas a partes que no existen y fuentes sin fecha.
 | | |
 |---|---|
 | Armas | 117 (52 primarias · 18 secundarias · 33 de soporte · 14 granadas) |
-| Enemigos | 2 (Devastator, Charger) |
+| Enemigos | 76 (30 Terminids · 31 Automatons · 15 Illuminate) |
+| Partes de enemigo | 482 |
 | Pruebas | 43 |
-| Conflictos de fuentes registrados | 9 |
+| Conflictos de fuentes registrados | 49 |
 
-El roster de armas manejadas por el jugador está completo a la fecha de verificación. Falta el
-resto del bestiario (Terminids, Automatons, Illuminate).
+El roster de armas del jugador y el bestiario de las tres facciones están completos a la fecha de
+verificación, incluyendo el contenido más reciente (Cyborg Legion en Automatons, Crusher/Wretch de
+la actualización Devoid of Liberty en Illuminate). Quedan afuera a propósito las estructuras de
+mapa (fábricas, nidos, torres) y variantes sin tabla de anatomía propia documentada en la wiki.
 
 ## Roadmap
 
 - [x] Catálogo completo de armas del jugador (primarias, secundarias, soporte, granadas)
-- [ ] Resto del roster de enemigos (Terminids, Automatons, Illuminate)
+- [x] Catálogo completo de enemigos (Terminids, Automatons, Illuminate)
 - [ ] Comparador de varias armas contra un mismo objetivo
 - [ ] Sobrepenetración encadenada
 - [ ] Permalinks con el escenario codificado en la URL
@@ -128,9 +131,10 @@ resto del bestiario (Terminids, Automatons, Illuminate).
 ## Fuentes
 
 - Sistema de daño, penetración, durabilidad, ExDR, overflow: <https://helldivers.wiki.gg/wiki/Damage>
-- AC-8 Autocannon: <https://helldivers.wiki.gg/wiki/AC-8_Autocannon>
-- Devastator: <https://helldivers.wiki.gg/wiki/Devastator>
-- Charger: <https://helldivers.wiki.gg/wiki/Charger>
+- Cada arma y cada enemigo del catálogo (193 archivos entre `data/weapons/` y `data/enemies/`) trae
+  su propia página de <https://helldivers.wiki.gg> en `source.url`, con fecha de verificación y
+  nivel de confianza — demasiadas para listar acá una por una. El panel **Procedencia de los
+  datos** (dentro de la Calculadora) las muestra todas agrupadas y marca los conflictos.
 
 ---
 

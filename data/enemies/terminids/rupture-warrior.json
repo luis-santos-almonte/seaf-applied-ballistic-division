@@ -1,0 +1,44 @@
+{
+  "id": "rupture-warrior",
+  "name": "Rupture Warrior",
+  "faction": "TERMINIDS",
+  "size": "medium",
+  "fireDamageMultiplier": 0.8,
+  "staggerThreshold": 20,
+  "source": {
+    "name": "Helldivers Wiki — Rupture Warrior",
+    "url": "https://helldivers.wiki.gg/wiki/Rupture_Warrior",
+    "dateChecked": "2026-08-23",
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
+  },
+  "main": { "hp": 250, "av": 1, "durability": 0.2, "exdr": 0.0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    {
+      "id": "head", "name": "Cabeza", "count": 1,
+      "hp": 110, "av": 3, "durability": 0.2,
+      "toMain": 1.0, "overflowCap": false,
+      "constitution": 160, "constitutionDecay": 70,
+      "fatal": true, "fatalNote": "Al destruirla entra en estado berserker (más velocidad) antes de desangrarse por Constitution.",
+      "exdr": 1.0,
+      "notes": "Variante de la cepa 'Rupture Strain' (spawnea desde dificultad 6+, reemplazando totalmente a los Warrior comunes en planetas con esa cepa). A diferencia del Warrior base, tiene AV3 (Medium) en cabeza y garras en vez de AV1, a cambio de menos HP en Main (250 vs 325). Las patas delanteras y la cola (parte de Main) sobresalen levemente por encima de la cabeza y son vulnerables a penetración AP2; la animación de emerger del suelo expone brevemente todo el cuerpo a armas de penetración ligera. Historial de cambios (parche 1.004.100): la durabilidad de cabeza y cuerpo subió de 0% a 20%, la transferencia a Main de patas/garras bajó de 50% a 40%, y la armadura de patas delanteras bajó a AV1."
+    },
+    {
+      "id": "legs", "name": "Patas", "count": 4,
+      "hp": 100, "av": 1, "durability": 0.0,
+      "toMain": 0.4, "overflowCap": false,
+      "fatal": false,
+      "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "claws", "name": "Garras", "count": 2,
+      "hp": 75, "av": 3, "durability": 0.0,
+      "toMain": 0.4, "overflowCap": false,
+      "fatal": false,
+      "exdr": 1.0,
+      "notes": null
+    }
+  ]
+}

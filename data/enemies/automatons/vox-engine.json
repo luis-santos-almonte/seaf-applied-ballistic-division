@@ -1,0 +1,110 @@
+{
+  "id": "vox-engine",
+  "name": "Vox Engine",
+  "faction": "AUTOMATONS",
+  "size": "boss",
+  "fireDamageMultiplier": null,
+  "staggerThreshold": null,
+  "source": {
+    "name": "Helldivers Wiki — Vox Engine",
+    "url": "https://helldivers.wiki.gg/wiki/Vox_Engine",
+    "dateChecked": "2026-08-23",
+    "confidence": "LOW",
+    "status": "partially_verified",
+    "conflict": "Es el Automaton más nuevo documentado (subfacción Cyborg Legion, parche 1.006.003, 2026-02-10) y el más grande/complejo del roster. Varias celdas de la tabla de Anatomía llegaron incompletas: la durabilidad de Main, el %ToMain de Cañones/Miniguns/Altavoces, y sobre todo la fila 'Hatches (2)' que en la wiki aparece casi enteramente en blanco (solo AV 'Unarmored' y Fatal 'Sí', sin HP ni %ToMain). Se modeló 'Hatches' como hpIsMain (comparte el HP de Main) por ser la interpretación más consistente con el resto de la tabla, pero es una estimación razonable, no un dato confirmado literalmente. No se documentan multiplicador de daño por fuego ni umbral de stagger."
+  },
+  "main": { "hp": 9000, "av": 5, "durability": 0.0, "exdr": 0, "constitution": 50000, "constitutionDecay": 10000 },
+  "parts": [
+    {
+      "id": "sarcophagus", "name": "Sarcófago (piloto ciborg)", "count": 1,
+      "hp": 7000, "av": 5, "durability": 0.6,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Compartimento blindado que protege al piloto ciborg."
+    },
+    {
+      "id": "torso", "name": "Torso", "count": 1,
+      "hp": 9000, "av": 5, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 0.6,
+      "notes": null
+    },
+    {
+      "id": "cannons", "name": "Cañones pesados", "count": 2,
+      "hp": 3500, "av": 4, "durability": 0.7,
+      "toMain": 0.0, "overflowCap": false,
+      "fatal": false, "exdr": 0.6,
+      "notes": "Arma principal; la wiki no especifica %ToMain (se asumió 0%, ver 'conflict')."
+    },
+    {
+      "id": "missile-launchers", "name": "Lanzamisiles", "count": 2,
+      "hp": 1200, "av": 3, "durability": 0.6,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "miniguns", "name": "Miniguns", "count": 2,
+      "hp": 300, "av": 3, "durability": 1.0,
+      "toMain": 0.0, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": "La wiki no especifica %ToMain (se asumió 0%, ver 'conflict')."
+    },
+    {
+      "id": "speakers", "name": "Altavoces", "count": 2,
+      "hp": 800, "av": 3, "durability": 0.0,
+      "toMain": 0.0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "fog-lights", "name": "Faros antiniebla", "count": 2,
+      "hp": 50, "av": 1, "durability": 0.6,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "torso-flaps", "name": "Solapas del torso", "count": 2,
+      "hp": 500, "av": 3, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": false, "exdr": 0.6,
+      "notes": null
+    },
+    {
+      "id": "vents", "name": "Rejillas de ventilación", "count": 6,
+      "hp": 300, "av": 1, "durability": 0.6,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "hatches", "name": "Escotillas", "count": 2,
+      "hp": null, "hpIsMain": true, "av": 0, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "notes": "Fila casi vacía en la tabla de la wiki (solo AV y Fatal documentados); se interpretó como que comparte el HP de Main. Ver 'conflict' del enemigo."
+    },
+    {
+      "id": "undercarriage", "name": "Chasis inferior", "count": 1,
+      "hp": 9000, "av": 5, "durability": 0.0,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": false, "exdr": 0.6,
+      "notes": null
+    },
+    {
+      "id": "trackpod-latches", "name": "Anclajes de las orugas", "count": 4,
+      "hp": 2000, "av": 3, "durability": 0.0,
+      "toMain": 0.5, "overflowCap": true,
+      "fatal": false, "exdr": 0.6,
+      "notes": null
+    },
+    {
+      "id": "tracks", "name": "Orugas", "count": 4,
+      "hp": 3000, "av": 4, "durability": 0.0,
+      "toMain": 0.6, "overflowCap": false,
+      "fatal": false, "exdr": 0.6,
+      "notes": "Inmoviliza, no destruye por sí sola."
+    }
+  ]
+}

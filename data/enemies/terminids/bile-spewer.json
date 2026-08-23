@@ -1,0 +1,25 @@
+{
+  "id": "bile-spewer",
+  "name": "Bile Spewer",
+  "faction": "TERMINIDS",
+  "size": "medium",
+  "fireDamageMultiplier": 1,
+  "staggerThreshold": 30,
+  "source": {
+    "name": "Helldivers Wiki — Bile Spewer",
+    "url": "https://helldivers.wiki.gg/wiki/Bile_Spewer",
+    "dateChecked": "2026-08-23",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "El scraping de la tabla de anatomía devolvió dos veces la fila 'Main' con las columnas Durable%/%ToMain en formato ambiguo (guiones en ambas, o 50%/50% cruzado). Se asumió Durability 0.5 y sin %ToMain (no aplica) por consistencia con Nursing Spewer y Rupture Spewer, que comparten la misma anatomía base y muestran ese patrón con claridad. Además, la wiki indica que Cabeza, Placas espinales y Patas delanteras suben de armadura Ligera (AV2) a Media (AV3) en dificultad Extreme o superior; se modeló el valor base (AV2) y se anotó el cambio en cada parte afectada."
+  },
+  "main": { "hp": 750, "av": 2, "durability": 0.5, "exdr": 0, "constitution": null, "constitutionDecay": null },
+  "parts": [
+    { "id": "head", "name": "Cabeza", "count": 1, "hp": 300, "av": 2, "durability": 0, "toMain": 1.0, "overflowCap": true, "fatal": true, "exdr": 1.0, "notes": "En dificultad Extreme o superior, la armadura sube de Ligera (AV2) a Media (AV3)." },
+    { "id": "mouth", "name": "Boca", "count": 1, "hp": 250, "av": 0, "durability": 0, "toMain": 1.0, "overflowCap": true, "fatal": true, "exdr": 1.0, "notes": "Sin armadura; punto débil secundario visible cuando escupe." },
+    { "id": "spinal-plates", "name": "Placas espinales", "count": 1, "hp": 500, "av": 2, "durability": 0.8, "toMain": 0.2, "overflowCap": true, "fatal": true, "exdr": 0, "notes": "En dificultad Extreme o superior, la armadura sube de Ligera (AV2) a Media (AV3)." },
+    { "id": "butt", "name": "Trasero", "count": 1, "hp": 750, "av": 0, "durability": 1.0, "toMain": 0.6, "overflowCap": true, "fatal": true, "exdr": 0, "fatalNote": "Un disparo letal al trasero provoca que explote.", "notes": "Puede lanzar bombas de bilis a distancia (ataque a distancia que el Nursing Spewer no tiene)." },
+    { "id": "front-legs", "name": "Patas delanteras", "count": 2, "hp": 200, "av": 2, "durability": 0, "toMain": 0.5, "overflowCap": false, "fatal": false, "exdr": 1.0, "notes": "En dificultad Extreme o superior, la armadura sube de Ligera (AV2) a Media (AV3)." },
+    { "id": "rear-legs", "name": "Patas traseras", "count": 2, "hp": 250, "av": 2, "durability": 0.3, "toMain": 0.5, "overflowCap": false, "fatal": false, "exdr": 1.0, "notes": null }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "id": "gatekeeper",
+  "name": "Gatekeeper",
+  "faction": "ILLUMINATE",
+  "size": "heavy",
+  "fireDamageMultiplier": 1.0,
+  "staggerThreshold": 40,
+  "source": {
+    "name": "Helldivers Wiki — Gatekeeper",
+    "url": "https://helldivers.wiki.gg/wiki/Gatekeeper",
+    "dateChecked": "2026-08-23",
+    "confidence": "MEDIUM",
+    "status": "partially_verified",
+    "conflict": "Mech de la subfacción Appropriators con una tabla de Anatomy muy extensa (17+ filas) y un estado adicional 'Armor Broken' que la wiki no explica con precisión (algunas filas del estado roto duplican HP/AV de las intactas, p.ej. Arms/Legs, sin indicar qué cambia realmente salvo la pérdida de las placas exteriores). Se modelaron las placas de Hombro/Brazo/Pierna como breakablePlating SIN relación 'protects' hacia Arms/Legs porque el texto de la wiki dice explícitamente que romperlas 'no expone los miembros de inmediato'; el Escudo sí se modeló bloqueando Cockpit y Pilot (requiresBroken) según la descripción textual. No se encontró clasificación de tamaño explícita en la wiki; se asignó 'heavy' por ser un mech multi-extremidad de 2500 HP en Main."
+  },
+  "main": { "hp": 2500, "av": 4, "durability": 1.0, "exdr": 0 },
+  "parts": [
+    {
+      "id": "shield-generator", "name": "Generador de escudo", "count": 1,
+      "hp": 50, "av": 4, "durability": 0,
+      "toMain": 0, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": "Ubicado en la 'frente' del mech. Al destruirlo se desactiva el escudo de forma permanente."
+    },
+    {
+      "id": "chassis", "name": "Chasis", "count": 1,
+      "hp": 1600, "av": 4, "durability": 0.8,
+      "toMain": 0.75, "overflowCap": false,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "carapace", "name": "Caparazón", "count": 2,
+      "hp": 400, "av": 4, "durability": 0,
+      "toMain": 0.2, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "breakablePlating": true,
+      "notes": "Placas exteriores; la wiki aclara que no protegen sistemas internos al destruirse (son solo HP adicional de baja prioridad)."
+    },
+    {
+      "id": "rear-weakspot", "name": "Punto débil trasero", "count": 1,
+      "hp": 800, "av": 1, "durability": 0.8,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "shield", "name": "Escudo", "count": 1,
+      "hp": 1300, "av": 2, "durability": 0,
+      "toMain": 0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "breakablePlating": true, "protects": "cockpit",
+      "notes": "Mientras está intacto, protege la Cabina y al Piloto (ver requiresBroken en esas partes)."
+    },
+    {
+      "id": "pilot", "name": "Piloto", "count": 1,
+      "hp": 700, "av": 2, "durability": 0.5,
+      "toMain": 0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "requiresBroken": "shield",
+      "notes": null
+    },
+    {
+      "id": "cockpit", "name": "Cabina", "count": 1,
+      "hp": 1200, "av": 4, "durability": 0.8,
+      "toMain": 0.75, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "requiresBroken": "shield",
+      "notes": null
+    },
+    {
+      "id": "cockpit-weakspot", "name": "Punto débil de cabina", "count": 1,
+      "hp": 800, "av": 1, "durability": 0.8,
+      "toMain": 1.0, "overflowCap": true,
+      "fatal": true, "exdr": 1.0,
+      "requiresBroken": "shield",
+      "notes": null
+    },
+    {
+      "id": "shoulder-armor", "name": "Armadura de hombros", "count": 2,
+      "hp": 200, "av": 4, "durability": 0,
+      "toMain": 0.2, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "breakablePlating": true,
+      "notes": null
+    },
+    {
+      "id": "arm-armor", "name": "Armadura de brazos", "count": 2,
+      "hp": 200, "av": 4, "durability": 0,
+      "toMain": 0.2, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "breakablePlating": true,
+      "notes": null
+    },
+    {
+      "id": "arms", "name": "Brazos", "count": 2,
+      "hp": 1600, "av": 3, "durability": 0.5,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "guns", "name": "Cañones", "count": 2,
+      "hp": 800, "av": 4, "durability": 0,
+      "toMain": 0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "gun-weakspots", "name": "Puntos débiles de cañones", "count": 2,
+      "hp": 800, "av": 2, "durability": 0,
+      "toMain": 0, "overflowCap": true,
+      "fatal": false, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "leg-armor", "name": "Armadura de piernas", "count": 6,
+      "hp": 200, "av": 4, "durability": 0,
+      "toMain": 0.2, "overflowCap": false,
+      "fatal": false, "exdr": 1.0,
+      "breakablePlating": true,
+      "notes": null
+    },
+    {
+      "id": "hips", "name": "Caderas", "count": 3,
+      "hp": 800, "av": 3, "durability": 0.5,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    },
+    {
+      "id": "legs", "name": "Piernas", "count": 3,
+      "hp": 800, "av": 3, "durability": 0.5,
+      "toMain": 1.0, "overflowCap": false,
+      "fatal": true, "exdr": 1.0,
+      "notes": null
+    }
+  ]
+}
