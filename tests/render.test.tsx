@@ -23,8 +23,8 @@ describe('render de la aplicación', () => {
     expect(html).toContain('Matriz armadura');
   });
 
-  it('muestra el panel de FLAK porque el AC-8 tiene metralla', () => {
-    expect(html).toContain('máximo teórico');
+  it('no muestra el panel de FLAK con el arma por defecto (Liberator, sin metralla)', () => {
+    expect(html).not.toContain('máximo teórico');
   });
 
   it('declara la procedencia de los datos', () => {

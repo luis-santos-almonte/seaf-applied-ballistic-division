@@ -70,8 +70,8 @@ export interface ResolvedScenario {
   flak: FlakResult | null;
 }
 
-/** Arma con la que arranca la consola: la primera con la que se cargó el catálogo. */
-const DEFAULT_WEAPON_ID = 'ac8-autocannon';
+/** Arma con la que arranca la consola: la primera que recibe el jugador en el juego. */
+const DEFAULT_WEAPON_ID = 'ar23-liberator';
 
 /** Semilla: el arma por defecto (o la primera disponible) y el primer enemigo del catálogo. */
 function seed() {
