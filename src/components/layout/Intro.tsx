@@ -1,12 +1,9 @@
-/** Tesis de la página: qué hace esta herramienta y qué no. */
+/** Instrucción breve de uso. La explicación del modelo vive en la pestaña Guía. */
 export function Intro() {
   return (
     <p className="intro">
-      No calcula <em>vida ÷ daño</em>. Reproduce el sistema real por partes: cada parte tiene su
-      propia vida, armadura, durabilidad, resistencia a explosión y porcentaje de transferencia al{' '}
-      <strong>Main HP</strong>. El proyectil y su explosión se resuelven como{' '}
-      <strong>dos eventos independientes</strong>. Modelo <strong>LEVEL 2</strong> — mecánicas del
-      juego, sin geometría ni caída por distancia.
+      Elige un arma, un enemigo y la parte a la que apuntas: la calculadora reproduce el daño real
+      que aplicaría el juego, paso a paso, y te dice cuántos impactos hacen falta para matar.
     </p>
   );
 }

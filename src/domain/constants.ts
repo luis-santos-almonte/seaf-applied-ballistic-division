@@ -36,7 +36,7 @@ export const VERDICT_DETAIL = {
 
 export const CAUSE_MESSAGE = {
   FATAL_PART_DESTROYED: 'Parte fatal destruida.',
-  MAIN_DEPLETED: 'Main health agotada.',
+  MAIN_DEPLETED: 'Main HP agotada.',
   PART_DESTROYED_NOT_FATAL:
     'La parte se destruye pero no es fatal: el enemigo sigue vivo. Hay que cambiar de objetivo.',
   NO_PENETRATION: 'Ni el proyectil ni la explosión penetran. Ricochet.',

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useScenario } from '@/hooks/useScenario';
 import { Masthead } from '@/components/layout/Masthead';
 import { Intro } from '@/components/layout/Intro';
@@ -9,13 +10,21 @@ import { TargetRanking } from '@/components/tables/TargetRanking';
 import { ShotLedger } from '@/components/tables/ShotLedger';
 import { ArmorDurabilityMatrix } from '@/components/tables/ArmorDurabilityMatrix';
 import { FlakBreakdown } from '@/components/tables/FlakBreakdown';
+import { Tabs, type TabItem } from '@/components/ui/Tabs';
+import { Guide } from '@/components/guide/Guide';
 import { resolveAp } from '@/engine';
+
+const TABS: readonly TabItem[] = [
+  { id: 'calculator', label: 'Calculadora' },
+  { id: 'guide', label: 'Guía' },
+];
 
 /**
  * Composición de la página. Un único `useScenario` sostiene el estado y todos
  * los resultados derivados; los componentes solo pintan.
  */
 export default function App() {
+  const [activeTab, setActiveTab] = useState<string>('calculator');
   const scenario = useScenario();
   const { effectiveAttack, enemy, state, dispatch, simulation, ranking, matrix, flak } = scenario;
 
@@ -24,31 +33,40 @@ export default function App() {
       <div className="hazard-strip" aria-hidden="true" />
       <div className="page">
         <Masthead />
-        <Intro />
+        <Tabs tabs={TABS} activeId={activeTab} onChange={setActiveTab} />
 
-        <div className="page__split">
-          <FireConsole scenario={scenario} />
-          <DamageReceipt scenario={scenario} />
-        </div>
+        {activeTab === 'calculator' && (
+          <>
+            <Intro />
 
-        <TargetRanking ranking={ranking} tag={`${enemy.name} · ${effectiveAttack.label}`} />
+            <div className="page__split">
+              <FireConsole scenario={scenario} />
+              <DamageReceipt scenario={scenario} />
+            </div>
 
-        <ShotLedger ledger={simulation.ledger} />
+            <TargetRanking ranking={ranking} tag={`${enemy.name} · ${effectiveAttack.label}`} />
 
-        <ArmorDurabilityMatrix
-          matrix={matrix}
-          tag={`${effectiveAttack.label} · AP ${resolveAp(effectiveAttack, state.angle)}`}
-        />
+            <ShotLedger ledger={simulation.ledger} />
 
-        {flak && (
-          <FlakBreakdown
-            flak={flak}
-            partName={scenario.part.name}
-            onFragmentsChange={(count) => dispatch({ type: 'setFlakFragments', count })}
-          />
+            <ArmorDurabilityMatrix
+              matrix={matrix}
+              tag={`${effectiveAttack.label} · AP ${resolveAp(effectiveAttack, state.angle)}`}
+            />
+
+            {flak && (
+              <FlakBreakdown
+                flak={flak}
+                partName={scenario.part.name}
+                onFragmentsChange={(count) => dispatch({ type: 'setFlakFragments', count })}
+              />
+            )}
+
+            <SourceAudit />
+          </>
         )}
 
-        <SourceAudit />
+        {activeTab === 'guide' && <Guide />}
+
         <Footer />
       </div>
     </>
