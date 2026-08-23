@@ -15,9 +15,9 @@
     "name": "Helldivers Wiki — GL-21 Grenade Launcher",
     "url": "https://helldivers.wiki.gg/wiki/GL-21_Grenade_Launcher",
     "dateChecked": "2026-08-22",
-    "confidence": "MEDIUM",
-    "status": "partially_verified",
-    "conflict": "El historial de parches indica que en 1.006.100 (2026-03-17) el AP de la explosión se revirtió de Heavy a Medium, pero la tabla de ataque actual consultada sigue mostrando Heavy. Se prioriza el valor de la tabla de ataque actual (Heavy=4) y se deja constancia del conflicto para verificación manual."
+    "confidence": "HIGH",
+    "status": "verified",
+    "conflict": null
   },
   "attacks": [
     {
@@ -33,7 +33,7 @@
       "stagger": null,
       "push": null,
       "confidence": "MEDIUM",
-      "notes": "AP Heavy (0-80°), Unarmored a ángulo extremo. Ver conflicto de fuente en source.conflict."
+      "notes": "AP Heavy (0-80°), Unarmored a ángulo extremo. El parche 1.006.100 solo tocó la penetración de la explosión (ver he-explosion); no hay evidencia de que este valor del impacto directo también haya cambiado."
     },
     {
       "id": "he-explosion",
@@ -42,19 +42,19 @@
       "kind": "explosion",
       "standard": 400,
       "durable": 400,
-      "ap": 4,
+      "ap": 3,
       "radiusInner": 3.5,
       "radiusOuter": 7.5,
       "radiusShockwave": 8,
       "demolition": 30,
       "stagger": 25,
       "push": 30,
-      "confidence": "MEDIUM",
-      "notes": "Ver conflicto de fuente en source.conflict sobre si el AP actual es Heavy(4) o Medium(3)."
+      "confidence": "HIGH",
+      "notes": "AP Medium. Había subido a Heavy en el parche 1.006.001 pero Arrowhead lo revirtió en 1.006.100 ('Machinery of Oppression'/6.1.0, 2026-03-17): 'we pulled the trigger too quickly'. El GL-28 (AP Heavy) quedó como la opción contra blindaje pesado y el GL-21 para hordas."
     }
   ],
   "history": [
-    { "patch": "1.006.100", "date": "2026-03-17", "field": "he-explosion.ap", "from": 4, "to": 3, "note": "Revertido de Heavy a Medium; ver conflicto con la tabla de ataque consultada." },
+    { "patch": "1.006.100", "date": "2026-03-17", "field": "he-explosion.ap", "from": 4, "to": 3, "note": "Revertido de Heavy a Medium. Confirmado por prensa especializada citando el patch note oficial de Arrowhead ('Machinery of Oppression: 6.1.0')." },
     { "patch": "1.006.001", "date": "2026-02-03", "field": "he-explosion.ap", "from": 3, "to": 4, "note": "AP de la explosión subido a Heavy." },
     { "patch": "1.000.400", "date": "2024-06-13", "field": "he-explosion.standard", "from": 350, "to": 400, "note": null }
   ]

@@ -70,9 +70,12 @@ export interface ResolvedScenario {
   flak: FlakResult | null;
 }
 
-/** Semilla: el primer arma y el primer enemigo del catálogo, en orden. */
+/** Arma con la que arranca la consola: la primera con la que se cargó el catálogo. */
+const DEFAULT_WEAPON_ID = 'ac8-autocannon';
+
+/** Semilla: el arma por defecto (o la primera disponible) y el primer enemigo del catálogo. */
 function seed() {
-  const weapon = weapons[0];
+  const weapon = findWeapon(DEFAULT_WEAPON_ID) ?? weapons[0];
   const enemy = enemies[0];
   if (!weapon || !enemy) throw new Error('El catálogo está vacío: no hay armas o enemigos.');
   const attack = weapon.attacks[0];

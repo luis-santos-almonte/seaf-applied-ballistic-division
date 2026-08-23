@@ -108,17 +108,18 @@ duplicados, referencias rotas a partes que no existen y fuentes sin fecha.
 
 | | |
 |---|---|
-| Armas | 1 (AC-8 Autocannon) |
+| Armas | 117 (52 primarias · 18 secundarias · 33 de soporte · 14 granadas) |
 | Enemigos | 2 (Devastator, Charger) |
 | Pruebas | 43 |
+| Conflictos de fuentes registrados | 9 |
 
-Todavía es chico. La idea es ir completando el roster con cada arma y enemigo que verifique contra
-la wiki.
+El roster de armas manejadas por el jugador está completo a la fecha de verificación. Falta el
+resto del bestiario (Terminids, Automatons, Illuminate).
 
 ## Roadmap
 
-- [ ] Resto del roster (Terminids, Automatons, Illuminate)
-- [ ] Más armas
+- [x] Catálogo completo de armas del jugador (primarias, secundarias, soporte, granadas)
+- [ ] Resto del roster de enemigos (Terminids, Automatons, Illuminate)
 - [ ] Comparador de varias armas contra un mismo objetivo
 - [ ] Sobrepenetración encadenada
 - [ ] Permalinks con el escenario codificado en la URL

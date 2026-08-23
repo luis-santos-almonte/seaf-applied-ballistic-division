@@ -15,9 +15,9 @@
     "name": "Helldivers Wiki — StA-X3 W.A.S.P. Launcher",
     "url": "https://helldivers.wiki.gg/wiki/StA-X3_W.A.S.P._Launcher",
     "dateChecked": "2026-08-22",
-    "confidence": "LOW",
+    "confidence": "MEDIUM",
     "status": "partially_verified",
-    "conflict": "El historial de parches indica que en 1.006.001 (2026-02-03) el AP del proyectil subió a Heavy y su daño directo se redujo a 0 (quedando el daño concentrado en la explosión), pero la tabla de ataque consultada muestra 200 de daño balístico con AP Anti-Tank II en los 4 ángulos. Se prioriza la tabla de ataque actual y se deja constancia del conflicto para verificación manual. Además, esta arma tiene un segundo modo de fuego ('Artillery', indirecto por trayectoria) cuyo perfil de daño no se pudo extraer por separado en esta consulta; solo se modela el modo 'Burst' (directo)."
+    "conflict": "El historial de parches de la wiki indica que en 1.006.001 (2026-02-03) el AP del proyectil subió a Heavy y su daño directo se redujo a 0, pero fuentes externas (cobertura de prensa del patch 6.0.0/1.006.001) describen ese parche únicamente como un remapeo de controles ('Programmable ammo mode' de función derecha a izquierda) para esta arma, sin mencionar cambios de daño o penetración, y listan las estadísticas vigentes como daño 200 / AP Anti-Tank II en el proyectil y AP Medium en la explosión — coincidiendo con la tabla de ataque actual, no con la entrada del historial. Se prioriza la tabla de ataque actual (corroborada por fuente externa) y queda la entrada del historial marcada como no confirmada. Además, esta arma tiene un segundo modo de fuego ('Artillery', indirecto por trayectoria) cuyo perfil de daño no se pudo extraer por separado en esta consulta; solo se modela el modo 'Burst' (directo)."
   },
   "attacks": [
     {
@@ -32,8 +32,8 @@
       "demolition": 30,
       "stagger": 25,
       "push": 50,
-      "confidence": "LOW",
-      "notes": "Ver conflicto de fuente en source.conflict sobre el daño/AP real tras el parche 1.006.001."
+      "confidence": "MEDIUM",
+      "notes": "Daño y AP corroborados por fuente externa además de la wiki (ver source.conflict); el historial de parches de la wiki sugiere un cambio drástico en 1.006.001 que no se confirma en ningún otro sitio."
     },
     {
       "id": "burst-explosion",
