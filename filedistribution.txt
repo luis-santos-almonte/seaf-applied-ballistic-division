@@ -72,7 +72,6 @@ SEAF Applied Ballistics Division/
 │   │   │   └── ArmorDurabilityMatrix.tsx
 │   │   └── layout/
 │   │       ├── Masthead.tsx
-│   │       ├── Intro.tsx
 │   │       └── Footer.tsx
 │   │
 │   ├── lib/

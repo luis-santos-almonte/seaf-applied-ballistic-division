@@ -71,14 +71,6 @@ const GLOSSARY: readonly GlossaryEntry[] = [
 export function Guide() {
   return (
     <div className="guide">
-      <p className="guide__lede">
-        Esta calculadora no reduce el combate a <em>vida ÷ daño</em>. Cada parte de un enemigo
-        tiene su propia vida, su propia armadura y su propia forma de repartir el daño hacia la
-        vida principal, y un proyectil y la explosión que dispara se resuelven como dos golpes
-        separados, cada uno con su propia armadura y su propia resistencia. Esta pestaña explica
-        los términos que vas a ver en la consola y el recibo, y el orden exacto en que se aplican.
-      </p>
-
       <Panel title="Vocabulario del juego" tag="guía">
         <dl>
           {GLOSSARY.map((entry) => (

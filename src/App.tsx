@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useScenario } from '@/hooks/useScenario';
 import { Masthead } from '@/components/layout/Masthead';
-import { Intro } from '@/components/layout/Intro';
 import { Footer } from '@/components/layout/Footer';
 import { FireConsole } from '@/components/console/FireConsole';
 import { DamageReceipt } from '@/components/receipt/DamageReceipt';
@@ -35,8 +34,6 @@ export default function App() {
 
         {activeTab === 'calculator' && (
           <>
-            <Intro />
-
             <div className="page__split">
               <FireConsole scenario={scenario} />
               <DamageReceipt scenario={scenario} />
