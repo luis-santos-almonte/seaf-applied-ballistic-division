@@ -12,7 +12,10 @@ const TONE: Record<PenetrationVerdict, string> = {
 interface Props {
   verdict: PenetrationVerdict;
   damage: number;
-  combined: boolean;
+  /** Perdigones que conectan, si el ataque los tiene (escopetas). 1 o undefined = un solo proyectil. */
+  pelletsHitting?: number;
+  /** Componentes además del proyectil que ya están sumados en `damage` (ej. ["explosión", "metralla"]). */
+  extra: string[];
 }
 
 /**
@@ -20,7 +23,10 @@ interface Props {
  * Reproduce la semántica de los hitmarkers del juego, que es la señal que el
  * jugador ya sabe leer en pantalla.
  */
-export function VerdictStamp({ verdict, damage, combined }: Props) {
+export function VerdictStamp({ verdict, damage, pelletsHitting, extra }: Props) {
+  const base = pelletsHitting && pelletsHitting > 1 ? `${pelletsHitting} perdigones` : 'proyectil';
+  const showBreakdown = extra.length > 0 || (pelletsHitting !== undefined && pelletsHitting > 1);
+
   return (
     <div className="verdict">
       <div className={cx('stamp', TONE[verdict])}>
@@ -30,7 +36,7 @@ export function VerdictStamp({ verdict, damage, combined }: Props) {
       <div className="verdict__figure">
         <b>{formatNumber(damage)}</b>
         <span>
-          daño a la parte por impacto{combined ? ' (proyectil + explosión)' : ''}
+          daño a la parte por impacto{showBreakdown ? ` (${[base, ...extra].join(' + ')})` : ''}
         </span>
       </div>
     </div>

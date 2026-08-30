@@ -70,31 +70,10 @@ export function linkedExplosion(weapon: Weapon, attack: Attack): Attack | null {
   return findAttack(weapon, attack.triggersExplosion) ?? null;
 }
 
-/** Los tres perfiles que componen un disparo FLAK, si el arma los tiene. */
-export function flakProfiles(
-  weapon: Weapon,
-): { projectile: Attack; explosion: Attack; shrapnel: Attack } | null {
-  const explosion = weapon.attacks.find((a) => a.kind === 'explosion' && a.shrapnel !== null);
-  if (!explosion?.shrapnel) return null;
-
-  const shrapnel = findAttack(weapon, explosion.shrapnel.attackId);
-  const projectile = weapon.attacks.find((a) => a.triggersExplosion === explosion.id);
-  if (!shrapnel || !projectile) return null;
-
-  return { projectile, explosion, shrapnel };
-}
-
-/** Resumen para el pie de pagina y la auditoria. */
+/** Resumen para el pie de pagina. */
 export const catalogStats = {
   weapons: weapons.length,
   attackProfiles: weapons.reduce((total, w) => total + w.attacks.length, 0),
   enemies: enemies.length,
   parts: enemies.reduce((total, e) => total + e.parts.length, 0),
-  conflicts: [
-    rules.armorPenetration.source,
-    rules.rounding.source,
-    rules.explosion.source,
-    ...weapons.map((w) => w.source),
-    ...enemies.map((e) => e.source),
-  ].filter((s) => s.conflict !== null).length,
 };

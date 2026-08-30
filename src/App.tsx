@@ -3,13 +3,11 @@ import { useScenario } from '@/hooks/useScenario';
 import { Masthead } from '@/components/layout/Masthead';
 import { Intro } from '@/components/layout/Intro';
 import { Footer } from '@/components/layout/Footer';
-import { SourceAudit } from '@/components/layout/SourceAudit';
 import { FireConsole } from '@/components/console/FireConsole';
 import { DamageReceipt } from '@/components/receipt/DamageReceipt';
 import { TargetRanking } from '@/components/tables/TargetRanking';
 import { ShotLedger } from '@/components/tables/ShotLedger';
 import { ArmorDurabilityMatrix } from '@/components/tables/ArmorDurabilityMatrix';
-import { FlakBreakdown } from '@/components/tables/FlakBreakdown';
 import { Tabs, type TabItem } from '@/components/ui/Tabs';
 import { Guide } from '@/components/guide/Guide';
 import { resolveAp } from '@/engine';
@@ -26,7 +24,7 @@ const TABS: readonly TabItem[] = [
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>('calculator');
   const scenario = useScenario();
-  const { effectiveAttack, enemy, state, dispatch, simulation, ranking, matrix, flak } = scenario;
+  const { fireMode, effectiveAttack, enemy, state, simulation, ranking, matrix } = scenario;
 
   return (
     <>
@@ -44,24 +42,14 @@ export default function App() {
               <DamageReceipt scenario={scenario} />
             </div>
 
-            <TargetRanking ranking={ranking} tag={`${enemy.name} · ${effectiveAttack.label}`} />
+            <TargetRanking ranking={ranking} tag={`${enemy.name} · ${fireMode.label}`} />
 
             <ShotLedger ledger={simulation.ledger} />
 
             <ArmorDurabilityMatrix
               matrix={matrix}
-              tag={`${effectiveAttack.label} · AP ${resolveAp(effectiveAttack, state.angle)}`}
+              tag={`${fireMode.label} · AP ${resolveAp(effectiveAttack, state.angle)}`}
             />
-
-            {flak && (
-              <FlakBreakdown
-                flak={flak}
-                partName={scenario.part.name}
-                onFragmentsChange={(count) => dispatch({ type: 'setFlakFragments', count })}
-              />
-            )}
-
-            <SourceAudit />
           </>
         )}
 

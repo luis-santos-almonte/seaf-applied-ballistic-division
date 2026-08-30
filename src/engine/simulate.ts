@@ -6,7 +6,9 @@ import type {
   FiringProfile,
   KillCause,
   Rules,
+  PelletBreakdown,
   ShotRecord,
+  ShrapnelBreakdown,
   SimulationResult,
 } from '@/domain/types';
 import { MAX_SIMULATED_SHOTS } from '@/domain/constants';
@@ -14,10 +16,24 @@ import { resolveExplosionBypass, resolveHit } from './hit';
 import { partPool, transferToMain } from './transfer';
 import { damagePerSecond, timeToKill } from './firing';
 
+export interface ShrapnelInput {
+  attack: Attack;
+  /** Explosion propia del fragmento al impactar, si tiene (ej. submuniciones). */
+  explosion?: Attack | null;
+  /** Cuantos fragmentos declara el usuario que conectan con esta parte. */
+  fragmentsHitting: number;
+  /** Cuantos fragmentos dispara el arma en total (para la cota teorica). */
+  fragmentCount: number;
+}
+
 export interface SimulationInput {
   attack: Attack;
   /** Explosion asociada al proyectil, si aplica y si alcanza esta misma parte. */
   explosion: Attack | null;
+  /** Metralla de esa explosion, si tiene y si la explosion esta incluida. */
+  shrapnel?: ShrapnelInput | null;
+  /** Cuantos perdigones de `attack.pelletsPerShot` declara el usuario que conectan (escopetas). */
+  pelletsHitting?: number;
   enemy: Enemy;
   part: EnemyPart;
   firing: FiringProfile;
@@ -38,6 +54,8 @@ export function simulate(input: SimulationInput): SimulationResult {
   const {
     attack,
     explosion,
+    shrapnel = null,
+    pelletsHitting = 1,
     enemy,
     part,
     firing,
@@ -47,6 +65,15 @@ export function simulate(input: SimulationInput): SimulationResult {
   } = input;
 
   const projectile = resolveHit(attack, part, { rules, angle });
+  const pelletsResult: PelletBreakdown | null =
+    attack.pelletsPerShot !== null
+      ? {
+          hitting: pelletsHitting,
+          count: attack.pelletsPerShot,
+          damagePerShot: projectile.finalDamage * pelletsHitting,
+          theoreticalMax: projectile.finalDamage * attack.pelletsPerShot,
+        }
+      : null;
 
   const explosionHit = explosion ? resolveHit(explosion, part, { rules }) : null;
   const explosionBypass =
@@ -54,7 +81,26 @@ export function simulate(input: SimulationInput): SimulationResult {
       ? resolveExplosionBypass(explosion, enemy.main, { rules })
       : null;
 
-  const damageToPart = projectile.finalDamage + (explosionHit?.finalDamage ?? 0);
+  const shrapnelHit = shrapnel ? resolveHit(shrapnel.attack, part, { rules, angle }) : null;
+  const shrapnelExplosionHit = shrapnel?.explosion ? resolveHit(shrapnel.explosion, part, { rules }) : null;
+  const shrapnelUnitDamage = (shrapnelHit?.finalDamage ?? 0) + (shrapnelExplosionHit?.finalDamage ?? 0);
+  const shrapnelDamage = shrapnelHit ? shrapnelUnitDamage * shrapnel!.fragmentsHitting : 0;
+  const shrapnelResult: ShrapnelBreakdown | null =
+    shrapnelHit && shrapnel
+      ? {
+          hit: shrapnelHit,
+          explosionHit: shrapnelExplosionHit,
+          fragmentsHitting: shrapnel.fragmentsHitting,
+          fragmentCount: shrapnel.fragmentCount,
+          damagePerShot: shrapnelDamage,
+          theoreticalMax:
+            projectile.finalDamage + (explosionHit?.finalDamage ?? 0) + shrapnelUnitDamage * shrapnel.fragmentCount,
+        }
+      : null;
+
+  const projectileDamage = pelletsResult ? pelletsResult.damagePerShot : projectile.finalDamage;
+  const explosionDamage = explosionHit?.finalDamage ?? 0;
+  const damageToPart = projectileDamage + explosionDamage + shrapnelDamage;
   const bypassDamage = explosionBypass?.applies ? explosionBypass.damage : 0;
 
   const pool = partPool(part);
@@ -89,6 +135,9 @@ export function simulate(input: SimulationInput): SimulationResult {
         partRemaining: hasOwnHp ? Math.max(0, pool - dealtToPart) : null,
         mainRemaining: Math.max(0, mainHp),
         cappedThisShot: transfer.capped && transfer.counted < damageToPart,
+        projectileDamage,
+        explosionDamage,
+        shrapnelDamage,
       });
 
       if (partDestroyed && part.fatal) {
@@ -116,6 +165,8 @@ export function simulate(input: SimulationInput): SimulationResult {
     projectile,
     explosion: explosionHit,
     explosionBypass,
+    shrapnel: shrapnelResult,
+    pellets: pelletsResult,
     damagePerShotToPart: damageToPart,
     damagePerShotToMain: ledger[0]?.mainDamage ?? 0,
     partPool: hasOwnHp ? pool : null,

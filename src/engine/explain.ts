@@ -36,7 +36,9 @@ export function explainSimulation(
   steps.push(durabilityStep(input, result));
   steps.push(armorStep(result));
   steps.push(roundingStep(result, rules));
+  steps.push(pelletsStep(result));
   steps.push(explosionStep(result));
+  steps.push(shrapnelStep(result));
   steps.push(transferStep(part, result));
   steps.push(breakpointStep(part, result));
 
@@ -102,6 +104,27 @@ function roundingStep(result: SimulationResult, rules: Rules): DerivationStep {
   };
 }
 
+function pelletsStep(result: SimulationResult): DerivationStep {
+  const p = result.pellets;
+
+  if (!p) {
+    return {
+      key: 'pellets',
+      label: 'Perdigones',
+      math: 'Excluida del cálculo',
+      note: 'Este ataque dispara un solo proyectil por disparo.',
+      muted: true,
+    };
+  }
+
+  return {
+    key: 'pellets',
+    label: 'Perdigones',
+    math: `${n(result.projectile.finalDamage)} × ${p.hitting} perdigones = ${n(p.damagePerShot)}`,
+    note: `Este cartucho dispara ${p.count} perdigones a la vez, no espaciados por la cadencia del arma. Declaraste que ${p.hitting} pegan en esta parte. El máximo teórico (los ${p.count} en la misma parte) sería ${n(p.theoreticalMax)}, pero eso no ocurre contra un objetivo único.`,
+  };
+}
+
 function explosionStep(result: SimulationResult): DerivationStep {
   const e = result.explosion;
 
@@ -135,6 +158,32 @@ function explosionStep(result: SimulationResult): DerivationStep {
       e.finalDamage === 0
         ? 'La explosión no penetra esta parte aunque el proyectil sí lo haga.'
         : 'Evento de daño independiente del proyectil.',
+  };
+}
+
+function shrapnelStep(result: SimulationResult): DerivationStep {
+  const s = result.shrapnel;
+
+  if (!s) {
+    return {
+      key: 'shrapnel',
+      label: 'Metralla',
+      math: 'Excluida del cálculo',
+      note: 'Esta explosión no dispara fragmentos, o la explosión está desactivada.',
+      muted: true,
+    };
+  }
+
+  const unitDamage = s.hit.finalDamage + (s.explosionHit?.finalDamage ?? 0);
+  const unitMath = s.explosionHit
+    ? `(${n(s.hit.finalDamage)} + ${n(s.explosionHit.finalDamage)} de su propia explosión)`
+    : `${n(s.hit.finalDamage)}`;
+
+  return {
+    key: 'shrapnel',
+    label: 'Metralla',
+    math: `${unitMath} × ${s.fragmentsHitting} fragmentos = ${n(s.damagePerShot)}`,
+    note: `De los ${s.fragmentCount} fragmentos que dispara, declaraste que ${s.fragmentsHitting} pegan en esta parte. El máximo teórico (los ${s.fragmentCount} en la misma parte, a ${n(unitDamage)} cada uno) sería ${n(s.theoreticalMax)}, pero eso no ocurre contra un objetivo único.`,
   };
 }
 

@@ -30,6 +30,7 @@
       "ap": [2, 2, 2, 0],
       "demolition": 10,
       "stagger": 3,
+      "pelletsPerShot": 16,
       "confidence": "HIGH",
       "notes": "16 perdigones por cartucho. Valores por perdigón individual."
     }

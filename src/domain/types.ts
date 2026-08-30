@@ -87,6 +87,33 @@ export interface TransferResult {
   mainDamage: number;
 }
 
+/** Desglose de la metralla de un disparo: un fragmento resuelto una vez y multiplicado. */
+export interface ShrapnelBreakdown {
+  hit: HitBreakdown;
+  /** Explosión propia del fragmento al impactar, si tiene (ej. submuniciones). */
+  explosionHit: HitBreakdown | null;
+  /** Cuantos fragmentos declara el usuario que conectan con esta parte. */
+  fragmentsHitting: number;
+  /** Cuantos fragmentos dispara el arma en total. */
+  fragmentCount: number;
+  /** (hit.finalDamage + (explosionHit?.finalDamage ?? 0)) * fragmentsHitting. */
+  damagePerShot: number;
+  /** Cota superior inalcanzable: los fragmentCount fragmentos en la misma parte. */
+  theoreticalMax: number;
+}
+
+/** Desglose de perdigones/proyectiles simultáneos de un mismo disparo (escopetas). */
+export interface PelletBreakdown {
+  /** Cuantos perdigones declara el usuario que conectan con esta parte. */
+  hitting: number;
+  /** Cuantos perdigones dispara el arma por cartucho. */
+  count: number;
+  /** hit.finalDamage * hitting (ya incluido en damagePerShotToPart). */
+  damagePerShot: number;
+  /** Cota superior inalcanzable: los `count` perdigones en la misma parte. */
+  theoreticalMax: number;
+}
+
 export interface FiringProfile {
   rpm: number;
   shotsPerCycle: number;
@@ -108,6 +135,10 @@ export interface ShotRecord {
   partRemaining: number | null;
   mainRemaining: number;
   cappedThisShot: boolean;
+  /** Desglose de partDamage por componente. 0 cuando ese componente no aplica. */
+  projectileDamage: number;
+  explosionDamage: number;
+  shrapnelDamage: number;
 }
 
 export type KillCause =
@@ -121,6 +152,8 @@ export interface SimulationResult {
   projectile: HitBreakdown;
   explosion: HitBreakdown | null;
   explosionBypass: ExplosionBypass | null;
+  shrapnel: ShrapnelBreakdown | null;
+  pellets: PelletBreakdown | null;
 
   damagePerShotToPart: number;
   damagePerShotToMain: number;

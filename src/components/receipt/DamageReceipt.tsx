@@ -4,29 +4,34 @@ import { Panel } from '@/components/ui/Panel';
 import { VerdictStamp } from './VerdictStamp';
 import { StepList } from './StepList';
 import { OutcomeStats } from './OutcomeStats';
+import { ShrapnelSection } from './ShrapnelSection';
+import { PelletSection } from './PelletSection';
 
 /** Panel de salida: la derivación completa de un impacto, paso a paso. */
 export function DamageReceipt({ scenario }: { scenario: ResolvedScenario }) {
-  const { simulation, steps, effectiveAttack, enemy, part, effectiveEnemy } = scenario;
+  const { simulation, steps, fireMode, enemy, part, effectiveEnemy } = scenario;
 
   const plate = part.requiresBroken
     ? effectiveEnemy.parts.find((p) => p.id === part.requiresBroken)
     : null;
 
+  const extra: string[] = [];
+  if ((simulation.explosion?.finalDamage ?? 0) > 0) extra.push('explosión');
+  if (simulation.shrapnel) extra.push('metralla');
+
   return (
-    <Panel
-      title="Recibo de disparo"
-      tag={`${effectiveAttack.label} → ${enemy.name} / ${part.name}`}
-      flush
-    >
+    <Panel title="Recibo de disparo" tag={`${fireMode.label} → ${enemy.name} / ${part.name}`} flush>
       <VerdictStamp
         verdict={simulation.projectile.verdict}
         damage={simulation.damagePerShotToPart}
-        combined={(simulation.explosion?.finalDamage ?? 0) > 0}
+        pelletsHitting={simulation.pellets?.hitting}
+        extra={extra}
       />
 
       <StepList steps={steps} />
       <OutcomeStats simulation={simulation} />
+      {simulation.pellets && <PelletSection simulation={simulation} partName={part.name} />}
+      {simulation.shrapnel && <ShrapnelSection simulation={simulation} partName={part.name} />}
 
       <p className="receipt__note">
         <strong>{simulation.killed ? 'Muere.' : 'Atención.'}</strong> {CAUSE_MESSAGE[simulation.cause]}

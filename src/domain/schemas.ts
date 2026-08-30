@@ -72,6 +72,9 @@ export const attackSchema = z.object({
     .nullable()
     .default(null),
 
+  /** Perdigones/proyectiles simultáneos por disparo de ESTE MISMO ataque (escopetas). */
+  pelletsPerShot: z.number().int().positive().nullable().default(null),
+
   demolition: z.number().nullable().default(null),
   stagger: z.number().nullable().default(null),
   push: z.number().nullable().default(null),

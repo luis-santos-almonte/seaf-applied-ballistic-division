@@ -28,6 +28,7 @@
       "standard": 55,
       "durable": 20,
       "ap": [2, 2, 2, 0],
+      "pelletsPerShot": 11,
       "confidence": "HIGH",
       "notes": "11 perdigones por cartucho. Valores por perdigón individual."
     }

@@ -4,6 +4,9 @@ import {
   AC8_FIRING,
   APHET,
   APHET_EXPLOSION,
+  FLAK,
+  FLAK_EXPLOSION,
+  SHRAPNEL,
   charger,
   devastator,
   partOf,
@@ -70,6 +73,70 @@ describe('Charger con AC-8 APHET', () => {
     const plate = shoot(charger, 'torso-armor');
     expect(plate.partDestroyed).toBe(true);
     expect(plate.killed).toBe(false);
+  });
+});
+
+/**
+ * La metralla del FLAK vivía en un cálculo aparte (resolveFlak) desconectado
+ * de `simulate()`: `shotsToKill` no la contaba. Estas pruebas cubren el camino
+ * real, migradas desde el viejo tests/flak.test.ts.
+ */
+describe('metralla (FLAK) sumada al cálculo principal', () => {
+  const butt = partOf(charger, 'butt');
+
+  const withoutShrapnel = simulate({
+    attack: FLAK,
+    explosion: FLAK_EXPLOSION,
+    shrapnel: null,
+    enemy: charger,
+    part: butt,
+    firing: AC8_FIRING,
+    rules,
+  });
+
+  const fragmentsHitting = 3;
+  const withShrapnel = simulate({
+    attack: FLAK,
+    explosion: FLAK_EXPLOSION,
+    shrapnel: { attack: SHRAPNEL, fragmentsHitting, fragmentCount: 30 },
+    enemy: charger,
+    part: butt,
+    firing: AC8_FIRING,
+    rules,
+  });
+
+  it('sin fragmentos declarados, no hay desglose de metralla', () => {
+    expect(withoutShrapnel.shrapnel).toBeNull();
+  });
+
+  it('con fragmentos declarados, el daño por fragmento se suma al daño por disparo', () => {
+    const fragmentDamage = withShrapnel.shrapnel!.hit.finalDamage;
+    expect(withShrapnel.damagePerShotToPart).toBe(
+      withoutShrapnel.damagePerShotToPart + fragmentDamage * fragmentsHitting,
+    );
+  });
+
+  it('bajan los disparos para matar respecto a ignorar la metralla', () => {
+    expect(withShrapnel.shotsToKill).toBeLessThanOrEqual(withoutShrapnel.shotsToKill);
+  });
+
+  it('declara los 30 fragmentos totales y separa la cota teórica de la realista', () => {
+    expect(withShrapnel.shrapnel?.fragmentCount).toBe(30);
+    expect(withShrapnel.shrapnel?.theoreticalMax).toBeGreaterThan(withShrapnel.damagePerShotToPart);
+  });
+
+  it('contra una parte 100% durable el fragmento hace 35, no 110 (usa el valor durable)', () => {
+    const underside = partOf(charger, 'underside');
+    const result = simulate({
+      attack: FLAK,
+      explosion: FLAK_EXPLOSION,
+      shrapnel: { attack: SHRAPNEL, fragmentsHitting: 30, fragmentCount: 30 },
+      enemy: charger,
+      part: underside,
+      firing: AC8_FIRING,
+      rules,
+    });
+    expect(result.shrapnel?.hit.finalDamage).toBe(35);
   });
 });
 

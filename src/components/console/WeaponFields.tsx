@@ -1,16 +1,19 @@
 import type { ResolvedScenario } from '@/hooks/useScenario';
 import type { AngleIndex } from '@/domain/types';
 import { weapons } from '@/data/catalog';
-import { resolveAp } from '@/engine';
+import { deriveFireModes, resolveAp } from '@/engine';
 import { CheckField, FieldRow, NumberField, SelectField } from '@/components/ui/Field';
 
-/** Selección del arma, su perfil de ataque y los números que lo definen. */
+/** Selección del arma, su modo de fuego y los números que lo definen. */
 export function WeaponFields({ scenario }: { scenario: ResolvedScenario }) {
-  const { state, dispatch, weapon, attack, effectiveAttack, rules } = scenario;
+  const { state, dispatch, weapon, fireMode, attack, effectiveAttack, rules } = scenario;
 
   const currentAp = resolveAp(effectiveAttack, state.angle);
   const isExplosion = attack.kind === 'explosion';
-  const hasExplosion = attack.triggersExplosion !== null;
+  const hasExplosion = fireMode.explosion !== null;
+  const hasShrapnel = fireMode.shrapnel !== null;
+  const fragmentCount = fireMode.shrapnelCount ?? 0;
+  const pelletsPerShot = attack.pelletsPerShot;
 
   return (
     <>
@@ -20,15 +23,16 @@ export function WeaponFields({ scenario }: { scenario: ResolvedScenario }) {
         options={weapons.map((w) => ({ value: w.id, label: w.name }))}
         onChange={(weaponId) => {
           const next = weapons.find((w) => w.id === weaponId);
-          if (!next?.attacks[0]) return;
-          dispatch({ type: 'selectWeapon', weaponId, attackId: next.attacks[0].id });
+          const nextMode = next && deriveFireModes(next)[0];
+          if (!nextMode) return;
+          dispatch({ type: 'selectWeapon', weaponId, attackId: nextMode.id });
         }}
       />
 
       <SelectField
-        label="Perfil de ataque"
+        label="Modo de fuego"
         value={state.attackId}
-        options={weapon.attacks.map((a) => ({ value: a.id, label: a.label }))}
+        options={deriveFireModes(weapon).map((m) => ({ value: m.id, label: m.label }))}
         onChange={(attackId) => dispatch({ type: 'selectAttack', attackId })}
       />
 
@@ -54,6 +58,17 @@ export function WeaponFields({ scenario }: { scenario: ResolvedScenario }) {
         />
       </FieldRow>
 
+      {pelletsPerShot !== null && (
+        <NumberField
+          label="Perdigones que conectan"
+          min={0}
+          max={pelletsPerShot}
+          value={Math.min(state.pelletsHitting, pelletsPerShot)}
+          onChange={(count) => dispatch({ type: 'setPelletsHitting', count: count ?? 0 })}
+          hint={`Este cartucho dispara ${pelletsPerShot} perdigones a la vez, no espaciados por la cadencia del arma. Declara cuántos pegan de verdad en esta parte.`}
+        />
+      )}
+
       <SelectField
         label="Ángulo de impacto"
         value={String(state.angle)}
@@ -77,9 +92,20 @@ export function WeaponFields({ scenario }: { scenario: ResolvedScenario }) {
         onChange={(include) => dispatch({ type: 'toggleExplosion', include })}
       />
       <p className="field__hint">
-        Desactívalo para aislar el proyectil. La explosión tiene su propio AP y puede rebotar donde
-        el proyectil sí entra.
+        Desactívalo para aislar el proyectil. La explosión (y su metralla, si tiene) tiene su
+        propio AP y puede rebotar donde el proyectil sí entra.
       </p>
+
+      {hasShrapnel && state.includeExplosion && (
+        <NumberField
+          label="Fragmentos que conectan"
+          min={0}
+          max={fragmentCount}
+          value={Math.min(state.flakFragments, fragmentCount)}
+          onChange={(count) => dispatch({ type: 'setFlakFragments', count: count ?? 0 })}
+          hint={`De los ${fragmentCount} fragmentos que dispara, cuántos pegan de verdad en esta parte.`}
+        />
+      )}
     </>
   );
 }

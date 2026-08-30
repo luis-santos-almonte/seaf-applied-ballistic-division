@@ -31,6 +31,7 @@
       "demolition": 10,
       "stagger": 35,
       "push": 30,
+      "pelletsPerShot": 12,
       "confidence": "HIGH",
       "notes": "12 perdigones por disparo. Los valores standard/durable son por perdigón individual, no el total del cartucho."
     }

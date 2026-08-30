@@ -28,6 +28,7 @@
       "standard": 35,
       "durable": 10,
       "ap": [3, 3, 3, 0],
+      "pelletsPerShot": 11,
       "confidence": "HIGH",
       "notes": "11 flechettes por cartucho. Valores por flechette individual."
     },
@@ -40,6 +41,7 @@
       "durable": 2,
       "ap": [2, 2, 2, 0],
       "stagger": null,
+      "pelletsPerShot": 20,
       "confidence": "HIGH",
       "notes": "20 perdigones por cartucho, munición alternativa seleccionable. Aplica aturdimiento grande (Stun Large) con 5s de duración; no hay campo de esquema dedicado a 'stun'."
     }

@@ -133,8 +133,7 @@ mapa (fábricas, nidos, torres) y variantes sin tabla de anatomía propia docume
 - Sistema de daño, penetración, durabilidad, ExDR, overflow: <https://helldivers.wiki.gg/wiki/Damage>
 - Cada arma y cada enemigo del catálogo (193 archivos entre `data/weapons/` y `data/enemies/`) trae
   su propia página de <https://helldivers.wiki.gg> en `source.url`, con fecha de verificación y
-  nivel de confianza — demasiadas para listar acá una por una. El panel **Procedencia de los
-  datos** (dentro de la Calculadora) las muestra todas agrupadas y marca los conflictos.
+  nivel de confianza — demasiadas para listar acá una por una.
 
 ---
 

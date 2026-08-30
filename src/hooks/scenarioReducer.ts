@@ -46,6 +46,8 @@ export interface ScenarioState {
   includeExplosion: boolean;
   rounding: RoundingMode | null;
   flakFragments: number;
+  /** Cuantos perdigones del cartucho declara el usuario que conectan (escopetas). */
+  pelletsHitting: number;
   weapon: WeaponOverrides;
   target: TargetOverrides;
   main: MainOverrides;
@@ -61,6 +63,7 @@ export type ScenarioAction =
   | { type: 'toggleExplosion'; include: boolean }
   | { type: 'setRounding'; rounding: RoundingMode | null }
   | { type: 'setFlakFragments'; count: number }
+  | { type: 'setPelletsHitting'; count: number }
   | { type: 'overrideWeapon'; patch: WeaponOverrides }
   | { type: 'overrideTarget'; patch: TargetOverrides }
   | { type: 'overrideMain'; patch: MainOverrides }
@@ -86,6 +89,7 @@ export function createInitialState(seed: {
     includeExplosion: true,
     rounding: null,
     flakFragments: 3,
+    pelletsHitting: 999,
     ...NO_OVERRIDES,
   };
 }
@@ -130,7 +134,10 @@ export function scenarioReducer(state: ScenarioState, action: ScenarioAction): S
       return { ...state, rounding: action.rounding };
 
     case 'setFlakFragments':
-      return { ...state, flakFragments: clampFragments(action.count) };
+      return { ...state, flakFragments: clampCount(action.count) };
+
+    case 'setPelletsHitting':
+      return { ...state, pelletsHitting: clampCount(action.count) };
 
     case 'overrideWeapon':
       return { ...state, weapon: { ...state.weapon, ...action.patch } };
@@ -152,4 +159,5 @@ export function scenarioReducer(state: ScenarioState, action: ScenarioAction): S
   }
 }
 
-const clampFragments = (n: number): number => Math.max(0, Math.min(30, Math.round(n) || 0));
+/** El tope real (contra fragmentos/perdigones del arma) lo aplica useScenario, que sí conoce el catálogo. */
+const clampCount = (n: number): number => Math.max(0, Math.round(n) || 0);

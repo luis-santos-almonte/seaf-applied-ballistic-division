@@ -28,6 +28,7 @@
       "standard": 20,
       "durable": 10,
       "ap": [2, 2, 2, 0],
+      "pelletsPerShot": 12,
       "confidence": "HIGH",
       "notes": "12 perdigones por cartucho. Además aplica una quemadura (Fire DoT): 100 de daño standard y durable, 3s de duración. No se modela como ataque aparte por ser un efecto de estado."
     }

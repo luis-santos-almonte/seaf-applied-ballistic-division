@@ -18,25 +18,17 @@ import type {
 } from '@/domain/types';
 import {
   armorDurabilityMatrix,
+  deriveFireModes,
   explainSimulation,
   rankTargets,
-  resolveFlak,
   simulate,
   type DerivationStep,
-  type FlakResult,
+  type FireMode,
   type MatrixRow,
+  type ShrapnelInput,
   type SimulationInput,
 } from '@/engine';
-import {
-  enemies,
-  findAttack,
-  findEnemy,
-  findWeapon,
-  flakProfiles,
-  linkedExplosion,
-  rules as baseRules,
-  weapons,
-} from '@/data/catalog';
+import { enemies, findEnemy, findWeapon, rules as baseRules, weapons } from '@/data/catalog';
 import {
   createInitialState,
   scenarioReducer,
@@ -50,6 +42,7 @@ export interface ResolvedScenario {
 
   /** Entradas de catálogo seleccionadas, sin overrides. */
   weapon: Weapon;
+  fireMode: FireMode;
   attack: Attack;
   enemy: Enemy;
   part: EnemyPart;
@@ -67,7 +60,6 @@ export interface ResolvedScenario {
   steps: DerivationStep[];
   ranking: RankedTarget[];
   matrix: MatrixRow[];
-  flak: FlakResult | null;
 }
 
 /** Arma con la que arranca la consola: la primera que recibe el jugador en el juego. */
@@ -80,17 +72,19 @@ function seed() {
   const weapon = findWeapon(DEFAULT_WEAPON_ID) ?? weapons[0];
   const enemy = findEnemy(DEFAULT_ENEMY_ID) ?? enemies[0];
   if (!weapon || !enemy) throw new Error('El catálogo está vacío: no hay armas o enemigos.');
-  const attack = weapon.attacks[0];
+  const fireMode = deriveFireModes(weapon)[0];
   const part = enemy.parts[0];
-  if (!attack || !part) throw new Error('El catálogo tiene entradas incompletas.');
-  return { weaponId: weapon.id, attackId: attack.id, enemyId: enemy.id, partId: part.id };
+  if (!fireMode || !part) throw new Error('El catálogo tiene entradas incompletas.');
+  return { weaponId: weapon.id, attackId: fireMode.id, enemyId: enemy.id, partId: part.id };
 }
 
 export function useScenario(): ResolvedScenario {
   const [state, dispatch] = useReducer(scenarioReducer, seed(), createInitialState);
 
   const weapon = findWeapon(state.weaponId) ?? weapons[0]!;
-  const attack = findAttack(weapon, state.attackId) ?? weapon.attacks[0]!;
+  const fireModes = useMemo(() => deriveFireModes(weapon), [weapon]);
+  const fireMode = fireModes.find((m) => m.id === state.attackId) ?? fireModes[0]!;
+  const attack = fireMode.attack;
   const enemy = findEnemy(state.enemyId) ?? enemies[0]!;
   const part = enemy.parts.find((p) => p.id === state.partId) ?? enemy.parts[0]!;
 
@@ -113,9 +107,27 @@ export function useScenario(): ResolvedScenario {
   }, [attack, state.weapon]);
 
   const effectiveExplosion = useMemo<Attack | null>(
-    () => (state.includeExplosion ? linkedExplosion(weapon, attack) : null),
-    [weapon, attack, state.includeExplosion],
+    () => (state.includeExplosion ? fireMode.explosion : null),
+    [fireMode, state.includeExplosion],
   );
+
+  /** Solo tiene sentido si la explosión (que la carga) está incluida. */
+  const effectiveShrapnel = useMemo<ShrapnelInput | null>(() => {
+    if (!state.includeExplosion || !fireMode.shrapnel || !fireMode.shrapnelCount) return null;
+    const fragmentCount = fireMode.shrapnelCount;
+    return {
+      attack: fireMode.shrapnel,
+      explosion: fireMode.shrapnelExplosion,
+      fragmentsHitting: Math.min(state.flakFragments, fragmentCount),
+      fragmentCount,
+    };
+  }, [fireMode, state.includeExplosion, state.flakFragments]);
+
+  /** Los perdigones de un mismo disparo no dependen de la explosión: son del proyectil. */
+  const effectivePelletsHitting = useMemo<number>(() => {
+    if (effectiveAttack.pelletsPerShot === null) return 1;
+    return Math.min(state.pelletsHitting, effectiveAttack.pelletsPerShot);
+  }, [effectiveAttack, state.pelletsHitting]);
 
   const effectivePart = useMemo<EnemyPart>(() => {
     const o = state.target;
@@ -159,13 +171,25 @@ export function useScenario(): ResolvedScenario {
     () => ({
       attack: effectiveAttack,
       explosion: effectiveExplosion,
+      shrapnel: effectiveShrapnel,
+      pelletsHitting: effectivePelletsHitting,
       enemy: effectiveEnemy,
       part: effectivePart,
       firing,
       rules,
       angle: state.angle,
     }),
-    [effectiveAttack, effectiveExplosion, effectiveEnemy, effectivePart, firing, rules, state.angle],
+    [
+      effectiveAttack,
+      effectiveExplosion,
+      effectiveShrapnel,
+      effectivePelletsHitting,
+      effectiveEnemy,
+      effectivePart,
+      firing,
+      rules,
+      state.angle,
+    ],
   );
 
   const simulation = useMemo(() => simulate(simulationInput), [simulationInput]);
@@ -182,12 +206,23 @@ export function useScenario(): ResolvedScenario {
       rankTargets({
         attack: effectiveAttack,
         explosion: effectiveExplosion,
+        shrapnel: effectiveShrapnel,
+        pelletsHitting: effectivePelletsHitting,
         enemy: effectiveEnemy,
         firing,
         rules,
         angle: state.angle,
       }),
-    [effectiveAttack, effectiveExplosion, effectiveEnemy, firing, rules, state.angle],
+    [
+      effectiveAttack,
+      effectiveExplosion,
+      effectiveShrapnel,
+      effectivePelletsHitting,
+      effectiveEnemy,
+      firing,
+      rules,
+      state.angle,
+    ],
   );
 
   const matrix = useMemo(
@@ -195,22 +230,11 @@ export function useScenario(): ResolvedScenario {
     [effectiveAttack, rules, state.angle],
   );
 
-  const flak = useMemo<FlakResult | null>(() => {
-    const profiles = flakProfiles(weapon);
-    if (!profiles) return null;
-    return resolveFlak({
-      ...profiles,
-      target: effectivePart,
-      fragmentsHitting: state.flakFragments,
-      rules,
-      angle: state.angle,
-    });
-  }, [weapon, effectivePart, state.flakFragments, rules, state.angle]);
-
   return {
     state,
     dispatch,
     weapon,
+    fireMode,
     attack,
     enemy,
     part,
@@ -224,6 +248,5 @@ export function useScenario(): ResolvedScenario {
     steps,
     ranking,
     matrix,
-    flak,
   };
 }

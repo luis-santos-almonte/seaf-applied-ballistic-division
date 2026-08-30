@@ -26,9 +26,4 @@ describe('render de la aplicación', () => {
   it('no muestra el panel de FLAK con el arma por defecto (Liberator, sin metralla)', () => {
     expect(html).not.toContain('máximo teórico');
   });
-
-  it('declara la procedencia de los datos', () => {
-    expect(html).toContain('Procedencia de los datos');
-    expect(html).toContain('helldivers.wiki.gg');
-  });
 });

@@ -36,7 +36,7 @@ SEAF Applied Ballistics Division/
 │   │   ├── simulate.ts             simulador disparo a disparo
 │   │   ├── ranking.ts              comparador de puntos de impacto
 │   │   ├── tables.ts               tabla de durabilidad y matriz AV × durab.
-│   │   ├── flak.ts                 desglose de metralla
+│   │   ├── fireModes.ts            agrupa attacks[] en modos de fuego (proyectil/explosión/metralla)
 │   │   ├── explain.ts              simulación → derivación paso a paso
 │   │   └── index.ts                superficie pública (barrel)
 │   │
@@ -63,16 +63,16 @@ SEAF Applied Ballistics Division/
 │   │   │   ├── DamageReceipt.tsx
 │   │   │   ├── VerdictStamp.tsx    ← elemento firma
 │   │   │   ├── StepList.tsx
-│   │   │   └── OutcomeStats.tsx
+│   │   │   ├── OutcomeStats.tsx
+│   │   │   ├── ShrapnelSection.tsx
+│   │   │   └── PelletSection.tsx
 │   │   ├── tables/
 │   │   │   ├── TargetRanking.tsx
 │   │   │   ├── ShotLedger.tsx
-│   │   │   ├── ArmorDurabilityMatrix.tsx
-│   │   │   └── FlakBreakdown.tsx
+│   │   │   └── ArmorDurabilityMatrix.tsx
 │   │   └── layout/
 │   │       ├── Masthead.tsx
 │   │       ├── Intro.tsx
-│   │       ├── SourceAudit.tsx     procedencia y conflictos de fuentes
 │   │       └── Footer.tsx
 │   │
 │   ├── lib/
@@ -92,7 +92,6 @@ SEAF Applied Ballistics Division/
     ├── damage.test.ts              durabilidad, armadura, resolución de impacto
     ├── firing.test.ts              intervalos, recargas, TTK, DPS
     ├── transfer.test.ts            % a Main y tope de overflow
-    ├── simulate.test.ts            Devastator, Charger, ranking
-    ├── flak.test.ts                teórico vs. realista
-    ├── catalog.test.ts             integridad de los datos
+    ├── simulate.test.ts            Devastator, Charger, ranking, metralla (FLAK)
+    ├── catalog.test.ts             integridad de los datos + cobertura de las 117 armas reales
     └── render.test.tsx             prueba de humo: monta toda la UI
